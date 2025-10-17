@@ -3,4 +3,4 @@
 THERE IS NONE!!
 
 ## Discord
-SOON!!!
+TEMPERANCE 13. [JOIN NOW.](https://discord.gg/UdDTpCpny3)
