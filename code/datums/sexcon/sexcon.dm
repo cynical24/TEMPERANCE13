@@ -1,8 +1,21 @@
+#define SEX_ZONE_NULL				0
+#define SEX_ZONE_GROIN				(1<<0)
+#define SEX_ZONE_GROIN_GRAB			(1<<1)
+#define SEX_ZONE_L_FOOT				(1<<2)
+#define SEX_ZONE_R_FOOT				(1<<3)
+#define SEX_ZONE_MOUTH				(1<<4)
+#define SEX_ZONE_CHEST				(1<<5)
+#define SEX_ZONE_CHEST_GRAB			(1<<6)
+
 /datum/sex_controller
 	/// The user and the owner of the controller
 	var/mob/living/carbon/human/user
 	/// Target of our actions, can be ourself
 	var/mob/living/carbon/human/target
+	/// Who is targeting us
+	// Disabled as it'd require properly stopping actions when the popup is closed.
+	// Different behavior which might be invasive.
+	//var/receiving = list()
 	/// Whether the user desires to stop his current action
 	var/desire_stop = FALSE
 	/// What is the current performed action
@@ -13,6 +26,8 @@
 	var/force = SEX_FORCE_MID
 	/// Our arousal
 	var/arousal = 0
+	///Makes genital arousal automatic by default
+	var/manual_arousal = SEX_MANUAL_AROUSAL_DEFAULT
 	/// Our charge gauge
 	var/charge = SEX_MAX_CHARGE
 	/// Whether we want to screw until finished, or non stop
@@ -29,11 +44,31 @@
 	var/last_ejaculation_time = 0
 	var/last_moan = 0
 	var/last_pain = 0
+	var/aphrodisiac = 1 //1 by default, acts as a multiplier on arousal gain. If this is different than 1, set/freeze arousal is disabled.
+	/// Which zones we are using in the current action.
+	var/using_zones = list()
+	/// Cache body parts used for accessibility check
+	var/access_zone_bitfield = SEX_ZONE_NULL
+	/// Menu based variables
+	var/action_category = SEX_CATEGORY_MISC
+	/// Show progress bar
+	var/show_progress = 1
+	/// Knot based variables
+	var/do_knot_action = FALSE
+	var/knotted_status = KNOTTED_NULL // knotted state and used to prevent multiple knottings when we do not handle that case
+	var/knotted_part = SEX_PART_NULL // which orifice was knotted (bitflag)
+	var/knotted_part_partner = SEX_PART_NULL // which orifice was knotted on partner (bitflag)
+	var/tugging_knot = FALSE
+	var/tugging_knot_check = 0
+	var/tugging_knot_blocked = FALSE
+	var/mob/living/carbon/knotted_owner = null // whom has the knot
+	var/mob/living/carbon/knotted_recipient = null // whom took the knot
 
 /datum/sex_controller/New(mob/living/carbon/human/owner)
 	user = owner
 
 /datum/sex_controller/Destroy()
+	//remove_from_target_receiving()
 	user = null
 	target = null
 	bed = null
@@ -112,6 +147,113 @@
 		return TRUE
 	return FALSE
 
+// any new sex commands that target new locations, will need to be added here, and given a unique bitflag define
+/datum/sex_controller/proc/update_all_accessible_body_zones()
+	access_zone_bitfield = SEX_ZONE_NULL
+	if(get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = FALSE, skipundies = TRUE))
+		access_zone_bitfield |= SEX_ZONE_GROIN
+	if(get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = TRUE, skipundies = TRUE))
+		access_zone_bitfield |= SEX_ZONE_GROIN_GRAB
+	if(get_location_accessible(user, BODY_ZONE_PRECISE_L_FOOT, grabs = FALSE, skipundies = TRUE))
+		access_zone_bitfield |= SEX_ZONE_L_FOOT
+	if(get_location_accessible(user, BODY_ZONE_PRECISE_R_FOOT, grabs = FALSE, skipundies = TRUE))
+		access_zone_bitfield |= SEX_ZONE_R_FOOT
+	if(get_location_accessible(user, BODY_ZONE_PRECISE_MOUTH, grabs = FALSE, skipundies = TRUE))
+		access_zone_bitfield |= SEX_ZONE_MOUTH
+	if(get_location_accessible(user, BODY_ZONE_CHEST, grabs = FALSE, skipundies = TRUE))
+		access_zone_bitfield |= SEX_ZONE_CHEST
+	if(get_location_accessible(user, BODY_ZONE_CHEST, grabs = TRUE, skipundies = TRUE))
+		access_zone_bitfield |= SEX_ZONE_CHEST_GRAB
+
+// only check active accessible body zones
+/datum/sex_controller/proc/update_current_accessible_body_zones(body_zone, grabs)
+	switch(body_zone)
+		if(BODY_ZONE_PRECISE_GROIN)
+			if(grabs)
+				if((access_zone_bitfield&SEX_ZONE_GROIN_GRAB) && !get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = TRUE, skipundies = TRUE))
+					access_zone_bitfield &= ~SEX_ZONE_GROIN_GRAB
+			else if((access_zone_bitfield&SEX_ZONE_GROIN) && !get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = FALSE, skipundies = TRUE))
+				access_zone_bitfield &= ~SEX_ZONE_GROIN
+		if(BODY_ZONE_PRECISE_L_FOOT)
+			if((access_zone_bitfield&SEX_ZONE_L_FOOT) && !get_location_accessible(user, BODY_ZONE_PRECISE_L_FOOT, grabs = FALSE, skipundies = TRUE))
+				access_zone_bitfield &= ~SEX_ZONE_L_FOOT
+		if(BODY_ZONE_PRECISE_R_FOOT)
+			if((access_zone_bitfield&SEX_ZONE_R_FOOT) && !get_location_accessible(user, BODY_ZONE_PRECISE_R_FOOT, grabs = FALSE, skipundies = TRUE))
+				access_zone_bitfield &= ~SEX_ZONE_R_FOOT
+		if(BODY_ZONE_PRECISE_MOUTH)
+			if((access_zone_bitfield&SEX_ZONE_MOUTH) && !get_location_accessible(user, BODY_ZONE_PRECISE_MOUTH, grabs = FALSE, skipundies = TRUE))
+				access_zone_bitfield &= ~SEX_ZONE_MOUTH
+		if(BODY_ZONE_CHEST)
+			if(grabs)
+				if((access_zone_bitfield&SEX_ZONE_CHEST_GRAB) && !get_location_accessible(user, BODY_ZONE_CHEST, grabs = TRUE, skipundies = TRUE))
+					access_zone_bitfield &= ~SEX_ZONE_CHEST_GRAB
+			else if((access_zone_bitfield&SEX_ZONE_CHEST) && !get_location_accessible(user, BODY_ZONE_CHEST, grabs = FALSE, skipundies = TRUE))
+				access_zone_bitfield &= ~SEX_ZONE_CHEST
+		else
+		 	// hey YOU, add the new targeted zone to SEX_ZONE bitfield, and update update_all_accessible_body_zones()/get_accessible_body_zone()
+			CRASH("sex_action: attempt to access non-existent bitfield for var body_zone_bitfield [body_zone]")
+
+/datum/sex_controller/proc/get_accessible_body_zone(body_zone_bitfield, body_zone, grabs)
+	switch(body_zone)
+		if(BODY_ZONE_PRECISE_GROIN)
+			if(grabs)
+				return (body_zone_bitfield&SEX_ZONE_GROIN_GRAB) != SEX_ZONE_NULL
+			return (body_zone_bitfield&SEX_ZONE_GROIN) != SEX_ZONE_NULL
+		if(BODY_ZONE_PRECISE_L_FOOT)
+			return (body_zone_bitfield&SEX_ZONE_L_FOOT) != SEX_ZONE_NULL
+		if(BODY_ZONE_PRECISE_R_FOOT)
+			return (body_zone_bitfield&SEX_ZONE_R_FOOT) != SEX_ZONE_NULL
+		if(BODY_ZONE_PRECISE_MOUTH)
+			return (body_zone_bitfield&SEX_ZONE_MOUTH) != SEX_ZONE_NULL
+		if(BODY_ZONE_CHEST)
+			if(grabs)
+				return (body_zone_bitfield&SEX_ZONE_CHEST_GRAB) != SEX_ZONE_NULL
+			return (body_zone_bitfield&SEX_ZONE_CHEST) != SEX_ZONE_NULL
+	// hey YOU, add the new targeted zone to SEX_ZONE bitfield, and update update_all_accessible_body_zones()/update_current_accessible_body_zones()
+	CRASH("sex_action: attempt to access non-existent bitfield for var body_zone_bitfield [body_zone]")
+
+/datum/sex_action/proc/check_location_accessible(mob/living/carbon/human/user, mob/living/carbon/human/target, location = BODY_ZONE_CHEST, grabs = FALSE)
+	var/obj/item/bodypart/bodypart = target.get_bodypart(location)
+
+	var/self_target = FALSE
+	var/datum/sex_controller/user_controller = user.sexcon
+	if(user_controller.target == user)
+		self_target = TRUE
+
+	var/signalargs = list(src, bodypart, self_target)
+	signalargs += args
+
+	var/sigbitflags = SEND_SIGNAL(target, COMSIG_ERP_LOCATION_ACCESSIBLE, signalargs)
+	bodypart = signalargs[ERP_BODYPART]
+
+	if(sigbitflags & SIG_CHECK_FAIL)
+		return FALSE
+
+	if(!bodypart)
+		return FALSE
+
+	if(!(sigbitflags & SKIP_ADJACENCY_CHECK) && !user.Adjacent(target))
+		return FALSE
+
+	if(src.check_same_tile && (user != target || self_target) && !(sigbitflags & SKIP_TILE_CHECK))
+		var/same_tile = (get_turf(user) == get_turf(target))
+		var/grab_bypass = (src.aggro_grab_instead_same_tile && user.get_highest_grab_state_on(target) == GRAB_AGGRESSIVE)
+		if(!same_tile && !grab_bypass)
+			return FALSE
+
+	if(src.require_grab && (user != target || self_target) && !(sigbitflags & SKIP_GRAB_CHECK))
+		var/grabstate = user.get_highest_grab_state_on(target)
+		if((grabstate == null || grabstate < src.required_grab_state))
+			return FALSE
+
+	if(!isnull(user_controller.current_action) && user_controller.current_action == src.type) // action is active, update the currently accessible body zones
+		target.sexcon.update_current_accessible_body_zones(location, grabs)
+	var/result = user_controller.get_accessible_body_zone(target.sexcon.access_zone_bitfield, location, grabs)
+	if(result && user == target && !(bodypart in user_controller.using_zones) && user_controller.current_action == SEX_ACTION(src))
+		user_controller.using_zones += location
+
+	return result
+
 /datum/sex_controller/proc/finished_check()
 	if(!do_until_finished)
 		return FALSE
@@ -124,6 +266,8 @@
 
 /datum/sex_controller/proc/adjust_force(amt)
 	force = clamp(force + amt, SEX_FORCE_MIN, SEX_FORCE_MAX)
+/datum/sex_controller/proc/adjust_arousal_manual(amt)
+	manual_arousal = clamp(manual_arousal + amt, SEX_MANUAL_AROUSAL_MIN, SEX_MANUAL_AROUSAL_MAX)
 
 /datum/sex_controller/proc/update_pink_screen()
 	var/severity = 0
@@ -159,18 +303,20 @@
 	set_target(new_target)
 	show_ui()
 
-/datum/sex_controller/proc/cum_onto()
+/datum/sex_controller/proc/cum_onto(var/mob/living/carbon/human/splashed_user = null)
 	log_combat(user, target, "Came onto the target")
 	playsound(target, 'sound/misc/mat/endout.ogg', 50, TRUE, ignore_walls = FALSE)
 	add_cum_floor(get_turf(target))
 	after_ejaculation()
 
-/datum/sex_controller/proc/cum_into(oral = FALSE)
+/datum/sex_controller/proc/cum_into(oral = FALSE, var/mob/living/carbon/human/splashed_user = null)
 	log_combat(user, target, "Came inside the target")
 	if(oral)
 		playsound(target, pick(list('sound/misc/mat/mouthend (1).ogg','sound/misc/mat/mouthend (2).ogg')), 100, FALSE, ignore_walls = FALSE)
 	else
 		playsound(target, 'sound/misc/mat/endin.ogg', 50, TRUE, ignore_walls = FALSE)
+	if(user != target && do_knot_action)
+		knot_try()
 	after_ejaculation()
 	if(!oral)
 		after_intimate_climax()
@@ -242,7 +388,13 @@
 
 /datum/sex_controller/proc/update_erect_state()
 	var/obj/item/organ/penis/penis = user.getorganslot(ORGAN_SLOT_PENIS)
-	if(penis)
+
+	if(user.mind)
+		var/datum/antagonist/werewolf/W = user.mind.has_antag_datum(/datum/antagonist/werewolf/)
+		if(W && W.transformed == TRUE)
+			user.regenerate_icons()
+
+	if(penis && hascall(penis, "update_erect_state"))
 		penis.update_erect_state()
 
 /datum/sex_controller/proc/adjust_arousal(amount)
@@ -265,6 +417,11 @@
 	action_target.adjustOxyLoss(oxyloss_amt)
 
 /datum/sex_controller/proc/perform_sex_action(mob/living/carbon/human/action_target, arousal_amt, pain_amt, giving)
+	if(HAS_TRAIT(user, TRAIT_GOODLOVER))
+		arousal_amt *=1.5
+		if(prob(10))
+			var/lovermessage = pick("This feels so good!","I am in heaven!","This is too good to be possible!","By the ten!","I can't stop, too good!")
+			to_chat(action_target, span_love(lovermessage))
 	action_target.sexcon.receive_sex_action(arousal_amt, pain_amt, giving, force, speed)
 
 /datum/sex_controller/proc/receive_sex_action(arousal_amt, pain_amt, giving, applied_force, applied_speed)
@@ -372,7 +529,28 @@
 		return FALSE
 	return TRUE
 
-/datum/sex_controller/proc/handle_passive_ejaculation()
+/datum/sex_controller/proc/handle_passive_ejaculation(var/mob/living/carbon/human/splashed_user = null)
+	var/mob/living/carbon/human/M = user
+	if(aphrodisiac > 1.5)
+		if(M.check_handholding())
+			if(prob(5)) //Yeah.
+				try_do_moan(3, 0, 1, 0)
+			if(arousal < 70)
+				adjust_arousal(0.2)
+		if(M.handcuffed)
+			if(prob(8))
+				var/chaffepain = pick(10,10,10,10,20,20,30)
+				try_do_moan(3, chaffepain, 1, 0)
+				damage_from_pain(chaffepain)
+				try_do_pain_effect(chaffepain)
+				last_moan = 0
+				M.visible_message(("<span class='love_mid'>[M] squirms uncomfortably in [M.p_their()] restraints.</span>"), \
+					("<span class='love_extreme'>I feel [M.handcuffed] rub uncomfortably against my skin.</span>"))
+			if(arousal < ACTIVE_EJAC_THRESHOLD)
+				adjust_arousal(0.25)
+			else
+				if(prob(3))
+					ejaculate()
 	if(arousal < PASSIVE_EJAC_THRESHOLD)
 		return
 	if(is_spent())
@@ -422,26 +600,45 @@
 	var/list/dat = list()
 	var/force_name = get_force_string()
 	var/speed_name = get_speed_string()
-	dat += "<center><a href='?src=[REF(src)];task=speed_down'>\<</a> [speed_name] <a href='?src=[REF(src)];task=speed_up'>\></a> ~|~ <a href='?src=[REF(src)];task=force_down'>\<</a> [force_name] <a href='?src=[REF(src)];task=force_up'>\></a></center>"
-	dat += "<center>| <a href='?src=[REF(src)];task=toggle_finished'>[do_until_finished ? "UNTIL IM FINISHED" : "UNTIL I STOP"]</a> |</center>"
-	dat += "<center><a href='?src=[REF(src)];task=set_arousal'>SET AROUSAL</a> | <a href='?src=[REF(src)];task=freeze_arousal'>[arousal_frozen ? "UNFREEZE AROUSAL" : "FREEZE AROUSAL"]</a></center>"
+	var/manual_arousal_name = get_manual_arousal_string()
+	dat += "<center><a href='?src=[REF(src)];task=speed_down'>\<</a> [speed_name] <a href='?src=[REF(src)];task=speed_up'>\></a> ~|~ <a href='?src=[REF(src)];task=force_down'>\<</a> [force_name] <a href='?src=[REF(src)];task=force_up'>\></a>"
+	if(user.getorganslot(ORGAN_SLOT_PENIS))
+		dat += " ~|~ <a href='?src=[REF(src)];task=manual_arousal_down'>\<</a> [manual_arousal_name] <a href='?src=[REF(src)];task=manual_arousal_up'>\></a>"
+	dat += "</center><center><a href='?src=[REF(src)];task=toggle_finished'>[do_until_finished ? "UNTIL IM FINISHED" : "UNTIL I STOP"]</a>"
+	if(current_action && !desire_stop)
+		var/datum/sex_action/action = SEX_ACTION(current_action)
+		if(action.knot_on_finish && knot_penis_type())
+			if(do_knot_action)
+				dat += " | <a href='?src=[REF(src)];task=toggle_knot'><font color='#d146f5'>USING KNOT</font></a>"
+			else
+				dat += " | <a href='?src=[REF(src)];task=toggle_knot'><font color='#eac8de'>NOT USING KNOT</font></a>"
+	dat += "</center><center><a href='?src=[REF(src)];task=set_arousal'>SET AROUSAL</a> | <a href='?src=[REF(src)];task=freeze_arousal'>[arousal_frozen ? "UNFREEZE AROUSAL" : "FREEZE AROUSAL"]</a></center>"
 	if(target == user)
 		dat += "<center>Doing unto yourself</center>"
 	else
 		dat += "<center>Doing unto [target]'s</center>"
-	if(current_action)
+	if(current_action && !desire_stop)
 		dat += "<center><a href='?src=[REF(src)];task=stop'>Stop</a></center>"
 	else
 		dat += "<br>"
+	dat += "<center><a href='?src=[REF(src)];task=category_misc'>[action_category == SEX_CATEGORY_MISC ? "<font color='#eac8de'>OTHER</font>" : "OTHER"]</a> | "
+	dat += "<a href='?src=[REF(src)];task=category_hands'>[action_category == SEX_CATEGORY_HANDS ? "<font color='#eac8de'>HANDS</font>" : "HANDS"]</a> | "
+	dat += "<a href='?src=[REF(src)];task=category_penetrate'>[action_category == SEX_CATEGORY_PENETRATE ? "<font color='#eac8de'>PENETRATE</font>" : "PENETRATE"]</a></center>"
 	dat += "<table width='100%'><td width='50%'></td><td width='50%'></td><tr>"
 	var/i = 0
+	var/user_is_incapacitated = user.incapacitated()
+	user.sexcon.update_all_accessible_body_zones()
+	if(target != user)
+		target.sexcon.update_all_accessible_body_zones()
 	for(var/action_type in GLOB.sex_actions)
 		var/datum/sex_action/action = SEX_ACTION(action_type)
+		if(!(action_category&action.category))
+			continue
 		if(!action.shows_on_menu(user, target))
 			continue
 		dat += "<td>"
 		var/link = ""
-		if(!can_perform_action(action_type))
+		if(!can_perform_action(action_type, user_is_incapacitated))
 			link = "linkOff"
 		if(current_action == action_type)
 			link = "linkOn"
@@ -453,7 +650,7 @@
 			dat += "</tr><tr>"
 
 	dat += "</tr></table>"
-	var/datum/browser/popup = new(user, "sexcon", "<center>Sate Desire</center>", 430, 540)
+	var/datum/browser/popup = new(user, "sexcon", "<center>Sate Desire</center>", 500, 550)
 	popup.set_content(dat.Join())
 	popup.open()
 	return
@@ -478,13 +675,29 @@
 			adjust_force(1)
 		if("force_down")
 			adjust_force(-1)
+		if("manual_arousal_up")
+			adjust_arousal_manual(1)
+		if("manual_arousal_down")
+			adjust_arousal_manual(-1)
 		if("toggle_finished")
 			do_until_finished = !do_until_finished
 		if("set_arousal")
 			var/amount = input(user, "Value above 120 will immediately cause orgasm!", "Set Arousal", arousal) as num
-			set_arousal(amount)
+			if(aphrodisiac > 1 && amount > 0)
+				set_arousal(amount * aphrodisiac)
+			else
+				set_arousal(amount)
 		if("freeze_arousal")
-			arousal_frozen = !arousal_frozen
+			if(aphrodisiac == 1)
+				arousal_frozen = !arousal_frozen
+		if("category_misc")
+			action_category = SEX_CATEGORY_MISC
+		if("category_hands")
+			action_category = SEX_CATEGORY_HANDS
+		if("category_penetrate")
+			action_category = SEX_CATEGORY_PENETRATE
+		if("toggle_knot")
+			do_knot_action = !do_knot_action
 	show_ui()
 
 /datum/sex_controller/proc/try_stop_current_action()
@@ -497,7 +710,8 @@
 	if(!current_action)
 		return
 	var/datum/sex_action/action = SEX_ACTION(current_action)
-	action.on_finish(user, target)
+	if(!user.sexcon.knotted_status) // never show the remove message, unless unknotted
+		action.on_finish(user, target)
 	desire_stop = FALSE
 	user.doing = FALSE
 	current_action = null
@@ -516,8 +730,9 @@
 		return
 	if(!action_type)
 		return
-	if(!can_perform_action(action_type))
+	if(!can_perform_action(action_type, user.incapacitated()))
 		return
+	knot_check_remove(action_type)
 	// Set vars
 	desire_stop = FALSE
 	current_action = action_type
@@ -533,17 +748,18 @@
 	// Do action loop
 	var/performed_action_type = current_action
 	var/datum/sex_action/action = SEX_ACTION(current_action)
+	show_progress = 1
 	action.on_start(user, target)
 	while(TRUE)
 		if(!isnull(target.client) && target.client.prefs.sexable == FALSE) //Vrell - Needs changed to let me test sex mechanics solo
 			break
 		if(!user.stamina_add(action.stamina_cost * get_stamina_cost_multiplier()))
 			break
-		if(!do_after(user, (action.do_time / get_speed_multiplier()), target = target))
+		if(!do_after(user, (action.do_time / get_speed_multiplier()), target = target, progress = show_progress))
 			break
 		if(current_action == null || performed_action_type != current_action)
 			break
-		if(!can_perform_action(current_action))
+		if(!can_perform_action(current_action, user.incapacitated()))
 			break
 		if(action.is_finished(user, target))
 			break
@@ -559,11 +775,11 @@
 			break
 	stop_current_action()
 
-/datum/sex_controller/proc/can_perform_action(action_type)
+/datum/sex_controller/proc/can_perform_action(action_type, incapacitated)
 	if(!action_type)
 		return FALSE
 	var/datum/sex_action/action = SEX_ACTION(action_type)
-	if(!inherent_perform_check(action_type))
+	if(!inherent_perform_check(action_type, incapacitated))
 		return FALSE
 	if(!action.can_perform(user, target))
 		return FALSE
@@ -594,23 +810,24 @@
 		return FALSE
 	if(user.stat != CONSCIOUS)
 		return FALSE
-	if(!user.Adjacent(target))
+	if(action.check_incapacitated && incapacitated)
 		return FALSE
-	if(action.check_incapacitated && user.incapacitated())
-		return FALSE
-	if(action.check_same_tile)
-		var/same_tile = (get_turf(user) == get_turf(target))
-		var/grab_bypass = (action.aggro_grab_instead_same_tile && user.get_highest_grab_state_on(target) == GRAB_AGGRESSIVE)
-		if(!same_tile && !grab_bypass)
-			return FALSE
-	if(action.require_grab)
-		var/grabstate = user.get_highest_grab_state_on(target)
-		if(grabstate == null || grabstate < action.required_grab_state)
-			return FALSE
 	return TRUE
 
+/*
+/datum/sex_controller/proc/remove_from_target_receiving()
+	if(!target)
+		return
+	var/datum/sex_controller/target_con = target.sexcon
+	if (user in target_con.receiving)
+		target_con.receiving -= user
+*/
+
 /datum/sex_controller/proc/set_target(mob/living/carbon/human/new_target)
+	//remove_from_target_receiving()
 	target = new_target
+	//var/datum/sex_controller/target_con = new_target.sexcon
+	//target_con.receiving += user
 
 /datum/sex_controller/proc/get_speed_multiplier()
 	switch(speed)
@@ -701,6 +918,16 @@
 		if(SEX_SPEED_EXTREME)
 			return "<font color='#d146f5'>UNRELENTING</font>"
 
+/datum/sex_controller/proc/get_manual_arousal_string()
+	switch(manual_arousal)
+		if(SEX_MANUAL_AROUSAL_DEFAULT)
+			return "<font color='#eac8de'>NATURAL</font>"
+		if(SEX_MANUAL_AROUSAL_UNAROUSED)
+			return "<font color='#e9a8d1'>UNAROUSED</font>"
+		if(SEX_MANUAL_AROUSAL_PARTIAL)
+			return "<font color='#f05ee1'>PARTIALLY ERECT</font>"
+		if(SEX_MANUAL_AROUSAL_FULL)
+			return "<font color='#d146f5'>FULLY ERECT</font>"
 /datum/sex_controller/proc/get_generic_force_adjective()
 	switch(force)
 		if(SEX_FORCE_LOW)
@@ -722,3 +949,12 @@
 			return "<span class='love_high'>[string]</span>"
 		if(SEX_FORCE_EXTREME)
 			return "<span class='love_extreme'>[string]</span>"
+
+#undef SEX_ZONE_NULL
+#undef SEX_ZONE_GROIN
+#undef SEX_ZONE_GROIN_GRAB
+#undef SEX_ZONE_L_FOOT
+#undef SEX_ZONE_R_FOOT
+#undef SEX_ZONE_MOUTH
+#undef SEX_ZONE_CHEST
+#undef SEX_ZONE_CHEST_GRAB
