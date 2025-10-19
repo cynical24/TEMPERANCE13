@@ -149,6 +149,96 @@
 	if(!fou)
 		to_chat(AM, "<b>It is a dead end.</b>")
 
+/obj/structure/fluff/traveltile/proc/try_living_travel(obj/structure/fluff/traveltile/T, mob/living/L)
+	if(!can_go(L))
+		return FALSE
+	if(L.pulledby)
+		return FALSE
+	if(leashed_by_other(L))
+		to_chat(L, span_warning("I can't travel! Someone is holding my leash!"))
+		return FALSE
+	to_chat(L, "<b>I begin to travel...</b>")
+	if(do_after(L, 50, needhand = FALSE, target = src))
+		if(L.pulledby)
+			to_chat(L, span_warning("I can't go, something's holding onto me."))
+			return FALSE
+		if(leashed_by_other(L))
+			to_chat(L, span_warning("I can't go, somebody has me on their leash."))
+			return FALSE
+		perform_travel(T, L)
+		return TRUE
+	return FALSE
+
+/obj/structure/fluff/traveltile/proc/perform_travel(obj/structure/fluff/traveltile/T, mob/living/L)
+	if(!L.restrained(ignore_grab = TRUE)) // heavy-handedly prevents using prisoners to metagame camp locations. pulledby would stop this but prisoners can also be kicked/thrown into the tile repeatedly
+		for(var/mob/living/carbon/human/H in hearers(6,src))
+			if(!HAS_TRAIT(H, required_trait) && !HAS_TRAIT(H, TRAIT_BLIND))
+				to_chat(H, "<b>I watch [L.name? L : "someone"] go through a well-hidden entrance.</b>")
+				if(!(H.m_intent == MOVE_INTENT_SNEAK))
+					to_chat(L, "<b>[H.name ? H : "Someone"] watches me pass through the entrance.</b>")
+				ADD_TRAIT(H, required_trait, TRAIT_GENERIC)
+
+	/*
+	Prior to writing:
+	On their own, leashes do not play nice at all with travel tile teleports. At best, they do not follow leashed "pets" to new z-levels if the leash is dropped.
+	At worst, they cause the "pet" to fall to 1 z-level lower from where they previously were, and not get teleported, if the "master" isn't also pulling them by hand.
+	Thus, the following jank is necessary.
+
+	Procs for getting/checking leash stuff that I made for this got moved to leash.dm as global procs, because their code was entirely independent of this type. - Zoktiik
+	*/
+	var/atom/movable/pullingg = L.pulling
+	var/list/master_leashed_mobs = get_master_leashed_mobs(L, FALSE)
+	var/obj/item/leash/user_freepet_leash = get_freepet_leash(L)
+	var/obj/item/leash/pullingg_freepet_leash
+	// leashes automatically handle "reattachment" to the "master" so we can just move them
+
+	// handle unknotting
+	if(ishuman(L))
+		var/mob/living/carbon/human/knot_haver = L
+		if(knot_haver?.sexcon.knotted_status)
+			knot_haver.sexcon.knot_remove()
+
+	L.recent_travel = world.time
+	if(pullingg)
+		if(ishuman(pullingg)) // also check if pulled mob is knotted
+			var/mob/living/carbon/human/H = pullingg
+			if(H?.sexcon.knotted_status)
+				H.sexcon.knot_remove()
+		pullingg_freepet_leash = get_freepet_leash(pullingg)
+		if(pullingg_freepet_leash)
+			pullingg_freepet_leash.forceMove(T.loc)
+		pullingg.recent_travel = world.time
+		pullingg.forceMove(T.loc)
+	if(length(master_leashed_mobs))
+		for(var/mob/living/leashed in master_leashed_mobs)
+			if(leashed != pullingg) // we didn't already handle u
+				leashed.recent_travel = world.time
+				leashed.forceMove(T.loc)
+
+	if(user_freepet_leash)
+		user_freepet_leash.forceMove(T.loc)
+	L.forceMove(T.loc)
+
+	if(pullingg)
+		L.start_pulling(pullingg, supress_message = TRUE)
+
+	return
+
+/obj/structure/fluff/traveltile/proc/can_go(atom/movable/AM)
+	. = TRUE
+	if(AM.recent_travel)
+		if(world.time < AM.recent_travel + 15 SECONDS)
+			. = FALSE
+	if(. && required_trait && isliving(AM))
+		var/mob/living/L = AM
+		if(HAS_TRAIT(L, required_trait))
+			if(world.time > L.last_client_interact + 0.3 SECONDS)
+				return FALSE // we will only be travelling of our own volition (anti-afk-abuse)
+			return TRUE
+		else
+			to_chat(L, "<b>It is a dead end.</b>")
+			return FALSE
+
 /obj/structure/fluff/traveltile/bandit
 	required_trait = TRAIT_BANDITCAMP
 /obj/structure/fluff/traveltile/vampire
