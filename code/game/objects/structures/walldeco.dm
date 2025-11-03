@@ -106,8 +106,8 @@
 	icon_state = "sparrow"
 
 /obj/structure/fluff/walldeco/xavo
-	name = "xavo"
-	desc = ""
+	name = "PERSERDUN"
+	desc = "Your glorious flag."
 	icon_state = "xavo"
 
 /obj/structure/fluff/walldeco/serpflag
