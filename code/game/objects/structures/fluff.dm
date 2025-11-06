@@ -319,6 +319,32 @@
 		return 0
 	return 1
 
+/obj/structure/fluff/railing/sandbag
+	name = "sandbags"
+	desc = "A stack of linen bags, filled with sand. You can't climb over it."
+	icon = 'icons/roguetown/misc/structure.dmi'
+	attacked_sound = 'sound/misc/hay_collect.ogg'
+	destroy_sound = 'sound/misc/wood_saw.ogg'
+	icon_state = "sandbag"
+	density = TRUE
+	anchored = TRUE
+	layer = 2.91
+	climbable = FALSE
+	max_integrity = 400
+	passcrawl = FALSE
+
+/obj/structure/fluff/railing/sandbag/CanPass(atom/movable/mover, turf/target)
+	if(get_dir(loc, target) == dir)
+		return 0
+	return 1
+
+/obj/structure/fluff/railing/sandbag/CheckExit(atom/movable/O, turf/target)
+	if(istype(O, /obj/projectile))
+		return 1
+	if(get_dir(O.loc, target) == dir)
+		return 0
+	return 1
+
 /obj/structure/bars
 	name = "bars"
 	desc = ""
