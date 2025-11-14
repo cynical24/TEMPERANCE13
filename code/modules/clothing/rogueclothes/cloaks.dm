@@ -82,8 +82,8 @@
 	user.update_inv_armor()
 
 /obj/item/clothing/cloak/perserduntabard
-	name = "perserdunian colors"
-	desc = "A tabard worn by Perserdunian warriors It's just brown."
+	name = "perserdunian tabard"
+	desc = "A standard issue tabard worn by Perserdunian forces. Created due to the desire for a cheap identifier."
 	color = null
 	icon_state = "psydontabard"
 	item_state = "psydontabard"
