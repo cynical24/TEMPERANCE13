@@ -105,7 +105,7 @@
 	icon_state = "machinepistol"
 	item_state = "machinepistol"
 	w_class = WEIGHT_CLASS_SMALL
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/pistol
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/machinepistol
 	slowdown = 0.15
 	spread = 0.5
 	pump_sound = 'sound/combat/ranged/hpistol_cock.ogg'
