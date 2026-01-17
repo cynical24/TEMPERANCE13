@@ -67,3 +67,9 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 	There is no doubt in you that disease will follow you not long after this. Even the open air above you offers no relief from the bloated, rotting carcasses that surround you.\n\
 	Dead masses float around in the fetid blood in various states of decay. Even the skull of a hound or some other small mammal occasionally surfaces to greet your sight."
 
+/datum/loreblurb/outpostxiphos
+	title = "Outpost Xiphos"
+	description = "Cold and oppressive. You're walking down the hallways of Perserdunian land. \n\
+	Without a gas mask, the faint smell of copper coats the concrete walls mixed with the soft crackling of blue candles. \n\
+	Glory to the Empire, and hail to the Venerable Master."
+	sound = 'sound/loredump/lore_sting2.ogg'

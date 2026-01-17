@@ -443,7 +443,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/grandknight
-	name = "Grandknight"
+	name = "Grand Knight"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/knightcommander

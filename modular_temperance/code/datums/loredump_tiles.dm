@@ -34,3 +34,7 @@ Very handy, eh?
 /obj/effect/loretile/butchersblock
 	name = "Butcher's Block Lore Tile"
 	lore = /datum/loreblurb/butchersblock
+
+/obj/effect/loretile/outpostxiphos
+	name = "Outpost Xiphos Lore Tile"
+	lore = /datum/loreblurb/outpostxiphos
