@@ -28,6 +28,13 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
+"aA" = (
+/obj/structure/fluff/railing/sandbag,
+/obj/machinery/light/rogue/wallfire/candle/weak{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "aB" = (
 /obj/structure/fluff/railing/border/west{
 	pixel_y = 0;
@@ -208,16 +215,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town/sargoth)
-"bU" = (
-/obj/structure/fluff/walldeco/ubk{
-	pixel_y = 33
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = -25;
-	dir = 10
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/exposed/risvonbase)
 "bV" = (
 /obj/structure/closet/crate/roguecloset/dark{
 	pixel_y = 0;
@@ -271,6 +268,11 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town/sargoth)
+"cj" = (
+/turf/closed/wall/mineral/rogue/risvon/tshape/dir4{
+	dir = 8
+	},
+/area/rogue/indoors/risvonbase)
 "cn" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/risvon)
@@ -354,13 +356,6 @@
 /obj/structure/curtain/black,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbasebar)
-"cX" = (
-/obj/effect/decal/carpet/square{
-	dir = 4;
-	pixel_x = 27
-	},
-/turf/open/floor/rogue/risvon,
-/area/rogue/indoors/risvonbase)
 "dd" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/risvon)
@@ -370,18 +365,6 @@
 /obj/effect/decal/cleanable/dirt/grime/dust,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/shelter/town/sargoth)
-"dk" = (
-/obj/effect/decal/cobbleedge{
-	pixel_y = -25;
-	dir = 10
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = 0;
-	dir = 8;
-	pixel_x = -25
-	},
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/exposed/risvonbase)
 "dl" = (
 /obj/structure/bed/rogue/inn/double{
 	pixel_y = 3
@@ -425,24 +408,17 @@
 /obj/structure/mineral_door/wood/wardoor,
 /turf/open/floor/rogue/warquad,
 /area/rogue/under/cave/warmachine)
-"dG" = (
-/obj/structure/fluff/walldeco/ubk{
-	pixel_y = 33
-	},
-/turf/open/floor/carpet/royalblack,
-/area/rogue/indoors/risvonbase)
 "dI" = (
 /obj/structure/table/wood/map/five,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbasebar)
-"dK" = (
-/obj/effect/decal/remains/wolf{
-	pixel_y = 16;
-	name = "sleeping dog";
-	desc = "Best to let him lie."
+"dJ" = (
+/obj/machinery/light/rogue/firebowl/standing{
+	pixel_y = 1;
+	pixel_x = -21
 	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/risvonbasebar)
+/turf/closed/wall/mineral/rogue/risvon/long/east_west,
+/area/rogue/indoors/risvonbase)
 "dM" = (
 /obj/structure/stairs{
 	dir = 8
@@ -508,11 +484,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/risvon)
-"ez" = (
-/obj/machinery/light/rogue/wallfire/candle/weak/r,
-/obj/machinery/light/rogue/wallfire/candle/l,
-/turf/open/floor/rogue/risvon,
-/area/rogue/indoors/risvonbase)
 "eB" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -523,14 +494,6 @@
 /obj/item/trash/applecore,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-"eG" = (
-/obj/effect/decal/remains/bear{
-	pixel_y = -3;
-	pixel_x = 9;
-	name = "trophy"
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/risvonbasebar)
 "eH" = (
 /obj/structure/fluff/walldeco/ubk{
 	pixel_y = 33
@@ -647,13 +610,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-"fV" = (
-/obj/structure/fluff/railing/sandbag,
-/obj/machinery/light/rogue/wallfire/candle/weak{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/risvon,
-/area/rogue/indoors/risvonbase)
 "fX" = (
 /turf/open/floor/rogue/greenstone/glyph6,
 /area/rogue/indoors/shelter/town/sargoth)
@@ -691,6 +647,18 @@
 "go" = (
 /turf/closed/wall/mineral/rogue/risvon/tshape/dir1,
 /area/rogue/indoors/risvonbasebar)
+"gp" = (
+/obj/effect/decal/cobbleedge{
+	pixel_y = -25;
+	dir = 10
+	},
+/obj/effect/decal/cobbleedge{
+	pixel_y = 0;
+	dir = 8;
+	pixel_x = -25
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/exposed/risvonbase)
 "gu" = (
 /obj/effect/loretile/funnyoutlet,
 /turf/open/floor/rogue/warmetal,
@@ -871,17 +839,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/risvonbase)
-"hI" = (
-/obj/effect/decal/cobbleedge{
-	pixel_y = 25;
-	dir = 1
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = 38;
-	dir = 5
-	},
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/exposed/risvonbase)
 "hK" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/fluff/railing/border/east,
@@ -918,12 +875,8 @@
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "hZ" = (
-/obj/structure/barbedwire{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/risvon)
+/turf/open/floor/rogue/dirt/ambush,
+/area/rogue/outdoors/exposed/risvonbase)
 "ic" = (
 /obj/structure/closet/crate/roguecloset/metal/prac{
 	pixel_x = 2
@@ -950,10 +903,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbasebar)
-"ig" = (
-/obj/structure/flora/newtree,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/exposed/risvonbase)
 "il" = (
 /obj/structure/table/wood/large_table/north_east,
 /obj/item/reagent_containers/peppermill,
@@ -987,6 +936,13 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/risvonbase)
+"iw" = (
+/obj/effect/decal/carpet/square{
+	dir = 4;
+	pixel_x = 27
+	},
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "iy" = (
 /obj/machinery/light/rogue/wallfire/candle/off{
 	pixel_y = -32
@@ -994,6 +950,10 @@
 /obj/effect/decal/cleanable/dirt/grime/dust,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/shelter/town/sargoth)
+"iz" = (
+/obj/structure/flora/roguegrass/bush/wall/tall,
+/turf/open/floor/rogue/grassred,
+/area/rogue/outdoors/exposed/risvonbase)
 "iB" = (
 /obj/structure/table/wood/perserdunsmall,
 /turf/open/floor/rogue/risvon,
@@ -1041,22 +1001,16 @@
 	},
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-"jb" = (
+"jf" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = 25;
-	dir = 5
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = 0;
 	dir = 1
 	},
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/exposed/risvonbase)
-"jf" = (
-/obj/structure/fluff/walldeco/ubk{
-	pixel_y = -32
+/obj/effect/decal/cobbleedge{
+	pixel_y = 38;
+	dir = 5
 	},
-/turf/open/floor/rogue/grassred,
+/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/exposed/risvonbase)
 "jg" = (
 /obj/structure/rack/rogue/shelf/biggest,
@@ -1228,6 +1182,16 @@
 	},
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors/risvonbase)
+"kt" = (
+/obj/machinery/light/rogue/firebowl/standing{
+	pixel_y = 1;
+	pixel_x = 21
+	},
+/obj/structure/fluff/walldeco/ubk{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/grassred,
+/area/rogue/outdoors/exposed/risvonbase)
 "kw" = (
 /obj/structure/fluff/pillow/red{
 	dir = 1;
@@ -1249,19 +1213,6 @@
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/cleanshallow,
 /area/rogue/outdoors/risvon)
-"kC" = (
-/obj/structure/table/wood/long_table/east,
-/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry{
-	pixel_y = 5
-	},
-/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry{
-	pixel_y = 5
-	},
-/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry{
-	pixel_y = 5
-	},
-/turf/open/floor/carpet/royalblack,
-/area/rogue/indoors/risvonbasebar)
 "kD" = (
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/rogue/indoors/risvonbase)
@@ -1287,11 +1238,8 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town/sargoth)
 "kR" = (
-/obj/effect/decal/carpet/square{
-	dir = 8;
-	pixel_x = 22
-	},
-/turf/open/floor/rogue/risvon,
+/obj/structure/chair/wood/rogue/throne,
+/turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "kW" = (
 /obj/structure/closet/crate/roguecloset/dark{
@@ -1355,8 +1303,11 @@
 /turf/closed/wall/mineral/rogue/scary/end/east,
 /area/rogue/under/cave/warmachine)
 "lJ" = (
-/obj/structure/flora/newtree,
-/turf/open/floor/rogue/grassred,
+/obj/structure/fluff/walldeco/commandant{
+	pixel_y = 0;
+	pixel_x = 32
+	},
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/exposed/risvonbase)
 "lL" = (
 /obj/structure/table/wood/long_table/mid,
@@ -1371,14 +1322,6 @@
 	},
 /turf/open/water/cleanshallow,
 /area/rogue/outdoors/risvon)
-"lO" = (
-/obj/structure/chair/wood/rogue/chair4{
-	dir = 4
-	},
-/obj/effect/landmark/start/commandant,
-/obj/effect/landmark/start/commandantlate,
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/risvonbasebar)
 "lQ" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/carpet/royalblack,
@@ -1478,10 +1421,6 @@
 /mob/living/simple_animal/hostile/rogue/robot/gunner/shotgun,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-"mS" = (
-/obj/structure/fluff/statue/tdummy,
-/turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/exposed/risvonbase)
 "mU" = (
 /obj/structure/chair/bench/church/smallbench,
 /obj/effect/decal/cleanable/dirt/grime/dust,
@@ -1525,13 +1464,6 @@
 /turf/closed/wall/mineral/rogue/risvon/end/west{
 	dir = 2
 	},
-/area/rogue/indoors/risvonbase)
-"nl" = (
-/obj/machinery/light/rogue/firebowl/standing{
-	pixel_y = 1;
-	pixel_x = -21
-	},
-/turf/closed/wall/mineral/rogue/risvon/long,
 /area/rogue/indoors/risvonbase)
 "nm" = (
 /turf/open/water/bath/pool{
@@ -1584,10 +1516,20 @@
 /obj/structure/fluff/wallclock,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbasebar)
+"nJ" = (
+/obj/structure/fluff/walldeco/ubk{
+	pixel_y = 33
+	},
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/risvonbase)
 "nM" = (
 /obj/structure/table/wood/long_table/mid/alt,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town/sargoth)
+"nR" = (
+/obj/structure/flora/newtree,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/exposed/risvonbase)
 "nW" = (
 /turf/closed/mineral/rogue,
 /area/rogue/outdoors/risvon)
@@ -1695,6 +1637,17 @@
 /obj/structure/bed/rogue/bedroll,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
+"oB" = (
+/obj/effect/decal/cobbleedge{
+	pixel_y = -25;
+	dir = 10
+	},
+/obj/effect/decal/cobbleedge{
+	pixel_y = 5;
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/exposed/risvonbase)
 "oC" = (
 /obj/structure/fluff/nest,
 /obj/structure/bed/rogue/bedroll{
@@ -1725,6 +1678,14 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
+"oO" = (
+/obj/structure/fluff/pillow/red{
+	pixel_y = 4;
+	pixel_x = -7;
+	dir = 1
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/risvonbasebar)
 "oR" = (
 /obj/structure/fluff/railing/border/north{
 	dir = 2;
@@ -1762,13 +1723,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-"pe" = (
-/obj/structure/fluff/walldeco/commandant{
-	pixel_y = 0;
-	pixel_x = 32
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/exposed/risvonbase)
 "ph" = (
 /obj/structure/flora/rock/pile/largejungle{
 	pixel_y = 0;
@@ -1873,14 +1827,25 @@
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "qb" = (
-/obj/structure/bookcase,
-/obj/item/book/rogue/regulationszig,
-/obj/item/book/rogue/regulationszig,
-/obj/item/book/rogue/regulationszig,
-/obj/item/book/rogue/regulationszig,
-/obj/item/book/rogue/regulationszig,
-/turf/open/floor/carpet/royalblack,
-/area/rogue/indoors/risvonbase)
+/obj/effect/decal/cobbleedge{
+	pixel_y = -25;
+	dir = 10
+	},
+/obj/effect/decal/cobbleedge{
+	pixel_y = 5;
+	dir = 1
+	},
+/obj/effect/decal/cobbleedge{
+	pixel_y = 31;
+	dir = 1
+	},
+/obj/effect/decal/cobbleedge{
+	pixel_y = 37;
+	dir = 9;
+	pixel_x = -31
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/exposed/risvonbase)
 "qd" = (
 /obj/structure/fluff/walldeco/ubk{
 	pixel_y = 33
@@ -1906,6 +1871,12 @@
 /obj/structure/fluff/walldeco/innsign,
 /turf/closed/wall/mineral/rogue/risvon/long,
 /area/rogue/indoors/risvonbase)
+"qn" = (
+/obj/structure/fluff/railing/border/north{
+	dir = 2
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/risvonbase)
 "qp" = (
 /obj/structure/rack/rogue/shelf{
 	pixel_y = 0;
@@ -1916,20 +1887,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-"qr" = (
-/obj/structure/table/wood/long_table/mid,
-/obj/item/rogueweapon/knuckles{
-	desc = "Enforce the Ziggurate's will.";
-	name = "discipline";
-	pixel_y = 3;
-	pixel_x = -1
-	},
-/obj/effect/decal/carpet{
-	dir = 8;
-	pixel_x = -19
-	},
-/turf/open/floor/carpet/royalblack,
-/area/rogue/indoors/risvonbasebar)
 "qt" = (
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /obj/item/reagent_containers/food/snacks/grown/wheat,
@@ -1988,11 +1945,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/risvon)
-"qL" = (
-/turf/closed/wall/mineral/rogue/risvon/outercorner/dir1{
-	dir = 2
-	},
-/area/rogue/outdoors/exposed/risvonbase)
 "qO" = (
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/risvon,
@@ -2019,11 +1971,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-"qU" = (
-/turf/closed/wall/mineral/rogue/risvon/tshape{
-	dir = 8
-	},
-/area/rogue/indoors/risvonbasebar)
 "qV" = (
 /obj/machinery/light/rogue/wallfire{
 	pixel_y = 33
@@ -2218,12 +2165,6 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
-"sh" = (
-/obj/structure/fluff/walldeco/ubk{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/exposed/risvonbase)
 "sj" = (
 /obj/structure/chair/bench/couchablack,
 /turf/open/floor/carpet/red,
@@ -2317,36 +2258,10 @@
 /obj/structure/bars,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-"sC" = (
-/obj/effect/decal/cobbleedge{
-	pixel_y = -25;
-	dir = 10
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = 5;
-	dir = 1
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = 31;
-	dir = 1
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = 37;
-	dir = 9;
-	pixel_x = -31
-	},
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/exposed/risvonbase)
 "sG" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/risvon)
-"sK" = (
-/obj/structure/fluff/walldeco/ugly{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/risvonbase)
 "sN" = (
 /obj/structure/chair/wood/rogue/chair3{
 	dir = 8
@@ -2376,10 +2291,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/risvonbase)
-"tj" = (
-/obj/structure/flora/newtree,
-/turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/exposed/risvonbase)
 "tq" = (
 /obj/structure/mannequin/male{
 	layer = 5;
@@ -2428,6 +2339,10 @@
 /obj/structure/rack/rogue/shelf/biggest,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
+"ts" = (
+/obj/structure/flora/newtree,
+/turf/open/floor/rogue/grassred,
+/area/rogue/outdoors/exposed/risvonbase)
 "tt" = (
 /obj/structure/fluff/walldeco/med6{
 	pixel_y = 1;
@@ -2513,6 +2428,16 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbasebar)
+"uq" = (
+/obj/structure/fluff/walldeco/ubk{
+	pixel_y = 33
+	},
+/obj/effect/decal/cobbleedge{
+	pixel_y = -25;
+	dir = 10
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/exposed/risvonbase)
 "uw" = (
 /obj/structure/spider/stickyweb/mirespider,
 /obj/effect/spawner/lootdrop/normalguns,
@@ -2680,11 +2605,6 @@
 	},
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors/risvonbase)
-"wf" = (
-/turf/closed/wall/mineral/rogue/risvon/tshape/dir4{
-	dir = 8
-	},
-/area/rogue/indoors/risvonbase)
 "wn" = (
 /obj/structure/table/optable,
 /obj/structure/roguemachine/goldface/public/organmachine{
@@ -2787,19 +2707,13 @@
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "xh" = (
-/turf/open/floor/rogue/dirt/ambush,
+/obj/structure/fluff/statue/tdummy,
+/turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/exposed/risvonbase)
 "xj" = (
 /obj/structure/chair/bench/church/smallbench,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-"xm" = (
-/obj/effect/decal/cobbleedge{
-	pixel_y = 25;
-	dir = 5
-	},
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/exposed/risvonbase)
 "xn" = (
 /obj/machinery/light/rogue/wallfire/candle/floorcandle/pink{
 	pixel_y = -9
@@ -2932,6 +2846,10 @@
 "yp" = (
 /turf/open/floor/rogue/greenstone/glyph1,
 /area/rogue/indoors/shelter/town/sargoth)
+"yr" = (
+/obj/structure/flora/newtree,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/exposed/risvonbase)
 "yu" = (
 /obj/structure/fluff/railing/sandbag{
 	dir = 8;
@@ -3048,12 +2966,16 @@
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "zp" = (
-/obj/structure/mineral_door/wood/wardoor{
-	lockid = "risvontag";
-	name = "STORAGE"
+/obj/effect/decal/cobbleedge{
+	pixel_y = 25;
+	dir = 5
 	},
-/turf/open/floor/rogue/med,
-/area/rogue/indoors/risvonbase)
+/obj/effect/decal/cobbleedge{
+	pixel_y = 0;
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/exposed/risvonbase)
 "zv" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
@@ -3089,17 +3011,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-"zH" = (
-/obj/effect/decal/cobbleedge{
-	pixel_y = -25;
-	dir = 10
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = 25;
-	dir = 5
-	},
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/exposed/risvonbase)
 "zJ" = (
 /obj/structure/flora/rock/pile/largejungle{
 	pixel_y = 0;
@@ -3113,24 +3024,6 @@
 	},
 /turf/open/water/cleanshallow,
 /area/rogue/outdoors/exposed/risvonbase)
-"zK" = (
-/obj/structure/rack/rogue/shelf/biggest,
-/obj/item/storage/belt/rogue/pouch/ammobag{
-	pixel_y = 11;
-	pixel_x = 7
-	},
-/obj/item/storage/belt/rogue/pouch/ammobag{
-	pixel_y = 11;
-	pixel_x = -7
-	},
-/obj/item/storage/belt/rogue/pouch/ammobag{
-	pixel_y = -7
-	},
-/obj/effect/decal/carpet/square{
-	dir = 8
-	},
-/turf/open/floor/rogue/risvon,
-/area/rogue/indoors/risvonbase)
 "zM" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = 7;
@@ -3139,6 +3032,11 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/exposed/risvonbase)
+"zR" = (
+/obj/machinery/light/rogue/wallfire/candle/weak/r,
+/obj/machinery/light/rogue/wallfire/candle/l,
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "zW" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = 0;
@@ -3169,6 +3067,12 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/risvon)
+"Ao" = (
+/obj/structure/fluff/walldeco/ugly{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/risvonbase)
 "Aq" = (
 /obj/effect/decal/cleanable/dirt/grime/grime4,
 /turf/open/floor/rogue/warmetal,
@@ -3236,9 +3140,12 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/risvon)
 "AX" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/exposed/risvonbase)
+/obj/structure/barbedwire{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/risvon)
 "AY" = (
 /obj/item/roguecoin/silver/pile,
 /obj/machinery/light/rogue/wallfire/candle/blue,
@@ -3304,6 +3211,20 @@
 	},
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/exposed/risvonbase)
+"BG" = (
+/obj/structure/table/wood/long_table/mid,
+/obj/item/rogueweapon/knuckles{
+	desc = "Enforce the Ziggurate's will.";
+	name = "discipline";
+	pixel_y = 3;
+	pixel_x = -1
+	},
+/obj/effect/decal/carpet{
+	dir = 8;
+	pixel_x = -19
+	},
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/risvonbasebar)
 "BI" = (
 /obj/structure/table/wood/poor,
 /obj/item/tablecloth/silk{
@@ -3324,6 +3245,24 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town/sargoth)
+"BO" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/storage/belt/rogue/pouch/ammobag{
+	pixel_y = 11;
+	pixel_x = 7
+	},
+/obj/item/storage/belt/rogue/pouch/ammobag{
+	pixel_y = 11;
+	pixel_x = -7
+	},
+/obj/item/storage/belt/rogue/pouch/ammobag{
+	pixel_y = -7
+	},
+/obj/effect/decal/carpet/square{
+	dir = 8
+	},
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "BQ" = (
 /obj/structure/table/wood/poor,
 /obj/machinery/light/rogue/torchholder/r,
@@ -3408,6 +3347,13 @@
 /obj/effect/decal/cleanable/vomit/old,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
+"CG" = (
+/obj/effect/decal/cobbleedge{
+	pixel_y = -25;
+	dir = 10
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/exposed/risvonbase)
 "CH" = (
 /obj/structure/mirror,
 /turf/open/floor/rogue/risvon,
@@ -3417,6 +3363,12 @@
 /area/rogue/indoors/shelter/town/sargoth)
 "CS" = (
 /turf/closed/wall/mineral/rogue/risvon/end/east,
+/area/rogue/indoors/risvonbase)
+"CT" = (
+/obj/machinery/light/rogue/wallfire/candle/weak{
+	pixel_y = -32
+	},
+/turf/closed/wall/mineral/rogue/risvon/outercorner/dir8,
 /area/rogue/indoors/risvonbase)
 "CU" = (
 /obj/structure/table/optable,
@@ -3586,21 +3538,25 @@
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/risvon)
 "Dt" = (
-/obj/machinery/light/rogue/firebowl/standing{
-	pixel_y = 1;
-	pixel_x = 21
+/obj/effect/decal/carpet/square{
+	dir = 8;
+	pixel_x = 22
 	},
-/obj/structure/fluff/walldeco/ubk{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/exposed/risvonbase)
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "Dw" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
+"Dz" = (
+/obj/machinery/light/rogue/firebowl/standing{
+	pixel_y = 1;
+	pixel_x = -21
+	},
+/turf/closed/wall/mineral/rogue/risvon/long,
 /area/rogue/indoors/risvonbase)
 "DA" = (
 /obj/structure/fluff/railing/wood/north{
@@ -3703,6 +3659,11 @@
 	},
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/risvon)
+"Ei" = (
+/turf/closed/wall/mineral/rogue/risvon/outercorner/dir1{
+	dir = 2
+	},
+/area/rogue/outdoors/exposed/risvonbase)
 "Ek" = (
 /obj/structure/fluff/railing/border/west{
 	pixel_x = -5
@@ -3758,11 +3719,11 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors/risvonbase)
 "ES" = (
-/obj/machinery/light/rogue/wallfire/candle/weak{
+/obj/structure/fluff/walldeco/ubk{
 	pixel_y = -32
 	},
-/turf/closed/wall/mineral/rogue/risvon/outercorner/dir8,
-/area/rogue/indoors/risvonbase)
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/exposed/risvonbase)
 "EU" = (
 /obj/structure/fluff/railing/border/west{
 	pixel_x = -7
@@ -3817,17 +3778,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/indoors/risvonbase)
-"Fq" = (
-/obj/effect/decal/cobbleedge{
-	pixel_y = -25;
-	dir = 10
-	},
-/obj/effect/decal/cobbleedge{
-	pixel_y = 5;
-	dir = 1
-	},
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/exposed/risvonbase)
 "Fv" = (
 /obj/structure/table/wood/perserdunsmall,
 /obj/item/storage/belt/rogue/surgery_bag/full{
@@ -3893,19 +3843,14 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/risvon)
 "FM" = (
-/obj/machinery/light/rogue/firebowl/standing{
-	pixel_y = 1;
-	pixel_x = -21
-	},
-/turf/closed/wall/mineral/rogue/risvon/long/east_west,
+/obj/structure/bookcase,
+/obj/item/book/rogue/regulationszig,
+/obj/item/book/rogue/regulationszig,
+/obj/item/book/rogue/regulationszig,
+/obj/item/book/rogue/regulationszig,
+/obj/item/book/rogue/regulationszig,
+/turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
-"FN" = (
-/obj/effect/decal/cobbleedge{
-	pixel_y = -25;
-	dir = 10
-	},
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/exposed/risvonbase)
 "FO" = (
 /obj/structure/fluff/railing/border/east{
 	dir = 5
@@ -4040,11 +3985,15 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/risvon)
 "Hj" = (
+/obj/structure/barbedwire,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/risvon)
+"Hm" = (
 /obj/machinery/light/rogue/firebowl/standing{
-	pixel_y = -13;
-	pixel_x = 21
+	pixel_y = 1;
+	pixel_x = 1
 	},
-/turf/open/floor/rogue/dirt/ambush,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/exposed/risvonbase)
 "Hp" = (
 /obj/item/ammo_casing/a22lr{
@@ -4253,9 +4202,13 @@
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "IT" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
-/turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/exposed/risvonbase)
+/obj/effect/decal/remains/bear{
+	pixel_y = -3;
+	pixel_x = 9;
+	name = "trophy"
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/risvonbasebar)
 "IV" = (
 /obj/structure/closet/crate/roguecloset/dark{
 	pixel_x = 3
@@ -4311,9 +4264,12 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/under/cave/warmachine)
 "Jm" = (
-/obj/structure/barbedwire,
-/turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/risvon)
+/obj/structure/mineral_door/wood/wardoor{
+	lockid = "risvontag";
+	name = "STORAGE"
+	},
+/turf/open/floor/rogue/med,
+/area/rogue/indoors/risvonbase)
 "Jn" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/flora/rogueflora/poppy{
@@ -4346,6 +4302,14 @@
 	},
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/rogue/indoors/risvonbase)
+"Jt" = (
+/obj/effect/decal/remains/wolf{
+	pixel_y = 16;
+	name = "sleeping dog";
+	desc = "Best to let him lie."
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/risvonbasebar)
 "Ju" = (
 /obj/structure/closet/crate/roguecloset/metal/prac{
 	pixel_x = 2
@@ -4384,14 +4348,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-"Jy" = (
-/obj/structure/fluff/pillow/red{
-	pixel_y = 4;
-	pixel_x = -7;
-	dir = 1
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/risvonbasebar)
 "Jz" = (
 /obj/structure/table/wood/large_table/middle_east,
 /obj/item/reagent_containers/food/snacks/rogue/meat/salami,
@@ -4772,6 +4728,12 @@
 /obj/structure/flora/roguegrass/maneater,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/risvon)
+"Mw" = (
+/obj/structure/fluff/walldeco/commandant{
+	pixel_x = 31
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/risvonbasebar)
 "Mx" = (
 /obj/structure/rack/rogue,
 /obj/item/natural/bundle/cloth,
@@ -4806,6 +4768,19 @@
 /obj/item/natural/bone,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/risvon)
+"ML" = (
+/obj/structure/table/wood/long_table/east,
+/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry{
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry{
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry{
+	pixel_y = 5
+	},
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/risvonbasebar)
 "MM" = (
 /obj/structure/closet/crate/drawer/random{
 	pixel_y = 0
@@ -4933,10 +4908,6 @@
 	dir = 2
 	},
 /area/rogue/indoors/risvonbase)
-"OE" = (
-/obj/structure/bed/rogue/bedroll,
-/turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/exposed/risvonbase)
 "OF" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/sandbag{
@@ -4962,13 +4933,6 @@
 "OM" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/risvonbase)
-"ON" = (
-/obj/machinery/light/rogue/firebowl/standing{
-	pixel_y = 1;
-	pixel_x = 1
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/exposed/risvonbase)
 "OP" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
@@ -5271,6 +5235,17 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/risvon)
+"QS" = (
+/obj/effect/decal/cobbleedge{
+	pixel_y = -25;
+	dir = 10
+	},
+/obj/effect/decal/cobbleedge{
+	pixel_y = 25;
+	dir = 5
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/exposed/risvonbase)
 "QU" = (
 /obj/structure/mineral_door/wood/wardoor,
 /obj/structure/bars/passage/shutter{
@@ -5368,6 +5343,11 @@
 	},
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/indoors/risvonbase)
+"RC" = (
+/turf/closed/wall/mineral/rogue/risvon/tshape{
+	dir = 8
+	},
+/area/rogue/indoors/risvonbasebar)
 "RE" = (
 /obj/structure/mineral_door/wood/wardoor,
 /obj/structure/spider/stickyweb/solo,
@@ -5471,6 +5451,12 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
+"SB" = (
+/obj/structure/fluff/walldeco/ubk{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/grassred,
+/area/rogue/outdoors/exposed/risvonbase)
 "SC" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire"
@@ -5714,6 +5700,13 @@
 /obj/item/natural/glass_shard,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/shelter/town/sargoth)
+"UU" = (
+/obj/machinery/light/rogue/firebowl/standing{
+	pixel_y = -13;
+	pixel_x = 21
+	},
+/turf/open/floor/rogue/dirt/ambush,
+/area/rogue/outdoors/exposed/risvonbase)
 "UY" = (
 /obj/structure/closet/crate/roguecloset/dark{
 	pixel_y = 0;
@@ -5747,6 +5740,12 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbasebar)
+"Vo" = (
+/obj/structure/fluff/railing/border{
+	dir = 6
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/risvonbase)
 "Vq" = (
 /obj/structure/roguewindow/openclose{
 	dir = 1
@@ -5857,6 +5856,21 @@
 	dir = 1
 	},
 /area/rogue/indoors/risvonbase)
+"Wf" = (
+/obj/structure/chair/wood/rogue/chair4{
+	dir = 4
+	},
+/obj/effect/landmark/start/commandant,
+/obj/effect/landmark/start/commandantlate,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/risvonbasebar)
+"Wg" = (
+/obj/machinery/light/rogue/firebowl/standing{
+	pixel_y = -12;
+	pixel_x = 21
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/exposed/risvonbase)
 "Wi" = (
 /turf/closed/wall/mineral/rogue/risvon/outercorner/dir1{
 	dir = 8
@@ -5894,13 +5908,6 @@
 "Wu" = (
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/shelter/town/sargoth)
-"Wv" = (
-/obj/machinery/light/rogue/firebowl/standing{
-	pixel_y = -12;
-	pixel_x = 21
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/exposed/risvonbase)
 "WB" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/cobble,
@@ -5925,12 +5932,6 @@
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town/sargoth)
-"WT" = (
-/obj/structure/fluff/walldeco/commandant{
-	pixel_x = 31
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/risvonbasebar)
 "WW" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/reagent_containers/glass/bowl{
@@ -6028,6 +6029,10 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/risvonbase)
+"Xx" = (
+/obj/structure/bed/rogue/bedroll,
+/turf/open/floor/rogue/grassred,
+/area/rogue/outdoors/exposed/risvonbase)
 "Xy" = (
 /obj/structure/flora/roguegrass/water,
 /turf/open/floor/rogue/dirt,
@@ -6094,6 +6099,13 @@
 	},
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors/risvonbase)
+"XP" = (
+/obj/effect/decal/cobbleedge{
+	pixel_y = 25;
+	dir = 5
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/exposed/risvonbase)
 "XQ" = (
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/water/cleanshallow,
@@ -6261,6 +6273,10 @@
 /obj/effect/decal/cleanable/dirt/grime/grime2,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
+"ZN" = (
+/obj/structure/flora/roguegrass/bush/wall/tall,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/exposed/risvonbase)
 "ZO" = (
 /obj/structure/chair/bench/couchablack/r,
 /obj/structure/mannequin/male{
@@ -6956,7 +6972,7 @@ rg
 RJ
 RJ
 YL
-zp
+Jm
 qC
 hN
 Tx
@@ -7350,7 +7366,7 @@ Xv
 Bb
 qZ
 Tx
-xh
+hZ
 rc
 vW
 rc
@@ -7480,10 +7496,10 @@ rg
 be
 Fv
 Tx
-OE
-xh
-IT
-AX
+Xx
+hZ
+iz
+ZN
 Qv
 vW
 KF
@@ -7498,7 +7514,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 cn
 nW
 nW
@@ -7628,7 +7644,7 @@ Tx
 fn
 fn
 dd
-Jm
+Hj
 cn
 cn
 cn
@@ -7758,7 +7774,7 @@ Tx
 qd
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -7861,19 +7877,19 @@ GH
 Kh
 Kh
 Tx
-Hj
+UU
 rc
 vW
 fz
 vW
-IT
-IT
-IT
-IT
-IT
-IT
-IT
-AX
+iz
+iz
+iz
+iz
+iz
+iz
+iz
+ZN
 rc
 vW
 fz
@@ -7888,7 +7904,7 @@ Tx
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -7997,7 +8013,7 @@ vW
 fz
 vW
 UC
-xh
+hZ
 rc
 rc
 rc
@@ -8018,7 +8034,7 @@ Tx
 Id
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -8148,7 +8164,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -8278,7 +8294,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -8408,7 +8424,7 @@ Tx
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -8538,7 +8554,7 @@ Tx
 qd
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -8642,18 +8658,18 @@ Kh
 wo
 Tx
 rc
-xh
-IT
-AX
-IT
-AX
-AX
-IT
-IT
-AX
-IT
-IT
-IT
+hZ
+iz
+ZN
+iz
+ZN
+ZN
+iz
+iz
+ZN
+iz
+iz
+iz
 rc
 vW
 fz
@@ -8668,7 +8684,7 @@ IW
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -8798,7 +8814,7 @@ Xv
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -8904,7 +8920,7 @@ rc
 rc
 rc
 rc
-xh
+hZ
 rc
 rc
 rc
@@ -8928,7 +8944,7 @@ Kl
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -9030,9 +9046,9 @@ rc
 rc
 rc
 rc
-xh
+hZ
 rc
-xh
+hZ
 rc
 rc
 rc
@@ -9058,7 +9074,7 @@ Xh
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -9164,7 +9180,7 @@ rc
 rc
 rc
 rc
-lJ
+ts
 vW
 vW
 My
@@ -9188,7 +9204,7 @@ Xh
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -9318,7 +9334,7 @@ Xh
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -9421,7 +9437,7 @@ Sd
 Sd
 NE
 rc
-xh
+hZ
 rc
 vW
 vW
@@ -9448,7 +9464,7 @@ Bs
 qd
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -9550,7 +9566,7 @@ Hx
 Sd
 pU
 Vy
-bU
+uq
 vW
 rc
 vW
@@ -9563,7 +9579,7 @@ eU
 eU
 My
 vW
-lJ
+ts
 rc
 vW
 fz
@@ -9680,8 +9696,8 @@ Hx
 Sd
 pU
 Ci
-dk
-FN
+gp
+CG
 vW
 My
 eU
@@ -9811,8 +9827,8 @@ Sd
 pU
 YR
 iM
-sC
-FN
+qb
+CG
 vW
 My
 eU
@@ -9941,9 +9957,9 @@ Jp
 Sd
 Vy
 vW
-jb
-Fq
-FN
+zp
+oB
+CG
 My
 eU
 eU
@@ -9968,7 +9984,7 @@ Bs
 qd
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -10072,7 +10088,7 @@ um
 gY
 rc
 vW
-jb
+zp
 Mi
 Mi
 My
@@ -10082,7 +10098,7 @@ Pe
 Pe
 My
 vW
-lJ
+ts
 rc
 rc
 vW
@@ -10098,7 +10114,7 @@ Xh
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -10203,7 +10219,7 @@ cT
 rc
 rc
 My
-zH
+QS
 Mi
 pR
 My
@@ -10228,7 +10244,7 @@ Xh
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -10334,7 +10350,7 @@ rc
 rc
 rc
 Mi
-FN
+CG
 vW
 vW
 vW
@@ -10358,7 +10374,7 @@ Xh
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -10464,7 +10480,7 @@ rc
 BA
 rc
 vW
-xm
+XP
 Mi
 rc
 Iq
@@ -10488,7 +10504,7 @@ Xh
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -10590,7 +10606,7 @@ Sd
 Sd
 xB
 cT
-xh
+hZ
 rc
 rc
 rc
@@ -10618,7 +10634,7 @@ CS
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -10725,7 +10741,7 @@ rc
 rc
 rc
 vW
-hI
+jf
 OZ
 FD
 TV
@@ -10748,7 +10764,7 @@ IW
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -10852,7 +10868,7 @@ Sd
 gY
 rc
 rc
-mS
+xh
 rc
 vW
 cH
@@ -10878,7 +10894,7 @@ Tx
 qd
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -10982,7 +10998,7 @@ um
 YR
 rc
 rc
-xh
+hZ
 rc
 vW
 fz
@@ -11008,7 +11024,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -11112,7 +11128,7 @@ Pu
 jl
 rc
 rc
-mS
+xh
 rc
 vW
 fz
@@ -11138,7 +11154,7 @@ Tx
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -11249,9 +11265,9 @@ fz
 vW
 rc
 rc
-ig
+nR
 rc
-jf
+SB
 Tx
 bu
 yR
@@ -11268,7 +11284,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -11372,11 +11388,11 @@ My
 rc
 rc
 My
-mS
+xh
 rc
 vW
 fz
-Wv
+Wg
 rc
 rc
 rc
@@ -11398,7 +11414,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -11511,7 +11527,7 @@ rc
 rc
 rc
 rc
-Dt
+kt
 Tx
 xC
 Yk
@@ -11528,7 +11544,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -11658,7 +11674,7 @@ IW
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -11788,7 +11804,7 @@ IW
 qd
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -11918,7 +11934,7 @@ Tx
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -12031,7 +12047,7 @@ rc
 My
 rc
 rc
-jf
+SB
 Tx
 xC
 Yk
@@ -12048,7 +12064,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -12178,7 +12194,7 @@ Tx
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -12291,7 +12307,7 @@ rc
 My
 rc
 rc
-sh
+ES
 Tx
 bu
 yR
@@ -12308,7 +12324,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -12416,10 +12432,10 @@ Tx
 rc
 vW
 FR
-ON
+Hm
 rc
 rc
-tj
+yr
 rc
 rc
 Tx
@@ -12438,7 +12454,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -12544,9 +12560,9 @@ xK
 Bf
 Tx
 rc
-pe
+lJ
 Pn
-pe
+lJ
 rc
 rc
 rc
@@ -12568,7 +12584,7 @@ Tx
 fn
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -12682,7 +12698,7 @@ HB
 HB
 Lx
 HB
-wf
+cj
 HB
 HB
 Lx
@@ -12698,7 +12714,7 @@ IW
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -12802,14 +12818,14 @@ xK
 ab
 xK
 oC
-FM
+dJ
 OT
 xK
 xK
 uF
 qS
 uF
-zK
+BO
 Tx
 EB
 Qw
@@ -12828,7 +12844,7 @@ tU
 qd
 fn
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -12937,9 +12953,9 @@ oJ
 xK
 xK
 xK
-kR
+Dt
 xK
-kR
+Dt
 Tx
 XO
 Qw
@@ -12958,7 +12974,7 @@ fn
 fn
 fn
 dd
-Jm
+Hj
 Ba
 Ba
 Ba
@@ -13088,7 +13104,7 @@ fn
 fn
 dd
 dd
-hZ
+AX
 Ba
 Ba
 Ba
@@ -13218,7 +13234,7 @@ fn
 nW
 dd
 cn
-hZ
+AX
 Ba
 Ba
 Ba
@@ -13327,7 +13343,7 @@ oJ
 xK
 xK
 at
-cX
+iw
 KM
 xK
 Tx
@@ -13593,7 +13609,7 @@ HB
 HB
 HB
 HB
-nl
+Dz
 HB
 tU
 nW
@@ -27766,7 +27782,7 @@ za
 NE
 Ql
 KQ
-lO
+Wf
 lB
 GJ
 NE
@@ -27896,8 +27912,8 @@ za
 NE
 cG
 TG
-qr
-kC
+BG
+ML
 aE
 Vy
 lu
@@ -28160,9 +28176,9 @@ GB
 SH
 ue
 YR
-dG
+nJ
 Io
-sf
+Vo
 QL
 Eq
 Tx
@@ -28290,9 +28306,9 @@ Tu
 SH
 sr
 NE
-YP
+kR
 gP
-na
+qn
 ot
 op
 Tx
@@ -28414,9 +28430,9 @@ za
 za
 za
 xW
-eG
+IT
 SH
-Jy
+oO
 SH
 Le
 gC
@@ -28545,16 +28561,16 @@ za
 za
 YR
 dl
-dK
+Jt
 Ih
-WT
+Mw
 Le
 NE
 Aw
 Ev
 dQ
 eP
-qb
+FM
 Tx
 Lo
 Lo
@@ -28672,8 +28688,8 @@ za
 za
 za
 za
-qL
-qU
+Ei
+RC
 Pu
 Pu
 Pu
@@ -28684,7 +28700,7 @@ Ev
 rI
 Eq
 Eq
-qb
+FM
 Tx
 Lo
 Lo
@@ -28814,7 +28830,7 @@ Eq
 Eq
 Eq
 Eq
-sK
+Ao
 Xv
 Lo
 Lo
@@ -30733,10 +30749,10 @@ jR
 (61,1,2) = {"
 Ic
 xK
-ez
+zR
 xK
 xK
-ez
+zR
 xK
 xK
 hO
@@ -30744,7 +30760,7 @@ xK
 xK
 vD
 xK
-ez
+zR
 xK
 xK
 Mh
@@ -30755,7 +30771,7 @@ Yk
 Jd
 ka
 Yk
-fV
+aA
 Tx
 nW
 nW
@@ -31276,7 +31292,7 @@ ql
 HB
 HB
 HB
-ES
+CT
 Lo
 Lo
 Lo
