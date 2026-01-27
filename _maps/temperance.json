@@ -1,8 +1,11 @@
 {
     "map_name": "Temperance",
     "map_path": "map_files/temperance",
-    "map_file": "risvon.dmm",
-	"traits": [{"Up": true}, {"Up": true, "Down": true}],
+    "map_file": ["risvon.dmm",
+	"perserdun.dmm"
+	],
+	"traits": [{"Name": "risvon", "Up": true}, {"Up": true, "Down": true},
+	{"Name": "perserdun", "Up": true}, {"Up": true, "Down": true}],
 	"minetype": null,
 	"space_empty_levels": 0,
 	"space_ruin_levels": 0,

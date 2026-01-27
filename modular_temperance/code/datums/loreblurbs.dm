@@ -68,9 +68,17 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 	Dead masses float around in the fetid blood in various states of decay. Even the skull of a hound or some other small mammal occasionally surfaces to greet your sight."
 
 /datum/loreblurb/outpostxiphos
-	title = "Outpost Xiphos"
+	title = "Outpost Julius"
 	description = "Cold and oppressive. This outpost was built ontop of conquered land. \n\
 	Without a gas mask, the faint smell of copper coats the concrete walls mixed with the soft crackling of blue candles. \n\
 	The Perserdunians etched out this outpost a few months ago, after an intense offensive campaign shattered both the land and the bandits that once terrorized this region. \n\
-	Peace follows our Venerable Master."
+	Peace follows our Glorified Empire."
+	sound = 'sound/loredump/lore_sting2.ogg'
+
+/datum/loreblurb/artillerysector
+	title = "AS-Y14"
+	description = "Artillery Sector Yield-14. \n\
+	Considered to be the backline of Perserdun's presence within the area. \n\
+	A typical round-trip takes about 30 minutes on foot through the trenches behind the Outpost.\n\
+	AS-Y14 houses the second half of Outfit Delta, and transfers between Julius and Y14 regularly happen."
 	sound = 'sound/loredump/lore_sting2.ogg'

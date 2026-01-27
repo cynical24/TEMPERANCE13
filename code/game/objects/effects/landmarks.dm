@@ -125,12 +125,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Mercenary")
 	delete_after_roundstart = FALSE
 
-/obj/effect/landmark/start/villagerlate
-	name = "Townerlate"
-	icon_state = "arrow"
-	jobspawn_override = list("Towner")
-	delete_after_roundstart = FALSE
-
 /obj/effect/landmark/start/lord
 	name = "Grand Duke"
 	icon_state = "arrow"
@@ -442,85 +436,215 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Grandmaster"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/grandmasterlate
+	name = "Grandmaster"
+	icon_state = "arrow"
+	jobspawn_override = list("Grandmaster")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/grandknight
 	name = "Grand Knight"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/grandknightlate
+	name = "Grand Knight"
+	icon_state = "arrow"
+	jobspawn_override = list("Grand Knight")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/knightcommander
 	name = "Knight Commander"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/knightcommanderlate
+	name = "Knight Commander"
+	icon_state = "arrow"
+	jobspawn_override = list("Knight Commander")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/armsman
 	name = "Armsman"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/armsmanlate
+	name = "Armsman"
+	icon_state = "arrow"
+	jobspawn_override = list("Armsman")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/auxiliarist
 	name = "Auxiliarist"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/auxiliaristlate
+	name = "Auxiliarist"
+	icon_state = "arrow"
+	jobspawn_override = list("Auxiliarist")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/chirurgeon
 	name = "Chirurgeon"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/chirurgeonlate
+	name = "Chirurgeon"
+	icon_state = "arrow"
+	jobspawn_override = list("Chirurgeon")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/partisan
 	name = "Partisan"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/partisanlate
+	name = "Partisan"
+	icon_state = "arrow"
+	jobspawn_override = list("Partisan")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/envoy
 	name = "Envoy"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/envoylate
+	name = "Envoy"
+	icon_state = "arrow"
+	jobspawn_override = list("Envoy")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/commandant
 	name = "Commandant"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/commandantlate
+	name = "Commandant"
+	icon_state = "arrow"
+	jobspawn_override = list("Commandant")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/oficiro
 	name = "Oficiro"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/oficirolate
+	name = "Oficiro"
+	icon_state = "arrow"
+	jobspawn_override = list("Oficiro")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/veterano
 	name = "Veterano"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/veteranolate
+	name = "Veterano"
+	icon_state = "arrow"
+	jobspawn_override = list("Veterano")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/soldato
 	name = "Soldato"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/soldatolate
+	name = "Soldato"
+	icon_state = "arrow"
+	jobspawn_override = list("Soldato")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/servisto
 	name = "Servisto"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/servistolate
+	name = "Servisto"
+	icon_state = "arrow"
+	jobspawn_override = list("Servisto")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/curacisto
 	name = "Curacisto"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/curacistolate
+	name = "Curacisto"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/curacistolate
+	name = "Curacisto"
+	icon_state = "arrow"
+	jobspawn_override = list("Curacisto")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/campfollower
 	name = "Camp Follower"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/campfollowerlate
+	name = "Camp Follower"
+	icon_state = "arrow"
+	jobspawn_override = list("Camp Follower")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/consulo
 	name = "Consulo"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/consulolate
+	name = "Consulo"
+	icon_state = "arrow"
+	jobspawn_override = list("Consulo")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/hierarch
 	name = "Hierarch"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/hierarchlate
+	name = "Hierarch"
+	icon_state = "arrow"
+	jobspawn_override = list("Hierarch")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/bulwark
 	name = "Bulwark"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/bulwarklate
+	name = "Bulwark"
+	icon_state = "arrow"
+	jobspawn_override = list("Bulwark")
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/provisioner
 	name = "Provisioner"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/provisionerlate
+	name = "Provisioner"
+	icon_state = "arrow"
+	jobspawn_override = list("Provisioner")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/mortician
 	name = "Mortician"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/morticianlate
+	name = "Mortician"
+	icon_state = "arrow"
+	jobspawn_override = list("Mortician")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/villager
 	name = "Towner"
 	icon_state = "arrow"
+
+/obj/effect/landmark/start/villagerlate
+	name = "Townerlate"
+	icon_state = "arrow"
+	jobspawn_override = list("Towner")
+	delete_after_roundstart = FALSE
 
 //Antagonist spawns
 

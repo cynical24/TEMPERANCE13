@@ -630,7 +630,7 @@
 // t13 stuff
 
 /obj/structure/table/wood/perserdunsmall
-	name = "ancient wooden table"
+	name = "wooden table"
 	desc = ""
 	icon = 'icons/roguetown/misc/tables.dmi'
 	icon_state = "vtableshort"
@@ -639,3 +639,78 @@
 	smooth = 0
 	climb_offset = 10
 	buildstack = /obj/item/grown/log/tree/small
+
+/obj/structure/table/wood/perserdunsmall/smallwood
+	icon_state = "smallwood"
+
+/obj/structure/table/wood/perserdunsmall/smallmetal
+	name = "metal table"
+	icon_state = "smallmetal"
+
+/obj/structure/table/wood/old
+	icon_state = "wood1"
+
+/obj/structure/table/wood/old2
+	icon_state = "wood2"
+
+/obj/structure/table/wood/old3
+	icon_state = "wood3"
+
+/obj/structure/table/wood/old4
+	icon_state = "wood4"
+
+/obj/structure/table/wood/old5
+	icon_state = "wood5"
+
+/obj/structure/table/wood/old6
+	icon_state = "wood6"
+
+/obj/structure/table/wood/old7
+	icon_state = "wood7"
+
+/obj/structure/table/wood/old8
+	icon_state = "wood8"
+
+/obj/structure/table/wood/old9
+	icon_state = "woodmid"
+
+/obj/structure/table/wood/metal
+	icon_state = "metal1"
+
+/obj/structure/table/wood/metal2
+	icon_state = "metal2"
+
+/obj/structure/table/wood/metal3
+	icon_state = "metal3"
+
+/obj/structure/table/wood/metal4
+	icon_state = "metal4"
+
+/obj/structure/table/wood/funny
+	name = "imposing table"
+	icon_state = "funnyleft"
+
+/obj/structure/table/wood/funny/mid
+	icon_state = "funnymid"
+
+/obj/structure/table/wood/funny/right
+	icon_state = "funnyright"
+
+/obj/structure/table/wood/long
+	icon_state = "long"
+
+/obj/structure/table/wood/long/right
+	dir = 1
+
+/obj/structure/table/wood/long/north_east
+	dir = 4
+
+/obj/structure/table/wood/long/east
+	dir = 8
+
+/obj/structure/table/wood/long/mid
+	icon_state = "long_mid"
+
+/obj/structure/table/wood/long/mid/alt
+	icon_state = "long_mid"
+	dir = 1

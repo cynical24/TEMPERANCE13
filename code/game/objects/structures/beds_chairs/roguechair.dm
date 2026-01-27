@@ -438,3 +438,11 @@
 	can_buckle = TRUE
 	buckle_lying = 90
 	sleepy = 3
+
+/obj/structure/chair/wood/rogue/metal
+	icon_state = "metalchair"
+	icon = 'icons/roguetown/misc/structure.dmi'
+	item_chair = /obj/item/chair/rogue
+	blade_dulling = DULLING_BASHCHOP
+	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
+	attacked_sound = "woodimpact"

@@ -257,6 +257,11 @@
 	icon_state = "border"
 	passcrawl = FALSE
 
+/obj/structure/fluff/railing/funnyend
+	icon_state = "funnyending"
+	blade_dulling = DULLING_BASHCHOP
+	layer = ABOVE_MOB_LAYER
+
 /obj/structure/fluff/railing/fence
 	name = "palisade"
 	desc = "A rudimentary barrier that might keep the monsters at bay."

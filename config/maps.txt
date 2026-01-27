@@ -24,3 +24,5 @@ endmap
 map dun_world
 endmap
 
+map temperance
+endmap

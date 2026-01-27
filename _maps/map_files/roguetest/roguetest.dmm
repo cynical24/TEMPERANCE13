@@ -124,6 +124,11 @@
 /obj/effect/landmark/observer_start,
 /turf/open/floor/rogue/carpet/lord,
 /area/rogue/indoors)
+"cz" = (
+/obj/effect/landmark/start/commandant,
+/obj/effect/landmark/start/commandantlate,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "dA" = (
 /obj/structure/roguewindow,
 /obj/structure/fluff/railing/border{
@@ -750,6 +755,10 @@
 /obj/structure/fluff/statue/tdummy,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"Bg" = (
+/mob/living/simple_animal/hostile/rogue/werewolf,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/rtfield)
 "BF" = (
 /obj/structure/table/wood{
 	icon_state = "longtable_mid";
@@ -781,6 +790,10 @@
 "CN" = (
 /obj/item/storage/roguebag,
 /turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"Di" = (
+/obj/item/paper/fluff/jobs/perserdun,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "Dm" = (
 /turf/open/floor/rogue/dirt/road,
@@ -913,6 +926,10 @@
 /obj/item/clothing/head/roguetown/helmet/leather,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors)
+"JY" = (
+/obj/item/paper/fluff/jobs/risvon,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "KF" = (
 /obj/effect/loretile/ruinedcity,
 /turf/open/floor/carpet/stellar,
@@ -2526,7 +2543,7 @@ WN
 WN
 WN
 WN
-WN
+Bg
 WN
 WN
 Th
@@ -2811,7 +2828,7 @@ qA
 qA
 BJ
 al
-al
+cz
 BJ
 HA
 BJ
@@ -2867,7 +2884,7 @@ al
 al
 BJ
 BJ
-BJ
+JY
 BJ
 BJ
 BJ
@@ -3075,7 +3092,7 @@ JQ
 Vf
 km
 BJ
-BJ
+Di
 BJ
 BJ
 BJ

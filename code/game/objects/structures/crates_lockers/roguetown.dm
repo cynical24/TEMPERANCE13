@@ -98,6 +98,20 @@
 	base_icon_state = "closetdark"
 	icon_state = "closetdark"
 
+/obj/structure/closet/crate/roguecloset/metal
+	base_icon_state = "intermetal"
+	icon_state = "intermetal"
+	open_sound = list('sound/foley/locker_open1.ogg', 'sound/foley/locker_open.ogg', 'sound/foley/lockerbig_open1.ogg')
+	close_sound = list('sound/foley/locker_close1.ogg', 'sound/foley/locker_close.ogg', 'sound/foley/lockerbig_close1.ogg')
+
+/obj/structure/closet/crate/roguecloset/metal/metal2
+	base_icon_state = "intermetalnew"
+	icon_state = "intermetalnew"
+
+/obj/structure/closet/crate/roguecloset/metal/prac
+	base_icon_state = "prac"
+	icon_state = "prac"
+
 /obj/structure/closet/crate/roguecloset/lord
 	keylock = TRUE
 	lockid = "lord"

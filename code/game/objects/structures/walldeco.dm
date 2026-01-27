@@ -443,3 +443,56 @@
 	desc = "The text reads: 'SHITHOLE.'"
 	icon_state = "doom"
 	layer = ABOVE_MOB_LAYER
+
+//computers (non-functional)
+/obj/structure/fluff/walldeco/computer
+	density = TRUE
+	icon_state = "small"
+
+/obj/structure/fluff/walldeco/computer/cameras
+	icon_state = "cameras"
+
+/obj/structure/fluff/walldeco/computer/request
+	icon_state = "request"
+
+/obj/structure/fluff/walldeco/computer/shuttle
+	icon_state = "shuttle"
+
+/obj/structure/fluff/walldeco/computer/operating
+	icon_state = "operating"
+
+/obj/structure/fluff/walldeco/computer/smallb
+	icon_state = "smallb"
+
+/obj/structure/fluff/walldeco/computer/requestb
+	icon_state = "requestb"
+
+/obj/structure/fluff/walldeco/computer/largeb
+	icon_state = "largeb"
+
+/obj/structure/fluff/walldeco/computer/overwatchb
+	icon_state = "overwatchb"
+
+/obj/structure/fluff/walldeco/computer/overwatch_mainb
+	icon_state = "overwatch_mainb"
+
+/obj/structure/fluff/walldeco/computer/tvoff
+	icon_state = "tvoff"
+
+/obj/structure/fluff/walldeco/computer/smalloff
+	icon_state = "smalloff"
+
+/obj/structure/fluff/walldeco/computer/largeoff
+	icon_state = "largeoff"
+
+/obj/structure/fluff/walldeco/computer/shuttleoff
+	icon_state = "shuttleoff"
+
+/obj/structure/fluff/walldeco/computer/overwatchoff
+	icon_state = "overwatchoff"
+
+/obj/structure/fluff/walldeco/computer/overwatch_mainoff
+	icon_state = "overwatch_mainoff"
+
+/obj/structure/fluff/walldeco/computer/captainoff
+	icon_state = "captainoff"

@@ -397,10 +397,17 @@
 
 /obj/item/book/rogue/regulations
 	name = "FINAL NOTICE"
-	desc = "Keep your Armsmen in line."
+	desc = "Don't let the Armsmen see this."
 	icon_state ="book_0"
 	base_icon_state = "book"
 	bookfile = "perserdunregs.json"
+
+/obj/item/book/rogue/regulationszig
+	name = "MINDING YOUR MANNERS"
+	desc = "To be distributed amongst the force."
+	icon_state ="book_0"
+	base_icon_state = "book"
+	bookfile = "risvonregs.json"
 
 /obj/item/book/rogue/playerbook
 	var/player_book_text

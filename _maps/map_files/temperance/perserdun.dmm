@@ -92,6 +92,11 @@
 	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"bw" = (
+/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4{
+	dir = 8
+	},
+/area/rogue/indoors/perserdunbase)
 "bz" = (
 /obj/structure/fluff/railing/sandbag,
 /obj/structure/table/vtable/v2,
@@ -114,7 +119,7 @@
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "bN" = (
-/obj/structure/closet/crate/chest/neu,
+/obj/structure/handcart,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
 "bP" = (
@@ -130,8 +135,12 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "bS" = (
-/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir8,
-/area/rogue/outdoors/indoors/persunbaseoutlook)
+/obj/structure/bed/rogue/inn{
+	dir = 8
+	},
+/obj/effect/landmark/start/chirurgeonlate,
+/turf/open/floor/rogue/perdun,
+/area/rogue/indoors/perserdunbase)
 "bT" = (
 /obj/effect/decal/cleanable/blood/old{
 	pixel_y = 5;
@@ -362,6 +371,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/knightcommander,
+/obj/effect/landmark/start/knightcommanderlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "eA" = (
@@ -480,7 +490,7 @@
 "fF" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/fluff/railing/border/west,
-/turf/open/water,
+/turf/open/water/bath,
 /area/rogue/indoors/perserdunbase)
 "fK" = (
 /obj/structure/flora/roguetree/burnt{
@@ -533,6 +543,7 @@
 "gX" = (
 /obj/effect/landmark/start/auxiliarist,
 /obj/effect/decal/cleanable/dirt/grime/grime4,
+/obj/effect/landmark/start/auxiliaristlate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "gY" = (
@@ -583,10 +594,6 @@
 	pixel_y = 10;
 	pixel_x = 7
 	},
-/obj/item/book/rogue/regulations{
-	pixel_y = -1;
-	pixel_x = -7
-	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
 "hE" = (
@@ -595,7 +602,8 @@
 /turf/open/floor/rogue/med,
 /area/rogue/indoors/perserdunbase)
 "hH" = (
-/turf/closed/wall/mineral/rogue/perserdun/outercorner,
+/obj/effect/decal/cleanable/dirt/grime/grime3,
+/turf/open/floor/rogue/perdun,
 /area/rogue/outdoors/indoors/persunbaseoutlook)
 "hI" = (
 /obj/item/gun/ballistic/rifle/repeater/patience{
@@ -613,7 +621,12 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
 "hJ" = (
-/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4,
+/obj/structure/table/wood/map/two,
+/obj/structure/fluff/walldeco/xavo{
+	pixel_y = 32;
+	pixel_x = 16
+	},
+/turf/open/floor/rogue/perdun,
 /area/rogue/outdoors/indoors/persunbaseoutlook)
 "hK" = (
 /obj/structure/table/vtable,
@@ -645,6 +658,14 @@
 	},
 /obj/structure/table/wood/perserdunsmall,
 /obj/effect/decal/carpet,
+/turf/open/floor/rogue/perdun,
+/area/rogue/indoors/perserdunbase)
+"id" = (
+/obj/effect/decal/cleanable/dirt/grime/grime4,
+/obj/structure/mineral_door/wood/wardoor{
+	lockid = "perserdun";
+	name = "SECTOR ARTILLERY"
+	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "iD" = (
@@ -692,6 +713,11 @@
 /obj/structure/table/church/m/alt,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
+"jG" = (
+/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4{
+	dir = 4
+	},
+/area/rogue/indoors/perserdunbase)
 "jI" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/perdun,
@@ -729,6 +755,16 @@
 /obj/effect/decal/cleanable/dirt/grime/grime2,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"jV" = (
+/obj/structure/barbedwire{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/structure/fluff/walldeco/xavo{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/perserdun)
 "kh" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -774,6 +810,13 @@
 /obj/structure/table/vtable/v2,
 /turf/open/floor/rogue/warmetal,
 /area/rogue)
+"kE" = (
+/obj/structure/closet/crate/roguecloset/metal{
+	pixel_y = 0;
+	pixel_x = 6
+	},
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/perserdunbase)
 "kG" = (
 /obj/structure/table/wood/long_table,
 /obj/item/millstone{
@@ -834,10 +877,8 @@
 /turf/open/floor/rogue/med,
 /area/rogue/indoors/perserdunbase)
 "mf" = (
-/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4{
-	dir = 1
-	},
-/area/rogue/indoors/perserdunbase)
+/turf/closed/wall/mineral/rogue/perserdun/long,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "mm" = (
 /obj/structure/fluff/walldeco/pray{
 	pixel_y = 0;
@@ -850,10 +891,6 @@
 /obj/structure/chair/wood/rogue/throne,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
-"mx" = (
-/obj/structure/fluff/railing/sandbag,
-/turf/open/floor/rogue/perdun,
-/area/rogue/outdoors/indoors/persunbaseoutlook)
 "mz" = (
 /obj/structure/table/vtable,
 /obj/item/rogueweapon/hammer/iron{
@@ -890,15 +927,15 @@
 	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
-"mK" = (
-/obj/effect/decal/cleanable/dirt/grime/grime2,
-/turf/open/floor/rogue/perdun,
-/area/rogue/outdoors/indoors/persunbaseoutlook)
 "mN" = (
 /obj/structure/chair/wood/rogue/chair4{
 	dir = 2
 	},
 /turf/open/floor/rogue/perdun,
+/area/rogue/indoors/perserdunbase)
+"mP" = (
+/obj/item/book/rogue/regulations,
+/turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "mR" = (
 /obj/structure/fluff/railing/sandbag{
@@ -932,6 +969,7 @@
 	pixel_y = 13
 	},
 /obj/effect/landmark/start/armsman,
+/obj/effect/landmark/start/armsmanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "nz" = (
@@ -1045,7 +1083,7 @@
 /obj/structure/fluff/walldeco/pray{
 	pixel_y = 32
 	},
-/obj/structure/rack/rogue/shelf/biggest,
+/obj/structure/closet/crate/roguecloset/metal/metal2,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "pp" = (
@@ -1085,6 +1123,7 @@
 /obj/structure/chair/wood/rogue/throne,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/landmark/start/grandknight,
+/obj/effect/landmark/start/grandknightlate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "qn" = (
@@ -1135,7 +1174,7 @@
 /area/rogue/outdoors/perserdun)
 "rw" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/closet/crate/chest/neu,
+/obj/structure/handcart,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
 "ry" = (
@@ -1449,6 +1488,9 @@
 	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"uc" = (
+/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir1,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "uf" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood/drip,
@@ -1481,10 +1523,8 @@
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "uF" = (
-/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4{
-	dir = 4
-	},
-/area/rogue/indoors/perserdunbase)
+/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "uL" = (
 /obj/effect/spawner/lootdrop/ammo,
 /turf/open/floor/rogue/dirt,
@@ -1551,10 +1591,12 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "wz" = (
-/turf/open/floor/rogue/perdun,
-/area/rogue/outdoors/indoors/persunbaseoutlook)
+/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4{
+	dir = 1
+	},
+/area/rogue/indoors/perserdunbase)
 "wA" = (
-/turf/closed/wall/mineral/rogue/wooddark/horizontal,
+/turf/closed/wall/mineral/rogue/decowood,
 /area/rogue)
 "wB" = (
 /obj/structure/flora/roguetree/stump/log{
@@ -1571,8 +1613,10 @@
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "wJ" = (
-/turf/closed/wall/mineral/rogue/wooddark/vertical,
-/area/rogue)
+/obj/structure/bed/rogue/inn,
+/obj/effect/landmark/start/chirurgeonlate,
+/turf/open/floor/rogue/perdun,
+/area/rogue/indoors/perserdunbase)
 "wQ" = (
 /obj/structure/flora/roguetree/stump/burnt{
 	pixel_x = -35;
@@ -1671,6 +1715,13 @@
 /obj/effect/decal/cleanable/dirt/grime/grime2,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"xM" = (
+/obj/structure/closet/crate/roguecloset/metal/metal2,
+/turf/open/floor/rogue/warmetal,
+/area/rogue)
+"xY" = (
+/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir8,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "yh" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt/road,
@@ -1679,6 +1730,15 @@
 /obj/structure/bed/rogue/inn{
 	dir = 8
 	},
+/turf/open/floor/rogue/perdun,
+/area/rogue/indoors/perserdunbase)
+"yt" = (
+/obj/machinery/light/rogue/wallfire/candle/blue{
+	light_color = "#505f7a";
+	pixel_x = -32
+	},
+/obj/effect/decal/cleanable/dirt/grime/grime4,
+/obj/effect/loretile/artillerysector,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "yx" = (
@@ -1757,6 +1817,7 @@
 /obj/machinery/light/rogue/wallfire/candle/blue{
 	light_color = "#505f7a"
 	},
+/obj/effect/landmark/start/grandmasterlate,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
 "zf" = (
@@ -1783,9 +1844,12 @@
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "zu" = (
-/obj/effect/decal/cleanable/dirt/grime/grime3,
+/obj/structure/fluff/walldeco/xavo{
+	pixel_y = 32
+	},
+/obj/effect/decal/cleanable/dirt/grime/grime4,
 /turf/open/floor/rogue/perdun,
-/area/rogue/outdoors/indoors/persunbaseoutlook)
+/area/rogue/indoors/perserdunbase)
 "zB" = (
 /obj/structure/table/wood/perserdunsmall{
 	pixel_y = -1
@@ -1811,6 +1875,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/armsman,
+/obj/effect/landmark/start/armsmanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "zY" = (
@@ -1881,9 +1946,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
-"Bn" = (
-/turf/closed/wall/mineral/rogue/perserdun/end/north,
-/area/rogue/outdoors/indoors/persunbaseoutlook)
 "Bu" = (
 /obj/effect/decal/cleanable/debris/stony{
 	dir = 8
@@ -1977,9 +2039,6 @@
 	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
-"CE" = (
-/turf/closed/wall/mineral/rogue/perserdun/long,
-/area/rogue/outdoors/indoors/persunbaseoutlook)
 "CJ" = (
 /mob/living/simple_animal/hostile/rogue/robot/gunner,
 /turf/open/floor/rogue/warmetal,
@@ -2150,6 +2209,8 @@
 /obj/item/bedsheet/rogue/cloth{
 	dir = 8
 	},
+/obj/effect/landmark/start/envoy,
+/obj/effect/landmark/start/envoylate,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
 "FB" = (
@@ -2165,6 +2226,7 @@
 	pixel_y = 32
 	},
 /obj/effect/decal/cleanable/dirt/grime/grime4,
+/obj/effect/landmark/start/armsmanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "FO" = (
@@ -2197,7 +2259,12 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "Gk" = (
-/turf/closed/mineral/rogue/bedrock,
+/obj/machinery/light/rogue/wallfire/candle/blue{
+	light_color = "#505f7a";
+	pixel_x = -32
+	},
+/obj/effect/decal/cleanable/dirt/grime/grime4,
+/turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "Gx" = (
 /obj/machinery/anvil/crafted{
@@ -2252,6 +2319,9 @@
 /obj/effect/mine/explosive,
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/perserdun)
+"Ht" = (
+/turf/closed/wall/mineral/rogue/perserdun/outercorner,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "Hv" = (
 /obj/structure/fluff/walldeco/compromise{
 	pixel_y = 32
@@ -2290,6 +2360,9 @@
 "Ig" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue)
+"Ir" = (
+/turf/closed/wall/mineral/rogue/perserdun/end/north,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "Iy" = (
 /obj/structure/chair/wood/rogue/chair4{
 	dir = 1
@@ -2359,6 +2432,7 @@
 /obj/structure/fluff/walldeco/xavo{
 	pixel_y = 32
 	},
+/obj/effect/landmark/start/armsmanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "IZ" = (
@@ -2567,15 +2641,14 @@
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "LG" = (
-/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4{
-	dir = 8
-	},
-/area/rogue/indoors/perserdunbase)
+/turf/open/floor/rogue/perdun,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "LJ" = (
 /obj/structure/chair/wood/rogue/chair4{
 	pixel_y = -9
 	},
 /obj/effect/landmark/start/knightcommander,
+/obj/effect/landmark/start/knightcommanderlate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "LL" = (
@@ -2671,6 +2744,10 @@
 	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"Ng" = (
+/obj/effect/decal/cleanable/dirt/grime/grime2,
+/turf/open/floor/rogue/perdun,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "Nh" = (
 /obj/structure/mineral_door/wood/violet{
 	lockid = "perserdun";
@@ -2728,6 +2805,13 @@
 "NX" = (
 /obj/structure/fluff/traveltile,
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/perserdun)
+"NY" = (
+/obj/structure/barbedwire,
+/obj/structure/fluff/walldeco/xavo{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/perserdun)
 "Od" = (
 /turf/closed/wall/mineral/rogue/perserdun/outercorner/dir8,
@@ -2813,9 +2897,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
-"OM" = (
-/turf/closed/wall/mineral/rogue/perserdun/outercorner/dir1,
-/area/rogue/outdoors/indoors/persunbaseoutlook)
 "ON" = (
 /obj/structure/fluff/grindwheel{
 	pixel_y = 5;
@@ -2945,8 +3026,9 @@
 /area/rogue/outdoors/perserdun)
 "QN" = (
 /obj/effect/decal/cleanable/dirt/grime/grime4,
-/turf/closed/mineral/rogue/bedrock,
-/area/rogue/outdoors/perserdun)
+/obj/structure/far_travel,
+/turf/open/floor/rogue/perdun,
+/area/rogue/indoors/perserdunbase)
 "QY" = (
 /obj/machinery/light/rogue/wallfire/candle/blue{
 	light_color = "#505f7a";
@@ -2985,6 +3067,7 @@
 /area/rogue/indoors/perserdunbase)
 "Ry" = (
 /obj/effect/landmark/start/auxiliarist,
+/obj/effect/landmark/start/auxiliaristlate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "RB" = (
@@ -3258,6 +3341,10 @@
 	},
 /turf/open/floor/rogue/med,
 /area/rogue/indoors/perserdunbase)
+"Ve" = (
+/obj/structure/fluff/railing/sandbag,
+/turf/open/floor/rogue/perdun,
+/area/rogue/outdoors/indoors/persunbaseoutlook)
 "Vf" = (
 /obj/structure/table/church/alt,
 /obj/machinery/light/rogue/wallfire/candle/floorcandle/alt{
@@ -3380,6 +3467,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/partisan,
+/obj/effect/landmark/start/partisanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "Wj" = (
@@ -3467,12 +3555,9 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/perserdun)
 "Xs" = (
-/obj/machinery/light/rogue/wallfire/candle/blue{
-	light_color = "#505f7a";
-	pixel_x = -32
-	},
-/turf/open/floor/rogue/perdun,
-/area/rogue/indoors/perserdunbase)
+/obj/effect/decal/cleanable/dirt/grime/grime4,
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/outdoors/perserdun)
 "XB" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/r{
 	light_color = s
@@ -4476,13 +4561,13 @@ NT
 NT
 ML
 Ig
-wJ
-wJ
-wJ
-wJ
-wJ
-wJ
-wJ
+wA
+wA
+wA
+wA
+wA
+wA
+wA
 Ig
 ML
 ML
@@ -5386,7 +5471,7 @@ ML
 ML
 ML
 wA
-vF
+xM
 vF
 vF
 vF
@@ -5516,7 +5601,7 @@ ML
 ML
 ML
 wA
-vF
+xM
 vF
 vF
 vF
@@ -5646,7 +5731,7 @@ NT
 ML
 ML
 wA
-vF
+xM
 vF
 Uy
 vF
@@ -5776,7 +5861,7 @@ ML
 ML
 ML
 wA
-vF
+xM
 vF
 vF
 Uy
@@ -5906,7 +5991,7 @@ ML
 ML
 ML
 wA
-vF
+xM
 vF
 vF
 vF
@@ -6036,13 +6121,13 @@ ML
 ML
 ML
 Ig
-wJ
-wJ
-wJ
+wA
+wA
+wA
 Rb
-wJ
-wJ
-wJ
+wA
+wA
+wA
 Ig
 ML
 ML
@@ -13414,7 +13499,7 @@ Bb
 Bb
 Bb
 Bb
-uF
+jG
 IG
 IG
 IG
@@ -13540,11 +13625,11 @@ IG
 IG
 "}
 (77,1,1) = {"
+QN
+Gk
 CQ
-Xs
-CQ
-CQ
-mf
+qW
+wz
 Bb
 Bb
 nT
@@ -13672,11 +13757,11 @@ IG
 (78,1,1) = {"
 Bb
 Bb
-uF
-eu
-CQ
-Xs
-CQ
+jG
+zu
+qW
+yt
+qW
 Qd
 IG
 IG
@@ -13802,10 +13887,10 @@ IG
 (79,1,1) = {"
 IG
 IG
-mf
+wz
 Bb
 Bb
-uF
+jG
 CQ
 Qd
 IG
@@ -13936,7 +14021,7 @@ IG
 IG
 IG
 Qd
-eu
+zu
 Qd
 IG
 IG
@@ -14065,9 +14150,9 @@ IG
 Rm
 Bb
 Bb
-LG
-CQ
-mf
+bw
+id
+wz
 nT
 IG
 IG
@@ -14879,8 +14964,8 @@ Bb
 Bb
 Bb
 Au
-CE
-hJ
+mf
+uF
 yY
 ML
 ML
@@ -15009,9 +15094,9 @@ dP
 CQ
 hn
 Dz
-zu
-OM
-hJ
+hH
+uc
+uF
 qs
 ML
 ML
@@ -15139,11 +15224,11 @@ CQ
 hW
 CQ
 ma
-wz
-wz
-OM
-Bn
-yY
+LG
+LG
+uc
+Ir
+NY
 ML
 ML
 ML
@@ -15270,7 +15355,7 @@ hW
 bp
 zf
 KN
-wz
+LG
 VS
 Nl
 qs
@@ -15384,7 +15469,7 @@ Bb
 hV
 BF
 ld
-Gk
+Bb
 Bb
 rZ
 Bb
@@ -15400,8 +15485,8 @@ Bb
 ji
 lC
 lb
-zu
-wz
+hH
+LG
 Wj
 qs
 ML
@@ -15529,9 +15614,9 @@ VK
 VK
 yx
 Qd
-Bd
-wz
-wz
+hJ
+LG
+LG
 GC
 yY
 ML
@@ -15660,8 +15745,8 @@ VK
 VK
 Qd
 Bd
-wz
-wz
+LG
+LG
 bz
 qs
 ML
@@ -15790,8 +15875,8 @@ VK
 VK
 Qd
 Vn
-wz
-mK
+LG
+Ng
 Wj
 qs
 ML
@@ -15920,9 +16005,9 @@ VK
 VK
 Qd
 oq
-mK
-wz
-mx
+Ng
+LG
+Ve
 yY
 ML
 ML
@@ -16049,11 +16134,11 @@ VK
 VK
 VK
 Qd
-mK
-mK
-hH
-Bn
-qs
+Ng
+Ng
+Ht
+Ir
+jV
 ML
 ML
 ML
@@ -16179,9 +16264,9 @@ VK
 VK
 VK
 Qd
-wz
-hH
-bS
+LG
+Ht
+xY
 qs
 ML
 ML
@@ -16309,8 +16394,8 @@ Bb
 Bb
 Bb
 Au
-CE
-bS
+mf
+xY
 qs
 ML
 ML
@@ -16699,7 +16784,7 @@ VK
 VK
 VK
 Qd
-yY
+NY
 ML
 ML
 ML
@@ -16802,7 +16887,7 @@ Qd
 vt
 Sy
 Sy
-sV
+mP
 OE
 Qd
 HW
@@ -18259,7 +18344,7 @@ Bb
 Bb
 Bb
 lC
-yY
+NY
 ML
 ML
 ML
@@ -18494,7 +18579,7 @@ CQ
 kq
 CQ
 Oi
-sV
+kE
 Qd
 CD
 CQ
@@ -18779,7 +18864,7 @@ VK
 VK
 VK
 Qd
-yY
+NY
 ML
 ML
 ML
@@ -19299,7 +19384,7 @@ VK
 VK
 VK
 Qd
-qs
+jV
 ML
 ML
 ML
@@ -19409,7 +19494,7 @@ XN
 sH
 XN
 Dz
-yq
+bS
 go
 yq
 go
@@ -19669,7 +19754,7 @@ sB
 XN
 iD
 zf
-RG
+wJ
 FZ
 RG
 FZ
@@ -19819,7 +19904,7 @@ Bb
 Bb
 Bb
 Od
-qs
+jV
 ML
 ML
 ML
@@ -20963,7 +21048,7 @@ IG
 IG
 IG
 IG
-vN
+IG
 vN
 vN
 vN
@@ -21093,6 +21178,8 @@ IG
 IG
 IG
 IG
+IG
+IG
 vN
 vN
 vN
@@ -21114,6 +21201,15 @@ vN
 vN
 vN
 vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21151,23 +21247,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21223,6 +21308,9 @@ IG
 IG
 IG
 IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -21243,6 +21331,15 @@ vN
 vN
 vN
 vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21280,24 +21377,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21345,12 +21430,18 @@ IG
 IG
 IG
 IG
-vN
-vN
-vN
-vN
-vN
-vN
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 IG
 vN
 vN
@@ -21370,6 +21461,15 @@ vN
 vN
 vN
 vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21407,27 +21507,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21473,6 +21558,21 @@ IG
 (10,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -21491,6 +21591,15 @@ vN
 vN
 vN
 vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21528,36 +21637,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21603,6 +21688,22 @@ IG
 (11,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -21620,6 +21721,15 @@ vN
 vN
 vN
 vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21657,37 +21767,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21733,6 +21818,23 @@ IG
 (12,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -21749,6 +21851,15 @@ vN
 vN
 vN
 vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21786,38 +21897,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21863,6 +21948,24 @@ IG
 (13,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -21878,6 +21981,15 @@ vN
 vN
 vN
 vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21915,39 +22027,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -21993,6 +22078,24 @@ IG
 (14,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -22008,6 +22111,15 @@ vN
 vN
 vN
 vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -22045,39 +22157,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -22123,6 +22208,25 @@ IG
 (15,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -22137,34 +22241,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -22253,6 +22338,25 @@ IG
 (16,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -22267,34 +22371,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -22383,6 +22468,25 @@ IG
 (17,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -22397,34 +22501,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -22513,6 +22598,25 @@ IG
 (18,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -22527,34 +22631,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -22643,6 +22728,25 @@ IG
 (19,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -22657,34 +22761,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -22773,6 +22858,25 @@ IG
 (20,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -22812,32 +22916,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -22903,6 +22988,25 @@ IG
 (21,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -22942,32 +23046,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -23033,6 +23118,25 @@ IG
 (22,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -23072,32 +23176,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -23163,6 +23248,25 @@ IG
 (23,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -23202,32 +23306,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -23293,6 +23378,25 @@ IG
 (24,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -23332,32 +23436,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -23423,6 +23508,25 @@ IG
 (25,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -23462,32 +23566,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -23553,6 +23638,25 @@ IG
 (26,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -23592,32 +23696,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -23683,6 +23768,25 @@ IG
 (27,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -23722,32 +23826,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -23813,6 +23898,25 @@ IG
 (28,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -23852,32 +23956,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -23943,6 +24028,25 @@ IG
 (29,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -23982,32 +24086,13 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -24073,25 +24158,25 @@ IG
 (30,1,2) = {"
 IG
 IG
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -24203,6 +24288,25 @@ IG
 (31,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -24221,31 +24325,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -24333,6 +24418,25 @@ IG
 (32,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -24351,31 +24455,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -24463,6 +24548,25 @@ IG
 (33,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -24481,31 +24585,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -24593,6 +24678,24 @@ IG
 (34,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -24612,30 +24715,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -24723,6 +24808,24 @@ IG
 (35,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -24742,28 +24845,10 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -24853,6 +24938,24 @@ IG
 (36,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -24872,28 +24975,10 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -24983,6 +25068,23 @@ IG
 (37,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -25003,29 +25105,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -25113,6 +25198,23 @@ IG
 (38,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -25133,29 +25235,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -25243,6 +25328,22 @@ IG
 (39,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -25264,28 +25365,12 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -25373,22 +25458,22 @@ IG
 (40,1,2) = {"
 IG
 IG
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -25503,6 +25588,22 @@ IG
 (41,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -25584,31 +25685,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -25633,6 +25718,22 @@ IG
 (42,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -25714,31 +25815,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -25763,6 +25848,21 @@ IG
 (43,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -25845,30 +25945,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -25893,6 +25978,15 @@ IG
 (44,1,2) = {"
 IG
 IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -25981,24 +26075,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -26023,14 +26108,14 @@ IG
 (45,1,2) = {"
 IG
 IG
-vN
-vN
-vN
-vN
-vN
 IG
 IG
 IG
+IG
+IG
+IG
+IG
+IG
 vN
 vN
 vN
@@ -26120,15 +26205,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -26250,15 +26335,15 @@ vN
 vN
 vN
 vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
-vN
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
 vN
 vN
 vN
@@ -29404,14 +29489,14 @@ IG
 IG
 IG
 IG
-QN
-QN
-QN
-QN
-QN
-QN
-QN
-QN
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
 vN
 vN
 vN
@@ -29531,17 +29616,17 @@ IG
 IG
 "}
 (72,1,2) = {"
-QN
-QN
-QN
+Xs
+Xs
+Xs
 Us
 Us
 Us
-QN
-QN
-QN
-QN
-QN
+Xs
+Xs
+Xs
+Xs
+Xs
 vN
 vN
 vN
@@ -29664,14 +29749,14 @@ IG
 IG
 IG
 IG
-QN
-QN
-QN
-QN
-QN
-QN
-QN
-QN
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
 vN
 vN
 vN
@@ -29794,14 +29879,14 @@ IG
 IG
 IG
 IG
-QN
-QN
-QN
-QN
-QN
-QN
-QN
-QN
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
 vN
 vN
 vN
@@ -29924,14 +30009,14 @@ IG
 IG
 IG
 IG
-QN
-QN
-QN
-QN
-QN
-QN
-QN
-QN
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
+Xs
 vN
 vN
 vN

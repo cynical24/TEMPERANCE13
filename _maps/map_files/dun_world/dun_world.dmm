@@ -58927,10 +58927,6 @@
 /obj/structure/closet/crate/chest/crate,
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/under/town/basement/keep)
-"tfv" = (
-/obj/structure/mineral_door/wood/towner/witch,
-/turf/open/floor/rogue/ruinedwood/herringbone,
-/area/rogue/indoors/town)
 "tfw" = (
 /obj/structure/fluff/railing/border/west,
 /turf/closed/mineral/rogue/bedrock,
@@ -469172,7 +469168,7 @@ jyS
 arJ
 kRg
 fJH
-tfv
+kRg
 oKS
 bSX
 bSX
