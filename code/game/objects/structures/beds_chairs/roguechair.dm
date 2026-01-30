@@ -520,5 +520,8 @@
 
 /obj/structure/chair/bench/comfychair //cbf'd to overlay this
 	icon_state = "comfychair_black"
-	icon = 'icons/roguetown/misc/structure.dmi'
+	item_chair = null
+
+/obj/structure/chair/bench/cavethrone
+	icon_state = "cave_throne"
 	item_chair = null
