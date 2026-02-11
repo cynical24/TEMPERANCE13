@@ -7,26 +7,13 @@
 /obj/effect/landmark/chest_or_mimic/loot_chest,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"aq" = (
-/obj/structure/table/wood/poor,
-/obj/item/cooking/pan/aalloy,
-/turf/open/floor/rogue/cobble,
+"aW" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue)
-"aA" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/sword/iron/messer,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"aE" = (
-/obj/effect/decal/cleanable/blood/drip{
-	icon_state = "floor6"
-	},
-/turf/open/floor/rogue/dirt,
-/area/rogue)
-"ce" = (
-/obj/structure/table/wood/large_table,
-/obj/effect/spawner/lootdrop/valuable_tableware_spawner,
-/turf/open/floor/rogue/cobble,
+"bp" = (
+/obj/item/flashlight/flare/torch/lantern,
+/turf/open/floor/rogue/naturalstone,
 /area/rogue)
 "cg" = (
 /obj/structure/chair/stool/rogue{
@@ -60,25 +47,34 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
-"cD" = (
-/obj/effect/decal/cleanable/blood/gibs/down,
-/obj/structure/fluff/pillow/magenta{
-	pixel_x = 2;
-	dir = 1;
-	pixel_y = 11
-	},
-/turf/open/floor/carpet/purple,
+"cC" = (
+/obj/structure/closet/crate/chest/neu_iron,
+/obj/item/reagent_containers/powder/herozium,
+/obj/item/reagent_containers/powder/spice,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/carpet/royalblack,
 /area/rogue)
 "cN" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/blue/end{
 	dir = 8
 	},
 /area/rogue)
-"dy" = (
-/obj/structure/flora/roguetree/pine{
-	icon_state = "pine3-snow"
-	},
+"cS" = (
+/mob/living/carbon/human/species/skeleton/npc/easy,
 /turf/open/floor/rogue/dirt,
+/area/rogue)
+"dk" = (
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/valuable_clutter_spawner,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"dp" = (
+/obj/item/roguegem/violet,
+/turf/open/floor/rogue/dirt,
+/area/rogue)
+"dR" = (
+/mob/living/carbon/human/species/skeleton/npc/no_equipment,
+/turf/open/floor/carpet/royalblack,
 /area/rogue)
 "eb" = (
 /obj/item/grown/log/tree,
@@ -100,14 +96,6 @@
 	},
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue)
-"eg" = (
-/obj/structure/bars/cemetery,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"ei" = (
-/obj/item/rogueweapon/sword/decorated,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue)
 "ew" = (
 /obj/structure/spider/cocoon{
 	pixel_x = -2;
@@ -115,9 +103,10 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue)
-"eR" = (
-/mob/living/carbon/human/species/skeleton/npc/no_equipment,
-/turf/open/water/bloody,
+"ex" = (
+/obj/structure/rack/rogue,
+/obj/item/broom,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "eU" = (
 /obj/effect/decal/cleanable/blood/drip{
@@ -129,13 +118,31 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/spider,
 /turf/open/floor/rogue/dirt,
 /area/rogue)
-"fU" = (
-/obj/structure/fluff/walldeco/chains,
-/turf/open/water/bloody,
+"fv" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/iron/saber,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
-"gs" = (
-/obj/item/roguegem/violet,
-/turf/open/floor/rogue/dirt,
+"fD" = (
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/cheap_clutter_spawner,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"fE" = (
+/mob/living/carbon/human/species/skeleton/npc/no_equipment,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"gf" = (
+/obj/structure/bars/cemetery,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"gj" = (
+/obj/machinery/light/rogue/wallfire/candle/off,
+/obj/structure/closet/crate/chest/neu_iron,
+/obj/item/reagent_containers/powder/starsugar,
+/obj/item/reagent_containers/powder/spice,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/carpet/royalblack,
 /area/rogue)
 "gI" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/spider/mutated,
@@ -145,11 +152,10 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/rogue/snow,
 /area/rogue)
-"gR" = (
-/mob/living/carbon/human/species/skeleton/npc/no_equipment,
-/turf/open/floor/carpet/royalblack,
+"gT" = (
+/turf/open/floor/carpet/purple,
 /area/rogue)
-"hj" = (
+"gY" = (
 /obj/item/roguegem/ruby,
 /turf/open/floor/rogue/dirt,
 /area/rogue)
@@ -160,9 +166,14 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
-"hT" = (
-/obj/structure/rack/rogue/shelf,
-/turf/open/floor/rogue/cobble,
+"ip" = (
+/obj/effect/decal/cleanable/blood/gibs/down,
+/obj/structure/fluff/pillow/magenta{
+	pixel_x = 2;
+	dir = 1;
+	pixel_y = 11
+	},
+/turf/open/floor/carpet/purple,
 /area/rogue)
 "iN" = (
 /obj/structure/closet/crate/chest/old_crate,
@@ -175,22 +186,16 @@
 "iU" = (
 /turf/open/floor/rogue/grasscold,
 /area/rogue)
-"iW" = (
-/mob/living/carbon/human/species/skeleton/npc/no_equipment,
+"jk" = (
+/obj/structure/table/wood/large_table/north_east,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"iY" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/halberd/bardiche,
+"jl" = (
+/obj/structure/toilet,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "jm" = (
 /turf/closed/mineral/rogue/bedrock,
-/area/rogue)
-"jv" = (
-/obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/valuable_clutter_spawner,
-/turf/open/floor/rogue/cobble,
 /area/rogue)
 "jz" = (
 /obj/effect/decal/cleanable/blood/drip{
@@ -198,19 +203,21 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue)
-"kB" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
 "kL" = (
 /obj/structure/flora/roguetree/pine{
 	icon_state = "pine1-snow"
 	},
 /turf/open/floor/rogue/snow,
 /area/rogue)
-"kV" = (
-/mob/living/simple_animal/hostile/retaliate/rogue/wolf,
-/turf/open/floor/rogue/dirt/road,
+"lh" = (
+/obj/structure/table/church,
+/obj/machinery/light/rogue/wallfire/candle/floorcandle/pink,
+/turf/open/water/bloody,
+/area/rogue)
+"lk" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/eaglebeak/lucerne,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "lv" = (
 /obj/effect/decal/cleanable/blood/footprints{
@@ -221,18 +228,16 @@
 "lA" = (
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
-"lM" = (
-/obj/item/chair/stool/bar/rogue,
-/turf/open/floor/rogue/cobble,
+"mG" = (
+/obj/effect/decal/remains/human{
+	color = "#808080"
+	},
+/turf/open/floor/rogue/dirt/road,
 /area/rogue)
-"me" = (
-/obj/effect/decal/cleanable/blood/gibs/old,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"mh" = (
-/obj/structure/table/wood/large_table/north,
-/obj/item/reagent_containers/food/snacks/rogue/steakcarrotonion,
-/turf/open/floor/rogue/cobble,
+"mK" = (
+/obj/item/reagent_containers/powder/coarse_salt,
+/obj/structure/bed/rogue/bloodybed,
+/turf/open/floor/carpet/royalblack,
 /area/rogue)
 "mQ" = (
 /obj/effect/decal/cleanable/blood/drip{
@@ -243,6 +248,14 @@
 "mV" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/bow,
 /turf/open/floor/rogue/dirt/road,
+/area/rogue)
+"mX" = (
+/obj/structure/fluff/pillow/magenta{
+	pixel_x = 2;
+	dir = 1;
+	pixel_y = 11
+	},
+/turf/open/floor/carpet/purple,
 /area/rogue)
 "nz" = (
 /turf/open/floor/rogue/dirt/road,
@@ -256,6 +269,26 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"nD" = (
+/obj/structure/closet/crate/chest/neu_iron,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"nP" = (
+/obj/structure/table/church/m,
+/obj/item/rogueweapon/huntingknife/idagger/steel/pestrasickle{
+	desc = "Delightful.";
+	name = "sacrifice";
+	force = 25
+	},
+/obj/item/reagent_containers/powder/moondust{
+	pixel_y = 0;
+	pixel_x = 6
+	},
+/turf/open/water/bloody,
+/area/rogue)
 "nX" = (
 /obj/structure/bars{
 	color = "#755f48";
@@ -265,6 +298,18 @@
 	density = 0;
 	icon_state = "passage1"
 	},
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"og" = (
+/obj/structure/table/wood/large_table,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"om" = (
+/obj/structure/bed/rogue,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"oA" = (
+/obj/item/chair/rogue/fancychair2,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "oC" = (
@@ -285,6 +330,22 @@
 /mob/living/carbon/human/species/human/northern/bandit,
 /turf/open/floor/rogue/grasscold,
 /area/rogue)
+"pb" = (
+/obj/machinery/light/rogue/wallfire/candle/off,
+/obj/structure/bars/cemetery,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"pe" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/greatsword/zwei,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"pj" = (
+/obj/structure/flora/roguetree/pine{
+	icon_state = "pine3-snow"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue)
 "pk" = (
 /obj/effect/decal/cleanable/blood{
 	icon_state = "floor6-old"
@@ -297,41 +358,69 @@
 	},
 /turf/open/floor/rogue/snow,
 /area/rogue)
+"pK" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/iron/messer,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"pW" = (
+/obj/effect/decal/cleanable/blood/gibs/down,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
 "qf" = (
 /obj/item/chair/rogue/generic1,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"qm" = (
-/obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/powder/ozium,
-/obj/item/reagent_containers/powder/spice,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/open/floor/carpet/royalblack,
-/area/rogue)
-"qr" = (
-/turf/open/floor/carpet/purple,
-/area/rogue)
-"rk" = (
-/obj/structure/flora/roguetree/pine{
-	icon_state = "pine3-snow"
-	},
-/turf/open/floor/rogue/snowrough,
-/area/rogue)
-"rz" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/rogue/dirt,
-/area/rogue)
-"sd" = (
-/obj/machinery/light/rogue/hearth,
-/obj/machinery/light/rogue/oven/south,
+"qs" = (
+/obj/structure/table/wood/large_table/north_east,
+/obj/effect/spawner/lootdrop/valuable_tableware_spawner,
 /turf/open/floor/rogue/cobble,
+/area/rogue)
+"qY" = (
+/obj/structure/table/wood/large_table/north_west,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"qZ" = (
+/obj/effect/decal/cleanable/coom{
+	color = "#808080"
+	},
+/obj/structure/fluff/pillow/magenta{
+	pixel_x = 2;
+	dir = 1;
+	pixel_y = 11
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"rf" = (
+/obj/item/roguegem/random,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue)
+"rt" = (
+/obj/structure/flora/roguetree/pine{
+	icon_state = "pine4-snow"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue)
+"rC" = (
+/obj/effect/decal/cleanable/blood/gibs/core,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"rQ" = (
+/obj/effect/decal/cleanable/blood/drip{
+	icon_state = "floor6"
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue)
 "sj" = (
 /obj/effect/decal/cleanable/blood/footprints{
 	icon_state = "bloodpaw1"
 	},
 /turf/open/floor/rogue/dirt,
+/area/rogue)
+"sp" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/halberd/bardiche,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "su" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf{
@@ -344,30 +433,30 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
-"te" = (
-/obj/structure/closet/crate/coffin/vampire,
-/turf/open/floor/rogue/cobble,
+"sH" = (
+/obj/structure/closet/crate/chest/neu_iron,
+/obj/item/reagent_containers/powder/ozium,
+/obj/item/reagent_containers/powder/spice,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/carpet/royalblack,
 /area/rogue)
 "tf" = (
-/obj/structure/table/wood/large_table/north_west,
-/obj/effect/spawner/lootdrop/cheap_tableware_spawner,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"th" = (
-/turf/open/water/bloody,
+/turf/open/floor/carpet/red,
 /area/rogue)
 "tC" = (
 /mob/living/carbon/human/species/skeleton/npc/easy,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
-"tU" = (
-/obj/structure/vampire/bloodpool{
-	pixel_x = -18
-	},
-/turf/open/floor/carpet/red,
+"ue" = (
+/turf/open/floor/carpet/royalblack,
 /area/rogue)
 "uk" = (
 /turf/open/floor/rogue/snow,
+/area/rogue)
+"uq" = (
+/obj/structure/table/wood/large_table/south_west,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "vd" = (
 /obj/structure/bed/rogue/bedroll{
@@ -376,10 +465,8 @@
 	},
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue)
-"vi" = (
-/obj/effect/decal/cleanable/roguerune/blood{
-	color = "#808080"
-	},
+"vj" = (
+/obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "vz" = (
@@ -392,22 +479,25 @@
 	icon_state = "decostone-b-blue"
 	},
 /area/rogue)
-"vN" = (
-/obj/structure/flora/roguetree/pine{
-	icon_state = "pine3-snow"
-	},
-/turf/open/floor/rogue/dirt/road,
+"vI" = (
+/obj/structure/fluff/walldeco/chains,
+/turf/open/water/bloody,
 /area/rogue)
 "wb" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/blue/long{
 	dir = 1
 	},
 /area/rogue)
-"wp" = (
+"wt" = (
 /obj/structure/flora/roguetree/pine{
-	icon_state = "pine4-snow"
+	icon_state = "pine3-snow"
 	},
-/turf/open/floor/rogue/dirt,
+/turf/open/floor/rogue/snowrough,
+/area/rogue)
+"wB" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/heavy_armor_spawner,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "wK" = (
 /turf/open/floor/rogue/dirt,
@@ -422,23 +512,9 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"xg" = (
-/obj/structure/mineral_door/wood/donjon/stone{
-	locked = 1
-	},
-/obj/effect/decal/cleanable/blood/tracks,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"xk" = (
-/obj/effect/decal/cleanable/coom{
-	color = "#808080"
-	},
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"xr" = (
-/obj/structure/table/church,
-/obj/machinery/light/rogue/wallfire/candle/floorcandle/pink,
-/turf/open/water/bloody,
+"xj" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/wolf,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue)
 "xt" = (
 /obj/effect/decal/remains/human{
@@ -468,28 +544,34 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"xx" = (
+/obj/effect/spawner/lootdrop/medium_armor_spawner,
+/turf/open/floor/rogue/dirt,
+/area/rogue)
 "xz" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/dirt,
 /area/rogue)
-"xV" = (
-/obj/structure/flora/roguetree/pine{
-	icon_state = "pine1-snow"
-	},
-/turf/open/floor/rogue/dirt,
-/area/rogue)
-"xZ" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/obj/structure/fluff/walldeco/chains,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"ya" = (
-/obj/structure/rack/rogue,
-/obj/effect/spawner/lootdrop/cheap_clutter_spawner,
+"yj" = (
+/obj/structure/table/wood/large_table,
+/obj/effect/spawner/lootdrop/cheap_tableware_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "ym" = (
 /obj/machinery/light/rogue/wallfire/candle/off,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"ys" = (
+/obj/structure/fluff/pillow/magenta{
+	pixel_x = 2;
+	dir = 1;
+	pixel_y = 11
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"yw" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/flail,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "yD" = (
@@ -499,10 +581,11 @@
 "yI" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/blue/cand,
 /area/rogue)
-"yJ" = (
-/obj/structure/rack/rogue,
-/obj/item/broom,
-/turf/open/floor/rogue/cobble,
+"yO" = (
+/mob/living/carbon/human/species/npc/deadite{
+	faction = list("undead")
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue)
 "yP" = (
 /obj/effect/decal/cleanable/blood/footprints{
@@ -524,44 +607,23 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "zs" = (
-/obj/structure/chair/stool/rogue,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"zA" = (
-/obj/structure/flora/roguetree/pine{
-	icon_state = "pine2-snow"
+/obj/effect/decal/cleanable/coom{
+	color = "#808080"
 	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue)
-"zF" = (
-/obj/structure/table/wood/poor,
-/obj/item/reagent_containers/glass/bucket/pot/aalloy,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"zV" = (
-/obj/structure/table/wood/large_table/south_west,
+"zE" = (
+/obj/item/chair/stool/bar/rogue,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"zW" = (
-/obj/effect/decal/cleanable/blood/gibs/up,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"Af" = (
-/obj/machinery/light/rogue/wallfire/candle/off,
-/obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/powder/starsugar,
-/obj/item/reagent_containers/powder/spice,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/open/floor/carpet/royalblack,
-/area/rogue)
-"AB" = (
+"zK" = (
 /mob/living/carbon/human/species/npc/deadite{
 	faction = list("undead")
 	},
-/turf/open/floor/rogue/dirt,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
-"AO" = (
-/obj/item/chair/rogue/fancychair2,
+"Ak" = (
+/obj/structure/closet/crate/coffin/vampire,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "Bc" = (
@@ -569,9 +631,6 @@
 	icon_state = "pine1-snow"
 	},
 /turf/open/floor/rogue/snowpatchy,
-/area/rogue)
-"Bk" = (
-/turf/open/floor/carpet/red,
 /area/rogue)
 "By" = (
 /obj/effect/spawner/roguemap/hauntpile{
@@ -588,28 +647,18 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"BA" = (
-/obj/item/roguegem/random,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue)
-"BC" = (
-/obj/structure/fluff/pillow/magenta{
-	pixel_x = 5
-	},
-/obj/structure/fluff/pillow/magenta{
-	dir = 8;
-	pixel_y = 5;
-	pixel_x = -6
-	},
-/obj/effect/decal/cleanable/roguerune/blood{
-	color = "#40110b";
-	plane = -6;
-	layer = 3.0
-	},
-/turf/open/floor/carpet/purple,
+"BO" = (
+/obj/effect/decal/cleanable/blood/gibs/old,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "BQ" = (
-/turf/open/floor/carpet/royalblack,
+/obj/effect/decal/cleanable/blood/gibs/body,
+/obj/structure/fluff/walldeco/chains,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"BW" = (
+/obj/effect/decal/cleanable/blood/gibs/body,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "Co" = (
 /obj/structure/flora/roguetree/pine{
@@ -617,16 +666,24 @@
 	},
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue)
-"Cv" = (
-/obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/powder/herozium,
-/obj/item/reagent_containers/powder/spice,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/open/floor/carpet/royalblack,
+"CK" = (
+/obj/structure/table/wood/large_table/south_east,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"CZ" = (
+/obj/structure/fluff/pillow/magenta{
+	pixel_x = 5
+	},
+/turf/open/floor/carpet/purple,
 /area/rogue)
 "Dk" = (
 /obj/effect/decal/remains/wolf,
 /turf/open/floor/rogue/naturalstone,
+/area/rogue)
+"Dt" = (
+/obj/structure/table/church/end,
+/obj/machinery/light/rogue/wallfire/candle/floorcandle/alt/pink,
+/turf/open/water/bloody,
 /area/rogue)
 "Dw" = (
 /obj/effect/decal/cleanable/blood/drip{
@@ -649,35 +706,22 @@
 /obj/structure/table/wood/folding,
 /turf/open/floor/rogue/grasscold,
 /area/rogue)
-"EL" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/eaglebeak/lucerne,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"ER" = (
-/obj/item/flashlight/flare/torch/lantern,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue)
-"EX" = (
+"Em" = (
 /obj/structure/table/wood/large_table/north_west,
+/obj/effect/spawner/lootdrop/cheap_tableware_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"EY" = (
-/obj/structure/closet/crate/chest/loot_chest,
-/obj/effect/spawner/lootdrop/armored_gloves_spawner,
+"EV" = (
+/obj/structure/vampire/bloodpool{
+	pixel_x = -18
+	},
+/turf/open/floor/carpet/red,
+/area/rogue)
+"Fa" = (
+/obj/effect/decal/cleanable/roguerune/blood{
+	color = "#808080"
+	},
 /turf/open/floor/rogue/cobble,
-/area/rogue)
-"Fd" = (
-/obj/effect/decal/cleanable/blood/gibs/core,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"Fv" = (
-/mob/living/carbon/human/species/skeleton/npc/easy,
-/turf/open/floor/rogue/dirt,
-/area/rogue)
-"Fx" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/rogue/dirt/road,
 /area/rogue)
 "Fz" = (
 /turf/open/floor/rogue/snowpatchy,
@@ -689,11 +733,6 @@
 	pixel_y = 10
 	},
 /obj/structure/closet/crate/roguecloset,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"FI" = (
-/obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/heavy_armor_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "Ge" = (
@@ -719,6 +758,13 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
+"Gt" = (
+/obj/structure/mineral_door/wood/donjon/stone{
+	locked = 1
+	},
+/obj/effect/decal/cleanable/blood/tracks,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
 "GF" = (
 /obj/machinery/light/rogue/wallfire/candle/off,
 /obj/structure/closet/crate/roguecloset,
@@ -732,11 +778,6 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
-"HA" = (
-/obj/effect/decal/cleanable/blood/tracks,
-/obj/effect/decal/carpet/square/black,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
 "HF" = (
 /obj/effect/decal/remains/human{
 	color = "#808080";
@@ -744,14 +785,6 @@
 	pixel_y = -18
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue)
-"HH" = (
-/obj/structure/fluff/pillow/magenta{
-	pixel_x = 2;
-	dir = 1;
-	pixel_y = 11
-	},
-/turf/open/floor/carpet/purple,
 /area/rogue)
 "HJ" = (
 /obj/effect/decal/remains/wolf{
@@ -789,10 +822,9 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"HY" = (
-/obj/structure/table/wood/large_table,
-/obj/effect/spawner/lootdrop/cheap_tableware_spawner,
-/turf/open/floor/rogue/cobble,
+"HO" = (
+/mob/living/carbon/human/species/skeleton/npc/no_equipment,
+/turf/open/water/bloody,
 /area/rogue)
 "Ij" = (
 /obj/structure/closet/crate/chest/old_crate,
@@ -814,24 +846,9 @@
 /obj/effect/spawner/lootdrop/valuable_jewelry_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"IM" = (
-/obj/structure/table/wood/large_table/north_east,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"IS" = (
-/obj/effect/decal/remains/human{
-	color = "#808080"
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue)
-"IW" = (
-/obj/machinery/light/rogue/wallfire/candle/off,
-/obj/structure/bars/cemetery,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"Je" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/greatsword/zwei,
+"IK" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/valuable_clutter_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "Jk" = (
@@ -850,6 +867,10 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"JH" = (
+/obj/structure/fluff/walldeco/chains,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
 "JW" = (
 /obj/effect/decal/cleanable/blood/drip{
 	icon_state = "floor6"
@@ -859,10 +880,6 @@
 "Ka" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/blue/long,
 /area/rogue)
-"Kf" = (
-/obj/structure/table/wood/large_table/north,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
 "Kl" = (
 /obj/effect/decal/remains/human{
 	color = "#808080";
@@ -871,34 +888,39 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
+"KB" = (
+/obj/item/rogueweapon/sword/decorated,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue)
+"KH" = (
+/obj/structure/rack/rogue/shelf,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
 "Lg" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
-"Lj" = (
-/obj/effect/spawner/lootdrop/medium_armor_spawner,
-/turf/open/floor/rogue/dirt,
+"Lq" = (
+/obj/structure/table/wood/poor,
+/obj/item/cooking/pan/aalloy,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "Ls" = (
 /turf/closed/wall/mineral/rogue/decostone/long/east_west,
 /area/rogue)
-"LI" = (
-/obj/structure/table/wood/large_table/north_east,
-/obj/effect/spawner/lootdrop/valuable_tableware_spawner,
+"LO" = (
+/obj/structure/flora/roguetree/pine{
+	icon_state = "pine1-snow"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue)
+"LP" = (
+/obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"Me" = (
-/obj/item/reagent_containers/powder/coarse_salt,
-/obj/structure/bed/rogue/bloodybed,
-/turf/open/floor/carpet/royalblack,
-/area/rogue)
-"Ml" = (
-/obj/structure/vampire/necromanticbook{
-	pixel_x = -16;
-	layer = 4.3
-	},
-/obj/structure/fluff/walldeco/bigpainting/lake,
-/turf/open/water/bloody,
+"Mc" = (
+/obj/structure/table/wood/large_table/north,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "Mm" = (
 /obj/structure/flora/roguetree/pine,
@@ -906,6 +928,10 @@
 /area/rogue)
 "Mr" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"MC" = (
+/obj/item/reagent_containers/powder/moondust_purest,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "MM" = (
@@ -929,14 +955,22 @@
 /obj/effect/spawner/lootdrop/armored_wrists_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"MP" = (
+/obj/machinery/light/rogue/hearth,
+/obj/machinery/light/rogue/oven/south,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
 "MT" = (
 /mob/living/carbon/human/species/skeleton/npc/hard,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"NO" = (
-/mob/living/carbon/human/species/npc/deadite{
-	faction = list("undead")
-	},
+"Na" = (
+/obj/effect/decal/cleanable/blood/tracks,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"Ng" = (
+/obj/structure/rack/rogue,
+/obj/item/reagent_containers/glass/bucket/pot/teapot,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "Of" = (
@@ -946,17 +980,52 @@
 	},
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue)
-"Pa" = (
-/obj/structure/fluff/pillow/magenta{
-	pixel_x = 2;
-	dir = 1;
-	pixel_y = 11
+"Ov" = (
+/obj/structure/flora/roguetree/pine{
+	icon_state = "pine2-snow"
 	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue)
+"OG" = (
+/obj/structure/closet/crate/chest/loot_chest,
+/obj/effect/spawner/lootdrop/armored_gloves_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"Pp" = (
-/obj/structure/bed/rogue,
-/turf/open/floor/rogue/cobble,
+"OK" = (
+/obj/structure/fluff/pillow/magenta{
+	dir = 8;
+	pixel_y = 5;
+	pixel_x = -6
+	},
+/turf/open/floor/carpet/purple,
+/area/rogue)
+"Pq" = (
+/obj/structure/flora/roguetree/pine{
+	icon_state = "pine4-snow"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue)
+"Pu" = (
+/obj/structure/flora/roguetree/pine{
+	icon_state = "pine3-snow"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue)
+"PJ" = (
+/obj/structure/fluff/pillow/magenta{
+	pixel_x = 5
+	},
+/obj/structure/fluff/pillow/magenta{
+	dir = 8;
+	pixel_y = 5;
+	pixel_x = -6
+	},
+/obj/effect/decal/cleanable/roguerune/blood{
+	color = "#40110b";
+	plane = -6;
+	layer = 3.0
+	},
+/turf/open/floor/carpet/purple,
 /area/rogue)
 "PP" = (
 /obj/effect/decal/remains/fox{
@@ -964,17 +1033,6 @@
 	pixel_y = 7
 	},
 /turf/open/floor/rogue/naturalstone,
-/area/rogue)
-"Qg" = (
-/obj/structure/table/church/end,
-/obj/machinery/light/rogue/wallfire/candle/floorcandle/alt/pink,
-/turf/open/water/bloody,
-/area/rogue)
-"QD" = (
-/obj/structure/flora/roguetree/pine{
-	icon_state = "pine1-snow"
-	},
-/turf/open/floor/rogue/dirt/road,
 /area/rogue)
 "QM" = (
 /obj/effect/decal/remains/human{
@@ -1017,17 +1075,10 @@
 "Rs" = (
 /turf/open/transparent/openspace,
 /area/rogue)
-"Rt" = (
-/obj/item/reagent_containers/powder/moondust_purest,
+"RD" = (
+/obj/structure/table/wood/large_table/north,
+/obj/item/reagent_containers/food/snacks/rogue/steakcarrotonion,
 /turf/open/floor/rogue/cobble,
-/area/rogue)
-"Rv" = (
-/obj/structure/toilet,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"RF" = (
-/obj/item/roguegem/diamond,
-/turf/open/floor/rogue/dirt,
 /area/rogue)
 "RH" = (
 /turf/open/floor/rogue/cobblerock,
@@ -1036,32 +1087,13 @@
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
-"RS" = (
-/obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
-/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
-/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
 "Sa" = (
 /obj/effect/decal/remains/fox,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
-"Sb" = (
-/obj/structure/table/wood/large_table/south_east,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
 "Sh" = (
 /obj/structure/flora/roguetree/pine,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue)
-"Sx" = (
-/obj/structure/fluff/pillow/magenta{
-	dir = 8;
-	pixel_y = 5;
-	pixel_x = -6
-	},
-/turf/open/floor/carpet/purple,
 /area/rogue)
 "SB" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
@@ -1074,22 +1106,17 @@
 "SL" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"SM" = (
+/obj/effect/decal/cleanable/roguerune/blood{
+	color = "#40110b";
+	plane = -6;
+	layer = 2.9
+	},
+/turf/open/floor/carpet/purple,
+/area/rogue)
 "Tk" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
 /turf/open/floor/rogue/naturalstone,
-/area/rogue)
-"Tn" = (
-/obj/structure/table/church/m,
-/obj/item/rogueweapon/huntingknife/idagger/steel/pestrasickle{
-	desc = "Delightful.";
-	name = "sacrifice";
-	force = 25
-	},
-/obj/item/reagent_containers/powder/moondust{
-	pixel_y = 0;
-	pixel_x = 6
-	},
-/turf/open/water/bloody,
 /area/rogue)
 "To" = (
 /obj/structure/flora/roguetree/pine{
@@ -1097,9 +1124,13 @@
 	},
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue)
-"Ty" = (
-/obj/structure/shisha/hookah,
-/turf/open/floor/carpet/purple,
+"Tz" = (
+/obj/structure/vampire/necromanticbook{
+	pixel_x = -16;
+	layer = 4.3
+	},
+/obj/structure/fluff/walldeco/bigpainting/lake,
+/turf/open/water/bloody,
 /area/rogue)
 "TL" = (
 /obj/structure/flora/roguetree/stump/pine,
@@ -1113,34 +1144,19 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue)
-"Uf" = (
-/obj/structure/fluff/walldeco/chains,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"Uq" = (
-/obj/structure/rack/rogue,
-/obj/item/reagent_containers/glass/bucket/pot/teapot,
-/turf/open/floor/rogue/cobble,
+"Un" = (
+/obj/structure/flora/roguetree/pine{
+	icon_state = "pine1-snow"
+	},
+/turf/open/floor/rogue/dirt/road,
 /area/rogue)
 "Vh" = (
 /obj/structure/trap/shock,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"Vo" = (
-/obj/structure/fluff/pillow/magenta{
-	pixel_x = 5
-	},
-/turf/open/floor/carpet/purple,
-/area/rogue)
-"VA" = (
-/obj/effect/decal/cleanable/coom{
-	color = "#808080"
-	},
-/obj/structure/fluff/pillow/magenta{
-	pixel_x = 2;
-	dir = 1;
-	pixel_y = 11
-	},
+"Vw" = (
+/obj/structure/table/wood/poor,
+/obj/item/reagent_containers/glass/bucket/pot/aalloy,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "VE" = (
@@ -1163,27 +1179,18 @@
 /obj/machinery/light/rogue/wallfire/candle/off,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
-"Wq" = (
-/obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/armored_boots_spawner,
+"Wc" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/rogue/dirt,
+/area/rogue)
+"Wy" = (
+/obj/effect/decal/cleanable/blood/tracks,
+/obj/effect/decal/carpet/square/black,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"WQ" = (
-/obj/effect/decal/cleanable/roguerune/blood{
-	color = "#40110b";
-	plane = -6;
-	layer = 2.9
-	},
+"Xd" = (
+/obj/structure/shisha/hookah,
 /turf/open/floor/carpet/purple,
-/area/rogue)
-"WS" = (
-/obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/powder/spice,
-/obj/item/reagent_containers/powder/spice,
-/obj/item/reagent_containers/powder/spice,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/open/floor/carpet/royalblack,
 /area/rogue)
 "XA" = (
 /obj/machinery/light/rogue/wallfire/candle/off,
@@ -1197,14 +1204,12 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"XL" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/flail,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
 "XO" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/rogue/naturalstone,
+/area/rogue)
+"XS" = (
+/turf/open/water/bloody,
 /area/rogue)
 "Ye" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/guard/xbow,
@@ -1216,23 +1221,13 @@
 	},
 /turf/open/floor/rogue/snow,
 /area/rogue)
-"Yi" = (
-/obj/structure/flora/roguetree/pine{
-	icon_state = "pine4-snow"
-	},
-/turf/open/floor/rogue/dirt/road,
+"Yy" = (
+/obj/item/roguegem/diamond,
+/turf/open/floor/rogue/dirt,
 /area/rogue)
-"Ym" = (
+"Zq" = (
 /obj/structure/table/wood/large_table,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"YL" = (
-/obj/structure/rack/rogue,
-/obj/effect/spawner/lootdrop/valuable_clutter_spawner,
-/turf/open/floor/rogue/cobble,
-/area/rogue)
-"Zu" = (
-/obj/effect/decal/cleanable/blood/tracks,
+/obj/effect/spawner/lootdrop/valuable_tableware_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "ZI" = (
@@ -1241,14 +1236,19 @@
 	},
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue)
-"ZJ" = (
-/obj/effect/decal/cleanable/blood/gibs/down,
+"ZN" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/armored_boots_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"ZY" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/sword/iron/saber,
-/turf/open/floor/rogue/cobble,
+"ZR" = (
+/obj/structure/closet/crate/chest/neu_iron,
+/obj/item/reagent_containers/powder/spice,
+/obj/item/reagent_containers/powder/spice,
+/obj/item/reagent_containers/powder/spice,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/carpet/royalblack,
 /area/rogue)
 
 (1,1,1) = {"
@@ -53708,7 +53708,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -53935,7 +53935,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -54162,7 +54162,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -54389,7 +54389,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -54616,7 +54616,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -54844,7 +54844,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -55070,7 +55070,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -55298,8 +55298,8 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -55524,9 +55524,9 @@ nz
 nz
 nz
 nz
+RH
 nz
-nz
-nz
+RH
 nz
 nz
 nz
@@ -55753,7 +55753,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -55978,10 +55978,10 @@ nz
 nz
 nz
 nz
+RH
 nz
 nz
-nz
-nz
+RH
 nz
 nz
 nz
@@ -56432,7 +56432,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -56886,8 +56886,8 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -57114,7 +57114,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -57341,7 +57341,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -57568,7 +57568,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -57795,7 +57795,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -58022,7 +58022,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -58249,7 +58249,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -58476,7 +58476,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -58703,7 +58703,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -59157,7 +59157,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -59384,7 +59384,7 @@ jm
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -59611,7 +59611,7 @@ jm
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -59838,7 +59838,7 @@ jm
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -60065,7 +60065,7 @@ jm
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -60292,7 +60292,7 @@ jm
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -60519,7 +60519,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -60746,7 +60746,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -60973,6 +60973,27 @@ nz
 nz
 nz
 nz
+RH
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+nz
+RH
+RH
+RH
 nz
 nz
 nz
@@ -61002,28 +61023,7 @@ nz
 nz
 nz
 nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
+RH
 nz
 nz
 nz
@@ -61201,56 +61201,56 @@ nz
 nz
 nz
 nz
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
 nz
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
 nz
+RH
+RH
 nz
+RH
 nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
+RH
+RH
+RH
+RH
+RH
+RH
 nz
 nz
 nz
@@ -61477,7 +61477,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -61704,7 +61704,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -61931,7 +61931,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -62386,7 +62386,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -62613,7 +62613,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -63067,7 +63067,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -63294,7 +63294,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -63521,7 +63521,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -63748,7 +63748,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -63975,7 +63975,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -64202,6 +64202,7 @@ nz
 nz
 nz
 nz
+RH
 nz
 nz
 nz
@@ -64264,8 +64265,7 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
 nz
 nz
 nz
@@ -64429,6 +64429,7 @@ nz
 nz
 nz
 nz
+RH
 nz
 nz
 nz
@@ -64491,8 +64492,7 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
 nz
 nz
 nz
@@ -64656,6 +64656,7 @@ nz
 nz
 nz
 nz
+RH
 nz
 nz
 nz
@@ -64714,19 +64715,18 @@ nz
 nz
 nz
 nz
+RH
+RH
+RH
+RH
+RH
 nz
 nz
+RH
 nz
+RH
 nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
+RH
 nz
 nz
 nz
@@ -64883,24 +64883,55 @@ nz
 nz
 nz
 nz
+RH
+RH
 nz
 nz
+RH
 nz
+RH
+RH
 nz
+RH
 nz
+RH
 nz
+RH
 nz
+RH
 nz
 nz
+RH
 nz
+RH
+RH
+RH
 nz
+RH
+RH
 nz
+RH
 nz
+RH
+RH
 nz
+RH
 nz
+RH
 nz
+RH
 nz
+RH
+RH
+RH
 nz
+RH
+RH
+RH
+RH
+RH
+RH
+RH
 nz
 nz
 nz
@@ -64915,6 +64946,7 @@ nz
 nz
 nz
 nz
+RH
 nz
 nz
 nz
@@ -64922,42 +64954,10 @@ nz
 nz
 nz
 nz
+RH
+RH
 nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
+RH
 nz
 nz
 nz
@@ -65172,6 +65172,7 @@ nz
 nz
 nz
 nz
+RH
 nz
 nz
 nz
@@ -65185,14 +65186,13 @@ nz
 nz
 nz
 nz
+RH
+RH
+RH
+RH
+RH
 nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
+RH
 nz
 nz
 nz
@@ -65399,6 +65399,7 @@ nz
 nz
 nz
 nz
+RH
 nz
 nz
 nz
@@ -65420,11 +65421,10 @@ nz
 nz
 nz
 nz
-nz
-nz
-nz
-nz
-nz
+RH
+RH
+RH
+RH
 nz
 nz
 nz
@@ -65626,6 +65626,7 @@ nz
 nz
 nz
 nz
+RH
 nz
 nz
 nz
@@ -65651,12 +65652,11 @@ nz
 nz
 nz
 nz
+RH
+RH
 nz
-nz
-nz
-nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -65853,7 +65853,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -66307,7 +66307,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -66534,7 +66534,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -66761,7 +66761,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -66988,7 +66988,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -67215,7 +67215,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -67442,7 +67442,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -67896,7 +67896,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -68123,7 +68123,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -68350,7 +68350,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -68577,7 +68577,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -69258,7 +69258,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -69486,7 +69486,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -69940,7 +69940,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -70394,7 +70394,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -70848,7 +70848,7 @@ iU
 iU
 iU
 iU
-iU
+RH
 iU
 iU
 iU
@@ -71075,7 +71075,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -71529,7 +71529,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -71756,7 +71756,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -72210,7 +72210,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -72437,7 +72437,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -72664,7 +72664,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -72891,8 +72891,8 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -73119,7 +73119,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -73346,7 +73346,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -73573,7 +73573,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -73800,7 +73800,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -74027,7 +74027,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -74254,7 +74254,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -74481,7 +74481,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -74708,7 +74708,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -74935,7 +74935,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -75389,7 +75389,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -75843,7 +75843,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -76297,7 +76297,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -76524,7 +76524,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -76751,7 +76751,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -76978,7 +76978,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -77205,7 +77205,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -77432,7 +77432,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -77659,7 +77659,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -77886,7 +77886,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -78113,7 +78113,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -78340,7 +78340,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -78567,7 +78567,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -78795,25 +78795,25 @@ nz
 nz
 nz
 nz
+RH
+RH
+RH
+RH
+RH
+nz
+RH
+RH
 nz
 nz
 nz
 nz
 nz
 nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
+RH
+RH
+RH
+RH
+RH
 nz
 nz
 nz
@@ -78889,7 +78889,7 @@ jm
 (118,1,2) = {"
 jm
 lA
-ei
+KB
 lA
 lA
 wN
@@ -79030,18 +79030,18 @@ nz
 nz
 nz
 nz
+RH
+RH
+RH
+RH
+RH
+RH
+RH
 nz
 nz
 nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -79118,7 +79118,7 @@ jm
 lA
 lA
 su
-BA
+rf
 yR
 lA
 lA
@@ -79268,7 +79268,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -79570,7 +79570,7 @@ jm
 (121,1,2) = {"
 jm
 lA
-BA
+rf
 lA
 lA
 lA
@@ -79722,7 +79722,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -79799,7 +79799,7 @@ jm
 lA
 Ik
 lA
-BA
+rf
 Lg
 lA
 yR
@@ -80176,7 +80176,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -80290,7 +80290,7 @@ wK
 wK
 jm
 jm
-rz
+Wc
 uk
 uk
 uk
@@ -80403,7 +80403,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -80857,7 +80857,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -81538,7 +81538,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -81664,7 +81664,7 @@ uk
 uk
 uk
 Fz
-xV
+LO
 Fz
 DI
 uk
@@ -81765,7 +81765,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -81992,7 +81992,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -82219,7 +82219,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -82447,7 +82447,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -82673,7 +82673,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -82799,7 +82799,7 @@ uk
 uk
 uk
 Fz
-dy
+Pu
 DI
 uk
 uk
@@ -82834,7 +82834,7 @@ uk
 uk
 uk
 nz
-vN
+pj
 Fz
 uk
 wK
@@ -82901,7 +82901,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -83127,8 +83127,8 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -83808,8 +83808,8 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -84035,7 +84035,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -84154,7 +84154,7 @@ uk
 uk
 DI
 Fz
-wp
+Pq
 DI
 uk
 Fz
@@ -84195,7 +84195,7 @@ uk
 uk
 Fz
 nz
-zA
+Ov
 DI
 uk
 wK
@@ -84263,7 +84263,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -84490,7 +84490,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -84717,8 +84717,8 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -84873,7 +84873,7 @@ uk
 uk
 Fz
 nz
-QD
+Un
 nz
 Fz
 DI
@@ -84944,7 +84944,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -85022,11 +85022,11 @@ jm
 jm
 jm
 lA
-ER
+bp
 SL
 SL
-ZY
-Je
+fv
+pe
 SL
 wb
 nz
@@ -85171,7 +85171,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -85316,7 +85316,7 @@ uk
 uk
 DI
 Fz
-QD
+Un
 nz
 Fz
 DI
@@ -85398,7 +85398,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -85475,7 +85475,7 @@ jm
 jm
 jm
 wb
-EL
+lk
 SL
 SL
 SL
@@ -85626,7 +85626,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -85702,7 +85702,7 @@ jm
 jm
 jm
 wb
-aA
+pK
 SL
 SL
 SL
@@ -85852,9 +85852,9 @@ nz
 nz
 nz
 nz
-nz
-nz
-nz
+RH
+RH
+RH
 nz
 nz
 nz
@@ -85929,7 +85929,7 @@ jm
 jm
 jm
 wb
-iY
+sp
 SL
 SL
 SL
@@ -86156,7 +86156,7 @@ jm
 jm
 jm
 wb
-XL
+yw
 SL
 Mr
 SL
@@ -86306,7 +86306,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -86533,7 +86533,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -86685,7 +86685,7 @@ uk
 uk
 Fz
 nz
-vN
+pj
 Fz
 Fz
 Fz
@@ -86760,7 +86760,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -86905,7 +86905,7 @@ uk
 uk
 uk
 Fz
-zA
+Ov
 Fz
 uk
 uk
@@ -87096,7 +87096,7 @@ uk
 uk
 uk
 DI
-vN
+pj
 Fz
 DI
 uk
@@ -87214,7 +87214,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -87441,7 +87441,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -87743,7 +87743,7 @@ jm
 jm
 jm
 wb
-Rv
+jl
 SL
 SL
 SL
@@ -87757,9 +87757,9 @@ nz
 RH
 RH
 nz
-Pp
+om
 SL
-Pp
+om
 SL
 SL
 SL
@@ -87895,7 +87895,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -88197,7 +88197,7 @@ jm
 jm
 jm
 wb
-Rv
+jl
 SL
 SL
 SL
@@ -88349,7 +88349,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -88446,7 +88446,7 @@ nz
 nz
 nz
 nz
-Fv
+cS
 wK
 nz
 wb
@@ -88651,15 +88651,15 @@ jm
 jm
 jm
 wb
-Af
+gj
 xt
-iW
-Fd
+fE
+rC
 SL
 SL
-Bk
-Bk
-tU
+tf
+tf
+EV
 wb
 nz
 wK
@@ -88804,7 +88804,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -88878,15 +88878,15 @@ jm
 jm
 jm
 wb
-WS
+ZR
 SL
 SL
 SL
 SL
-Rt
+MC
 SL
-Bk
-Bk
+tf
+tf
 wb
 nz
 wK
@@ -89105,15 +89105,15 @@ jm
 jm
 jm
 wb
-th
-th
-Vo
-Ty
+XS
+XS
+CZ
+Xd
 MT
 SL
 SL
 SL
-Bk
+tf
 wb
 wK
 nz
@@ -89258,7 +89258,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -89332,18 +89332,18 @@ jm
 jm
 jm
 wb
-th
-th
-BC
-cD
-xk
+XS
+XS
+PJ
+ip
+zs
 SL
-xZ
+BQ
 MT
 SL
 wb
 wK
-IS
+mG
 wK
 RH
 wK
@@ -89485,7 +89485,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -89559,17 +89559,17 @@ jm
 jm
 jm
 wb
-th
-th
-fU
-th
-Zu
-Zu
-Zu
-Zu
-HA
-xg
-Fx
+XS
+XS
+vI
+XS
+Na
+Na
+Na
+Na
+Wy
+Gt
+aW
 wK
 wK
 nz
@@ -89597,7 +89597,7 @@ uk
 uk
 Fz
 Fz
-zA
+Ov
 DI
 DI
 uk
@@ -89611,7 +89611,7 @@ Fz
 wK
 wK
 wK
-SL
+RH
 nz
 wK
 uk
@@ -89712,7 +89712,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -89786,18 +89786,18 @@ jm
 jm
 jm
 wb
-th
-th
-xr
-th
-Sx
-Pa
+XS
+XS
+lh
+XS
+OK
+ys
 SL
 SL
 SL
 wb
-IS
-aE
+mG
+rQ
 nz
 nz
 nz
@@ -89838,7 +89838,7 @@ Fz
 wK
 nz
 nz
-SL
+RH
 nz
 wK
 uk
@@ -89939,7 +89939,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -90013,14 +90013,14 @@ jm
 jm
 jm
 wb
-Ml
-eR
-Tn
-th
-WQ
+Tz
+HO
+nP
+XS
+SM
 SL
 SL
-Fd
+rC
 SL
 wb
 nz
@@ -90063,9 +90063,9 @@ uk
 Fz
 wK
 wK
-SL
-SL
-SL
+RH
+RH
+RH
 wK
 uk
 uk
@@ -90166,7 +90166,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -90240,12 +90240,12 @@ jm
 jm
 jm
 wb
-th
-th
-Qg
-th
-Vo
-VA
+XS
+XS
+Dt
+XS
+CZ
+qZ
 SL
 SL
 SL
@@ -90281,7 +90281,7 @@ uk
 uk
 uk
 nz
-Yi
+rt
 Fz
 uk
 uk
@@ -90393,7 +90393,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -90467,12 +90467,12 @@ jm
 jm
 jm
 wb
-fU
-th
-th
-th
+vI
+XS
+XS
+XS
 SL
-me
+BO
 MT
 SL
 SL
@@ -90515,8 +90515,8 @@ uk
 uk
 uk
 wK
-SL
-SL
+RH
+RH
 wK
 wK
 uk
@@ -90620,7 +90620,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -90694,14 +90694,14 @@ jm
 jm
 jm
 wb
-th
-th
-BC
-HH
-ZJ
+XS
+XS
+PJ
+mX
+pW
 SL
 SL
-Uf
+JH
 SL
 vF
 Ka
@@ -90847,7 +90847,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -90921,13 +90921,13 @@ jm
 jm
 jm
 wb
-th
-th
-qr
-Ty
-xk
+XS
+XS
+gT
+Xd
+zs
 SL
-Rt
+MC
 SL
 SL
 wb
@@ -90935,7 +90935,7 @@ HF
 SL
 SL
 SL
-zs
+vj
 SL
 SL
 wK
@@ -91074,7 +91074,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -91148,21 +91148,21 @@ jm
 jm
 jm
 wb
-qm
+sH
 SL
-xk
+zs
 SL
-zW
+LP
 MT
 SL
-kB
-BQ
+BW
+ue
 wb
-hT
+KH
 xb
 SL
-tf
-zV
+Em
+uq
 SL
 SL
 SL
@@ -91301,7 +91301,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -91375,22 +91375,22 @@ jm
 jm
 jm
 wb
-Cv
+cC
 SL
 SL
 SL
 SL
 SL
 SL
-gR
-Me
+dR
+mK
 wb
-hT
+KH
 SL
-lM
-Kf
-Ym
-zs
+zE
+Mc
+og
+vj
 SL
 wK
 nz
@@ -91528,7 +91528,7 @@ iU
 iU
 iU
 iU
-iU
+RH
 iU
 iU
 iU
@@ -91612,11 +91612,11 @@ Ka
 Ka
 Ka
 yI
-hT
+KH
 SL
 SL
-Kf
-HY
+Mc
+yj
 SL
 SL
 SL
@@ -91755,7 +91755,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -91833,17 +91833,17 @@ iN
 SL
 xt
 SL
-Uf
+JH
 MT
-EY
+OG
 SL
 al
 wb
-hT
+KH
 SL
 SL
-IM
-Sb
+jk
+CK
 SL
 SL
 SL
@@ -91982,7 +91982,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -92209,7 +92209,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -92283,7 +92283,7 @@ jm
 jm
 jm
 wb
-te
+Ak
 SL
 SL
 SL
@@ -92293,12 +92293,12 @@ SL
 SL
 SL
 wb
-hT
+KH
 SL
-zs
-EX
-zV
-lM
+vj
+qY
+uq
+zE
 wK
 wK
 nz
@@ -92436,7 +92436,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -92520,11 +92520,11 @@ SL
 SL
 SL
 wb
-hT
+KH
 SL
 SL
-Kf
-Ym
+Mc
+og
 wK
 SL
 SL
@@ -92570,7 +92570,7 @@ Fz
 Fz
 uk
 Fz
-rk
+wt
 wK
 nz
 wK
@@ -92663,7 +92663,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -92745,13 +92745,13 @@ SL
 SL
 MT
 SL
-jv
+IK
 wb
-hT
+KH
 SL
-lM
-Kf
-HY
+zE
+Mc
+yj
 SL
 SL
 SL
@@ -92890,7 +92890,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -92965,21 +92965,21 @@ jm
 jm
 yI
 wb
-IW
-eg
-eg
-eg
+pb
+gf
+gf
+gf
 SL
 SL
 SL
-jv
+IK
 wb
-hT
+KH
 SL
 SL
-IM
-Sb
-zs
+jk
+CK
+vj
 SL
 SL
 nz
@@ -93008,7 +93008,7 @@ uk
 uk
 DI
 nz
-kV
+xj
 nz
 nz
 uk
@@ -93117,7 +93117,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -93192,13 +93192,13 @@ jm
 wK
 jm
 wb
-NO
+zK
 HM
-NO
-eg
+zK
+gf
 SL
 SL
-vi
+Fa
 QM
 wb
 SL
@@ -93655,7 +93655,7 @@ SL
 SL
 SL
 wb
-RS
+nD
 SL
 SL
 SL
@@ -93798,7 +93798,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -93874,7 +93874,7 @@ wK
 wK
 jm
 wb
-Wq
+ZN
 qf
 SL
 SL
@@ -94025,7 +94025,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -94104,13 +94104,13 @@ wb
 xb
 SL
 SL
-AO
+oA
 SL
 SL
 SL
 Ge
 wb
-aq
+Lq
 SL
 SL
 SL
@@ -94172,7 +94172,7 @@ uk
 uk
 Fz
 Fz
-QD
+Un
 DI
 uk
 Fz
@@ -94331,13 +94331,13 @@ wb
 SL
 SL
 Ye
-EX
-zV
+qY
+uq
 SL
 SL
 SL
 wb
-sd
+MP
 SL
 SL
 SL
@@ -94479,7 +94479,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -94558,13 +94558,13 @@ wb
 SL
 SL
 SL
-mh
-ce
+RD
+Zq
 SL
 SL
 SL
 wb
-sd
+MP
 SL
 SL
 SL
@@ -94608,7 +94608,7 @@ uk
 uk
 DI
 Fz
-vN
+pj
 Fz
 DI
 uk
@@ -94706,7 +94706,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -94785,13 +94785,13 @@ jm
 SL
 SL
 qf
-Kf
-Ym
+Mc
+og
 SL
 SL
 SL
 wb
-zF
+Vw
 SL
 SL
 SL
@@ -94933,7 +94933,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -95012,8 +95012,8 @@ wK
 SL
 SL
 SL
-LI
-Sb
+qs
+CK
 SL
 SL
 Vh
@@ -95160,7 +95160,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -95387,7 +95387,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -95614,7 +95614,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -95693,7 +95693,7 @@ wb
 FB
 SL
 XE
-FI
+wB
 VM
 wK
 wK
@@ -95769,7 +95769,7 @@ uk
 uk
 Fz
 Fz
-zA
+Ov
 uk
 uk
 uk
@@ -95841,7 +95841,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -95926,11 +95926,11 @@ Ka
 wK
 wK
 wb
-yJ
+ex
 SL
 SL
 SL
-ya
+fD
 wb
 SL
 SL
@@ -96068,8 +96068,8 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -96153,11 +96153,11 @@ jm
 wK
 wK
 jm
-Uq
+Ng
 SL
 SL
 SL
-ya
+fD
 wb
 SL
 SL
@@ -96296,7 +96296,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -96375,12 +96375,12 @@ jm
 jm
 jm
 jm
-AB
+yO
 wK
 wK
 wK
 jm
-YL
+dk
 SL
 SL
 SL
@@ -96423,7 +96423,7 @@ uk
 uk
 uk
 Fz
-xV
+LO
 Fz
 uk
 uk
@@ -96523,7 +96523,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -96608,9 +96608,9 @@ wK
 jm
 jm
 jm
-YL
+dk
 SL
-ya
+fD
 SL
 wb
 nz
@@ -96827,8 +96827,8 @@ QR
 jm
 jm
 jm
-AB
-Lj
+yO
+xx
 wK
 wK
 jm
@@ -96977,7 +96977,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -97054,7 +97054,7 @@ wK
 jm
 jm
 jm
-AB
+yO
 wK
 jm
 jm
@@ -97122,7 +97122,7 @@ uk
 uk
 uk
 Fz
-vN
+pj
 Fz
 DI
 uk
@@ -97133,7 +97133,7 @@ uk
 uk
 uk
 Fz
-Yi
+rt
 Fz
 uk
 uk
@@ -97204,7 +97204,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -97658,7 +97658,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 nz
 nz
@@ -97885,8 +97885,8 @@ nz
 nz
 nz
 nz
-nz
-nz
+RH
+RH
 nz
 nz
 nz
@@ -98011,7 +98011,7 @@ uk
 uk
 uk
 Fz
-xV
+LO
 Fz
 uk
 uk
@@ -98114,28 +98114,28 @@ nz
 nz
 nz
 nz
+RH
+RH
+RH
+RH
 nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
-nz
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
 nz
 iU
 iU
@@ -98362,7 +98362,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -98589,7 +98589,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -98816,7 +98816,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -99043,7 +99043,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -99270,7 +99270,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -99497,7 +99497,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -99778,7 +99778,7 @@ jm
 jm
 QR
 gI
-gs
+dp
 MM
 jm
 jm
@@ -99951,7 +99951,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -100004,8 +100004,8 @@ jm
 jm
 jm
 jm
-RF
-hj
+Yy
+gY
 VE
 jm
 jm
@@ -100056,7 +100056,7 @@ uk
 uk
 uk
 Fz
-zA
+Ov
 nz
 uk
 uk
@@ -100178,7 +100178,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -100405,7 +100405,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -100632,7 +100632,7 @@ nz
 nz
 nz
 nz
-nz
+RH
 nz
 iU
 iU
@@ -100859,7 +100859,7 @@ iU
 iU
 iU
 iU
-iU
+RH
 iU
 iU
 iU
@@ -101086,7 +101086,7 @@ iU
 iU
 iU
 iU
-iU
+RH
 iU
 iU
 iU
@@ -101313,7 +101313,7 @@ iU
 iU
 iU
 iU
-iU
+RH
 iU
 iU
 iU
@@ -101540,7 +101540,7 @@ iU
 iU
 iU
 iU
-iU
+RH
 iU
 iU
 iU
