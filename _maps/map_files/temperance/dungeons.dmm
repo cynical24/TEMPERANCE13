@@ -172,6 +172,10 @@
 	dir = 4;
 	pixel_y = 1
 	},
+/obj/structure/fluff/traveltile{
+	aportalgoesto = "hospitalout2";
+	aportalid = "hospitalin2"
+	},
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
 "cO" = (
@@ -284,6 +288,17 @@
 /obj/structure/closet/crate/roguecloset/metal,
 /obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/grime,
+/area/rogue/under/cave/warmachine)
+"dH" = (
+/obj/structure/stairs/stone{
+	dir = 4;
+	pixel_y = 1
+	},
+/obj/structure/fluff/traveltile{
+	aportalgoesto = "hospitalout1";
+	aportalid = "hospitalin1"
+	},
+/turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
 "dQ" = (
 /obj/structure/table/wood/longreif,
@@ -473,6 +488,11 @@
 /obj/effect/decal/cleanable/dirt/grime,
 /obj/effect/decal/cleanable/dirt/grime,
 /turf/open/floor/rogue/warmetal,
+/area/rogue/under/cave/warmachine)
+"gD" = (
+/obj/effect/decal/cleanable/dirt/grime/grime3,
+/mob/living/simple_animal/hostile/rogue/robot,
+/turf/open/floor/rogue/grime,
 /area/rogue/under/cave/warmachine)
 "gF" = (
 /obj/effect/decal/cleanable/dirt/grime/dust,
@@ -683,6 +703,7 @@
 	density = 0
 	},
 /obj/effect/decal/cleanable/dirt/grime/grime3,
+/mob/living/simple_animal/hostile/rogue/robot,
 /turf/open/floor/rogue/grime,
 /area/rogue/under/cave/warmachine)
 "jY" = (
@@ -33096,7 +33117,7 @@ FI
 FI
 wJ
 da
-Cd
+gD
 wJ
 FI
 FI
@@ -37171,7 +37192,7 @@ FI
 vv
 wy
 Ci
-cN
+dH
 cN
 SB
 SB
@@ -37182,7 +37203,7 @@ CH
 FI
 wJ
 Vl
-dt
+CC
 wJ
 FI
 FI
