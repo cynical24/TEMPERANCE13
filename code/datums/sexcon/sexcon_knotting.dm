@@ -5,7 +5,7 @@
 	if(!penis.functional)
 		return FALSE
 	switch(penis.penis_type)
-		if(PENIS_TYPE_KNOTTED,PENIS_TYPE_TAPERED_KNOTTED,PENIS_TYPE_TAPERED_DOUBLE_KNOTTED,PENIS_TYPE_BARBED_KNOTTED)
+		if(PENIS_TYPE_KNOTTED,PENIS_TYPE_EQUINE_KNOTTED,PENIS_TYPE_TAPERED_KNOTTED,PENIS_TYPE_TAPERED_DOUBLE_KNOTTED,PENIS_TYPE_BARBED_KNOTTED)
 			return TRUE
 	return FALSE
 
@@ -360,33 +360,33 @@
 		knotted_part_partner = SEX_PART_NULL
 
 /mob/living/carbon/human/werewolf_transform() // needed to ensure that we safely remove the tie before transitioning
-	if(src.sexcon.knotted_status)
-		src.sexcon.knot_remove()
+	if(istype(sexcon) && sexcon.knotted_status)
+		sexcon.knot_remove()
 	return ..()
 
 /mob/living/carbon/human/werewolf_untransform(dead,gibbed) // needed to ensure that we safely remove the tie after transitioning
-	if(src.sexcon.knotted_status)
-		src.sexcon.knot_remove()
+	if(istype(sexcon) && sexcon.knotted_status)
+		sexcon.knot_remove()
 	return ..()
 
 /mob/living/carbon/can_speak_vocal() // do not allow bottom to speak while knotted orally (at least until they're double knotted or it has been removed)
 	. = ..()
 	if(. && iscarbon(src))
 		var/mob/living/carbon/H = src
-		return !(H.sexcon.knotted_status == KNOTTED_AS_BTM && H.sexcon.knotted_part_partner&SEX_PART_JAWS)
+		return !((H?.sexcon?.knotted_status == KNOTTED_AS_BTM) && (H?.sexcon?.knotted_part_partner&SEX_PART_JAWS))
 	return .
 
 /datum/emote/is_emote_muffled(mob/living/carbon/H) // do not allow bottom to emote while knotted orally (at least until they're double knotted or it has been removed)
 	. = ..()
 	if(!.)
 		return FALSE
-	return !(H.sexcon.knotted_status == KNOTTED_AS_BTM && H.sexcon.knotted_part_partner&SEX_PART_JAWS)
+	return !((H?.sexcon?.knotted_status == KNOTTED_AS_BTM) && (H?.sexcon?.knotted_part_partner&SEX_PART_JAWS))
 
 /datum/emote/select_message_type(mob/user, intentional) // always use the muffled message while bottom is knotted orally (at least until they're double knotted or it has been removed)
 	. = ..()
 	if(message_muffled && iscarbon(user))
 		var/mob/living/carbon/H = user
-		if(H.sexcon.knotted_status == KNOTTED_AS_BTM && H.sexcon.knotted_part_partner&SEX_PART_JAWS)
+		if((H?.sexcon?.knotted_status == KNOTTED_AS_BTM) && (H?.sexcon?.knotted_part_partner&SEX_PART_JAWS))
 			. = message_muffled
 
 /datum/status_effect/knot_tied
@@ -407,8 +407,8 @@
 	effectedstats = list("intelligence" = -10)
 
 /atom/movable/screen/alert/status_effect/knot_fucked_stupid
-	name = "Braindead"
-	desc = "I am having difficulty thinking.."
+	name = "Fucked Stupid"
+	desc = "Mmmph I can't think straight..."
 	icon_state = "knotted_stupid"
 
 /datum/status_effect/knot_gaped
@@ -438,7 +438,7 @@
 
 /atom/movable/screen/alert/status_effect/knot_gaped
 	name = "Gaped"
-	desc = "You were forcefully withdrawn from."
+	desc = "You were forcefully withdrawn from. Warmth runs freely down your thighs..."
 
 /datum/status_effect/knotted
 	id = "knotted"
