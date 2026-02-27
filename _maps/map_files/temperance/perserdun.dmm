@@ -9,7 +9,7 @@
 "ae" = (
 /obj/machinery/light/rogue/hearth,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "ai" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/r{
 	light_color = "#505f7a"
@@ -156,6 +156,9 @@
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"cl" = (
+/turf/closed/wall/mineral/rogue/miscroof/outercorner/dir4,
+/area/rogue/under/cave/warmachine)
 "cr" = (
 /obj/structure/table/wood/perserdunsmall,
 /obj/item/storage/belt/rogue/surgery_bag/full{
@@ -227,6 +230,9 @@
 /obj/effect/mine/explosive,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/perserdun)
+"cV" = (
+/turf/closed/wall/mineral/rogue/miscroof/outercorner/dir1,
+/area/rogue/under/cave/warmachine)
 "cZ" = (
 /obj/structure/closet/crate/roguecloset/dark{
 	pixel_y = 12
@@ -246,6 +252,9 @@
 /obj/effect/decal/cleanable/dirt/grime/dust,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"dn" = (
+/turf/closed/wall/mineral/rogue/miscroof/middle/dir1,
+/area/rogue/under/cave/warmachine)
 "dq" = (
 /obj/structure/table/vtable/v2,
 /obj/item/needle{
@@ -437,7 +446,7 @@
 "ft" = (
 /obj/structure/shisha/hookah,
 /turf/open/floor/carpet/royalblack,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "fu" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/cooking/platter{
@@ -509,7 +518,7 @@
 "fO" = (
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "fU" = (
 /obj/effect/decal/cleanable/dirt/grime/grime3,
 /obj/effect/decal/cleanable/dirt/grime/dust,
@@ -701,7 +710,7 @@
 "iV" = (
 /obj/effect/spawner/lootdrop/t13armor,
 /turf/open/floor/carpet/royalblack,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "ji" = (
 /obj/effect/decal/cleanable/dirt/grime/grime3,
 /turf/closed/wall/mineral/rogue/perserdun/long,
@@ -815,7 +824,7 @@
 /obj/item/storage/belt/rogue/leather/knifebelt/black/kazengun,
 /obj/structure/table/vtable/v2,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "kE" = (
 /obj/structure/closet/crate/roguecloset/metal{
 	pixel_y = 0;
@@ -959,7 +968,7 @@
 "nh" = (
 /obj/structure/globe,
 /turf/open/floor/carpet/royalblack,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "nm" = (
 /turf/closed/wall/mineral/rogue/miscroof/outercorner/dir1,
 /area/rogue/outdoors/perserdun)
@@ -1027,7 +1036,7 @@
 /area/rogue/indoors/perserdunbase)
 "oj" = (
 /turf/open/floor/rogue/dirt,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "ok" = (
 /obj/machinery/light/rogue/wallfire/candle/blue{
 	light_color = "#505f7a";
@@ -1169,7 +1178,7 @@
 /obj/structure/table/vtable,
 /obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "qS" = (
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/perdun,
@@ -1321,7 +1330,7 @@
 "so" = (
 /obj/structure/chair/wood/rogue,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "ss" = (
 /obj/structure/bed/rogue/inn/double{
 	dir = 2
@@ -1526,7 +1535,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "uD" = (
 /obj/effect/decal/cleanable/dirt/grime/grime2,
 /obj/machinery/light/rogue/wallfire/candle/blue{
@@ -1610,7 +1619,7 @@
 /area/rogue/indoors/perserdunbase)
 "wA" = (
 /turf/closed/wall/mineral/rogue/decowood,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "wB" = (
 /obj/structure/flora/roguetree/stump/log{
 	pixel_x = -18;
@@ -1731,7 +1740,7 @@
 "xM" = (
 /obj/structure/closet/crate/roguecloset/metal/metal2,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "xY" = (
 /turf/closed/wall/mineral/rogue/perserdun/outercorner/dir8,
 /area/rogue/outdoors/indoors/persunbaseoutlook)
@@ -1790,7 +1799,7 @@
 /area/rogue/indoors/perserdunbase)
 "yR" = (
 /turf/open/floor/carpet/royalblack,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "yU" = (
 /obj/item/clothing/cloak/templar/malumite{
 	name = "battered trench tabard"
@@ -2005,6 +2014,9 @@
 	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"BU" = (
+/turf/closed/wall/mineral/rogue/miscroof/middle/dir8,
+/area/rogue/under/cave/warmachine)
 "BW" = (
 /obj/structure/chair/wood/rogue/chair4{
 	dir = 8
@@ -2066,7 +2078,7 @@
 "CJ" = (
 /mob/living/simple_animal/hostile/rogue/robot/gunner,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "CQ" = (
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
@@ -2076,6 +2088,9 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
+"Db" = (
+/turf/closed/wall/mineral/rogue/miscroof/middle/dir4,
+/area/rogue/under/cave/warmachine)
 "Dj" = (
 /obj/structure/mineral_door/wood/violet{
 	lockid = "perserdun";
@@ -2211,7 +2226,7 @@
 "EZ" = (
 /obj/structure/chair/bench/couchablack,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "Fa" = (
 /obj/effect/spawner/lootdrop/general_loot_mid/x3,
 /obj/structure/closet/crate/chest/wicker,
@@ -2253,6 +2268,9 @@
 /obj/effect/landmark/start/armsmanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
+"FF" = (
+/turf/closed/wall/mineral/rogue/miscroof/outercorner/dir8,
+/area/rogue/under/cave/warmachine)
 "FO" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/effect/decal/cleanable/dirt/grime/dust,
@@ -2316,7 +2334,7 @@
 /obj/structure/table/church/m,
 /obj/effect/spawner/lootdrop/t13armor,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "GO" = (
 /obj/structure/table/church{
 	dir = 1
@@ -2326,7 +2344,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "GX" = (
 /turf/closed/wall/mineral/rogue/miscroof/middle/dir4,
 /area/rogue)
@@ -2383,7 +2401,7 @@
 /area/rogue/indoors/perserdunbase)
 "Ig" = (
 /turf/closed/wall/mineral/rogue/wooddark,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "Ir" = (
 /turf/closed/wall/mineral/rogue/perserdun/end/north,
 /area/rogue/outdoors/indoors/persunbaseoutlook)
@@ -2876,6 +2894,9 @@
 	desc = "Comforting to some."
 	},
 /area/rogue/indoors/perserdunbase)
+"Ot" = (
+/turf/closed/wall/mineral/rogue/miscroof/middle,
+/area/rogue/under/cave/warmachine)
 "Ox" = (
 /obj/machinery/light/rogue/wallfire/candle/floorcandle/alt{
 	pixel_y = 0;
@@ -3229,7 +3250,7 @@
 "SP" = (
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "SS" = (
 /obj/machinery/light/rogue/firebowl/standing/blue{
 	light_color = "#505f7a"
@@ -3331,7 +3352,7 @@
 "Uy" = (
 /mob/living/carbon/human/species/human/northern/bandit,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "Uz" = (
 /obj/structure/fluff/walldeco/compromise{
 	pixel_y = 32
@@ -3393,7 +3414,7 @@
 /area/rogue/indoors/perserdunbase)
 "Vi" = (
 /turf/open/floor/rogue/redlight,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "Vj" = (
 /obj/effect/decal/cleanable/dirt/grime,
 /obj/effect/decal/cleanable/dirt/grime,
@@ -3405,6 +3426,9 @@
 	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
+"Vl" = (
+/turf/closed/wall/mineral/rogue/miscroof/outercorner,
+/area/rogue/under/cave/warmachine)
 "Vn" = (
 /obj/item/flashlight/flare/torch/lantern{
 	pixel_y = 4;
@@ -3483,7 +3507,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "VS" = (
 /obj/effect/decal/cleanable/dirt/grime/grime4,
 /turf/open/floor/rogue/perdun,
@@ -3537,7 +3561,7 @@
 "Ww" = (
 /obj/structure/chair/bench/couchablack/r,
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "Wz" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -3547,7 +3571,7 @@
 "WC" = (
 /obj/item/clothing/shoes/roguetown/armor/ebboots/wrapped,
 /turf/open/floor/carpet/royalblack,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "WI" = (
 /obj/structure/chair/wood/rogue/chair4{
 	dir = 4
@@ -3639,7 +3663,7 @@
 	pixel_x = 17
 	},
 /turf/open/floor/rogue/warmetal,
-/area/rogue)
+/area/rogue/under/cave/warmachine)
 "Yi" = (
 /obj/effect/decal/cleanable/dirt/grime/dust,
 /turf/closed/wall/mineral/rogue/perserdun/long/east_west,
@@ -4723,7 +4747,7 @@ ML
 wA
 EZ
 XT
-vF
+ph
 SP
 nh
 ft
@@ -4853,8 +4877,8 @@ ML
 wA
 Ww
 uB
-vF
-vF
+ph
+ph
 yR
 iV
 WC
@@ -4981,10 +5005,10 @@ ML
 ML
 ML
 wA
-vF
-vF
+ph
+ph
 CJ
-vF
+ph
 yR
 yR
 yR
@@ -5112,12 +5136,12 @@ ML
 ML
 wA
 CJ
-vF
-vF
-vF
+ph
+ph
+ph
 CJ
-vF
-vF
+ph
+ph
 wA
 ML
 ML
@@ -5242,11 +5266,11 @@ ML
 ML
 wA
 ae
-vF
-vF
-vF
-vF
-vF
+ph
+ph
+ph
+ph
+ph
 CJ
 wA
 ML
@@ -5372,12 +5396,12 @@ ML
 ML
 wA
 so
-vF
-vF
-vF
-vF
-vF
-vF
+ph
+ph
+ph
+ph
+ph
+ph
 wA
 ML
 ML
@@ -5502,12 +5526,12 @@ ML
 ML
 wA
 xM
-vF
-vF
-vF
-vF
-vF
-vF
+ph
+ph
+ph
+ph
+ph
+ph
 wA
 ML
 ML
@@ -5632,12 +5656,12 @@ ML
 ML
 wA
 xM
-vF
-vF
-vF
-vF
-vF
-vF
+ph
+ph
+ph
+ph
+ph
+ph
 wA
 ML
 ML
@@ -5762,12 +5786,12 @@ ML
 ML
 wA
 xM
-vF
+ph
 Uy
-vF
-vF
-vF
-vF
+ph
+ph
+ph
+ph
 wA
 ML
 ML
@@ -5892,12 +5916,12 @@ ML
 ML
 wA
 xM
-vF
-vF
+ph
+ph
 Uy
-vF
-vF
-vF
+ph
+ph
+ph
 wA
 ML
 ML
@@ -6022,12 +6046,12 @@ ML
 ML
 wA
 xM
-vF
-vF
-vF
+ph
+ph
+ph
 fO
-vF
-vF
+ph
+ph
 wA
 ML
 ML
@@ -6154,7 +6178,7 @@ Ig
 wA
 wA
 wA
-Rb
+mG
 wA
 wA
 wA
@@ -6305,13 +6329,13 @@ ML
 ML
 ML
 ML
-DF
-EN
-EN
-EN
-EN
-EN
-Pq
+Vl
+BU
+BU
+BU
+BU
+BU
+cl
 ML
 ML
 ML
@@ -6435,13 +6459,13 @@ ML
 ML
 ML
 ML
-sm
+dn
 GO
-vF
-vF
+ph
+ph
 CJ
-vF
-Ld
+ph
+Ot
 ML
 ML
 NT
@@ -6565,13 +6589,13 @@ ML
 ML
 ML
 ML
-sm
+dn
 GG
-vF
-vF
-vF
-vF
-Ld
+ph
+ph
+ph
+ph
+Ot
 ML
 ML
 ML
@@ -6695,13 +6719,13 @@ qs
 ML
 ML
 ML
-sm
+dn
 VQ
-vF
-vF
-vF
-vF
-Ld
+ph
+ph
+ph
+ph
+Ot
 ML
 ML
 ML
@@ -6825,13 +6849,13 @@ ML
 ML
 ML
 ML
-sm
-vF
-vF
-vF
+dn
+ph
+ph
+ph
 CJ
-vF
-Ld
+ph
+Ot
 ML
 ML
 ML
@@ -6955,13 +6979,13 @@ ML
 ML
 ML
 ML
-sm
+dn
 Uy
-vF
-vF
-vF
-vF
-Ld
+ph
+ph
+ph
+ph
+Ot
 ML
 ML
 ML
@@ -7085,13 +7109,13 @@ ML
 ML
 ML
 ML
-Rb
-vF
+mG
+ph
 Uy
-vF
-vF
-vF
-Ld
+ph
+ph
+ph
+Ot
 ML
 ML
 ML
@@ -7215,13 +7239,13 @@ ML
 ML
 ML
 ML
-sm
-vF
-vF
-vF
-vF
+dn
+ph
+ph
+ph
+ph
 CJ
-Ld
+Ot
 ML
 ML
 ML
@@ -7345,13 +7369,13 @@ ML
 ML
 ML
 ML
-sm
-vF
-vF
-vF
-vF
-vF
-Ld
+dn
+ph
+ph
+ph
+ph
+ph
+Ot
 ML
 ML
 NT
@@ -7475,13 +7499,13 @@ ML
 ML
 ML
 ML
-IZ
-GX
-GX
-GX
-GX
-GX
-qn
+cV
+Db
+Db
+Db
+Db
+Db
+FF
 ML
 ML
 ML
@@ -7715,10 +7739,10 @@ ML
 ML
 ML
 Ig
-EN
-EN
-EN
-EN
+BU
+BU
+BU
+BU
 Ig
 ML
 ML
@@ -7844,12 +7868,12 @@ ML
 ML
 ML
 ML
-sm
+dn
 CJ
-vF
-vF
+ph
+ph
 qN
-Ld
+Ot
 ML
 ML
 ML
@@ -7974,12 +7998,12 @@ ML
 ML
 ML
 ML
-sm
-vF
-vF
-vF
+dn
+ph
+ph
+ph
 ky
-Ld
+Ot
 ML
 ML
 ML
@@ -8104,11 +8128,11 @@ ML
 ML
 ML
 ML
-sm
-vF
+dn
+ph
 Ig
-EN
-EN
+BU
+BU
 Ig
 ML
 ML
@@ -8234,10 +8258,10 @@ ML
 ML
 ML
 ML
-sm
-vF
-vF
-Rb
+dn
+ph
+ph
+mG
 oj
 oj
 ML
@@ -8364,10 +8388,10 @@ aA
 ML
 ML
 ML
-sm
-vF
-vF
-Rb
+dn
+ph
+ph
+mG
 oj
 oj
 ML
@@ -8494,11 +8518,11 @@ ML
 ML
 ML
 ML
-sm
-vF
+dn
+ph
 Ig
-GX
-GX
+Db
+Db
 Ig
 ML
 NT
@@ -8624,12 +8648,12 @@ ML
 ML
 ML
 ML
-sm
-vF
-vF
-vF
+dn
+ph
+ph
+ph
 Vi
-Ld
+Ot
 ML
 ML
 NT
@@ -8755,10 +8779,10 @@ ML
 ML
 ML
 Ig
-GX
-GX
-GX
-GX
+Db
+Db
+Db
+Db
 Ig
 ML
 NT

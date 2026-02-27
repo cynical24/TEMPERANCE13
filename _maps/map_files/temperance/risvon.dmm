@@ -2635,9 +2635,6 @@
 "ws" = (
 /turf/closed/wall/mineral/rogue/risvon/long/east_west,
 /area/rogue/outdoors/exposed/risvonbase)
-"wu" = (
-/turf/closed/mineral/rogue/bedrock,
-/area/rogue)
 "wv" = (
 /obj/structure/bookcase,
 /obj/machinery/light/rogue/wallfire/candle,
@@ -23018,41 +23015,41 @@ jR
 "}
 
 (1,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 jR
 jR
 jR
@@ -23148,41 +23145,41 @@ jR
 jR
 "}
 (2,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 jR
 jR
 jR
@@ -23278,19 +23275,19 @@ jR
 jR
 "}
 (3,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 gw
 HB
 HB
@@ -23298,21 +23295,21 @@ HB
 HB
 HB
 TE
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 jR
 jR
 jR
@@ -23408,15 +23405,15 @@ jR
 jR
 "}
 (4,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 gw
 HB
 HB
@@ -23538,15 +23535,15 @@ jR
 jR
 "}
 (5,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 Ml
 LD
@@ -23668,15 +23665,15 @@ jR
 jR
 "}
 (6,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 ic
 xK
@@ -23798,15 +23795,15 @@ jR
 jR
 "}
 (7,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 Ju
 xK
@@ -23928,15 +23925,15 @@ jR
 jR
 "}
 (8,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 Ml
 xK
@@ -24058,15 +24055,15 @@ jR
 jR
 "}
 (9,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 ic
 xK
@@ -24188,15 +24185,15 @@ jR
 jR
 "}
 (10,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 Ml
 xK
@@ -24318,15 +24315,15 @@ jR
 jR
 "}
 (11,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tv
 iC
 HB
@@ -24448,16 +24445,16 @@ jR
 jR
 "}
 (12,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 za
 za
@@ -24578,16 +24575,16 @@ jR
 jR
 "}
 (13,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 za
 za
@@ -24708,16 +24705,16 @@ jR
 jR
 "}
 (14,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 za
 za
@@ -24838,16 +24835,16 @@ jR
 jR
 "}
 (15,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 za
 za
@@ -24968,16 +24965,16 @@ jR
 jR
 "}
 (16,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 za
 za
@@ -25098,16 +25095,16 @@ jR
 jR
 "}
 (17,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 za
 za
@@ -25228,16 +25225,16 @@ jR
 jR
 "}
 (18,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 za
 za
@@ -25358,16 +25355,16 @@ jR
 jR
 "}
 (19,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 za
 za
@@ -25488,9 +25485,9 @@ jR
 jR
 "}
 (20,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Xp
 HB
 HB
@@ -25618,9 +25615,9 @@ jR
 jR
 "}
 (21,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 za
 za
@@ -25748,9 +25745,9 @@ jR
 jR
 "}
 (22,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 za
 za
@@ -25878,9 +25875,9 @@ jR
 jR
 "}
 (23,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Fj
 HB
 HB
@@ -26008,9 +26005,9 @@ jR
 jR
 "}
 (24,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -26138,9 +26135,9 @@ jR
 jR
 "}
 (25,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -26268,9 +26265,9 @@ jR
 jR
 "}
 (26,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -26398,9 +26395,9 @@ jR
 jR
 "}
 (27,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -26528,9 +26525,9 @@ jR
 jR
 "}
 (28,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -26658,9 +26655,9 @@ jR
 jR
 "}
 (29,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -26788,9 +26785,9 @@ jR
 jR
 "}
 (30,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -26918,9 +26915,9 @@ jR
 jR
 "}
 (31,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -27048,9 +27045,9 @@ jR
 jR
 "}
 (32,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -27178,9 +27175,9 @@ jR
 jR
 "}
 (33,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -27308,9 +27305,9 @@ jR
 jR
 "}
 (34,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -27438,9 +27435,9 @@ jR
 jR
 "}
 (35,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -27568,9 +27565,9 @@ jR
 jR
 "}
 (36,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -27698,9 +27695,9 @@ jR
 jR
 "}
 (37,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Tx
 xK
 xK
@@ -27828,9 +27825,9 @@ jR
 jR
 "}
 (38,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 Zy
 HB
 HB
@@ -27958,9 +27955,9 @@ jR
 jR
 "}
 (39,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 za
 za
 za
@@ -28088,9 +28085,9 @@ jR
 jR
 "}
 (40,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 za
 za
 za
@@ -28218,9 +28215,9 @@ jR
 jR
 "}
 (41,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 LC
 LC
@@ -28348,9 +28345,9 @@ jR
 jR
 "}
 (42,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -28478,9 +28475,9 @@ jR
 jR
 "}
 (43,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -28608,9 +28605,9 @@ jR
 jR
 "}
 (44,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -28738,9 +28735,9 @@ jR
 jR
 "}
 (45,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -28868,9 +28865,9 @@ jR
 jR
 "}
 (46,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -28998,9 +28995,9 @@ jR
 jR
 "}
 (47,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -29128,9 +29125,9 @@ jR
 jR
 "}
 (48,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -29258,9 +29255,9 @@ jR
 jR
 "}
 (49,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -29388,9 +29385,9 @@ jR
 jR
 "}
 (50,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -29518,9 +29515,9 @@ jR
 jR
 "}
 (51,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -29648,9 +29645,9 @@ jR
 jR
 "}
 (52,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -29778,9 +29775,9 @@ jR
 jR
 "}
 (53,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -29908,9 +29905,9 @@ jR
 jR
 "}
 (54,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -30038,9 +30035,9 @@ jR
 jR
 "}
 (55,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 NF
 NF
@@ -30168,9 +30165,9 @@ jR
 jR
 "}
 (56,1,2) = {"
-wu
-wu
-wu
+jR
+jR
+jR
 LC
 LC
 LC
@@ -30298,14 +30295,14 @@ jR
 jR
 "}
 (57,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 tP
 xK
@@ -30428,14 +30425,14 @@ jR
 jR
 "}
 (58,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 jj
 xK
@@ -30558,14 +30555,14 @@ jR
 jR
 "}
 (59,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 Gh
 xK
@@ -31078,14 +31075,14 @@ jR
 jR
 "}
 (63,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 Tx
 nq
 Lv
@@ -31208,14 +31205,14 @@ jR
 jR
 "}
 (64,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 HU
 HB
 HB
@@ -31338,17 +31335,17 @@ jR
 jR
 "}
 (65,1,2) = {"
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
-wu
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
 HU
 HB
 HB

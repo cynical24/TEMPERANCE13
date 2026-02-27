@@ -88,7 +88,7 @@
 		/datum/body_marking/bun,
 	)
 
-/datum/species.elf/wood/check_roundstart_eligible() // This is ugly as fuck and should use the config file but this codebase doesn't have the examples
+/datum/species/elf/wood/check_roundstart_eligible() // This is ugly as fuck and should use the config file but this codebase doesn't have the examples
 	return TRUE
 
 /datum/species/elf/wood/get_span_language(datum/language/message_language)
