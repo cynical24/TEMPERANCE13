@@ -2371,7 +2371,6 @@
 #include "code\modules\tgs\includes.dm"
 #include "code\modules\tgs\core\_definitions.dm"
 #include "code\modules\tgs\core\byond_world_export.dm"
-#include "code\modules\tgs\core\clientcount.dm"
 #include "code\modules\tgs\core\core.dm"
 #include "code\modules\tgs\core\datum.dm"
 #include "code\modules\tgs\core\tgs_version.dm"
