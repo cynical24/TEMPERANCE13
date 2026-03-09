@@ -1545,35 +1545,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							to_chat(user, "<font color='red'>This voice color is too dark for mortals.</font>")
 							return
 						voice_color = sanitize_hexcolor(new_voice)
-				
-				if("extra_language")
-					var/static/list/selectable_languages = list(
-						/datum/language/elvish,
-						/datum/language/dwarvish,
-						/datum/language/orcish, 
-						/datum/language/hellspeak,
-						/datum/language/draconic,
-						/datum/language/celestial,
-						/datum/language/grenzelhoftian,
-						/datum/language/kazengunese,
-						/datum/language/etruscan,
-						/datum/language/gronnic,
-						/datum/language/otavan,
-						/datum/language/aavnic
-					)
-					var/list/choices = list("None")
-					for(var/language in selectable_languages)
-						if(language in pref_species.languages)
-							continue
-						var/datum/language/a_language = new language()
-						choices[a_language.name] = language
-					
-					var/chosen_language = input(user, "Choose your character's extra language:", "Character Preference") as null|anything in choices
-					if(chosen_language)
-						if(chosen_language == "None")
-							extra_language = "None"
-						else
-							extra_language = choices[chosen_language]
 
 				if("voice_pitch")
 					var/new_voice_pitch = input(user, "Choose your character's voice pitch ([MIN_VOICE_PITCH] to [MAX_VOICE_PITCH], lower is deeper):", "Voice Pitch") as null|num
