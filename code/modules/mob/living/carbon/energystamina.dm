@@ -150,7 +150,7 @@
 	var/heart_attacking = FALSE
 
 /mob/living/carbon/proc/heart_attack()
-	if(prob(((STACON - 10) * 10))
+	if(prob(((STACON - 10) * 10)))
 		to_chat(src, span_subtle("Your heart can take the pain."))
 		return
 	if(!heart_attacking)
