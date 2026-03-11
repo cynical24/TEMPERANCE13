@@ -278,8 +278,6 @@
 			raw_message = "<small>[raw_message]</small>"
 		if(garrisonline)
 			raw_message = "<span style='color: [GARRISON_SCOM_COLOR]'>[raw_message]</span>" //Prettying up for Garrison line
-			for(var/obj/item/scomstone/garrison/S in SSroguemachine.scomm_machines)
-				S.repeat_message(raw_message, src, usedcolor, message_language)
 			for(var/obj/item/scomstone/bad/garrison/S in SSroguemachine.scomm_machines)
 				S.repeat_message(raw_message, src, usedcolor, message_language)
 			for(var/obj/structure/roguemachine/scomm/S in SSroguemachine.scomm_machines)
@@ -363,8 +361,6 @@
 		S.repeat_message(input_text, src, usedcolor)
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		S.repeat_message(input_text, src, usedcolor)
-	for(var/obj/item/scomstone/empire/S in SSroguemachine.scomm_machines)
-		return
 	for(var/obj/item/listenstone/S in SSroguemachine.scomm_machines)//make the listenstone hear scomstone
 		S.repeat_message(input_text, src, usedcolor)
 	SSroguemachine.crown?.repeat_message(input_text, src, usedcolor)
