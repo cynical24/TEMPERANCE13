@@ -6,7 +6,7 @@
 	total_positions = 8
 	spawn_positions = 8
 	allowed_races = RACES_CONSCRIPT
-	allowed_sexes = list(MALE)
+	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You are the backbone of the Risvon Ziggurate. You are typically a volunteer, or a conscript. \
