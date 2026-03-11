@@ -39,17 +39,17 @@
 
 /datum/outfit/job/roguetown/grandknight/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
-	shoes = /obj/item/clothing/shoes/roguetown/boots
+	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/full/iron
 	cloak = /obj/item/clothing/cloak/perserduntabard
-	pants = /obj/item/clothing/under/roguetown/trou/artipants
+	pants = /datum/anvil_recipe/armor/iron/platelegs
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/iron
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/storage/belt/rogue/pouch/ammobag
+	beltr = /obj/item/gasgrenade
 	backl = /obj/item/rogueweapon/stoneaxe/oath
 	wrists = /obj/item/scomstone/empire
 	gloves = /obj/item/clothing/gloves/roguetown/plate/iron
@@ -65,7 +65,7 @@
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE) //test 2 see if it's broken
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/axes, 5, TRUE) // mf the fuggin' soldats are better than this guy hooooly at least give him 10% more chance to get past their axes
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
@@ -74,9 +74,11 @@
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
 	H.change_stat("strength", 2)
-	H.change_stat("constitution", 2)
-	H.change_stat("endurance", 2)
+	H.change_stat("constitution", 3)
+	H.change_stat("endurance", 3)
 	H.change_stat("perception", 2)
-	H.change_stat("speed", 3)
+	H.change_stat("intelligence", 2)
+	H.change_stat("speed", 2)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LONGSTRIDER, TRAIT_GENERIC)
+

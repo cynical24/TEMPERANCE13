@@ -53,7 +53,7 @@
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	backpack_contents = list(
-		/obj/item/ammo_box/handfuls/leveraction = 4,
+		/obj/item/ammo_box/handfuls/leveraction = 6,
 		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/mid,
 		/obj/item/gasgrenade,

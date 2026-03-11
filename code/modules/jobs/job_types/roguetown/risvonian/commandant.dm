@@ -56,7 +56,7 @@
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	id = /obj/item/roguekey/risvon
 	backpack_contents = list(
-		/obj/item/ammo_box/clip/pistol = 5,
+		/obj/item/ammo_box/clip/pistol = 6,
 		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/rich,
 		/obj/item/grenade = 2,
@@ -84,6 +84,7 @@
 	H.change_stat("speed", 2)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LONGSTRIDER, TRAIT_GENERIC)
+
 
 GLOBAL_VAR_INIT(commandant_raid_cooldown, -50000) // Inits variable for later
 

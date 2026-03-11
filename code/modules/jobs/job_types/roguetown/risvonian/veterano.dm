@@ -53,7 +53,7 @@
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	id = /obj/item/roguekey/risvon
 	backpack_contents = list(
-		/obj/item/ammo_box/handfuls/shotgun/buckshot = 4,
+		/obj/item/ammo_box/handfuls/shotgun/buckshot = 6,
 		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/mid,
 		/obj/item/smokegrenade,
@@ -64,9 +64,9 @@
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE) // THEY DO NOT GET SWORDS, THEY ARE SAVAGES, THEY USE AXES
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE) // they are also better than soldatos at axes, gives them a 10% chance to better get by parries
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
@@ -74,6 +74,7 @@
 	H.adjust_skillrank(/datum/skill/combat/shotguns, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+	H.change_stat("strength", 1) // roid rage mfs on them 24/7 percs
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)
 	H.change_stat("perception", 2)

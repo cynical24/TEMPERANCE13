@@ -54,7 +54,7 @@
 	id = /obj/item/roguekey/risvon
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	backpack_contents = list(
-		/obj/item/ammo_box/clip/pistol = 4,
+		/obj/item/ammo_box/clip/pistol = 6,
 		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/gun/ballistic/rifle/repeater/pistol,
 		/obj/item/storage/belt/rogue/pouch/coins/poor,

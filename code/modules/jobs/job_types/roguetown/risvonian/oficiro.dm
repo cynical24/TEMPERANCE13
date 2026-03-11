@@ -53,7 +53,7 @@
 	backl = /obj/item/gun/ballistic/rifle/repeater/rattlesnake
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	backpack_contents = list(
-		/obj/item/ammo_box/handfuls/rattlesnake = 2,
+		/obj/item/ammo_box/handfuls/rattlesnake = 4,
 		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/mid,
 		/obj/item/smokegrenade = 2,

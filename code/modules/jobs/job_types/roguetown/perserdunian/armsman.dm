@@ -52,7 +52,7 @@
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	id = /obj/item/roguekey/perserdun
 	backpack_contents = list(
-		/obj/item/ammo_box/handfuls/rifle = 4,
+		/obj/item/ammo_box/handfuls/rifle = 6,
 		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/gasgrenade,
