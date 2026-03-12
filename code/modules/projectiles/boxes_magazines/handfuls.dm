@@ -6,7 +6,7 @@
 	max_ammo = 5
 	multiload = 0
 
-/obj/item/ammo_box/handfuls/proc/check_rounds
+/obj/item/ammo_box/handfuls/proc/check_rounds()
 	if(!stored_ammo.len)
 		qdel(src)
 
