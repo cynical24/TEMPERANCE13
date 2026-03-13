@@ -27,6 +27,8 @@
 	var/list/bullet_cost
 	///cost of the materials in the magazine/box itself
 	var/list/base_cost
+	///Whether or not the box should be deleted when the last bullet is removed
+	var/handful = FALSE
 
 /obj/item/ammo_box/Initialize()
 	. = ..()
@@ -44,6 +46,8 @@
 		stored_ammo -= b
 		if (keep)
 			stored_ammo.Insert(1,b)
+		if(handful && !stored_ammo.len)
+			qdel(src)
 		return b
 
 ///puts a round into the magazine
