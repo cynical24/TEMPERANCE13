@@ -2,7 +2,7 @@
 	name = "Gunslinger"
 	tutorial = "Embracers of the modern day. Relies on guns, skills, and some armor."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_ALL_KINDS
+	allowed_races = RACES_CONSCRIPT
 	outfit = /datum/outfit/job/roguetown/adventurer/gunslinger
 	traits_applied = list(TRAIT_OUTLANDER)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
