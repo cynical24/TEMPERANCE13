@@ -31,13 +31,6 @@
 					/obj/item/gun/ballistic/rifle/repeater/jackal,
 				)
 
-/datum/supply_pack/rogue/ranged_weapons/JackalAmmo
-	name = "Jackal Ammo"
-	cost = 25
-	contains = list(
-					/obj/item/ammo_box/magazine/jackal,
-				)
-
 /datum/supply_pack/rogue/ranged_weapons/Reaper
 	name = "Reaper Semi-Automatic Rifle"
 	cost = 195 // T3 weapon
