@@ -1671,13 +1671,26 @@
 	},
 /area/rogue/outdoors/risvon)
 "oJ" = (
-/obj/structure/roguemachine/goldface/public/katarina{
-	pixel_y = 12
-	},
 /obj/structure/table/wood/perserdunsmall,
 /obj/effect/decal/carpet/square{
 	dir = 1
 	},
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
+/obj/item/ammo_box/clip/pistol,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "oO" = (
@@ -5116,6 +5129,23 @@
 "Pu" = (
 /turf/closed/wall/mineral/rogue/risvon/long,
 /area/rogue/indoors/risvonbasebar)
+"Pw" = (
+/obj/structure/table/wood/perserdunsmall,
+/obj/effect/decal/carpet/square{
+	dir = 1
+	},
+/obj/item/ammo_box/handfuls/rattlesnake,
+/obj/item/ammo_box/handfuls/rattlesnake,
+/obj/item/ammo_box/handfuls/shotgun/buckshot,
+/obj/item/ammo_box/handfuls/shotgun/buckshot,
+/obj/item/ammo_box/handfuls/shotgun/buckshot,
+/obj/item/ammo_box/handfuls/shotgun/buckshot,
+/obj/item/ammo_box/handfuls/shotgun,
+/obj/item/ammo_box/handfuls/shotgun,
+/obj/item/ammo_box/handfuls/shotgun,
+/obj/item/ammo_box/handfuls/shotgun,
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "PC" = (
 /obj/structure/flora/roguetree/stump/log{
 	pixel_x = -13;
@@ -13472,7 +13502,7 @@ xK
 xK
 WW
 Tx
-oJ
+Pw
 xK
 xK
 at
