@@ -20,8 +20,8 @@
 /obj/item/ammo_box/handfuls/leveraction
 	name = "handful of custom bullets"
 	desc = "A handful of modified pistol bullets, made in Perserdun."
-	ammo_type = /obj/item/ammo_casing/a9mm
-	caliber = "a9mm"
+	ammo_type = /obj/item/ammo_casing/a44
+	caliber = "a44"
 	max_ammo = 7
 	multiload = 0
 	icon_state = "pistol-handful"
