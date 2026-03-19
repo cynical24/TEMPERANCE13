@@ -5,6 +5,7 @@
 	icon_state = "brustwehr_isntready"
 	density = 1
 	anchored = 1
+	max_integrity = 10
 	climbable = FALSE
 	pass_flags_self = PASSTABLE
 	var/digstage = 0
@@ -52,9 +53,10 @@
 	icon_state = "brustwehr_0"
 	density = 1
 	anchored = 1
+	max_integrity = 800
 	smooth = TRUE
 	climbable = TRUE
-	var/health = 800
+	var/health = 100
 
 /obj/structure/barricade/brutswehr/New()
 	..()
@@ -64,7 +66,7 @@
 	..()
 	update_nearby_icons()
 
-	//Explosion Act
+	//Explosion Act MANNY: this is shitcode and can be done better, but is functional and idc
 /obj/structure/barricade/brutswehr/ex_act(severity)
 	switch(severity)
 		if(1.0)
