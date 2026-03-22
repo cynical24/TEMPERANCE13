@@ -76,6 +76,7 @@
 		/datum/body_marking/tonage,
 		/datum/body_marking/bangs,
 		/datum/body_marking/bun,
+		/datum/body_marking/facepaint
 	)
 	languages = list(
 		/datum/language/common,

@@ -66,6 +66,7 @@
 		/datum/body_marking/nose,
 		/datum/body_marking/bangs,
 		/datum/body_marking/bun,
+		/datum/body_marking/facepaint
 	)
 
 /datum/species/human/northern/check_roundstart_eligible()

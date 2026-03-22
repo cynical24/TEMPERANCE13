@@ -89,6 +89,7 @@
 		/datum/body_marking/nose,
 		/datum/body_marking/bangs,
 		/datum/body_marking/bun,
+		/datum/body_marking/facepaint
 	)
 
 /datum/species/elf/wood/check_roundstart_eligible() // This is ugly as fuck and should use the config file but this codebase doesn't have the examples

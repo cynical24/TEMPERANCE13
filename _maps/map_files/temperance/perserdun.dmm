@@ -1841,6 +1841,10 @@
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/perserdun)
+"EB" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/perserdun)
 "EC" = (
 /obj/structure/fluff/railing/sandbag{
 	dir = 1
@@ -21974,7 +21978,7 @@ ML
 wB
 ML
 ML
-ML
+EB
 ML
 TK
 TK
@@ -22990,7 +22994,7 @@ ML
 TK
 ML
 ML
-ML
+EB
 ML
 ML
 ML
@@ -24925,7 +24929,7 @@ ML
 ML
 ML
 ML
-ML
+EB
 TK
 TK
 ML
@@ -26180,7 +26184,7 @@ ML
 ML
 ML
 ML
-ML
+EB
 TK
 ML
 ML
@@ -29476,7 +29480,7 @@ ML
 ML
 ML
 ML
-ML
+EB
 ML
 ML
 ML
@@ -30677,7 +30681,7 @@ ML
 qs
 ML
 ML
-ML
+EB
 ML
 ML
 ML
@@ -30790,7 +30794,7 @@ TK
 ML
 ML
 ML
-ML
+EB
 ML
 ML
 ML
@@ -31985,7 +31989,7 @@ ML
 ML
 ML
 ML
-ML
+EB
 ML
 TK
 ML
@@ -32767,7 +32771,7 @@ ML
 ML
 ML
 ML
-ML
+EB
 ML
 ML
 qs

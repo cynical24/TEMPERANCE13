@@ -196,6 +196,7 @@
 	pixel_x = 1;
 	pixel_y = -4
 	},
+/obj/item/reagent_containers/food/snacks/deadmouse,
 /turf/open/floor/rogue/grime,
 /area/rogue/under/cave/warmachine)
 "cR" = (
@@ -3032,6 +3033,11 @@
 /obj/effect/decal/loader,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/dungeon1)
+"Xl" = (
+/obj/effect/decal/cleanable/dirt/grime,
+/obj/item/reagent_containers/food/snacks/deadmouse,
+/turf/open/floor/rogue/grime,
+/area/rogue/under/cave/warmachine)
 "Xp" = (
 /obj/structure/closet/crate/drawer/filing/alt3,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/medical,
@@ -34109,7 +34115,7 @@ Le
 dt
 CC
 Le
-Le
+Xl
 Le
 Ze
 IC

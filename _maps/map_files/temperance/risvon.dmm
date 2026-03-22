@@ -1336,6 +1336,11 @@
 	},
 /turf/open/water/cleanshallow,
 /area/rogue/outdoors/risvon)
+"lO" = (
+/obj/effect/landmark/start/bastiono,
+/obj/effect/landmark/start/bastionolate,
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "lQ" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/carpet/royalblack,
@@ -2984,6 +2989,10 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
+"yT" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/risvon)
 "yU" = (
 /obj/structure/mineral_door/bars,
 /obj/effect/decal/cleanable/blood/tracks{
@@ -6315,6 +6324,10 @@
 /obj/structure/chair/bench/couch,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town/sargoth)
+"YC" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
+/turf/open/floor/rogue/grassred,
+/area/rogue/outdoors/risvon)
 "YL" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/rogue/church,
@@ -9821,7 +9834,7 @@ cn
 cn
 Ba
 Ba
-cn
+yT
 cn
 cn
 Ba
@@ -13396,7 +13409,7 @@ xK
 xK
 xK
 xK
-xK
+lO
 Tx
 EB
 Qw
@@ -15166,7 +15179,7 @@ Ba
 Ba
 Ba
 Ba
-Ba
+YC
 Ba
 Ba
 Ba
@@ -15280,7 +15293,7 @@ wA
 Ba
 Ba
 Ba
-Ba
+YC
 Ba
 Ba
 Ba
@@ -20749,7 +20762,7 @@ cn
 cn
 cn
 cn
-cn
+yT
 cn
 cn
 cn
