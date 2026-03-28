@@ -9,7 +9,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
-	tutorial = "You are an armsman, promoted to the special postition of Heavy Munitions Technician. \
+	tutorial = "You are a soldato, promoted to the special postition of Heavy Munitions Technician. \
 				Your main purpose is follow the orders of the Armilteknikisto. Coordinate to achieve peak heavy weapons efficiency. \
 				For most of your life, you've been filled with a firm belief that the strong must rule. \
 				You are also a firm believer of the denial of one's desires, in favor for unity and a greater good." 
