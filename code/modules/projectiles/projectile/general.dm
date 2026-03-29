@@ -36,6 +36,12 @@
 	damage = 45
 	armor_penetration = 40 // just enough to punch through chainmaille
 
+/obj/projectile/bullet/a380
+    name = ".380 ACP bullet"
+    icon_state = "bullet_proj"
+    damage = 50
+    armor_penetration = 30
+
 // shotgun
 
 /obj/projectile/bullet/shotgun_slug

@@ -137,6 +137,22 @@
 	recoil = 0.30
 	experimental_inhand = FALSE
 
+/obj/item/gun/ballistic/revolver/snub
+	name = "'Land' Snubnose Revolver"
+	desc = "A compact revolver with a short barrel. Notoriously inaccurate, but easy to conceal. Seems the kind of gun that a bandit would use, but you know, it gets the job done."
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/snubby
+	force = 9 // haha tiny gun bad
+	spread = 8 // with what barrel yo?
+	icon_state = "snubnose"
+	item_state = "snubnose"
+	slowdown = 0.1 // small gun, small slowdown
+	empty_indicator = TRUE
+	fire_sound = REVOLVERSHOT
+	load_sound = REVOLVERINSERT
+	recoil = 0.30
+	experimental_inhand = FALSE
+
 //dogshit double barrel shotgun code
 
 /obj/item/gun/ballistic/revolver/doublebarrel

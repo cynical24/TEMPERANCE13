@@ -80,3 +80,9 @@
 	cost = 40
 	contains = list(/obj/item/ammo_box/clip/broomhandle,
 	/obj/item/ammo_box/clip/broomhandle)
+
+/datum/supply_pack/rogue/ammunition/luger
+    name = "KRL Ammo (x2)"
+    cost = 30
+    contains = list(/obj/item/ammo_box/magazine/luger,
+    /obj/item/ammo_box/magazine/luger)

@@ -26,4 +26,14 @@
 	caliber = "a45acp"
 	max_ammo = 7
 	multiload = 1
-	icon_state = "colt-mag_LQ"
+	icon_state = "coltmag"
+
+/obj/item/ammo_box/magazine/luger
+    name = "KRL magazine"
+    desc = "An extractable magazine. It looks like a standard pistol magazine, except a bit bigger."
+    multiple_sprites = AMMO_BOX_PER_BULLET
+    ammo_type = /obj/item/ammo_casing/a9mm
+    caliber = "a9mm"
+    max_ammo = 8
+    multiload = 1
+    icon_state = "lugermag"

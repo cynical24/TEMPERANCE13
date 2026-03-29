@@ -75,6 +75,14 @@
 	max_ammo = 6
 	multiload = 1
 
+/obj/item/ammo_box/magazine/internal/boltaction/snubby
+	name = "snubby internal magazine"
+	desc = "This should NOT be here."
+	ammo_type = /obj/item/ammo_casing/a380
+	caliber = "a380"
+	max_ammo = 6
+	multiload = 1
+
 //pistols
 
 /obj/item/ammo_box/magazine/internal/boltaction/pistol
