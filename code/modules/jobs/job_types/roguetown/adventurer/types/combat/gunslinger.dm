@@ -66,17 +66,16 @@
 			
 			to_chat(H, span_warning("You're probably from a gang. Or, you happened to kill whoever held the pistol before you. Make some money, grab some guns. Try not to die."))
 			armor = /obj/item/clothing/suit/roguetown/armor/leather
-			cloak = /obj/item/clothing/cloak/half/rider/red
+			cloak = /obj/item/clothing/suit/roguetown/armor/longcoat
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
 			pants = /obj/item/clothing/under/roguetown/trou/leather
-			beltl = 
+			beltl = /obj/item/gun/ballistic/pistol/fury
 			beltr = /obj/item/rogueweapon/knuckles
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			neck = /obj/item/clothing/neck/roguetown/gorget
 			gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
 			backl = /obj/item/storage/backpack/rogue/satchel
-			backr = 
 			belt = /obj/item/storage/belt/rogue/leather
 			head = /obj/item/clothing/head/roguetown/puritan
 			backpack_contents = list(
@@ -84,7 +83,7 @@
 				/obj/item/rogueweapon/huntingknife = 1, 
 				/obj/item/recipe_book/survival = 1,
 				/obj/item/rogueweapon/scabbard/sheath = 1,
-				/obj/item/ammo_box/magazine/jackal = 2,
+				/obj/item/ammo_box/magazine/fury = 3,
 				/obj/item/flashlight/flare/torch = 1,
 				/obj/item/storage/belt/rogue/pouch/coins/rich = 1,
 				/obj/item/storage/belt/rogue/pouch/coins/poor = 1,

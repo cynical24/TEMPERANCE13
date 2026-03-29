@@ -58,6 +58,14 @@
 	projectile_type = /obj/projectile/bullet/a45acp
 	bullet_type = RIFLECASING
 
+/obj/item/ammo_casing/a380
+	name = ".380 ACP bullet casing"
+	desc = "A .380 ACP bullet-piece."
+	icon_state = "spent-casing_QT_pistol"
+	caliber = "a380"
+	projectile_type = /obj/projectile/bullet/a380
+	bullet_type = RIFLECASING
+
 //shotguns
 
 /obj/item/ammo_casing/shotgun

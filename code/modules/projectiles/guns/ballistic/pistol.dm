@@ -81,6 +81,7 @@
 	fire_sound = PISTOLSHOT
 	load_sound = 'sound/combat/ranged/clipload.ogg'
 	recoil = 0.15
+	slot_flags = ITEM_SLOT_HIP
 
 /obj/item/gun/ballistic/rifle/repeater/jackal 
 	name = "SPR 'Jackal'"
@@ -97,7 +98,7 @@
 	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
 	recoil = 0.15
 	semi_auto = TRUE
-
+	slot_flags = ITEM_SLOT_HIP
 
 /obj/item/gun/ballistic/rifle/repeater/commandant
 	name = "ANL 'Liberation'"
@@ -115,16 +116,16 @@
 	semi_auto = TRUE
 	slot_flags = ITEM_SLOT_BACK
 
-
 /obj/item/gun/ballistic/pistol/fury
 	name = "Fury"
-	desc = "One of the rarer variants of the semi auto pistols found in the wild, this one's got a seven-round magazine, firing some decent rounds out of it too. Looks intimidating."
+	desc = "One of the rarer variants of the semi auto pistols found in the wild, this one's got a seven-round magazine, firing some decent rounds out of it too. Looks intimidating. Maybe even hateful."
 	icon_state = "colt"
 	item_state = "colt"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/fury
 	slowdown = 0.15
 	spread = 0.5
+	force = 25 //heavy pistol, should be good for whipping someone in the head with
 	fire_sound = PISTOLSHOT
 	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
 	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
