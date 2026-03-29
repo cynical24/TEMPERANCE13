@@ -50,7 +50,7 @@
 	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/perserdun
-	backr = /obj/item/storage/backpack/rogue/satchel/chestrig
+	backr = /obj/item/storage/backpack/rogue/satchel/perserdun
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
