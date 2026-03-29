@@ -36,7 +36,7 @@
 				/obj/item/flashlight/flare/torch = 1,
 				/obj/item/rogueweapon/huntingknife/idagger/steel = 1,
 				/obj/item/lockpickring/mundane = 1,
-				/obj/item/ammo_box/speedloader/magnum = 2,
+				/obj/item/ammo_box/speedloader/magnum = 3,
 				/obj/item/rogueweapon/scabbard/sheath = 1,
 				)
 			H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)

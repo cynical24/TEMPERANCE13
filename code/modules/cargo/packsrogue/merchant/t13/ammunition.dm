@@ -68,3 +68,9 @@
 	cost = 30
 	contains = list(/obj/item/ammo_box/magazine/jackal,
 	/obj/item/ammo_box/magazine/jackal)
+
+/datum/supply_pack/rogue/ammunition/fury
+	name = "Fury Ammo (x2)"
+	cost = 30
+	contains = list(/obj/item/ammo_box/magazine/fury,
+	/obj/item/ammo_box/magazine/fury)

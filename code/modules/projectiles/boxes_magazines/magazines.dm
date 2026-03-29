@@ -27,13 +27,3 @@
 	max_ammo = 7
 	multiload = 1
 	icon_state = "colt-mag_LQ"
-
-/obj/item/ammo_box/magazine/luger
-	name = "luger magazine"
-	desc = "An extractable magazine. It has a few holes punched in it, you can see the rounds through it."
-	multiple_sprites = AMMO_BOX_PER_BULLET
-	ammo_type = /obj/item/ammo_casing/a9mm
-	caliber = "a9mm"
-	max_ammo = 8
-	multiload = 1
-	icon_state = "luger-mag"
