@@ -78,7 +78,6 @@
 		/obj/item/storage/belt/rogue/pouch/coins/mid = 1,
 		/obj/item/storage/keyring/gatemaster = 1,
 		/obj/item/flashlight/flare/torch/lantern = 1,
-		/obj/item/ammo_box/magazine/luger = 3,
 	)
 	H.adjust_skillrank(/datum/skill/combat/shotguns, 4, TRUE)
 
@@ -97,7 +96,6 @@
 		/obj/item/storage/belt/rogue/pouch/coins/mid = 1,
 		/obj/item/storage/keyring/gatemaster = 1,
 		/obj/item/flashlight/flare/torch/lantern = 1,
-		/obj/item/ammo_box/magazine/luger = 3,
 	)
 	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE)
 
