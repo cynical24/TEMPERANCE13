@@ -643,6 +643,18 @@ will handle it, but:
 		return FALSE
 	return TRUE
 
+/proc/reverse_direction(atom/dir)
+	if(dir == null)
+		return
+	if(dir == NORTH)
+		return SOUTH
+	if(dir == SOUTH)
+		return NORTH
+	if(dir == EAST)
+		return WEST
+	if(dir == WEST)
+		return EAST
+
 /proc/wash_atom(atom/A, clean = CLEAN_WEAK)
 	SEND_SIGNAL(A, COMSIG_COMPONENT_CLEAN_ACT, clean)
 	if(isobj(A))

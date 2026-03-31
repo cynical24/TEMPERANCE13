@@ -19,7 +19,9 @@
 	attack_verb = list("struck", "hit", "bashed")
 
 	var/list/fire_sound = list('sound/blank.ogg')
+	var/list/dist_fire_sound = list('sound/blank.ogg') //DISTANTLIGHT,DISTANTMEDIUM,DISTANTHEAVY
 	var/fire_sound_volume = 50
+	var/far_volume = 50 // base volume of distant sounds, should not be higher than 60
 	var/dry_fire_sound = 'sound/blank.ogg'
 	var/recoil = 0						//boom boom shake the room
 	var/clumsy_check = TRUE
@@ -34,8 +36,12 @@
 	var/flight_x_offset = 0
 	var/flight_y_offset = 0
 
-	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
+	var/automatic = 0 //nonfunctional, would be deciseconds between each shot
+	var/burst = 1 //amount of boolets to fire, ALSO SET SEMIAUTO PLS
+	var/burst_delay = 2 //amount of deciseconds between each shot if bursting
 	var/pb_knockback = 0
+
+
 
 /obj/item/gun/Destroy()
 	if(chambered) //Not all guns are chambered (EMP'ed energy guns etc)
@@ -61,12 +67,29 @@
 	to_chat(user, "<span class='danger'>*FUCK!*</span>")
 	playsound(src, dry_fire_sound, 30, TRUE)
 
+/obj/item/gun/proc/play_fire_sound(var/mob/user, var/obj/projectile/P)
+	var/turf/epicenter = get_turf(user)
+
+	var/frequency = get_rand_frequency()
+	for(var/mob/living/M in range(60))
+		// Double check for client
+		if(M && M.client)
+			var/turf/M_turf = get_turf(M)
+			if(M_turf && M_turf.z == epicenter.z)
+				var/dist = get_dist(M_turf, epicenter)
+				var/distant_fire_sound = sound(pick(dist_fire_sound))
+				if(dist <= 60 && dist >= 8)
+					if(dist <= 30)
+						far_volume += 40 //if within 30 tiles, make sound louder
+					M.playsound_local(M_turf, null, far_volume, 1, frequency, falloff = 5, S = distant_fire_sound)
+	playsound(user, pick(fire_sound), fire_sound_volume)
+
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
 	if(recoil)
 		shake_camera(user, recoil + 1, recoil)
 
-	playsound(user, pick(fire_sound), fire_sound_volume)
+	play_fire_sound(user)
 	if(message)
 		user.visible_message("<span class='danger'>[user] shoots [src]!</span>", \
 						"<span class='danger'>I shoot [src]!</span>", \
@@ -80,12 +103,13 @@
 
 /obj/item/gun/afterattack(atom/target, mob/living/user, flag, params)
 	. = ..()
-	testing("gun afterattack")
+	testing("gun attack")
 	if(!target)
 		testing("no target")
 		return
-	if(!user?.used_intent.tranged) //melee attack
-		return
+	if(!(user.using_object))
+		if(!user?.used_intent.tranged) //melee attack
+			return
 	if(flag) //It's adjacent, is the user, or is on the user's person
 		if(target in user.contents) //can't shoot stuff inside us.
 			return
@@ -135,11 +159,14 @@
 				return
 		sprd = round((rand() - 0.5) * DUALWIELD_PENALTY_EXTRA_MULTIPLIER * (randomized_gun_spread + randomized_bonus_spread))
 		before_firing(target,user)
-		if(!chambered.fire_casing(target, user, params, , FALSE, zone_override, sprd, src))
-			shoot_with_empty_chamber(user)
-			return
-		else
-			shoot_live_shot(user, 0, target, message)
+		for(var/i in 1 to burst)
+			if(!chambered.fire_casing(target, user, params, , FALSE, zone_override, sprd, src))
+				shoot_with_empty_chamber(user)
+			else
+				shoot_live_shot(user, 0, target, message)
+			if(i < burst)
+				process_chamber()
+				sleep(burst_delay)
 	else
 		shoot_with_empty_chamber(user)
 		return
@@ -187,3 +214,4 @@
 //Happens before the actual projectile creation
 /obj/item/gun/proc/before_firing(atom/target,mob/user)
 	return
+

@@ -283,6 +283,7 @@
 	var/d_intent = INTENT_DODGE
 	var/islatejoin = FALSE
 	var/obj/effect/proc_holder/ranged_ability //Any ranged ability the mob has, as a click override
+	var/obj/using_object = null //the object the mob is currently using, for click override(for instance, deployable guns)
 
 	var/list/mob_timers = list()
 

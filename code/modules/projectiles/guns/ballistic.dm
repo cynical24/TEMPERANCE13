@@ -243,6 +243,17 @@
 	. = ..()
 	if (.)
 		return
+	if (!internal_magazine && istype(A, /obj/item/ammo_box/magazine/hmg))
+		var/obj/item/ammo_box/magazine/hmg/AM = A
+		if (!magazine)
+			insert_magazine(user, AM)
+			process_chamber(user, AM)
+		else
+			if (tac_reloads)
+				eject_magazine(user, FALSE, AM)
+			else
+				to_chat(user, "<span class='notice'>There's already a [magazine_wording] in \the [src].</span>")
+		return
 	if (!internal_magazine && istype(A, /obj/item/ammo_box/magazine))
 		var/obj/item/ammo_box/magazine/AM = A
 		if (!magazine)

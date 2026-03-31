@@ -548,6 +548,12 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/mirespider,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
+"fh" = (
+/obj/structure/chair/stool/rogue,
+/obj/effect/landmark/start/municioteknikisto,
+/obj/effect/landmark/start/municioteknikistolate,
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "fi" = (
 /obj/structure/mineral_door/wood{
 	lockid = "risvontag";
@@ -610,6 +616,12 @@
 /obj/structure/fluff/walldeco/med4{
 	pixel_x = -32
 	},
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
+"fT" = (
+/obj/structure/chair/stool/rogue,
+/obj/effect/landmark/start/armilteknikisto,
+/obj/effect/landmark/start/armilteknikistolate,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "fX" = (
@@ -30991,7 +31003,7 @@ Mh
 xK
 xK
 xK
-Yk
+fT
 Jd
 ka
 Yk
@@ -31121,7 +31133,7 @@ WO
 xK
 xK
 xK
-Yk
+fh
 aL
 Ld
 Yk

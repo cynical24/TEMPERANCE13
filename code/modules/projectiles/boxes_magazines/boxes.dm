@@ -15,3 +15,5 @@
 	max_ammo = 5
 	multiload = 0
 	icon_state = "antitank-ammobox"
+
+	

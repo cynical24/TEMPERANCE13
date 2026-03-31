@@ -52,6 +52,12 @@
 	item_state = "blackbelt"
 	sellprice = 10
 
+/obj/item/storage/belt/rogue/leather/black/soldier
+	populate_contents = list(
+		/obj/item/rogueweapon/huntingknife/idagger/steel,
+		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
+	)
+
 /obj/item/storage/belt/rogue/leather/plaquesilver
 	name = "plaque belt"
 	icon_state = "silverplaque"
@@ -465,6 +471,26 @@
 	component_type = /datum/component/storage/concrete/grid/ammobag
 	slot_flags = ITEM_SLOT_HIP
 
+/obj/item/storage/belt/rogue/pouch/ammobag/rifle
+	populate_contents = list( 
+		/obj/item/ammo_box/handfuls/rifle, 
+		/obj/item/ammo_box/handfuls/rifle, 
+		/obj/item/ammo_box/handfuls/rifle, 
+		/obj/item/ammo_box/handfuls/rifle, 
+		/obj/item/ammo_box/handfuls/rifle, 
+		/obj/item/ammo_box/handfuls/rifle, 
+	)
+
+/obj/item/storage/belt/rogue/pouch/ammobag/pistol 
+	populate_contents = list(
+		/obj/item/ammo_box/clip/pistol,
+		/obj/item/ammo_box/clip/pistol,
+		/obj/item/ammo_box/clip/pistol,
+		/obj/item/ammo_box/clip/pistol,
+		/obj/item/ammo_box/clip/pistol,
+		/obj/item/ammo_box/clip/pistol,
+	)
+
 /obj/item/storage/backpack/rogue/backpack/perserdun
 	name = "ruckbag"
 	desc = "Product of the Empire's vast industry."
@@ -477,11 +503,19 @@
 	icon_state = "EB_backpack"
 	item_state = "EB_backpack"
 
+/obj/item/storage/backpack/rogue/backpack/mg
+	name = "bigbag"
+	desc = "A hulking cloth bag lined with metal rods, attached to a harness, to assist in carrying loads of ammo."
+	icon_state = "warfare_backpack"
+	item_state = "warfare_backpack"
+	component_type = /datum/component/storage/concrete/grid/hmg
+
 /obj/item/storage/backpack/rogue/satchel/chestrig
 	name = "chest rig"
-	desc = "A funny piece of equipment, made for carrying whatever."
+	desc = "A WAR machine produced piece of clothing designed specifically to hold machine gun strip clips."
 	icon_state = "chestrig"
 	item_state = "chestrig"
+	component_type = /datum/component/storage/concrete/grid/hmg
 
 /obj/item/storage/belt/rogue/pouch/pillbottle
 	name = "pill bottle"
@@ -496,3 +530,21 @@
 		/obj/item/reagent_containers/pill/health,
 		/obj/item/reagent_containers/pill/health,
 	)
+
+/obj/item/storage/backpack/rogue/satchel/risvon
+	name = "hardbag"
+	desc = "A durable, machine-produced nylon satchel bag."
+	icon_state = "blue_satchel"
+	item_state = "blue_satchel"
+
+/obj/item/storage/backpack/rogue/satchel/perserdun
+	name = "backsack"
+	desc = "A durable, hand-made cloth sack."
+	icon_state = "redsatchelalt"
+	item_state = "redsatchelalt"
+
+/obj/item/storage/backpack/rogue/satchel/surgeon
+	name = "medbag"
+	desc = "A clean, compartmentalized satchel for holding advanced medical supplies. Product of the LIFE machine."
+	icon_state = "medic_satchel_blue"
+	item_state = "medic_satchel_blue"

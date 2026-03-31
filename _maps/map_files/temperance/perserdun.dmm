@@ -1622,6 +1622,14 @@
 	},
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/perserdun)
+"Ao" = (
+/obj/structure/chair/wood/rogue/chair4{
+	dir = 2
+	},
+/obj/effect/landmark/start/rook,
+/obj/effect/landmark/start/rooklate,
+/turf/open/floor/rogue/perdun,
+/area/rogue/indoors/perserdunbase)
 "Au" = (
 /obj/structure/fluff/walldeco/vent/vent2,
 /turf/closed/wall/mineral/rogue/perserdun/long/east_west,
@@ -1634,6 +1642,14 @@
 /obj/machinery/light/roguestreet/midlamp,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/perserdun)
+"AG" = (
+/obj/structure/chair/wood/rogue/chair4{
+	dir = 2
+	},
+/obj/effect/landmark/start/ammosquire,
+/obj/effect/landmark/start/ammosquirelate,
+/turf/open/floor/rogue/perdun,
+/area/rogue/indoors/perserdunbase)
 "AS" = (
 /obj/structure/barbedwire{
 	pixel_y = -2
@@ -33874,7 +33890,7 @@ Au
 DK
 ng
 nw
-mN
+Ao
 be
 LI
 be
@@ -34004,7 +34020,7 @@ Bw
 nT
 hc
 CQ
-mN
+AG
 IE
 LI
 IE

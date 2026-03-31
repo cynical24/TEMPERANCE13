@@ -25,7 +25,7 @@
 /datum/outfit/job/roguetown/hierarch/pre_equip(mob/living/carbon/human/H)
 	..()
 	shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/storage/keyring/royal
 	id = /obj/item/clothing/ring/gold

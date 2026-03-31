@@ -478,6 +478,26 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Armsman")
 	delete_after_roundstart = FALSE
 
+/obj/effect/landmark/start/rook
+	name = "Rook"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/rooklate
+	name = "Rook"
+	icon_state = "arrow"
+	jobspawn_override = list("Rook")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/ammosquire
+	name = "Ammo Squire"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/ammosquirelate
+	name = "Ammo Squire"
+	icon_state = "arrow"
+	jobspawn_override = list("Ammo Squire")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/auxiliarist
 	name = "Auxiliarist"
 	icon_state = "arrow"
@@ -556,6 +576,26 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Soldato"
 	icon_state = "arrow"
 	jobspawn_override = list("Soldato")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/armilteknikisto
+	name = "Armilteknikisto"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/armilteknikistolate
+	name = "Armilteknikisto"
+	icon_state = "arrow"
+	jobspawn_override = list("Armilteknikisto")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/municioteknikisto
+	name = "Municioteknikisto"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/municioteknikistolate
+	name = "Municioteknikisto"
+	icon_state = "arrow"
+	jobspawn_override = list("Municioteknikisto")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/bastiono

@@ -46,7 +46,7 @@
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	wrists = /obj/item/scomstone/garrison
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltr = /obj/item/storage/belt/rogue/pouch/stim
 	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored/iron
 	gloves = /obj/item/clothing/gloves/roguetown/leather/latex
