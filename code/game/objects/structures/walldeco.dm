@@ -434,7 +434,7 @@
 
 /obj/structure/fluff/walldeco/ubk
 	name = "signia"
-	desc = "The Mark of the Ziggurate."
+	desc = "The Mark of the Dictate."
 	icon_state = "ubk"
 	layer = ABOVE_MOB_LAYER
 

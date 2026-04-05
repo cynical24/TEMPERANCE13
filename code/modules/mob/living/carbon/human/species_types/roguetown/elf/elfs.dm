@@ -7,7 +7,7 @@
 	desc = "<b>Elf</b><br>\
 	Elves were once known to be a mystical race that stemmed exclusively from the ethnostate of Perdere for over a thousand years. \
 	Though, the nation has recently collapsed underneath the advent of the \"Capaythian War,\" a six-month campaign initiated by the Great Empire in order to force the trade of Capaytha Madness, a highly addictive stimulant. \
-	Most elves now find themselves scattered across the continent, and have roles within the Great Empire itself, the Ziggurate, or other unclaimed city-states. \
+	Most elves now find themselves scattered across the continent, and have roles within the Great Empire itself, the Dictate, or other unclaimed city-states. \
 	Additionally, some elves have begun to partake in rituals to commune with fae and other spirits of nature, granting them horns and tails.\
 	(+1 Speed)"
 

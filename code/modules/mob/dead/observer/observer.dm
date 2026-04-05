@@ -380,7 +380,7 @@ Works together with spawning an observer, noted above.
 			if(force_respawn)
 				mind.remove_antag_datum(/datum/antagonist/zombie)
 				return ..()
-			var/datum/antagonist/zombie/Z = mind.has_antag_datum(/datum/antagonist/zombie)
+//			var/datum/antagonist/zombie/Z = mind.has_antag_datum(/datum/antagonist/zombie)
 //			if(!Z.revived)
 //				if(!(world.time % 5))
 //					to_chat(src, span_warning("I'm preparing to walk again."))

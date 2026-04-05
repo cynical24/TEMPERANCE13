@@ -162,7 +162,7 @@
 	force_wielded = 40
 	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/mace/smash/eaglebeak, /datum/intent/spear/thrust)
 	name = "WILL"
-	desc = "A standard poleaxe adorned with Perserdun's colors. Crush the Ziggurate."
+	desc = "A standard poleaxe adorned with Perserdun's colors. Crush the Dictate."
 	icon_state = "poleaxe"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	max_blade_int = 500

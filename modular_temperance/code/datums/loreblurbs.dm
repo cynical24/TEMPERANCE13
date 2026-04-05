@@ -87,12 +87,12 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 	title = "ROSTRUM LEMURIA"
 	description = "The dents of bullet-holes in the walls make themselves prevalent, as you pass by the entrance to the Rostrum. \n\
 	It smells like concrete, zigarettes, gunpowder, and blood. There's a decorated pond in the middle of the outstation. \n\
-	The Ziggurate settled in their staging ground a few years ago after negotiating a now-expired trade deal with King's Row. \n\
+	The Dictate settled in their staging ground a few years ago after negotiating a now-expired trade deal with King's Row. \n\
 	Recently, there's been spottings of a second brigade of cadres-and-accompanying-officers setting up camp a few miles past the mountain range the Rostrum's embedded in."
 
 /datum/loreblurb/bastillexiphos
 	title = "BASTILLE XIPHOS"
-	description = "A bastille is a temporary encampment belonging to a Ziggurate brigade. \n\
+	description = "A bastille is a temporary encampment belonging to a Risvonian brigade. \n\
 	Officially, both the Rostrum and Bastille belong the 5th Caprito (or Chapter) of Dominion. \n\
 	Though, the Chapter's been divided into two brigades that transfer personnel to-and-from the Bastille about every week or so. \n\
 	The actual bastille's made out of tents and metal walls similar to a siege camp. Travel time is about an hour for a round-trip on foot."

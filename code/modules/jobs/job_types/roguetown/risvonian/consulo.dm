@@ -10,7 +10,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You're a diplomat to the local Caprito. \
-				Decked out in expensive, fancy clothing - you typically spend most of your time drafting up letters, while trying to convince the local populace to let your Great Ziggurate take over. \
+				Decked out in expensive, fancy clothing - you typically spend most of your time drafting up letters, while trying to convince the local populace to let your Great Dictate take over. \
 				Rank-wise, you're just below the Commandant, but hold zero authority during combat.\
 				You also oversee the local camp, and ensure things are running relatively smoothly." 
 

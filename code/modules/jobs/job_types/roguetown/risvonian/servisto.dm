@@ -9,8 +9,9 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
-	tutorial = "You are a magician within the Ziggurate force. \
-				You're attached to each Cadre, acting as both a means to increase Soldato strength and to tend to wounds." 
+	tutorial = "You are a magician within the Dictate's forces. \
+				You're attached to each Cadre, acting as both a means to increase Soldato strength and basic first aid. \
+				The healing magic you know comes from Marionettes & teachings found within the WAR and LOVE Machines." 
 
 	outfit = /datum/outfit/job/roguetown/servisto
 	display_order = JDO_SERVISTO
@@ -32,7 +33,7 @@
 			if(!index)
 				index = H.real_name
 			S.name = " [index]'s nailtag"
-
+    
 /datum/outfit/job/roguetown/servisto/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
 	shoes = /obj/item/clothing/shoes/roguetown/boots

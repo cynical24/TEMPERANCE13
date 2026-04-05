@@ -548,7 +548,7 @@
 
 /obj/item/roguekey/risvon
 	name = "nailtag"
-	desc = "This key opens doors to the Ziggurate's outpost. It's also a soldier's identification."
+	desc = "This key opens doors to the Dictate's outpost. It's also a soldier's identification."
 	icon_state = "risvontag"
 	lockid = "risvontag"
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_RING

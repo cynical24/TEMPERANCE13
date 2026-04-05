@@ -112,7 +112,7 @@
 /datum/species/tieberian/get_skin_list()
 	return list(
 		"Sildenafil" = SKIN_COLOR_JEHOEL,
-		"Ziggurate Blue" = SKIN_COLOR_URVIX,
+		"Dictate Blue" = SKIN_COLOR_URVIX,
 		"Cyclohexyl" = SKIN_COLOR_SARVYRA,
 		"Mephedrone" = SKIN_COLOR_VHESLYN,
 		"Novichok" = SKIN_COLOR_ARLENNETH,

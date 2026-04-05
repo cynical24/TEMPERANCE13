@@ -225,15 +225,16 @@
 
 #define COMMANDANT (1<<0) //1 slot leadership. probably has a heavy smg & great light armor
 #define OFICIRO (1<<1) //sniper? maybe a semi-auto rifle? + grenades?
-#define VETERANO (1<<2) //veteran w/ a shotgun & grenades instead of a pistol & net
-#define SOLDATO	(1<<3) //standard soldier - high speed, low armor, net + pistol
-#define TUORO (1<<4)
-#define ARMILTEKNIKISTO (1<<5) //heavy weapon technician - melee weapon and machine gun
-#define MUNICIOTEKNIKISTO (1<<6) // heavy weapon ammo bearer - stripped down soldato gear and ammo storage
-#define SERVISTO (1<<7) //support role - can probably shit meds out the wazoo 
-#define CURACISTO (1<<8)
-#define CAMPFOLLOWER (1<<9)
-#define CONSULO (1<<10)
+#define KASPAFISTO (1<<2) //actual sniper - amr & shit. grandknight equiv
+#define VETERANO (1<<3) //veteran w/ a shotgun & grenades instead of a pistol & net
+#define SOLDATO	(1<<4) //standard soldier - high speed, low armor, net + pistol
+#define TUORO (1<<5)
+#define ARMILTEKNIKISTO (1<<6) //heavy weapon technician - melee weapon and machine gun
+#define MUNICIOTEKNIKISTO (1<<7) // heavy weapon ammo bearer - stripped down soldato gear and ammo storage
+#define SERVISTO (1<<8) //support role - can probably shit meds out the wazoo 
+#define CURACISTO (1<<9)
+#define CAMPFOLLOWER (1<<10)
+#define CONSULO (1<<11)
 
 #define KINGSROW (1<<14)
 
@@ -281,15 +282,16 @@
 // RISVON
 #define JDO_COMMANDANT 1.9
 #define JDO_OFICIRO 2.0
-#define JDO_VETERANO 2.1
-#define JDO_SOLDATO 2.2
-#define JDO_ARMILTEKNIKISTO 2.3
-#define JDO_MUNICIOTEKNIKISTO 2.4
-#define JDO_TUORO 2.5
-#define JDO_SERVISTO 2.6
-#define JDO_CURACISTO 2.7
-#define JDO_CAMPFOLLOWER 2.8
-#define JDO_CONSULO 2.9
+#define JDO_KASPAFISTO 2.1
+#define JDO_VETERANO 2.2
+#define JDO_SOLDATO 2.3
+#define JDO_ARMILTEKNIKISTO 2.4
+#define JDO_MUNICIOTEKNIKISTO 2.5
+#define JDO_TUORO 2.6
+#define JDO_SERVISTO 2.7
+#define JDO_CURACISTO 2.8
+#define JDO_CAMPFOLLOWER 2.9
+#define JDO_CONSULO 2.10
 
 // KINGSROW
 #define JDO_HIERARCH 3
@@ -322,7 +324,10 @@
 	/datum/job/roguetown/curacisto,\
 	/datum/job/roguetown/campfollower,\
 	/datum/job/roguetown/consulo,\
-	/datum/job/roguetown/tuoro
+	/datum/job/roguetown/tuoro,\
+	/datum/job/roguetown/armilteknikisto,\
+	/datum/job/roguetown/municioteknikosto,\
+	/datum/job/roguetown/kaspafisto
 
 #define KINGSROW_ROLES \
 	/datum/job/roguetown/hierarch,\

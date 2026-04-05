@@ -9,7 +9,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
-	tutorial = "You are the backbone of the Risvon Ziggurate. You are typically a volunteer, or a conscript. \
+	tutorial = "You are the backbone of the Risvon Dictate. You are typically a volunteer, or a conscript. \
 				Your main purpose is follow the orders of your superiors. They are your Oficiros, and your Commandant. \
 				For most of your life, you've been filled with a firm belief that the strong must rule. \
 				You are also a firm believer of the denial of one's desires, in favor for unity and a greater good." 
@@ -71,6 +71,7 @@
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/pistols, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)

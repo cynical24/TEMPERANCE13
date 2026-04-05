@@ -631,7 +631,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 				if (PERSERDUN)
 					cat_name = "Great Empire of Perserdun"
 				if (RISVON)
-					cat_name = "Risvon Ziggurate"
+					cat_name = "Risvon Dictate"
 				if (KINGSROW)
 					cat_name = "King's Row"
 				if (UNAFFILIATED)

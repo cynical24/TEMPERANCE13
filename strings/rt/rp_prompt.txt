@@ -1,4 +1,4 @@
-You are on the land known as 'TEMPERANCE,' a large continent that supports two major factions: The Great Empire of Perserdun and the Risvonian Ziggurate.
+You are on the land known as 'TEMPERANCE,' a large continent that supports two major factions: The Great Empire of Perserdun and the Risvonian Dictate.
 <br>
 <br>
 Ten years ago - strange, hyperfuturistic factories dubbed as 'MACHINES' started to appear in TEMPERANCE. They are the Machine of Love, Life, and War.
@@ -18,9 +18,9 @@ You find yourself on the land of King's Row, a place heavily benefited by the ex
 <br>
 The <b>Empire</b> demands loyalty and expansion. They love to show others the might and will of their God-King 'Rab.' 
 <br>
-The <b>Ziggurate</b> crushes those beneath it. They prioritize strength and hate the weak. From the Inheritor-Dunes of Risvon, to the great West - they seek to conquer all.
+The <b>Dictate</b> crushes those beneath it. They prioritize strength and hate the weak. From the Inheritor-Dunes of Risvon, to the great West - they seek to conquer all.
 <br>
 <b>King's Row</b> wishes to survive, and make some money admist the conflict.
 <br>
 <br>
-The Empire and the Ziggurate are natural enemies. One must conquer the other.
+The Empire and the Dictate are natural enemies. One must conquer the other.

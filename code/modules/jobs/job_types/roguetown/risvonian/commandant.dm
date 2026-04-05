@@ -5,14 +5,14 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	allowed_races = RACES_TEMPERANCE
+	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	selection_color = JCOLOR_RISVON
 
 	tutorial = "You are the commanding officer of the local Risvon Capitro. Or Chapter, if you're a scrub. \
 				You are aware of the discovery of a new WAR MACHINE in the local area. \
-				Your main goal is to claim the entire production site for the Ziggurate, while also beating off any foreign intruders. \
+				Your main goal is to claim the entire production site for the Dictate, while also beating off any foreign intruders. \
 				You're on the same intelligence level as an Oficiro, in terms of raw knowledge about the state. You were handpicked by higher ranks for your performance."
 
 	outfit = /datum/outfit/job/roguetown/commandant
@@ -74,6 +74,7 @@
 	H.adjust_skillrank(/datum/skill/combat/pistols, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
 	H.change_stat("intelligence", 2)
 	H.change_stat("constitution", 1)

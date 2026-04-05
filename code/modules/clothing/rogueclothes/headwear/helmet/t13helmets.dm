@@ -44,14 +44,14 @@
 	item_state = "ikettlevisor"
 
 /obj/item/clothing/head/roguetown/helmet/kettle/iron/oficiro
-	name = "iron ziggurate helmet"
+	name = "iron risvonian helmet"
 	desc = "A metal helmet. It kinda looks like a sallet."
 	icon_state = "oficiro"
 	item_state = "oficiro"
 
 /obj/item/clothing/head/roguetown/helmet/kettle/iron/commandant
-	name = "iron ziggurate helmet"
-	desc = "A metal helmet. Custom made. For the Ziggurate!"
+	name = "iron risvonian helmet"
+	desc = "A metal helmet. Custom made. For the Divegat!"
 	icon_state = "commandant"
 	item_state = "commandant"
 
@@ -88,3 +88,13 @@
 	experimental_onhip = FALSE
 	sellprice = 200
 	flags_inv = HIDE_HEADTOP
+
+/obj/item/clothing/head/roguetown/veil
+	name = "veil"
+	desc = "For the Divegat."
+	icon_state = "veil"
+	item_state = "veil"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+	dynamic_hair_suffix = ""
+	sewrepair = TRUE
+	//dropshrink = 0.75

@@ -2284,7 +2284,7 @@
 /obj/item/gun/ballistic/shotgun/eternal{
 	anchored = 1;
 	name = "disabled PAX 'Eternal'";
-	desc = "A recovered artefact from the local Outlets. The internal parts were sent back to the Ziggurate's Inheritor Sands to justify their presence here.";
+	desc = "A recovered artefact from the local Outlets. The internal parts were sent back to Vraylaz to justify their presence here.";
 	pixel_y = 7;
 	pixel_x = -5
 	},
@@ -3312,7 +3312,7 @@
 "BG" = (
 /obj/structure/table/wood/long_table/mid,
 /obj/item/rogueweapon/knuckles{
-	desc = "Enforce the Ziggurate's will.";
+	desc = "Enforce the Divegat's will.";
 	name = "discipline";
 	pixel_y = 3;
 	pixel_x = -1

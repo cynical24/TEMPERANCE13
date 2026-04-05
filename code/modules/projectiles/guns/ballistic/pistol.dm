@@ -105,7 +105,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/commandant
 	name = "ANL 'Liberation'"
-	desc = "Clip-loaded, semi-automatic pistol. Honor the Ziggurate."
+	desc = "Clip-loaded, semi-automatic pistol. Honor the Divegat."
 	icon_state = "machinepistol"
 	item_state = "machinepistol"
 	w_class = WEIGHT_CLASS_SMALL

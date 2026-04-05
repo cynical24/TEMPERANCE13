@@ -7,7 +7,7 @@
 )
 #define MUSIC_TAVCAT_RADIO list(\
 	"Risvonian Talkshow" = 'sound/music/jukeboxes/gen/talkshow.ogg',\
-	"Ziggurate's Simplified Anthem" = 'sound/music/jukeboxes/gen/countdown.ogg',\
+	"Dictate's Simplified Anthem" = 'sound/music/jukeboxes/gen/countdown.ogg',\
 )
 #define MUSIC_TAVCAT_MACHINE list(\
 	"Toxic" = 'sound/music/jukeboxes/machine/machinetoxic.ogg',\

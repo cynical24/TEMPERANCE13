@@ -35,5 +35,5 @@
 		return
 
 	var/mob/living/carbon/human/H = user
-	var/random_message = pick("you spin the globe!", "You land on Temperance!", "You land on the Risvonian Ziggurate! Glory!", "You land on the Great Perserdunian Empire! Honor!", "You land on old Kalaria.", "You land on ancient Yun!")
+	var/random_message = pick("you spin the globe!", "You land on Temperance!", "You land on the Risvonian Dictate! Glory!", "You land on the Great Perserdunian Empire! Honor!", "You land on old Kalaria.", "You land on ancient Yun!")
 	to_chat(H, span_notice("[random_message]"))
