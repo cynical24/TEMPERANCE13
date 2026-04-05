@@ -10,7 +10,8 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You are a magician within the Dictate's forces. \
-				You're attached to each Cadre, acting as both a means to increase Soldato strength and to tend to wounds." 
+				You're attached to each Cadre, acting as both a means to increase Soldato strength and basic first aid. \
+				The healing magic you know comes from Marionettes & teachings found within the WAR and LOVE Machines." 
 
 	outfit = /datum/outfit/job/roguetown/servisto
 	display_order = JDO_SERVISTO
