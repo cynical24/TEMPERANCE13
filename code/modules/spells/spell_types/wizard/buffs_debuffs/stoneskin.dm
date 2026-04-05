@@ -8,11 +8,11 @@
 	releasedrain = 60
 	chargedrain = 1
 	chargetime = 1 SECONDS
-	recharge_time = 2 MINUTES
+	recharge_time = 1 MINUTES
 	warnie = "spellwarning"
 	school = "transmutation"
 	spell_tier = 2
-	invocation = "Perstare Sicut Saxum." // Endure like Stone 
+	invocation = "LIKE STONE..!"
 	invocation_type = "whisper"
 	glow_color = GLOW_COLOR_BUFF
 	glow_intensity = GLOW_INTENSITY_LOW
@@ -30,7 +30,7 @@
 		return
 
 	var/mob/living/spelltarget = A
-	playsound(get_turf(spelltarget), 'sound/magic/haste.ogg', 80, TRUE, soundping = TRUE)
+	playsound(get_turf(spelltarget), 'sound/magic/ding.ogg', 80, TRUE, soundping = TRUE)
 
 	if(spelltarget != user)
 		user.visible_message("[user] mutters an incantation and [spelltarget] 's skin hardens like stone.")

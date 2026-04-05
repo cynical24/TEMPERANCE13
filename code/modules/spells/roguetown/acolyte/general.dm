@@ -250,8 +250,8 @@
 	return FALSE
 
 /obj/effect/proc_holder/spell/invoked/regression
-	name = "Regression"
-	desc = "Rewinds the target wounds, Healing them over time. If target is under Stasis heals them twice as much."
+	name = "Rewinding"
+	desc = "Rewinds the target wounds, Healing them over time. If target is under Stasis, heals them twice as much."
 	overlay_state = "regression"
 	releasedrain = 30
 	chargedrain = 0
@@ -259,19 +259,17 @@
 	range = 4
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
-	sound = list('sound/magic/regression1.ogg','sound/magic/regression2.ogg','sound/magic/regression3.ogg','sound/magic/regression4.ogg')
+	sound = list('sound/magic/rewind.ogg', 'sound/magic/rewind2.ogg', 'sound/magic/rewind3.ogg')
 	invocation_type = "none"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	recharge_time = 10 SECONDS
-	miracle = TRUE
-	devotion_cost = 10
+	recharge_time = 5 SECONDS
 
 /obj/effect/proc_holder/spell/invoked/regression/cast(list/targets, mob/living/user)
 	. = ..()
 	if(isliving(targets[1]))
 		var/mob/living/target = targets[1]
-		target.visible_message(span_info("Order filled magic rewind [target]'s wounds!"), span_notice("My wounds, undone!"))
+		target.visible_message(span_info("[target] is rewound!"), span_notice("My wounds, undone!"))
 		var/healing = 2.5
 		if(target.has_status_effect(/datum/status_effect/buff/stasis))
 			healing += 2.5
@@ -281,7 +279,7 @@
 	return FALSE
 
 /obj/effect/proc_holder/spell/invoked/convergence
-	name = "Convergence"
+	name = "Entanglement"
 	desc = "Converges the targets past and present, causing them to heal 50% more."
 	overlay_state = "convergence"
 	releasedrain = 30
@@ -297,15 +295,13 @@
 	invocation_type = "none"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	recharge_time = 20 SECONDS
-	miracle = TRUE
-	devotion_cost = 20
+	recharge_time = 10 SECONDS
 
 /obj/effect/proc_holder/spell/invoked/convergence/cast(list/targets, mob/living/user)
 	. = ..()
 	if(isliving(targets[1]))
 		var/mob/living/target = targets[1]
-		target.visible_message(span_info("A convergence of fates surrounds [target]!"), span_notice("My past and present converge as one!"))
+		target.visible_message(span_info("Dozens of afterimages entangle onto [target]!"), span_notice("FUCK! THAT FEELS AWFUL!"))
 		if(iscarbon(target))
 			var/mob/living/carbon/C = target
 			C.apply_status_effect(/datum/status_effect/buff/convergence)
@@ -320,7 +316,7 @@
 
 /obj/effect/proc_holder/spell/invoked/stasis
 	name = "Stasis"
-	desc = "You capture your target's current state in time, reverting them to such a state several seconds later. If under Convergence  when expiring, your target will keep any healing they receive."
+	desc = "You capture your target's current state in time, reverting them to such a state several seconds later. If under Entanglement when expiring, your target will keep any healing they receive."
 	releasedrain = 35
 	chargedrain = 1
 	chargetime = 30
@@ -341,8 +337,6 @@
 	var/firestacks = 0
 	var/divinefirestacks = 0
 	var/blood = 0
-	miracle = TRUE
-	devotion_cost = 30
 
 /obj/effect/proc_holder/spell/invoked/stasis/cast(list/targets, mob/user = usr)
 	if(isliving(targets[1]))

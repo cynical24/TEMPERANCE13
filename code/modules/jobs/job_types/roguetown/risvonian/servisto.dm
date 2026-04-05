@@ -6,11 +6,11 @@
 	total_positions = 2
 	spawn_positions = 2
 	allowed_races = RACES_CONSCRIPT
-	allowed_sexes = list(MALE)
+	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You are a magician within the Ziggurate force. \
-				You're attached to each Cadre, acting as both a means to increase Soldato strength & healing." 
+				You're attached to each Cadre, acting as both a means to increase Soldato strength and to tend to wounds." 
 
 	outfit = /datum/outfit/job/roguetown/servisto
 	display_order = JDO_SERVISTO
@@ -46,7 +46,7 @@
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/storage/belt/rogue/pouch/stim
 	wrists = /obj/item/scomstone
-	gloves = /obj/item/clothing/gloves/roguetown/leather/latex
+	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	backpack_contents = list(
@@ -70,5 +70,12 @@
 	H.adjust_skillrank(/datum/skill/combat/pistols, 4, TRUE)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/regression)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/convergence)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/stasis)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/fortitude)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/haste)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/stoneskin)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LONGSTRIDER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ARCYNE_T3, TRAIT_GENERIC)
