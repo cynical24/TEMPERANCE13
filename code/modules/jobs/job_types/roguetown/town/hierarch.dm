@@ -5,7 +5,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	allowed_races = RACES_TEMPERANCE
+	allowed_races = RACES_TEMPERANCE_NONCOMBATANT
 	allowed_sexes = list(MALE, FEMALE)
 	selection_color = JCOLOR_KINGSROW
 
