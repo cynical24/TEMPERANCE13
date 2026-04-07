@@ -611,7 +611,7 @@
 
 /obj/item/rogueweapon/sword/iron
 	name = "iron arming sword"
-	desc = "A long iron blade attached to a hilt, separated by a crossguard. The arming sword has been Psydonia's implement of war by excellence for generations, this one is cheaper than its steel brother."
+	desc = "Just take the piece of shit and stab someone. It's not hard."
 	icon_state = "isword"
 	minstr = 6
 	smeltresult = /obj/item/ingot/iron
@@ -621,7 +621,7 @@
 
 /obj/item/rogueweapon/sword/iron/short
 	name = "iron shortsword"
-	desc = "The arming sword's shorter and much older brother. Despite being centuries older than the swords of todae, it remains in use as a cheap sidearm for shieldbearers and archers. This iron variant predates them all."
+	desc = "Just take the piece of shit and stab someone. It's not hard."
 	icon_state = "iswordshort"
 	sheathe_icon = "iswordshort"
 	possible_item_intents = list(/datum/intent/sword/cut/short, /datum/intent/sword/thrust/short, /datum/intent/sword/peel)
