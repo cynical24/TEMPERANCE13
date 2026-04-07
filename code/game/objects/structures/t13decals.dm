@@ -129,7 +129,7 @@
 // as a side note, i just realized these should've been fluff structures instead of decals. sorry!
 /obj/effect/decal/crashed 
 	name = "cyclops"
-	desc = "TF OLHK. The inside of the glass has a dried, blue fluid."
+	desc = "51 61 132 15 41 121. The inside of the glass has a dried, blue fluid."
 	density = TRUE
 	icon = 'icons/roguetown/misc/decoration.dmi'
 	icon_state = "crashed"
