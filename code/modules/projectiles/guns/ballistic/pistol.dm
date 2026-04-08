@@ -208,7 +208,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/infiltrator
     name = "KR 'Infiltrator'"
-    desc = "Twenty rounds, sounds good until you run out. This thing seems to be made quickly, just a shitty gun, looks like it'll overheat by the time you finish shooting all those rounds, best to dump it than to bother trying to reload it."
+    desc = "A 20-round, semi-automatic pistol. It goes all in on the ammo capacity - meaning that the caliber's pretty weak, and it can't be reloaded."
     icon_state = "mauser"
     item_state = "mauser"
     w_class = WEIGHT_CLASS_SMALL
