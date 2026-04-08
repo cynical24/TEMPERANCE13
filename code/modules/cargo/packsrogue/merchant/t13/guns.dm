@@ -67,7 +67,7 @@
 				)
 
 /datum/supply_pack/rogue/firearms/infiltrator
-	name = "KR 'infiltrator' Pistol"
+	name = "KR 'Infiltrator' One-Use Pistol"
 	cost = 60
 	contains = list(
 					/obj/item/gun/ballistic/rifle/repeater/infiltrator,
