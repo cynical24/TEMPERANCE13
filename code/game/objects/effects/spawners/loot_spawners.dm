@@ -430,6 +430,7 @@
 		/obj/item/gun/ballistic/shotgun/eternal = 1,
 		/obj/item/gun/ballistic/rifle/repeater/patience	= 1,
 		/obj/item/gun/ballistic/rifle/reaper = 1,
+		/obj/item/gun/ballistic/rifle/repeater/auto8 = 1,
 	)
 
 /obj/effect/spawner/lootdrop/normalguns
@@ -440,6 +441,7 @@
 		/obj/item/gun/ballistic/rifle/repeater/mondragon = 1,
 		/obj/item/gun/ballistic/revolver/pace = 1,
 		/obj/item/gun/ballistic/revolver/doublebarrel = 1,
+		/obj/item/gun/ballistic/shotgun/levershotgun = 1,
 	)
 
 /obj/effect/spawner/lootdrop/hightierammo

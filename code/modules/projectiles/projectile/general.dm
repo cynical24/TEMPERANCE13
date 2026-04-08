@@ -41,6 +41,12 @@
     damage = 50
     armor_penetration = 30
 
+/obj/projectile/bullet/a45lc
+	name = ".45 Long Colt bullet"
+	icon_state = "bullet_proj"
+	damage = 70
+	armor_penetration = 40 //added armor pen similar to the .44 bullet
+
 // shotgun
 
 /obj/projectile/bullet/shotgun_slug
