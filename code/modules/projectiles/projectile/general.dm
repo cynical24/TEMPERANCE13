@@ -87,3 +87,19 @@
 	name = ".50D bullet"
 	damage = 100
 	armor_penetration = 80
+
+//other
+
+/obj/projectile/bullet/shrapnel //default shrapnel; if we ever want specific behaviors for shrapnel we can put em here
+	name = "pellet"
+	damage = 30
+	armor_penetration = 40
+	hitscan = FALSE
+	ignore_source_check = TRUE
+	woundclass = BCLASS_CUT
+	spread = 45 //could probably fine-tune this to make mines explode prettier but it's okay for now
+
+/obj/projectile/bullet/shrapnel/frogmine //frogmine explosion
+	name = "frogmine pellet"
+	damage = 50
+	armor_penetration = 60
