@@ -32,7 +32,7 @@
 			cloak = /obj/item/clothing/suit/roguetown/armor/longcoat
 			head = /obj/item/clothing/head/roguetown/fedora
 			backpack_contents = list(
-				/obj/item/flashlight/flare/torch = 1,
+				/obj/item/flashlight/flare/lantern = 1,
 				/obj/item/lockpick = 1, 
 				/obj/item/rogueweapon/mace/cudgel = 1, // it's a shame I can't get billy clubs in here, but this is the next best thing
 				/obj/item/lockpickring/mundane = 1,

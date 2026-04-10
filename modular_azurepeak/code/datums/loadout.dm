@@ -207,9 +207,13 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Striped Shirt"
 	path = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor
 
+/datum/loadout_item/shirt and vest
+	name = "Shirt and Vest"
+	path = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
+
 /datum/loadout_item/sailorjacket
 	name = "Leather Jacket"
-	path = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor
+	path = /obj/item/clothing/suit/roguetown/armor/leather/heavy/jacket
 
 /datum/loadout_item/exoticsilkbra
 	name = "Exotic Silk Bra"

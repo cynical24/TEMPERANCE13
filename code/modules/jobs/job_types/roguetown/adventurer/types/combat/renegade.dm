@@ -110,13 +110,11 @@
 			
 			to_chat(H, span_warning("You're probably from a gang. Or, you happened to kill whoever held the pistol before you. Make some money, grab some guns. Try not to die."))
 			armor = /obj/item/clothing/suit/roguetown/armor/leather
-			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
 			pants = /obj/item/clothing/under/roguetown/trou/leather
 			beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 			beltr = /obj/item/gun/ballistic/rifle/repeater/jackal
 			shoes = /obj/item/clothing/shoes/roguetown/boots
-			neck = /obj/item/clothing/neck/roguetown/gorget
 			gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
 			backl = /obj/item/storage/backpack/rogue/satchel
 			belt = /obj/item/storage/belt/rogue/leather
