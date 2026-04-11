@@ -108,7 +108,7 @@
 
 /obj/item/gun/ballistic/revolver/pace
 	name = "'Pace' Prarie Revolver"
-	desc = "A relatively cheap revolver, similar to the Garland. Doesn't handle as well. Not as accurate, not as well made. Still, it'll put holes in things, and that's what you need, right?"
+	desc = "A relatively cheap revolver, similar to the Garland. Doesn't handle as well. Not as accurate, not as well made. Still, it'll put holes in things, and that's what you need, right? Just try to match the tempo"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/revolver
 	force = 10

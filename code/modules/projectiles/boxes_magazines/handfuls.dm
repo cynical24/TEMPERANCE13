@@ -35,6 +35,15 @@
 	multiload = 0
 	icon_state = "pistol-handful"
 
+/obj/item/ammo_box/handfuls/mercy
+	name = "handful of custom bullets"
+	desc = "A handful of small low caliber pistol bullets."
+	ammo_type = /obj/item/ammo_casing/a22lr
+	caliber = "a22lr"
+	max_ammo = 7
+	multiload = 0
+	icon_state = "pistol-handful"
+
 /obj/item/ammo_box/handfuls/judge
 	name = "handful of heavy revolver bullets"
 	desc = "A handful of heavy revolver bullets."

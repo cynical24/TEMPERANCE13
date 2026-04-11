@@ -117,3 +117,9 @@
 	cost = 40
 	contains = list(/obj/item/ammo_box/magazine/cfmag,
 	/obj/item/ammo_box/magazine/cfmag)
+
+/datum/supply_pack/rogue/ammunition/mercy
+	name = "Mercy revolver handfuls (x2)"
+	cost = 20
+	contains = list(/obj/item/ammo_box/handfuls/mercy,
+	/obj/item/ammo_box/handfuls/mercy)
