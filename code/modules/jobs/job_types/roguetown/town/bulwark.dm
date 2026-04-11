@@ -72,7 +72,7 @@
 	category_tags = list(CTAG_BULWARK)
 
 /datum/outfit/job/roguetown/bulwark/shotgun/pre_equip(mob/living/carbon/human/H)
-	backl = /obj/item/ammo_box/magazine/internal/shot/auto8
+	backl = /obj/item/gun/ballistic/rifle/repeater/auto8
 	backr = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 2,

@@ -24,7 +24,7 @@
 	caliber = "a762lp"
 	max_ammo = 5
 	multiload = 0
-	icon_state = "rifle-handful"
+	icon_state = "LP-rifle-handful"
 
 /obj/item/ammo_box/handfuls/leveraction
 	name = "handful of custom bullets"

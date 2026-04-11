@@ -33,7 +33,7 @@
 /obj/item/ammo_box/clip/mondragon
 	name = "Low Powder Rifle clip"
 	desc = "A metal piece used for filling up a rifle with a lower powder load."
-	icon_state = "clip"
+	icon_state = "LP-clip"
 	ammo_type = /obj/item/ammo_casing/a762lp
 	caliber = "a762lp"
 	max_ammo = 5
