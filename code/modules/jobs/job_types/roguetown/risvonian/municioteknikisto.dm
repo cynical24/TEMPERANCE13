@@ -53,10 +53,10 @@
 	id = /obj/item/roguekey/risvon
 	backr = /obj/item/storage/backpack/rogue/satchel/risvon
 	backl = /obj/item/storage/backpack/rogue/satchel/chestrig
-	r_hand = /obj/item/gun/ballistic/rifle/repeater/risvocarb
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/offiseroluger
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/hmg/a303 = 9,
-		/obj/item/ammo_box/clip/pistol = 6,
+		/obj/item/ammo_box/magazine/luger = 6,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

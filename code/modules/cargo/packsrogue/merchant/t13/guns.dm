@@ -89,7 +89,28 @@
 
 /datum/supply_pack/rogue/firearms/mercy
 	name = "LC 'Mercy' Revolver"
-	cost = 90
+	cost = 60
+	contains = list(
+					/obj/item/gun/ballistic/revolver/mercy,
+				)
+
+/datum/supply_pack/rogue/firearms/mpcolt
+	name = "MP 'Certain Fury' Semi-Automatic Pistol Carbine"
+	cost = 190
+	contains = list(
+					/obj/item/gun/ballistic/rifle/repeater/mpcolt,
+				)
+
+/datum/supply_pack/rogue/firearms/risvocarb
+	name = "KAR 'Marland' Pistol Carbine"
+	cost = 210
 	contains = list(
 					/obj/item/gun/ballistic/rifle/repeater/risvocarb,
+				)
+
+/datum/supply_pack/rogue/firearms/auto5
+	name = "AO5 'Gloria' Semi-Automatic Shotgun"
+	cost = 300
+	contains = list(
+					/obj/item/gun/ballistic/rifle/repeater/auto5,
 				)

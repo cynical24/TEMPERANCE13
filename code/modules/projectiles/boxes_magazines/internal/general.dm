@@ -120,7 +120,7 @@
 /obj/item/ammo_box/magazine/internal/boltaction/infiltrator
 	name = "infiltrator internal magazine"
 	desc = "please ahelp if u find me"
-	ammo_type = /obj/item/ammo_casing/a22lr
+	ammo_type = /obj/item/ammo_casing/a30
 	caliber = "a30"
 	max_ammo = 20
 	multiload = 1

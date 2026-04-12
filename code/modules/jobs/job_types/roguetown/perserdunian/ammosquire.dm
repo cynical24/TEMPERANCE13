@@ -49,11 +49,11 @@
 	wrists = /obj/item/scomstone/garrison
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	backr = /obj/item/storage/backpack/rogue/satchel/perserdun
-	r_hand = /obj/item/gun/ballistic/rifle/repeater/mpcolt
+	r_hand = /obj/item/gun/ballistic/revolver/snub
 	id = /obj/item/roguekey/perserdun
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/hmg/a762x59 = 9,
-		/obj/item/ammo_box/magazine/cfmag = 6
+		/obj/item/ammo_box/speedloader/snub = 6
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
