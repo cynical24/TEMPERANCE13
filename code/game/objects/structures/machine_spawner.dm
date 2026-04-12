@@ -71,10 +71,10 @@
 
 /obj/structure/machine/spawner/process()
 	timer++
-	if(timer == 30)
+	if(timer == 780)//13 minutes
 		active = TRUE
 		update_effect()
-	if(timer >= 60)
+	if(timer >= 900) //15 minutes
 		active = FALSE
 		update_effect()
 		spawnitem()
