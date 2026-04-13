@@ -7553,7 +7553,7 @@
 /turf/open/floor/rogue/wardouble,
 /area/rogue/under/cave/warmachine)
 "WA" = (
-/obj/structure/machine/spawner,
+/obj/structure/machine/spawner/delay,
 /turf/open/floor/rogue/wardouble,
 /area/rogue/under/cave/warmachine)
 "WC" = (

@@ -5,12 +5,17 @@
 	icon = 'icons/obj/structures/bigmachine.dmi'
 	max_integrity = 999999
 	resistance_flags = INDESTRUCTIBLE
+	layer = MOB_LAYER + 0.01
 	icon_state = "furnace"
+	var/delay = FALSE
 	var/timer = 0
 	var/active = FALSE
 	var/datum/looping_sound/machineloop/soundloop
 	var/list/turfsy = list()
 	var/list/blockers = list()
+
+/obj/structure/machine/spawner/delay
+	delay = TRUE
 
 /obj/mblock
 	name = ""
@@ -41,11 +46,16 @@
 	timer = 0
 	START_PROCESSING(SSprocessing, src)
 
+/obj/structure/machine/spawner/proc/checkdelay()
+	if(delay)
+		sleep(1 HOURS)
+		delay = FALSE
+
 /obj/structure/machine/spawner/proc/spawnitem()
 	STOP_PROCESSING(SSprocessing, src)
 	playsound(src, 'sound/misc/loops/machinedone.ogg', 100)
 	var/obj/new_type 
-	if(prob(80))
+	if(prob(90))
 		new_type = pick(
 			/obj/effect/spawner/lootdrop/machine/rifleammo,
 			/obj/effect/spawner/lootdrop/machine/ammo,
@@ -58,8 +68,7 @@
 			/obj/effect/spawner/lootdrop/machine/eternal,
 			/obj/effect/spawner/lootdrop/machine/patience)
 	new new_type(get_step(src, SOUTH))
-	spawn(100)
-		reset()
+	reset()
 
 /obj/structure/machine/spawner/proc/update_effect()
 	if(active)
@@ -70,6 +79,7 @@
 		soundloop.stop()
 
 /obj/structure/machine/spawner/process()
+	checkdelay()
 	timer++
 	if(timer == 780)//13 minutes
 		active = TRUE
@@ -84,19 +94,25 @@
 	fan_out_items = TRUE
 
 /obj/effect/spawner/lootdrop/machine/Initialize(mapload)
-	. = ..()
 	if(loot)
-		do_spawn()
+		for(var/path in loot)
+			var/number = loot[path]
+			if(!isnum(number)) 
+				number = 1
+			for(var/i in 1 to number)
+				new path(get_turf(src))
+	else
+		. = ..()
 	return INITIALIZE_HINT_QDEL
-
+/*
 /obj/effect/spawner/lootdrop/machine/do_spawn() //so. it kinda just spits out a lot of random bullshit. whatever
 	for(var/path in loot)
 		var/number = loot[path]
-		if(!isnum(number))
-			number = 10
+		if(!isnum(number)) 
+			number = 1
 		for(var/i in 1 to number)
-			new path(get_turf(src))
-
+			new path(get_turf(src))s
+*/
 
 /obj/effect/spawner/lootdrop/machine/rifleammo 
 	loot = list(

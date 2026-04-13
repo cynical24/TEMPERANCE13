@@ -393,6 +393,10 @@
 "lC" = (
 /turf/closed/wall/mineral/rogue/decostone/cand,
 /area/rogue/indoors)
+"lN" = (
+/obj/structure/machine/spawner/delay,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "lO" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/reagent_containers/food/snacks/grown/onion/rogue,
@@ -2965,7 +2969,7 @@ jD
 HW
 BJ
 BJ
-DJ
+lN
 BJ
 BJ
 BJ
