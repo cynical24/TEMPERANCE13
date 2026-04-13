@@ -187,7 +187,7 @@
 		return
 	if(src.folded)
 		src.folded = FALSE
-		src.possible_item_intents = list(/datum/intent/shovelscoop, /datum/intent/mace/strike, /datum/intent/axe/chop)
+		src.possible_item_intents = list(/datum/intent/shovelscoop, /datum/intent/mace/strike/shovel, /datum/intent/axe/chop)
 		user.update_a_intents()
 		src.grid_height = 64
 		src.w_class = WEIGHT_CLASS_NORMAL
