@@ -129,13 +129,13 @@
 						user_informed = TRUE
 				else
 					UH.visible_message(span_warning("Severs the bloodlink from [target]!"))
-					bloodbeam.End()
+					qdel(bloodbeam)
 					return TRUE
 			else
 				UH.visible_message(span_warning("Severs the bloodlink from [target]!"))
-				bloodbeam.End()
+				qdel(bloodbeam)
 				return TRUE
-		bloodbeam.End()
+		qdel(bloodbeam)
 		return TRUE
 	revert_cast()
 	return FALSE
@@ -166,11 +166,16 @@
 	chargedloop = /datum/looping_sound/invokeascendant
 	associated_skill = /datum/skill/magic/blood
 	cost = 6
+
+/obj/effect/proc_holder/spell/invoked/projectile/piercing_blood/cast(list/targets, mob/living/user)
 	if(ishuman(user))
-            if(user.blood_volume < 45)
-                to_chat(user, span_warning("I don't have enough blood to cast this."))
-                return FALSE
-            user.blood_volume = max(user.blood_volume - 45, 0)
+		if(user.blood_volume < 45)
+			to_chat(user, span_warning("I don't have enough blood to cast this."))
+			return FALSE
+		user.blood_volume = max(user.blood_volume - 45, 0)
+	else
+		return FALSE
+	. = ..()
 
 /obj/projectile/magic/bloodbeam
 	name = "blood beam"
