@@ -485,7 +485,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/rooklate
 	name = "Rook"
 	icon_state = "arrow"
-	jobspawn_override = list("Rook")
+	jobspawn_override = list("Rook", "Blackguard")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/ammosquire
