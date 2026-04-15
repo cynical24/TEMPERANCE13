@@ -236,6 +236,7 @@
 #define CURACISTO (1<<9)
 #define CAMPFOLLOWER (1<<10)
 #define CONSULO (1<<11)
+#define FLAMSOLDATO (1<<12)
 
 #define KINGSROW (1<<14)
 
@@ -294,6 +295,7 @@
 #define JDO_CURACISTO 2.8
 #define JDO_CAMPFOLLOWER 2.9
 #define JDO_CONSULO 2.10
+#define JDO_FLAMSOLDATO 2.11
 
 // KINGSROW
 #define JDO_HIERARCH 3

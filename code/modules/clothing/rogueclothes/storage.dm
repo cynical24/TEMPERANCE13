@@ -508,6 +508,10 @@
 	item_state = "warfare_satchel"
 	component_type = /datum/component/storage/concrete/grid/amr
 
+/obj/item/storage/belt/rogue/pouch/ammobag/amr/flamer
+	name = "canister sack"
+	desc = "A fire-retardant bag meant to carry napalm fuel."
+	component_type = /datum/component/storage/concrete/grid/ammobag
 
 /obj/item/storage/backpack/rogue/backpack/perserdun
 	name = "ruckbag"
