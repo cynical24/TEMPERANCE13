@@ -26,7 +26,7 @@
 	var/used_time = 12 SECONDS // How many seconds it takes to disarm the trap
 	max_integrity = 100
 
-	grid_width = 64
+	grid_width = 32
 	grid_height = 64
 
 /obj/item/restraints/legcuffs/beartrap/attack_hand(mob/user)
