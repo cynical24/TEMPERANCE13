@@ -263,3 +263,17 @@
 	fire_sound = 'sound/combat/ranged/enfieldfire.ogg'
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.15
+
+/obj/item/gun/ballistic/rifle/repeater/lebel
+	name = "SOG 'Regal'"
+	desc = "A Kalarian bolt action rifle, Hold more rounds in the internal magazine, but it's still an utter pain to load."
+	icon = 'icons/roguetown/weapons/64guns.dmi'
+	icon_state = "lebeler"
+	item_state = "lebeler"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/lebel
+	slowdown = 0.15
+	spread = 0.5
+	pump_sound = 'sound/combat/ranged/riflecock.ogg'
+	fire_sound = 'sound/combat/ranged/enfieldfire.ogg'
+	load_sound = 'sound/combat/ranged/rifleload.ogg'
+	recoil = 0.25

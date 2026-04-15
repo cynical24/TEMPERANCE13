@@ -47,7 +47,7 @@
 
 /datum/supply_pack/rogue/firearms/artyluger
 	name = "KR 'Preacher' Stocked Pistol"
-	cost = 180
+	cost = 130
 	contains = list(
 					/obj/item/gun/ballistic/rifle/repeater/artyluger,
 				)
@@ -110,7 +110,14 @@
 
 /datum/supply_pack/rogue/firearms/auto5
 	name = "AO5 'Gloria' Semi-Automatic Shotgun"
-	cost = 300
+	cost = 350
 	contains = list(
 					/obj/item/gun/ballistic/rifle/repeater/auto5,
+				)
+
+/datum/supply_pack/rogue/firearms/lebel
+	name = "SOG 'Regal' Bolt Action Rifle"
+	cost = 80
+	contains = list(
+					/obj/item/gun/ballistic/rifle/repeater/lebel,
 				)

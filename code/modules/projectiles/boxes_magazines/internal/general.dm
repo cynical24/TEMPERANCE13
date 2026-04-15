@@ -16,12 +16,20 @@
 	max_ammo = 4
 	multiload = 0
 
+/obj/item/ammo_box/magazine/internal/boltaction/lebel
+	name = "Lebel internal magazine"
+	desc = "This should NOT be here."
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = "a762"
+	max_ammo = 8
+	multiload = 1
+
 /obj/item/ammo_box/magazine/internal/boltaction/leverchester
 	name = "WTF."
 	desc = "YOU SHOULD NOT BE SEEING THIS!!!"
 	ammo_type = /obj/item/ammo_casing/a44
 	caliber = "a44"
-	max_ammo = 6
+	max_ammo = 9
 	multiload = 0
 
 

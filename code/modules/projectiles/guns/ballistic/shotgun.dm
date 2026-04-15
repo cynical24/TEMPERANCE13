@@ -183,7 +183,7 @@
 	name = "MNZ 'Hare'"
 	desc = "Somewhat similar to the Ark. It's a compact shotgun that can fit inside your bag - how neat!"
 	icon = 'icons/roguetown/weapons/64guns.dmi'
-	w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "levershotgun"
 	item_state = "levershotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/levershotgun

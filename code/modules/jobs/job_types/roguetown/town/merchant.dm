@@ -45,7 +45,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots
-	armor = /obj/item/clothing/suit/roguetown/armor/longcoat
+	cloak = /obj/item/clothing/suit/roguetown/armor/longcoat
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/rich
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich

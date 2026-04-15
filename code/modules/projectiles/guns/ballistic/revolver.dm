@@ -102,6 +102,7 @@
 	slowdown = 0.15
 	empty_indicator = TRUE
 	fire_sound = 'sound/combat/ranged/garlandfire.ogg'
+	dry_fire_sound = 'sound/combat/ranged/revolver_prime.ogg'
 	load_sound = REVOLVERINSERT
 	recoil = 0.15
 	experimental_inhand = FALSE
@@ -131,6 +132,7 @@
 	spread = 6
 	icon_state = "webley"
 	item_state = "webley"
+	dry_fire_sound = 'sound/combat/ranged/revhammer.ogg'
 	slowdown = 0.15
 	empty_indicator = TRUE
 	fire_sound = 'sound/combat/ranged/webleyfire.ogg'
@@ -147,6 +149,7 @@
 	spread = 8 // with what barrel yo?
 	icon_state = "snubnose"
 	item_state = "snubnose"
+	dry_fire_sound = 'sound/combat/ranged/revhammer.ogg'
 	slowdown = 0.1 // small gun, small slowdown
 	empty_indicator = TRUE
 	fire_sound = REVOLVERSHOT
@@ -201,6 +204,7 @@
 	icon = 'icons/roguetown/weapons/64guns.dmi'
 	icon_state = "revolvingrifle"
 	item_state = "revolvingrifle"
+	dry_fire_sound = 'sound/combat/ranged/revolver_prime.ogg'
 	slowdown = 0.2 //slower
 	empty_indicator = TRUE
 	fire_sound = 'sound/combat/ranged/garlandfire.ogg'
