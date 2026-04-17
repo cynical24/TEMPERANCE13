@@ -334,11 +334,11 @@
 	volume = 100
 	extra_range = 5
 
-// /datum/looping_sound/invokeblood
-// 	mid_sounds = list('sound/magic/chargingold.ogg')
-// 	mid_length = 320
-// 	volume = 100
-// 	extra_range = 5
+/datum/looping_sound/invokeblood
+	mid_sounds = list('sound/magic/chargingblood.ogg')
+	mid_length = 320
+	volume = 100
+	extra_range = 5
 
 /datum/looping_sound/invokeradio
 	mid_sounds = list('sound/magic/radiocharge.ogg')

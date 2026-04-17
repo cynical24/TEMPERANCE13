@@ -52,7 +52,6 @@
 	drawmessage = "I pool blood from under my nails and shape it into a needle."
 	dropmessage = "The needle liquidizes into blood once more, falling to the ground."
 	school = "transmutation"
-	// sound = 'sound/magic/blood_needle.ogg'
 	overlay_state = "rune4"
 	chargedrain = 0
 	chargetime = 0
@@ -77,3 +76,15 @@
 	can_repair = TRUE
 	color = "#9b2020"
 	anvilrepair = null
+
+/obj/effect/proc_holder/spell/targeted/touch/bloodneedle/cast(list/targets, mob/user)
+	if(!QDELETED(attached_hand))
+		remove_hand(TRUE)
+		to_chat(user, span_notice("[dropmessage]"))
+		return
+
+	for(var/mob/living/carbon/C in targets)
+		if(!attached_hand)
+			if(ChargeHand(C))
+				playsound(get_turf(user), 'sound/magic/blood_needle.ogg', 50, TRUE)
+				return

@@ -173,7 +173,7 @@
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
 	charging_slowdown = 3
-	chargedloop = /datum/looping_sound/invokeascendant // need to change
+	chargedloop = /datum/looping_sound/invokeblood
 	associated_skill = /datum/skill/magic/blood
 	cost = 6
 
@@ -239,7 +239,7 @@
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
 	charging_slowdown = 3
-	chargedloop = /datum/looping_sound/invokeascendant // need to change
+	chargedloop = /datum/looping_sound/invokeblood
 	associated_skill = /datum/skill/magic/blood
 	cost = 3
 
