@@ -528,6 +528,10 @@
 	item_state = "warfare_satchel"
 	component_type = /datum/component/storage/concrete/grid/amr
 
+/obj/item/storage/belt/rogue/pouch/ammobag/amr/flamer
+	name = "canister sack"
+	desc = "A fire-retardant bag meant to carry napalm fuel."
+	component_type = /datum/component/storage/concrete/grid/ammobag
 
 /obj/item/storage/backpack/rogue/backpack/perserdun
 	name = "ruckbag"
@@ -586,3 +590,27 @@
 	desc = "A clean, compartmentalized satchel for holding advanced medical supplies. Product of the LIFE machine."
 	icon_state = "medic_satchel_blue"
 	item_state = "medic_satchel_blue"
+
+/obj/item/storage/backpack/rogue/satchel/radiopack
+	name = "radiopack"
+	desc = "An expensive piece of equipment that connects straight to AS-Y14 through the use of radio waves."
+	icon_state = "radiopack"
+	item_state = "radiopack"
+	var/list/radiostatic_sounds = list('sound/foley/radiostatic/badopera.ogg', 'sound/foley/radiostatic/beep.ogg', 'sound/foley/radiostatic/ditditdit.ogg', 'sound/foley/radiostatic/hangup.ogg', 'sound/foley/radiostatic/malechatter.ogg', 'sound/foley/radiostatic/roger.ogg', 'sound/foley/radiostatic/standby.ogg', 'sound/foley/radiostatic/thinking.ogg')
+
+/obj/item/storage/backpack/rogue/satchel/radiopack/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/item/storage/backpack/rogue/satchel/radiopack/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
+/obj/item/storage/backpack/rogue/satchel/radiopack/process()
+	radiostatic()
+
+/obj/item/storage/backpack/rogue/satchel/radiopack/proc/radiostatic()
+	if(QDELETED(src)) //crazy error
+		return
+	playsound(src, pick(radiostatic_sounds), 80, TRUE)
+
