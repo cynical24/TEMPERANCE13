@@ -299,11 +299,12 @@
 	icon = 'icons/roguetown/weapons/64guns.dmi'
 	icon_state = "lewisgun"
 	item_state = "lewisgun"
+	item_flags = SLOWS_WHILE_IN_HAND
 	can_parry = TRUE
 	armor = ARMOR_SHIELD
 	possible_item_intents = list(, SHIELD_BLOCK, SHIELD_SMASH)
 	mag_type = /obj/item/ammo_box/magazine/lewis
-	slowdown = 1.5 //I'M THE JUGGAHNAUT BAYBEE
+	slowdown = 2 //I'M THE JUGGAHNAUT BAYBEE
 	force = 40 //if someone hits you with a fucking lewis gun, you're gonna have a bad time
 	spread = 3
 	pump_sound = 'sound/combat/ranged/riflecock.ogg'
@@ -329,6 +330,7 @@
 	icon_state = "dp47"
 	item_state = "dp47"
 	mag_type = /obj/item/ammo_box/magazine/dp47
+	item_flags = SLOWS_WHILE_IN_HAND
 	slowdown = 0.7
 	force = 40
 	spread = 2
