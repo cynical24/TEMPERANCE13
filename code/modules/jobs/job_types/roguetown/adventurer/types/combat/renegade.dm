@@ -172,6 +172,7 @@
 			pants = /obj/item/clothing/under/roguetown/trou/leather
 			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 			cloak = /obj/item/clothing/cloak/half/red
+			r_hand = /obj/item/storage/meatbag
 			backpack_contents = list(
 				/obj/item/rogueweapon/huntingknife/idagger/steel = 1,
 				/obj/item/lockpickring/mundane = 1,

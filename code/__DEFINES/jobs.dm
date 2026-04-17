@@ -220,7 +220,6 @@
 #define CHIRURGEON (1<<7)
 #define PARTISAN (1<<8)
 #define ENVOY (1<<9)
-#define JAEGER (1<<10) //trapper
 #define RADIOTROOPER (1<<10)
 
 #define RISVON	(1<<13)
@@ -276,7 +275,6 @@
 #define JDO_KNIGHTCOMMANDER 1.2
 #define JDO_AUXILIARIST 1.3
 #define JDO_ARMSMAN 1.4
-#define JDO_JAEGER 1.41
 #define JDO_ROOK 1.5
 #define JDO_AMMOSQUIRE 1.6
 #define JDO_CHIRURGEON 1.7
@@ -317,7 +315,6 @@
 	/datum/job/roguetown/knightcommander,\
 	/datum/job/roguetown/auxiliar,\
 	/datum/job/roguetown/armsman,\
-	/datum/job/roguetown/jaeger,\
 	/datum/job/roguetown/chirurgeon,\
 	/datum/job/roguetown/partisan,\
 	/datum/job/roguetown/envoy

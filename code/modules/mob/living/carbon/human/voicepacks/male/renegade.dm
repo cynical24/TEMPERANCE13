@@ -2,7 +2,7 @@
 	var/used
 	switch(soundin)
 		if("chuckle")
-			used = list('sound/vo/male/renegade/cheeki-breeki.ogg',)
+			used = list('sound/vo/male/renegade/chuckle (1).ogg',)
 		if("embed")
 			used = list('sound/vo/male/young/embed (1).ogg','sound/vo/male/young/embed (2).ogg')
 		if("sigh")
@@ -17,6 +17,10 @@
 			used = 'sound/vo/male/renegade/death.ogg'
 		if("cough")
 			used = list('sound/vo/male/renegade/cough (1).ogg','sound/vo/male/renegade/cough (2).ogg')
+		if("whistle")
+			used = list('sound/vo/male/renegade/cheeki-breeki.ogg')
+		if("warcry")
+			used = list('sound/vo/male/renegade/yeehaw.mp3')
 		if("paincrit")
 			used = list('sound/vo/male/young/paincrit (1).ogg','sound/vo/male/young/paincrit (2).ogg','sound/vo/male/young/paincrit (3).ogg')
 		if("painscream")
