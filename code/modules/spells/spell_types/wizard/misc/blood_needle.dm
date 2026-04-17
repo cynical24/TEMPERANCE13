@@ -52,6 +52,7 @@
 	drawmessage = "I pool blood from under my nails and shape it into a needle."
 	dropmessage = "The needle liquidizes into blood once more, falling to the ground."
 	school = "transmutation"
+	// sound = 'sound/magic/blood_needle.ogg'
 	overlay_state = "rune4"
 	chargedrain = 0
 	chargetime = 0
@@ -70,7 +71,7 @@
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	icon_state = "needle"
 	catchphrase = null
-	on_use_sound = null // maybe get goopy gooey blood noises idk
+	on_use_sound = 'sound/magic/blood_needle_use.ogg'
 	w_class = WEIGHT_CLASS_TINY
 	infinite = TRUE
 	can_repair = TRUE

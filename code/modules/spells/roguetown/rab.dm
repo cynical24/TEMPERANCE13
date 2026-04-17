@@ -5,7 +5,7 @@
 	range = 1
 	associated_skill = /datum/skill/magic/blood
 	miracle = FALSE
-	// sound = null i want this to have a unique sound
+	sound = 'sound/magic/internal_examination.ogg'
 	devotion_cost = 0 //Doctors are not clerics
 
 /obj/effect/proc_holder/spell/invoked/blood_heal
@@ -18,7 +18,7 @@
 	range = 4
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
-	sound = 'sound/magic/heal.ogg'
+	sound = 'sound/magic/heal.ogg' // needs a custom one
 	invocation_type = "none"
 	associated_skill = /datum/skill/magic/blood
 	antimagic_allowed = TRUE
@@ -157,7 +157,7 @@
 	desc = "Condense your blood into a powerful, razor-thin beam and fire it with extremely high pressure."
 	clothes_req = FALSE
 	overlay_state = "bloodlightning"
-	sound = 'sound/magic/vlightning.ogg'
+	sound = 'sound/magic/piercing_blood.ogg'
 	range = 8
 	projectile_type = /obj/projectile/magic/bloodbeam
 	releasedrain = 30
@@ -173,7 +173,7 @@
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
 	charging_slowdown = 3
-	chargedloop = /datum/looping_sound/invokeascendant
+	chargedloop = /datum/looping_sound/invokeascendant // need to change
 	associated_skill = /datum/skill/magic/blood
 	cost = 6
 
@@ -224,7 +224,7 @@
 	desc = "Siphon blood from another and transfer it to yourself."
 	clothes_req = FALSE
 	overlay_state = "bloodsteal"
-	sound = 'sound/magic/vlightning.ogg'
+	sound = 'sound/magic/blood_siphon.ogg'
 	range = 8
 	projectile_type = /obj/projectile/magic/bloodsiphon
 	releasedrain = 30
@@ -239,7 +239,7 @@
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
 	charging_slowdown = 3
-	chargedloop = /datum/looping_sound/invokeascendant
+	chargedloop = /datum/looping_sound/invokeascendant // need to change
 	associated_skill = /datum/skill/magic/blood
 	cost = 3
 

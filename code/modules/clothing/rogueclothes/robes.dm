@@ -123,6 +123,7 @@
 			if(HAS_BLOOD_DNA(src) && !HAS_TRAIT(H, TRAIT_BLOODIED_ROBE))
 				ADD_TRAIT(H, TRAIT_BLOODIED_ROBE, TRAIT_GENERIC)
 				to_chat(H, span_notice("THE BLOOD OF WARRIORS SEEPS INTO MY VESTMENTS, EMPOWERING ME!"))
+				H.playsound_local(H, 'sound/magic/bloodied_robes.ogg', 100)
 			else if(!HAS_BLOOD_DNA(src) && HAS_TRAIT(H, TRAIT_BLOODIED_ROBE))
 				REMOVE_TRAIT(H, TRAIT_BLOODIED_ROBE, TRAIT_GENERIC)
 				to_chat(H, span_notice("The blood fades from my vestments..."))
