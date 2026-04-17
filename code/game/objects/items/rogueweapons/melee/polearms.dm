@@ -946,7 +946,7 @@
 
 /obj/item/rogueweapon/woodstaff/quarterstaff
 	name = "wooden quarterstaff"
-	desc = "A staff that makes any journey easier. Durable and swift, capable of bludgeoning stray volves and ruffians alike. Its length allow it to be used for a thrusting attack."
+	desc = "A staff that makes any journey easier. Durable and swift, capable of bludgeoning stray wolves and vultures alike. Its length allow it to be used for a thrusting attack."
 	force = 15
 	force_wielded = 20
 	gripped_intents = list(/datum/intent/spear/bash/ranged/quarterstaff, /datum/intent/spear/thrust/quarterstaff)

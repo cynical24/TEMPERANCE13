@@ -230,6 +230,23 @@
 /obj/effect/temp_visual/small_smoke/halfsecond
 	duration = 5
 
+/obj/effect/temp_visual/blood_liquify
+	name = "blood liquify"
+	icon = 'icons/mob/mob.dmi'
+	icon_state = "liquify"
+	color = "red"
+	duration = 8
+	randomdir = FALSE
+	layer = ABOVE_MOB_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/temp_visual/blood_liquify/Initialize(mapload, reverse = FALSE)
+	. = ..()
+	if(reverse)
+		animate(src, pixel_y = -6, alpha = 0, time = duration, easing = EASE_OUT)
+	else
+		animate(src, pixel_y = 6, alpha = 0, time = duration, easing = EASE_OUT)
+
 /obj/effect/temp_visual/fire
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "3"

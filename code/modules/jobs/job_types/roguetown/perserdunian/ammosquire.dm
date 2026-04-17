@@ -19,7 +19,7 @@
 	min_pq = 0
 	max_pq = null
 
-	cmode_music = 'sound/music/combat_armsman.ogg'
+	cmode_music = 'sound/music/combat_machinegunner.ogg'
 
 /datum/job/roguetown/ammosquire/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()

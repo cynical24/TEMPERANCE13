@@ -1701,6 +1701,11 @@
 /obj/structure/barbedwire,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/perserdun)
+"zb" = (
+/obj/effect/landmark/start/warpriest,
+/obj/effect/landmark/start/warpriestlate,
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/perserdunbase)
 "zf" = (
 /turf/closed/wall/mineral/rogue/perserdun/end/east,
 /area/rogue/indoors/perserdunbase)
@@ -15890,7 +15895,7 @@ IG
 IG
 Qd
 dt
-qg
+zb
 qg
 qg
 Nc

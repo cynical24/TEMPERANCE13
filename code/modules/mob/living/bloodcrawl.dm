@@ -3,13 +3,21 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "nothing"
 	density = FALSE
-	anchored = TRUE
+	anchored = FALSE
 	invisibility = 60
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/canmove = TRUE
 
 /obj/effect/dummy/phased_mob/slaughter/relaymove(mob/user, direction)
-	forceMove(get_step(src,direction))
+	var/turf/T = get_step(src, direction)
+	if(!T)
+		return
+	if(T.density)
+		return
+	for(var/obj/O in T)
+		if(O.density && !istype(O, /obj/structure/mineral_door) && !istype(O, /obj/structure/table) && !istype(O, /obj/structure/fluff))
+			return
+	forceMove(T)
 
 /obj/effect/dummy/phased_mob/slaughter/ex_act()
 	return
@@ -20,12 +28,12 @@
 /mob/living/proc/phaseout(obj/effect/decal/cleanable/B)
 	if(iscarbon(src))
 		var/mob/living/carbon/C = src
+		var/dropped_items = FALSE
 		for(var/obj/item/I in C.held_items)
-			//TODO make it toggleable to either forcedrop the items, or deny
-			//entry when holding them
-			// literally only an option for carbons though
+			C.dropItemToGround(I, TRUE)
+			dropped_items = TRUE
+		if(dropped_items)
 			to_chat(C, span_warning("I may not hold items while blood crawling!"))
-			return FALSE
 		var/obj/item/bloodcrawl/B1 = new(C)
 		var/obj/item/bloodcrawl/B2 = new(C)
 		B1.icon_state = "bloodhand_left"
@@ -43,7 +51,8 @@
 	var/turf/mobloc = get_turf(loc)
 
 	visible_message(span_warning("[src] sinks into the pool of blood!"))
-	playsound(get_turf(src), 'sound/blank.ogg', 50, TRUE, -1)
+	playsound(get_turf(src), 'sound/magic/enter_blood.ogg', 50, TRUE, -1)
+	new /obj/effect/temp_visual/blood_liquify(get_turf(src))
 	// Extinguish, unbuckle, stop being pulled, set our location into the
 	// dummy object
 	var/obj/effect/dummy/phased_mob/slaughter/holder = new /obj/effect/dummy/phased_mob/slaughter(mobloc)
@@ -53,7 +62,6 @@
 	// makes us stop pulling
 	var/pullee = pulling
 
-	holder = holder
 	forceMove(holder)
 
 	// if we're not pulling anyone, or we can't eat anyone
@@ -87,10 +95,10 @@
 	notransform = FALSE
 	return TRUE
 
-/mob/living/proc/bloodcrawl_consume(mob/living/victim)
+/mob/living/proc/bloodcrawl_consume(mob/living/victim) // i have no idea if this actually works ingame
 	to_chat(src, span_danger("I begin to feast on [victim]... You can not move while you are doing this."))
 
-	var/sound = 'sound/blank.ogg'
+	var/sound = 'sound/magic/demon_consume.ogg'
 
 	for(var/i in 1 to 3)
 		playsound(get_turf(src),sound, 50, TRUE)
@@ -140,7 +148,8 @@
 	ADD_TRAIT(src, TRAIT_NODROP, ABSTRACT_ITEM_TRAIT)
 
 /mob/living/proc/exit_blood_effect(obj/effect/decal/cleanable/B)
-	playsound(get_turf(src), 'sound/blank.ogg', 50, TRUE, -1)
+	playsound(get_turf(src), 'sound/magic/exit_blood.ogg', 50, TRUE, -1)
+	new /obj/effect/temp_visual/blood_liquify(get_turf(src), TRUE)
 	//Makes the mob have the color of the blood pool it came out of
 	var/newcolor = rgb(149, 10, 10)
 	if(istype(B, /obj/effect/decal/cleanable/xenoblood))

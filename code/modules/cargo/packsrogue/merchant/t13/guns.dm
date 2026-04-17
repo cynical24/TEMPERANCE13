@@ -107,10 +107,3 @@
 	contains = list(
 					/obj/item/gun/ballistic/rifle/repeater/risvocarb,
 				)
-
-/datum/supply_pack/rogue/firearms/auto5
-	name = "AO5 'Gloria' Semi-Automatic Shotgun"
-	cost = 300
-	contains = list(
-					/obj/item/gun/ballistic/rifle/repeater/auto5,
-				)

@@ -9,11 +9,33 @@
 	popup.open(FALSE)
 
 /client/proc/view_actors_manifest()
+	var/list/actors_list = get_sorted_actors_list()
+	var/list/categories_used = list()
 	var/dat
-	for(var/X in GLOB.actors_list)
-		dat += "[GLOB.actors_list[X]]"
+	var/list/categories = list(
+		"Perserdun" = GLOB.perserdun_positions,
+		"Risvon" = GLOB.risvon_positions,
+		"King's Row" = GLOB.kingsrow_positions,
+		"Nobody" = GLOB.nonaffiliated_positions,
+	)
 
-	var/datum/browser/popup = new(src, "actors", "<center>This Story's Actors</center>", 387, 420)
+	for(var/mob_id in actors_list)
+		var/list/actor_data = actors_list[mob_id]
+		var/category = actor_data["category"] //Gets the actor's cateogry and puts it in 'category' for us
+
+		if(!(category in categories_used))
+			var/cat_color = COLOR_WHITE
+			if(length(categories_used))
+				dat += "<br>"
+			if(category in categories)
+				var/current_category = categories[category]
+				cat_color = SSjob.name_occupations[current_category[1]].selection_color
+			dat += "<center><h1 style='padding-top: 0; bold; color: [cat_color]'>-- [category] --</h1></center>"
+			categories_used += category
+		var/list/character_data = actor_data["data"]
+		dat += "<b>[character_data["name"]]</b> as <b>[character_data["rank"]]</b><br>"
+
+	var/datum/browser/popup = new(src, "actors", "<center>This Battle's Victims</center>", 387, 420)
 	popup.set_content(dat)
 	popup.open(FALSE)
 

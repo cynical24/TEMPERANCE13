@@ -104,36 +104,48 @@
 /obj/item/clothing/suit/roguetown/shirt/robe/white
 	color = CLOTHING_WHITE
 
-/obj/item/clothing/suit/roguetown/shirt/robe/priest
-	name = "solar vestments"
-	desc = "Holy vestments sanctified by divine hands. Caution is advised if not a faithful."
+/obj/item/clothing/suit/roguetown/shirt/robe/warpriest
+	name = "war priest vestments"
+	desc = "Vestments sanctified by the War Priest themselves. Stains of blood line the fabric."
 	icon_state = "priestrobe"
+	color = "#3A3A71"
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	armor = ARMOR_PADDED	//Equal to gamby
-	color = null
 
-/obj/item/clothing/suit/roguetown/shirt/robe/priest/pickup(mob/living/user)
-	if(!HAS_TRAIT(user, TRAIT_CHOSEN))
-		to_chat(user, "<font color='yellow'>UNWORTHY HANDS TOUCH THE VESTMENTS, CEASE OR BE PUNISHED</font>")
-		spawn(30)
-			if(loc == user)
-				user.adjust_fire_stacks(5)
-				user.IgniteMob()
-	..()
+/obj/item/clothing/suit/roguetown/shirt/robe/warpriest/Initialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, PROC_REF(on_clean))
 
-/obj/item/clothing/suit/roguetown/shirt/robe/priest/equipped(mob/living/user, slot)
+/obj/item/clothing/proc/update_bloodied()
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		if((H.wear_armor == src || H.wear_shirt == src) && HAS_TRAIT(H, TRAIT_RABCHOSEN))
+			if(HAS_BLOOD_DNA(src) && !HAS_TRAIT(H, TRAIT_BLOODIED_ROBE))
+				ADD_TRAIT(H, TRAIT_BLOODIED_ROBE, TRAIT_GENERIC)
+				to_chat(H, span_notice("THE BLOOD OF WARRIORS SEEPS INTO MY VESTMENTS, EMPOWERING ME!"))
+				H.playsound_local(H, 'sound/magic/bloodied_robes.ogg', 100)
+			else if(!HAS_BLOOD_DNA(src) && HAS_TRAIT(H, TRAIT_BLOODIED_ROBE))
+				REMOVE_TRAIT(H, TRAIT_BLOODIED_ROBE, TRAIT_GENERIC)
+				to_chat(H, span_notice("The blood fades from my vestments..."))
+
+/obj/item/clothing/suit/roguetown/shirt/robe/warpriest/equipped(mob/living/user, slot)
 	..()
-	if(slot != SLOT_ARMOR|SLOT_SHIRT)
+	if(slot != SLOT_ARMOR && slot != SLOT_SHIRT)
 		return
-	if(!HAS_TRAIT(user, TRAIT_CHOSEN))	//Requires this cus it's a priest-only thing.
-		return
-	ADD_TRAIT(user, TRAIT_MONK_ROBE, TRAIT_GENERIC)
-	to_chat(user, span_notice("With my vows to poverty and my vestments, I feel vigerous - empowered by the gods!"))
+	update_bloodied()
 
-/obj/item/clothing/suit/roguetown/shirt/robe/priest/dropped(mob/living/user)
+/obj/item/clothing/suit/roguetown/shirt/robe/warpriest/dropped(mob/living/user)
 	..()
-	REMOVE_TRAIT(user, TRAIT_MONK_ROBE, TRAIT_GENERIC)
-	to_chat(user, span_notice("I must lay down my robes and rest; even god's chosen must rest.."))
+	if(HAS_TRAIT(user, TRAIT_BLOODIED_ROBE))
+		REMOVE_TRAIT(user, TRAIT_BLOODIED_ROBE, TRAIT_GENERIC)
+		to_chat(user, span_notice("I lose that sense of vigor as I lay down my vestments..."))
+
+/obj/item/clothing/suit/roguetown/shirt/robe/warpriest/add_blood_DNA(list/dna)
+	. = ..()
+	update_bloodied()
+
+/obj/item/clothing/suit/roguetown/shirt/robe/warpriest/proc/on_clean(datum/source, clean)
+	addtimer(CALLBACK(src, PROC_REF(update_bloodied)), 1) // delay is required or it runs too early
 
 /obj/item/clothing/suit/roguetown/shirt/robe/monk
 	name = "monk vestments"
@@ -143,17 +155,17 @@
 	armor = ARMOR_PADDED	//Equal to gamby
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 
-/obj/item/clothing/suit/roguetown/shirt/robe/monk/equipped(mob/living/user, slot)
-	..()
-	if(!HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN))	//Requires this cus it's a monk-only thing.
-		return
-	ADD_TRAIT(user, TRAIT_MONK_ROBE, TRAIT_GENERIC)
-	to_chat(user, span_notice("With my vows to poverty and my vestments, I feel vigerous - empowered by the gods!"))
+// /obj/item/clothing/suit/roguetown/shirt/robe/monk/equipped(mob/living/user, slot)
+// 	..()
+// 	if(!HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN))	//Requires this cus it's a monk-only thing.
+// 		return
+// 	ADD_TRAIT(user, TRAIT_MONK_ROBE, TRAIT_GENERIC)
+// 	to_chat(user, span_notice("With my vows to poverty and my vestments, I feel vigerous - empowered by the gods!"))
 
-/obj/item/clothing/suit/roguetown/shirt/robe/monk/dropped(mob/living/user)
-	..()
-	REMOVE_TRAIT(user, TRAIT_MONK_ROBE, TRAIT_GENERIC)
-	to_chat(user, span_notice("I must lay down my robes and rest; even god's chosen must rest.."))
+// /obj/item/clothing/suit/roguetown/shirt/robe/monk/dropped(mob/living/user)
+// 	..()
+// 	REMOVE_TRAIT(user, TRAIT_MONK_ROBE, TRAIT_GENERIC)
+// 	to_chat(user, span_notice("I must lay down my robes and rest; even god's chosen must rest.."))
 
 /obj/item/clothing/suit/roguetown/shirt/robe/courtmage
 	color = "#6c6c6c"

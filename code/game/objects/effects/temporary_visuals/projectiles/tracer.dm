@@ -55,9 +55,19 @@
 	name = "blood bolt"
 	icon_state = "cult"
 
+/obj/effect/projectile/tracer/bloodbeam
+	name = "blood beam"
+	icon = 'icons/effects/beam.dmi'
+	icon_state = "sat_beam"
+
 /obj/effect/projectile/tracer/bloodsteal
 	name = "blood steal"
 	icon_state = "hcult"
+
+/obj/effect/projectile/tracer/bloodsiphon
+	name = "blood siphon"
+	icon = 'icons/effects/beam.dmi'
+	icon_state = "drainbeam"
 
 /obj/effect/projectile/tracer/heavy_laser
 	name = "heavy laser"

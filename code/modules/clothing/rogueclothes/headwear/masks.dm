@@ -10,7 +10,7 @@
 
 /obj/item/clothing/head/roguetown/priestmask/pickup(mob/living/user)
 	..()
-	if(!HAS_TRAIT(user, TRAIT_CHOSEN))
+	if(!HAS_TRAIT(user, TRAIT_RABCHOSEN))
 		to_chat(user, "<font color='yellow'>UNWORTHY HANDS TOUCH THE VISAGE, CEASE OR BE PUNISHED</font>")
 		spawn(30)
 			if(loc == user)

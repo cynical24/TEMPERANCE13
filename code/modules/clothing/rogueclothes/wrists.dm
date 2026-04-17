@@ -92,10 +92,15 @@
 
 /obj/item/clothing/wrists/roguetown/wrappings
 	name = "solar wrappings"
-	slot_flags = ITEM_SLOT_WRISTS
+	slot_flags = ITEM_SLOT_WRISTS|ITEM_SLOT_GLOVES
 	icon_state = "wrappings"
 	item_state = "wrappings"
 	sewrepair = TRUE
+
+/obj/item/clothing/wrists/roguetown/wrappings/perserdun
+	name = "hand wrappings"
+	desc = "Rough hand and wrist cloth wrappings, dyed with the colors of <span class='notice'>THE GREAT EMPIRE OF PERSERDUN</span>."
+	color = "#5F5F82"
 
 /obj/item/clothing/wrists/roguetown/nocwrappings
 	name = "moon wrappings"

@@ -13,7 +13,7 @@
 		added = round(-10 + (added * - 40))
 		if(HAS_TRAIT(src, TRAIT_MISSING_NOSE))
 			added = round(added * 0.5, 1)
-		if(HAS_TRAIT(src, TRAIT_MONK_ROBE))
+		if(HAS_TRAIT(src, TRAIT_BLOODIED_ROBE))
 			added = round(added * 1.25, 1)
 		if(stamina >= 1)
 			stamina_add(added)
