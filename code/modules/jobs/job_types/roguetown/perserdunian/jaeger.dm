@@ -53,7 +53,6 @@
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/grenade/gas/poison,
-		/obj/item/grenade/gas/smoke,
 		/obj/item/restraints/legcuffs/beartrap,
 		/obj/item/restraints/legcuffs/beartrap,
 		/obj/item/restraints/legcuffs/beartrap,
@@ -63,6 +62,7 @@
 		/obj/item/landmine,
 		/obj/item/landmine,
 		/obj/item/landmine,
+		/obj/item/frogmine,
 		/obj/item/frogmine,
 		/obj/item/frogmine,
 		/obj/item/frogmine,
