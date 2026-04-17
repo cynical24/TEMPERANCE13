@@ -105,7 +105,6 @@
 /obj/item/clothing/head/roguetown/roguehood/shalal/heavyhood
 	name = "heavy hood"
 	desc = "This thick lump of burlap completely shrouds your head, protecting it from harsh weather and nosey protagonists alike."
-	max_integrity = 200 //does nothing since no protection
 	color = CLOTHING_BROWN
 	item_state = "heavyhood"
 	icon_state = "heavyhood"
