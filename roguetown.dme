@@ -2311,6 +2311,7 @@
 #include "code\modules\spells\spell_types\wizard\invoked_single_target\mortar.dm"
 #include "code\modules\spells\spell_types\wizard\misc\arcyne_prison.dm"
 #include "code\modules\spells\spell_types\wizard\misc\blink.dm"
+#include "code\modules\spells\spell_types\wizard\misc\blood_needle.dm"
 #include "code\modules\spells\spell_types\wizard\misc\enchant_weapon.dm"
 #include "code\modules\spells\spell_types\wizard\misc\forcewall.dm"
 #include "code\modules\spells\spell_types\wizard\misc\greater_forcewall.dm"

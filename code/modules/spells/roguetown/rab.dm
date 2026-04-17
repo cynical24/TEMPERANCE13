@@ -1,3 +1,13 @@
+/obj/effect/proc_holder/spell/invoked/diagnose/blood
+	name = "Internal Examination"
+	desc = "Utilize your knowledge of the body's innerworkings to see 'through' another."
+	overlay_state = "diagnose"
+	range = 1
+	associated_skill = /datum/skill/magic/blood
+	miracle = FALSE
+	// sound = null i want this to have a unique sound
+	devotion_cost = 0 //Doctors are not clerics
+
 /obj/effect/proc_holder/spell/invoked/blood_heal
 	name = "Blood Congeal"
 	desc = "The simplest of blood magicks. Tap into the coagulative properties of blood to seal deep wounds and staunch bleeding. Capable of healing fractures by rapidly congealing blood into a rigid substance.<br>Standing near puddles of blood will improve the flow."
