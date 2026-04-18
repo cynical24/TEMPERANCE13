@@ -900,10 +900,6 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/perserdunbase)
-"lB" = (
-/obj/structure/barricade/brustwehr,
-/turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/perserdun)
 "lC" = (
 /turf/closed/wall/mineral/rogue/perserdun/tshape/dir1,
 /area/rogue/indoors/perserdunbase)
@@ -1228,11 +1224,6 @@
 	},
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
-"rV" = (
-/obj/structure/barricade/brustwehr,
-/obj/structure/barricade/brustwehr,
-/turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/perserdun)
 "rW" = (
 /obj/structure/chair/wood/rogue/chair4{
 	dir = 1
@@ -2671,10 +2662,6 @@
 	pixel_x = 1;
 	pixel_y = -3
 	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/perserdun)
-"NB" = (
-/obj/structure/closet/dirthole/grave,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/perserdun)
 "ND" = (
@@ -28610,9 +28597,9 @@ TK
 ML
 eQ
 ML
-lB
-lB
-lB
+ML
+ML
+ML
 NT
 NT
 ML
@@ -28740,8 +28727,8 @@ TK
 ML
 ML
 ML
-TK
-TK
+ML
+ML
 ML
 ML
 ML
@@ -28870,7 +28857,7 @@ TK
 TK
 TK
 TK
-NB
+TK
 TK
 TK
 TK
@@ -29788,7 +29775,7 @@ NT
 ML
 ML
 TK
-NB
+TK
 ML
 ML
 ML
@@ -29920,7 +29907,7 @@ ML
 TK
 TK
 TK
-lB
+ML
 ML
 ML
 ML
@@ -30050,7 +30037,7 @@ qs
 TK
 TK
 TK
-lB
+ML
 ML
 ML
 ML
@@ -30180,7 +30167,7 @@ qs
 ML
 TK
 TK
-lB
+ML
 ML
 ML
 ML
@@ -30555,7 +30542,7 @@ ML
 ML
 ML
 ML
-lB
+ML
 TK
 ML
 EC
@@ -30685,7 +30672,7 @@ ML
 ML
 ML
 ML
-rV
+ML
 TK
 ML
 EC
@@ -30815,9 +30802,9 @@ ML
 ML
 ML
 ML
-lB
+ML
 TK
-NB
+TK
 xf
 Ug
 wy
