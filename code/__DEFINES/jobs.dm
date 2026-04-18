@@ -275,8 +275,8 @@
 // PERSERDUN
 #define JDO_GRANDMASTER 1
 #define JDO_GRANDKNIGHT 1.1
-<<<<<<< blackguard
 #define JDO_KNIGHTCOMMANDER 1.2
+#define JDO_WARPRIEST 1.22
 #define JDO_AUXILIARIST 1.3
 #define JDO_BLACKGUARD 1.32
 #define JDO_ARMSMAN 1.4
@@ -286,17 +286,7 @@
 #define JDO_PARTISAN 1.8
 #define JDO_ENVOY 1.82
 #define JDO_RADIOTROOPER 1.83
-=======
-#define JDO_WARPRIEST 1.2
-#define JDO_KNIGHTCOMMANDER 1.3
-#define JDO_AUXILIARIST 1.4
-#define JDO_ARMSMAN 1.5
-#define JDO_ROOK 1.6
-#define JDO_AMMOSQUIRE 1.7
-#define JDO_CHIRURGEON 1.8
-#define JDO_PARTISAN 1.9
-#define JDO_ENVOY 1.92
-#define JDO_RADIOTROOPER 1.93
+
 >>>>>>> main
 
 // RISVON
