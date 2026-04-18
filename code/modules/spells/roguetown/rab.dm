@@ -162,8 +162,8 @@
 	projectile_type = /obj/projectile/magic/bloodbeam
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 5
-	recharge_time = 5 SECONDS
+	chargetime = 15
+	recharge_time = 20 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
@@ -194,7 +194,7 @@
 	impact_type = null
 	hitscan = TRUE
 	damage = 70
-	armor_penetration = 50
+	armor_penetration = 20
 	damage_type = BRUTE
 	woundclass = BCLASS_PIERCE
 	nodamage = FALSE
@@ -229,8 +229,8 @@
 	projectile_type = /obj/projectile/magic/bloodsiphon
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 10
-	recharge_time = 30 SECONDS
+	chargetime = 25
+	recharge_time = 40 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
