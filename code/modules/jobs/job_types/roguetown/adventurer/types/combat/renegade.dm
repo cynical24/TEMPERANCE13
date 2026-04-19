@@ -153,7 +153,7 @@
 			H.change_stat("endurance", 1)
 			H.change_stat("speed", 3)
 			H.set_blindness(0)
-			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
+			H.cmode_music = 'sound/music/cmode/adventurer/combat_gangster.ogg'
 			H.dna.species.soundpack_m = new /datum/voicepack/male/renegade()
 
 		if("Poacher")
@@ -203,5 +203,5 @@
 			H.change_stat("speed", 3)
 			H.grant_language(/datum/language/thievescant)
 			H.set_blindness(0)
-			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
+			H.cmode_music = 'sound/music/combat_poacher.ogg'
 			H.dna.species.soundpack_m = new /datum/voicepack/male/renegade()

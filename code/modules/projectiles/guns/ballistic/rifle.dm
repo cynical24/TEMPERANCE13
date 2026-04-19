@@ -221,7 +221,7 @@
 	slowdown = 0.15
 	spread = 0.5
 	pump_sound = 'sound/combat/ranged/bolt-work.ogg'
-	fire_sound = 'sound/combat/ranged/rattlesnake_fire.ogg'
+	fire_sound = RATTLESHOT
 	load_sound = 'sound/combat/ranged/rattleload.ogg'
 	recoil = 2
 	possible_item_intents = list(

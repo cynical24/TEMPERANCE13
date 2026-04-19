@@ -130,7 +130,7 @@
 	spread = 0.5
 	force = 25 //heavy pistol, should be good for whipping someone in the head with
 	pump_sound = 'sound/combat/ranged/hpistol_cock.ogg'
-	fire_sound = 'sound/combat/ranged/colt_fire.ogg'
+	fire_sound = COLTSHOT
 	load_sound = 'sound/combat/ranged/coltmagin.ogg'
 	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
 	recoil = 0.15
@@ -147,6 +147,7 @@
 	slowdown = 0.25 //BIG pistol
 	spread = 0.5
 	force = 25 //heavy pistol, should be good for whipping someone in the head with
+	pump_sound = 'sound/combat/ranged/hpistol_cock.ogg'
 	fire_sound = RIFLESHOT
 	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
 	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
@@ -218,7 +219,7 @@
     spread = 0.5
     force = 15 
     pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-    fire_sound = 'sound/combat/ranged/mauser_fire.ogg'
+    fire_sound = CARBINESHOT
     load_sound = 'sound/combat/ranged/pistol_magin.ogg'
     eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
     recoil = 0.15
@@ -237,7 +238,7 @@
     spread = 0.5
     force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
     pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-    fire_sound = 'sound/combat/ranged/colt_fire.ogg'
+    fire_sound = COLTSHOT
     load_sound = 'sound/combat/ranged/coltmagin.ogg'
     eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
     recoil = 0.05 //stocked pistol
@@ -255,7 +256,7 @@
     spread = 0.5
     force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
     pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-    fire_sound = 'sound/combat/ranged/mauser_fire2.ogg'
+    fire_sound = CARBINESHOT
     load_sound = 'sound/combat/ranged/pistol_magin.ogg'
     eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
     recoil = 0.05 //stocked pistol
