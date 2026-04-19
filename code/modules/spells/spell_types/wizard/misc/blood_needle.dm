@@ -70,6 +70,7 @@
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'	
 	icon_state = "needle"
 	catchphrase = null
+	charges = 3
 	on_use_sound = 'sound/magic/blood_needle_use.ogg'
 	w_class = WEIGHT_CLASS_TINY
 	infinite = TRUE
