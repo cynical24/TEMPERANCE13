@@ -38,7 +38,7 @@
 				/obj/item/rogueweapon/huntingknife = 1, 
 				/obj/item/recipe_book/survival = 1,
 				/obj/item/rogueweapon/scabbard/sheath = 1,
-				/obj/item/ammo_box/handfuls/shotgun/buckshot = 2,
+				/obj/item/ammo_box/handfuls/shotgun/buckshot = 3,
 				/obj/item/flashlight/flare/torch = 1,
 				)
 			H.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)
@@ -83,7 +83,7 @@
 				/obj/item/flashlight/flare/torch = 1,
 				/obj/item/rogueweapon/huntingknife/idagger/steel = 1,
 				/obj/item/lockpickring/mundane = 1,
-				/obj/item/ammo_box/speedloader/magnum = 2,
+				/obj/item/ammo_box/speedloader/magnum = 3,
 				/obj/item/rogueweapon/scabbard/sheath = 1,
 				)
 			H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
@@ -187,6 +187,9 @@
 			H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE) //you've got no unarmed weapons- wait what's that? You've got hands? Well shit, show off some moves cowpoke
 			H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+			H.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/labor/butchering, 4, TRUE) //well they're a poacher, let them go do some poaching
+			H.adjust_skillrank(/datum/skill/craft/tanning, 4, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/climbing, 6, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/riding, 5, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)

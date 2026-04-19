@@ -437,6 +437,7 @@
 	icon_state = "normgun"
 	lootcount = 1
 	loot = list(
+		/obj/item/gun/ballistic/rifle/repeater/lebel = 1,
 		/obj/item/gun/ballistic/revolver/sawedoff = 1,
 		/obj/item/gun/ballistic/rifle/repeater/enfield = 1,
 		/obj/item/gun/ballistic/revolver/pace = 1,
@@ -461,8 +462,8 @@
 	icon_state = "ammo"
 	lootcount = 1
 	loot = list(
-		/obj/item/ammo_box/handfuls/leveraction = 1,
-		/obj/item/ammo_box/clip/pistol = 3,
+		/obj/item/ammo_box/handfuls/leveraction = 2,
+		/obj/item/ammo_box/clip/pistol = 2,
 		/obj/item/ammo_box/handfuls/rifle = 2,
 		/obj/item/ammo_box/handfuls/shotgun = 1,
 		/obj/item/ammo_box/handfuls/shotgun/buckshot = 1,

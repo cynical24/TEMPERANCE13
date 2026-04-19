@@ -181,7 +181,7 @@
 	desc = "A one-shot, sawed off shotgun. This configuration's typically made by outlaws to help with deal negotiation."
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/sawedoff
-	force = 30
+	force = 20
 	throwforce = 40
 	spread = 0.8 // the fuck you think you're gonna hit with that barrel?
 	icon_state = "singlebarrel"
