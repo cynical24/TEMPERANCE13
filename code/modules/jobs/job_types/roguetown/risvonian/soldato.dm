@@ -47,11 +47,11 @@
 	mask = /obj/item/clothing/mask/rogue/gasmask/risvonmask
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/rifleclip
+	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/pistol
 	wrists = /obj/item/scomstone
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon
-	backl = /obj/item/gun/ballistic/rifle/repeater/springfield
+	backl = /obj/item/gun/ballistic/rifle/repeater/pistol
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/poor,

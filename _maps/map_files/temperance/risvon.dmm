@@ -5971,7 +5971,7 @@
 /obj/item/gun/ballistic/rifle/repeater/springfield{
 	pixel_y = 8
 	},
-/obj/item/gun/ballistic/rifle/repeater/springfield{
+/obj/item/gun/ballistic/rifle/repeater/pistol{
 	pixel_y = -8
 	},
 /turf/open/floor/rogue/risvon,
