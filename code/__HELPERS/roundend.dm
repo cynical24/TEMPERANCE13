@@ -147,7 +147,7 @@
 	'sound/music/jukeboxes/gen/countdown.ogg',
 	'sound/music/jukeboxes/otherworld/song1.ogg',
 	'sound/music/jukeboxes/otherworld/song5.ogg',
-	'sound/music/jukeboxes/roundend/honoraryastronaut.ogg',
+	'sound/music/roundend/honoraryastronaut.ogg',
 	)
 	var/end_song = pick(end_songs)
 	var/list/key_list = list()
