@@ -93,7 +93,7 @@
 
 /turf/closed/mineral/attack_right(mob/user)
 	var/obj/item = user.get_active_held_item()
-	if(user.used_intent.type == /datum/intent/pick && (user.get_skill_level(/datum/skill/labor/mining) >= SKILL_LEVEL_JOURNEYMAN))
+	if(user.used_intent.type == /datum/intent/pick)
 		if(do_after(user, 4 SECONDS, TRUE, src))
 			if(!ismineralturf(src))
 				return
@@ -236,7 +236,7 @@
 		/turf/closed/mineral/rogue/cinnabar = 15,
 		/turf/closed/mineral/rogue/copper = 15,
 		/turf/closed/mineral/rogue/tin = 10,
-		/turf/closed/mineral/rogue/coal = 14, 
+		/turf/closed/mineral/rogue/coal = 14,
 		/turf/closed/mineral/rogue/gem = 1)
 
 /turf/closed/mineral/random/rogue/high
@@ -250,7 +250,7 @@
 		/turf/closed/mineral/rogue/iron = 33,
 		/turf/closed/mineral/rogue/copper = 20,
 		/turf/closed/mineral/rogue/tin = 12,
-		/turf/closed/mineral/rogue/coal = 19, 
+		/turf/closed/mineral/rogue/coal = 19,
 		/turf/closed/mineral/rogue/gem = 3)
 
 
@@ -338,7 +338,7 @@
 	spread = 2
 
 /turf/closed/mineral/rogue/bedrock
-	name = "rock"
+	name = "bedrock"
 	desc = "Seems barren and nigh-indestructable"
 	icon_state = "rockyashbed"
 //	smooth_icon = 'icons/turf/walls/hardrock.dmi'
@@ -359,3 +359,16 @@
 /turf/closed/mineral/rogue/bedrock/Melt()
 	to_be_destroyed = FALSE
 	return src
+
+/turf/closed/mineral/rogue/soft
+	name = "soft rock"
+	desc = "A piece of sedimentary rock. It yields nicely to your pick."
+	icon_state = "rockyashsoft"
+	mineralAmt = 0
+	max_integrity = 500 //When two-handing an iron pick, this will take 2 swings
+
+/turf/closed/mineral/rogue/hard
+	name = "hard rock"
+	desc = "A deposit of metamorphic rock. Are you sure you want to take the time to mine this way?"
+	icon_state = "rockyashhard"
+	max_integrity = 1500 //When two-handing an iron pick, this will take 6 swings
