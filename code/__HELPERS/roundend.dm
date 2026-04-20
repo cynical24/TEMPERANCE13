@@ -144,13 +144,17 @@
 	'sound/music/jukeboxes/machine/machinemadness.ogg',
 	'sound/music/jukeboxes/machine/machinerain.ogg',
 	'sound/music/jukeboxes/machine/machinetoxic.ogg',
+	'sound/music/jukeboxes/gen/countdown.ogg',
+	'sound/music/jukeboxes/otherworld/song1.ogg',
+	'sound/music/jukeboxes/otherworld/song5.ogg',
+	'sound/music/jukeboxes/roundend/honoraryastronaut.ogg',
 	)
 	var/end_song = pick(end_songs)
 	var/list/key_list = list()
 	for(var/client/C in GLOB.clients)
 		if(C.mob)
 			SSdroning.kill_droning(C)
-			C.mob.playsound_local(C.mob, end_song, prefs.musicvol, FALSE)
+			C.mob.playsound_local(C.mob, end_song, 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 //	if(key_list.len)
