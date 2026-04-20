@@ -125,7 +125,7 @@ var/global/list/pridelist = list(
 		dat += "Detail Color: <font color='[activecolor_detail]'>&#10070;</font>"
 		dat += "<A href='?src=\ref[src];paint_detail=1'>Apply new color</A> | "
 		dat += "<A href='?src=\ref[src];clear_detail=1'>Remove paintjob</A><BR><BR>"
-			
+
 	if(inserted_item.altdetail_color)
 		dat += "<A href='?src=\ref[src];select_altdetail=1'>Select new tertiary color.</A><BR>"
 		dat += "Alt. Detail Color: <font color='[activecolor_altdetail]'>&#10070;</font>"
@@ -345,7 +345,7 @@ var/global/list/pridelist = list(
 	name = "Dye Station"
 	desc = "A station to give your apparel a fresh new color! Recommended to use with white items for best results."
 	icon = 'icons/roguetown/misc/structure.dmi'
-	icon_state = "dyestation"
+	icon_state = "dyeing"
 	density = TRUE
 	anchored = TRUE
 	var/atom/movable/inserted
@@ -447,7 +447,7 @@ var/global/list/pridelist = list(
 		dat += "Detail Color: <font color='[activecolor_detail]'>&#10070;</font>"
 		dat += "<A href='?src=\ref[src];paint_detail=1'>Apply new color</A> | "
 		dat += "<A href='?src=\ref[src];clear_detail=1'>Remove paintjob</A><BR><BR>"
-			
+
 	if(inserted_item.altdetail_color)
 		dat += "<A href='?src=\ref[src];select_altdetail=1'>Select new tertiary color.</A><BR>"
 		dat += "Alt. Detail Color: <font color='[activecolor_altdetail]'>&#10070;</font>"
@@ -572,7 +572,7 @@ var/list/risvon_colors = list(
    	"CONSCRIPTS LEATHER"="#7c6d5c", //Same as DIRT in the extra color list. Works shockingly well to match their tabard.
 	"AUTUMN FOREST"="#df8405",	//Same as global ORANGE
 	"FORGOTTEN SUN"="#ffcd43", //Same as global YELLOW
-	"ERROR: PRINTER FAILURE"="#962e5c"	//Same as global MAGENTA
+	"ERROR: PRINTER FAILURE"="#962e5c",	//Same as global MAGENTA
 	"FERTILE SOIL"="#61462c", 	//Same as global BROWN
 	)
 
