@@ -55,3 +55,8 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
+/obj/item/clothing/head/roguetown/maidband
+	name = "maid headband"
+	desc = "A pleated cloth headband. It has gained widespread popularity from Valorian nobles travelling with their servants."
+	icon_state = "maidband"
+	body_parts_covered = NONE

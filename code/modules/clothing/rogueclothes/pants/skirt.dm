@@ -30,3 +30,9 @@
 
 /obj/item/clothing/under/roguetown/skirt/darkgrey
 	color = CLOTHING_DARK_GREY
+
+/obj/item/clothing/under/roguetown/skirt/desert
+	name = "desert skirt"
+	desc = "At least it cools me off, but what of the modesty?"
+	icon_state = "desertskirt"
+	item_state = "desertskirt"

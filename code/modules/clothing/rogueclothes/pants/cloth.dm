@@ -43,6 +43,29 @@
 	name = "sailor's pants"
 	icon_state = "sailorpants"
 
+/obj/item/clothing/under/roguetown/tights/explorerpants
+	name = "explorer's pants"
+	desc = "Practical and modest, you hope that it will survive the next cavedive."
+	icon_state = "explorerpants"
+	item_state = "explorerpants"
+
+/obj/item/clothing/under/roguetown/tights/formalfancy
+	name = "formal trousers"
+	desc = "A formal pair of formal trousers."
+	icon_state = "butlerpants"
+	item_state = "butlerpants"
+	detail_tag = "_detail"
+	sleeved = 'icons/roguetown/clothing/special/onmob/sleeves_maids.dmi'
+	salvage_result = /obj/item/natural/cloth
+	detail_color = CLOTHING_DARK_GREY
+
+/obj/item/clothing/under/roguetown/tights/shorts
+	name = "trouser shorts"
+	desc = "A pair of formal trouser shorts, fit for any strapping young lad."
+	icon_state = "butlershorts"
+	item_state = "butlershorts"
+	detail_color = CLOTHING_DARK_GREY
+
 /obj/item/clothing/under/roguetown/webs
 	name = "webbing"
 	desc = "a fine webbing made from spidersilk, popular fashion within the underdark"

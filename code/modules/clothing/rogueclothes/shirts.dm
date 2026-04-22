@@ -347,6 +347,35 @@
 	color = null
 	sellprice = 100
 
+/obj/item/clothing/suit/roguetown/shirt/fancyjacket
+	name = "fancy jacket"
+	desc = "My, so modern -- so elegant. Which fine hands sewed this?"
+	icon_state = "fancyjacket"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	body_parts_covered = CHEST|GROIN|ARMS|VITALS
+	boobed = FALSE
+	flags_inv = HIDECROTCH|HIDEBOOB
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	allowed_sex = list(MALE, FEMALE)
+
+/obj/item/clothing/suit/roguetown/shirt/explorer
+	name = "explorer's vest"
+	desc = "Vest belonging to those who seek knowledge!"
+	icon_state = "explorervest"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	body_parts_covered = CHEST|GROIN|ARMS|VITALS
+	boobed = TRUE
+	flags_inv = HIDECROTCH|HIDEBOOB
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	allowed_sex = list(MALE, FEMALE)
+	color = null
+
 /obj/item/clothing/suit/roguetown/shirt/tunic
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	name = "tunic"
@@ -466,6 +495,16 @@
 	. = ..()
 	color = CLOTHING_BLACK
 
+/obj/item/clothing/suit/roguetown/shirt/dress/slit
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "slitted dress"
+	desc = "A finely sewn dress with a slit to expose the thigh, how scandalous!"
+	icon_state = "slitdress"
+	item_state = "slitdress"
+	r_sleeve_status = SLEEVE_NOMOD
+	l_sleeve_status = SLEEVE_NOMOD
+	color = CLOTHING_BLACK
+
 /obj/item/clothing/suit/roguetown/shirt/undershirt/webs
 	name = "webbed shirt"
 	desc = "Exotic silk finely woven into... this? Might as well be wearing a spiderweb."
@@ -551,6 +590,19 @@
 	sewrepair = TRUE
 	flags_inv = null
 	slot_flags = ITEM_SLOT_SHIRT
+
+/obj/item/clothing/suit/roguetown/shirt/desertbra
+	name = "desert bra"
+	desc = "An exquisite bra crafted from durable cloth. It leaves little to the imagination. Why is it a desert bra and not just a bra?"
+	icon_state = "desertbra"
+	item_state = "desertbra"
+	body_parts_covered = CHEST
+	boobed = FALSE
+	sewrepair = TRUE
+	flags_inv = null
+	slot_flags = ITEM_SLOT_SHIRT
+	salvage_result = /obj/item/natural/fibers
+	salvage_amount = 3
 
 //kazengite content
 /obj/item/clothing/suit/roguetown/shirt/undershirt/eastshirt1
@@ -640,3 +692,31 @@
 	if(QDELETED(src))
 		return
 	qdel(src)
+
+/obj/item/clothing/suit/roguetown/shirt/dress/maidfancy
+	name = "maid dress"
+	desc = "A dress befitting the housekeeper of a lord's staff. While not as intricate as a royal's, it is indicative of the house's status."
+	body_parts_covered = CHEST|GROIN|ARMS|VITALS
+	sleeved = 'icons/roguetown/clothing/special/onmob/sleeves_maids.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	boobed = TRUE
+	icon_state = "maiddressfancy"
+	item_state = "maiddressfancy"
+	detail_tag = "_detail"
+	detail_color = CLOTHING_DARK_GREY
+
+/obj/item/clothing/suit/roguetown/shirt/dress/maidservant
+	name = "servant gown"
+	sleeved = 'icons/roguetown/clothing/special/onmob/sleeves_maids.dmi'
+	desc = "A dress worn by those of manors and noble staff. Commonly black, though some estates dye them to their house colors."
+	icon_state = "maidgown"
+	item_state = "maidgown"
+	detail_color = CLOTHING_DARK_GREY
+
+/obj/item/clothing/suit/roguetown/shirt/undershirt/formal
+	name = "formal shirt"
+	desc = "A comfortable yet functional dress shirt often worn by the staff of a noble household."
+	icon_state = "butlershirt"
+	item_state = "butlershirt"
+	sleeved = 'icons/roguetown/clothing/special/onmob/sleeves_maids.dmi'

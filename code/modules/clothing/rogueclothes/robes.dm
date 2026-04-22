@@ -312,3 +312,12 @@
 	desc = "Part robe, part butcher's apron."
 	icon_state = "surgrobe"
 	item_state = "surgrobe"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bared
+	name = "Bared Robe"
+	desc = "A robe of basic cloth, it's chest bared open to expose what lay underneath."
+	icon_state = "openrobe"
+	item_state = "openrobe"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	color = CLOTHING_WHITE

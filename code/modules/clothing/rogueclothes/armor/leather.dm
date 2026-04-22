@@ -220,3 +220,15 @@
 	color = null
 	allowed_sex = list(MALE, FEMALE)
 	allowed_race = NON_DWARVEN_RACE_TYPES
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/tailcoat
+	name = "tailcoat"
+	desc = "A finely-sewn tailcoat often worn by those on the brink of the upper echelons of caste."
+	icon_state = "butlercoat"
+	item_state = "butlercoat"
+	detail_tag = "_detail"
+	sleeved = 'icons/roguetown/clothing/special/onmob/sleeves_maids.dmi'
+	armor = ARMOR_LEATHER
+	detail_color = CLOTHING_DARK_GREY
+	slot_flags = ITEM_SLOT_ARMOR
+	armor = ARMOR_PADDED
