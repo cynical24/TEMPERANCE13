@@ -125,83 +125,83 @@ GLOBAL_LIST_EMPTY(cmode_tracks_by_name)
 /datum/combat_music/armsman
 	name = "Armsman"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Armsman"
 	musicpath = list('sound/music/combat_armsman.ogg')
 
 /datum/combat_music/auxiliar
 	name = "Auxiliar"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Auxiliar"
 	musicpath = list('sound/music/combat_auxiliar.ogg')
 
 /datum/combat_music/backliner
 	name = "Backliner"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Backliner"
 	musicpath = list('sound/music/combat_backliner.ogg')
 
 /datum/combat_music/debt
 	name = "Debt Collector"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Debt Collector"
 	musicpath = list('sound/music/cmode/adventurer/combat_debt.ogg')
 
 /datum/combat_music/foreigner
 	name = "Foreigner"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Foreigner"
 	musicpath = list('sound/music/cmode/adventurer/combat_foreigner.ogg')
 
 /datum/combat_music/gangster
 	name = "Gangster"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Gangster"
 	musicpath = list('sound/music/cmode/adventurer/combat_gangster.ogg')
 
 /datum/combat_music/gunman
-	name = "Gunslinger / Perpetrator / Desperado"
+	name = "Gunslinger (Old-Boy) / Renegade (Perpetrator/Desperado)"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "OldBoy/Perp/Desperado"
 	musicpath = list('sound/music/cmode/adventurer/combat_gunman.ogg')
 
 /datum/combat_music/machinegunner
-	name = "Rook / Ammo Squire"
+	name = "Rook/Ammo Squire"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Machinegunner"
 	musicpath = list('sound/music/combat_machinegunner.ogg')
 
 /datum/combat_music/metalface
-	name = "Explorer / Provisioner"
+	name = "Explorer/Provisioner"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Explorer/Provisioner"
 	musicpath = list('sound/music/combat_metalface.ogg')
 
 /datum/combat_music/poacher
 	name = "Poacher"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Poacher"
 	musicpath = list('sound/music/combat_poacher.ogg')
 
 /datum/combat_music/private
-	name = "Private Investigator"
+	name = "Gunslinger (Private Investigator)"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Private Investigator"
 	musicpath = list('sound/music/cmode/adventurer/combat_private.ogg')
 
 /datum/combat_music/soldato
 	name = "Soldato"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Soldato"
 	musicpath = list('sound/music/combat_soldato.ogg')
 
 /datum/combat_music/veterano
 	name = "Veterano"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Veterano"
 	musicpath = list('sound/music/combat_veterano.ogg')
 
 /datum/combat_music/voltigeur
 	name = "Voltigeur"
 	desc = ""
-	shortname = "REPLACE"
+	shortname = "Voltigeur"
 	musicpath = list('sound/music/combat_voltigeur.ogg')
