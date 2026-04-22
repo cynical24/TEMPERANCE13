@@ -167,6 +167,8 @@
 		/datum/sprite_accessory/snout/roundlight,
 		/datum/sprite_accessory/snout/front/roundlight,
 		/datum/sprite_accessory/snout/roundlightdualcolor,
+		/datum/sprite_accessory/snout/stubby,
+		/datum/sprite_accessory/snout/stubbyalt,
 		)
 
 /datum/customizer/organ/snout/akula
