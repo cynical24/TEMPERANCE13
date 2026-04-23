@@ -37,6 +37,9 @@
 	user.sexcon.intercourse_noise(user, TRUE)
 	user.sexcon.do_thrust_animate(target)
 
+	if(HAS_TRAIT(user, TRAIT_DEATHBYSNUSNU))
+		user.sexcon.try_pelvis_crush(target)
+
 	target.sexcon.perform_sex_action(target, 2, 0, TRUE)
 	if(target.sexcon.check_active_ejaculation())
 		target.visible_message(span_love("[target] cums into [user]'s cunt!"))
@@ -44,6 +47,12 @@
 		target.try_impregnate(user)
 		target.virginity = FALSE
 		user.virginity = FALSE
+
+	if(target.sexcon.considered_limp())
+		target.sexcon.perform_sex_action(user, 1.2, 3, FALSE)
+	else
+		target.sexcon.perform_sex_action(user, 2.4, 7, FALSE)
+	user.sexcon.handle_passive_ejaculation()
 
 /datum/sex_action/vaginal_ride_sex/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	user.visible_message(span_warning("[user] gets off [target]."))

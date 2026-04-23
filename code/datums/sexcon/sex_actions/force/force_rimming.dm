@@ -7,12 +7,22 @@
 
 /datum/sex_action/force_rimming/shows_on_menu(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(user == target)
-		return FALSE
+		if(isdullahan(user))
+			var/datum/species/dullahan/dullahan = user.dna.species
+			if(dullahan.headless && !user.is_holding(dullahan.my_head))
+				return FALSE
+		else
+			return FALSE
 	return TRUE
 
 /datum/sex_action/force_rimming/can_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(user == target)
-		return FALSE
+		if(isdullahan(user))
+			var/datum/species/dullahan/dullahan = user.dna.species
+			if(dullahan.headless && !user.is_holding(dullahan.my_head))
+				return FALSE
+		else
+			return FALSE
 	if(!check_location_accessible(user, user, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_MOUTH))
@@ -24,7 +34,7 @@
 
 /datum/sex_action/force_rimming/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	user.visible_message(user.sexcon.spanify_force("[user] [user.sexcon.get_generic_force_adjective()] forces [target] to rim [user.p_their()] butt."))
-	target.sexcon.make_sucking_noise()
+	user.sexcon.oralcourse_noise(target)
 	target.sexcon.do_thrust_animate(user)
 
 	user.sexcon.perform_sex_action(user, 2, 4, TRUE)

@@ -7,14 +7,24 @@
 
 /datum/sex_action/force_cunnilingus/shows_on_menu(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(user == target)
-		return FALSE
+		if(isdullahan(user))
+			var/datum/species/dullahan/dullahan = user.dna.species
+			if(dullahan.headless && !user.is_holding(dullahan.my_head))
+				return FALSE
+		else
+			return FALSE
 	if(!user.getorganslot(ORGAN_SLOT_VAGINA))
 		return FALSE
 	return TRUE
 
 /datum/sex_action/force_cunnilingus/can_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(user == target)
-		return FALSE
+		if(isdullahan(user))
+			var/datum/species/dullahan/dullahan = user.dna.species
+			if(dullahan.headless && !user.is_holding(dullahan.my_head))
+				return FALSE
+		else
+			return FALSE
 	if(!check_location_accessible(user, user, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_MOUTH))
@@ -28,11 +38,11 @@
 
 /datum/sex_action/force_cunnilingus/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	user.visible_message(user.sexcon.spanify_force("[user] [user.sexcon.get_generic_force_adjective()] forces [target] to suck [user.p_their()] cunt."))
-	target.sexcon.make_sucking_noise()
+	user.sexcon.oralcourse_noise(target)
 	target.sexcon.do_thrust_animate(user)
 
 	user.sexcon.perform_sex_action(user, 2, 4, TRUE)
-	user.sexcon.handle_passive_ejaculation()
+	user.sexcon.handle_passive_ejaculation(splashed_user = target)
 
 	user.sexcon.perform_sex_action(target, 0, 2, FALSE)
 	target.sexcon.handle_passive_ejaculation()

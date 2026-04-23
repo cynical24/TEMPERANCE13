@@ -1,6 +1,6 @@
 /datum/reagent/consumable/ethanol/beer/emberwine
 	name = "Emberwine"
-	boozepwr = 80
+	boozepwr = 20
 	taste_description = "searing sweetness"
 	taste_mult = 0.5
 	quality = DRINK_VERYGOOD
@@ -51,13 +51,11 @@
 						if(3)
 							C.Immobilize(30)
 							C.set_blurriness(5)
-							C.energy_add(15)
-							to_chat(C, "<span class='warning'>Your armor chafes uncomfortably against your skin and makes it difficult to breathe.</span>")
+							to_chat(C, "<span class='warning'>Your armor chaffs uncomfortably against your skin and makes it difficult to breathe.</span>")
 						if(2)
 							C.Immobilize(15)
 							C.set_blurriness(2)
-							C.energy_add(5)
-							to_chat(C, "<span class='warning'>Your armor chafes uncomfortably against your skin.</span>")
+							to_chat(C, "<span class='warning'>Your armor chaffs uncomfortably against your skin.</span>")
 			S.adjust_charge(8)
 	return ..()
 
@@ -80,7 +78,6 @@
 		C.set_blurriness(5)
 
 /datum/reagent/consumable/ethanol/beer/emberwine/addiction_act_stage3(mob/living/carbon/human/C)
-	SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "[type]_overdose", /datum/mood_event/withdrawal_severe, name)
 	if(prob(20))
 		to_chat(C, span_danger("I have an intense craving for [name]."))
 		C.sexcon.adjust_arousal(5)
@@ -92,7 +89,6 @@
 
 /datum/reagent/consumable/ethanol/beer/emberwine/addiction_act_stage4(mob/living/carbon/human/C)
 	var/datum/sex_controller/S = C.sexcon
-	SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "[type]_overdose", /datum/mood_event/withdrawal_severe, name) //Not critical because they'll already be getting blueballed.
 	if(!S.arousal_frozen)
 		S.arousal_frozen = TRUE
 	C.sexcon.arousal = 40
@@ -101,3 +97,26 @@
 	if(prob(10))
 		to_chat(C, span_boldannounce("The feeling in your loins has subsided to a dull ache. Only more [name] would scratch the itch..."))
 	return
+
+/datum/reagent/erpjuice
+	name = "Erotic Fluid"
+	reagent_state = LIQUID
+	color = "#ebebeb"
+	metabolization_rate = 0.1
+
+/datum/reagent/erpjuice/on_mob_life(mob/living/carbon/M) //Rejoice, cum whores can now very inefficiently drink cum to substain themselves.
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		H.adjust_hydration(1)
+		H.adjust_nutrition(0.5) //Semen is not very nutritious. The player can go about 3 rounds of cumming before needing to wait a long time code-wise to cum more.
+		if(H.blood_volume < BLOOD_VOLUME_NORMAL)
+			H.blood_volume = min(H.blood_volume+10, BLOOD_VOLUME_NORMAL)
+	..()
+
+/datum/reagent/erpjuice/cum
+	description = "A thick, sticky, cream like fluid. produced during an orgasm."
+	taste_description = "salty and tangy"
+
+/datum/reagent/erpjuice/femcum
+	description = "A slightly milky fluid, thin and watery in texture."
+	taste_description = "faintly sweet and mineraly"

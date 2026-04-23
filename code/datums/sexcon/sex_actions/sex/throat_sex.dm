@@ -11,6 +11,10 @@
 		return FALSE
 	if(!user.getorganslot(ORGAN_SLOT_PENIS))
 		return FALSE
+	if(isdullahan(target) && knot_on_finish)
+		var/datum/species/dullahan/dullahan = target.dna.species
+		if(dullahan.headless)
+			return FALSE
 	return TRUE
 
 /datum/sex_action/throat_sex/can_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
@@ -24,6 +28,10 @@
 		return FALSE
 	if(!user.sexcon.can_use_penis())
 		return FALSE
+	if(isdullahan(target) && knot_on_finish)
+		var/datum/species/dullahan/dullahan = target.dna.species
+		if(dullahan.headless)
+			return FALSE
 	return TRUE
 
 /datum/sex_action/throat_sex/on_start(mob/living/carbon/human/user, mob/living/carbon/human/target)
@@ -42,7 +50,7 @@
 	user.sexcon.perform_sex_action(user, 2, 0, TRUE)
 	if(user.sexcon.check_active_ejaculation())
 		user.visible_message(span_love("[user] cums into [target]'s throat!"))
-		user.sexcon.cum_into(oral = TRUE, splashed_user = target)
+		user.sexcon.cum_into(oral = TRUE, splashed_user = target) // give facial status effect for the target, considering this was rough throat sex
 		user.virginity = FALSE
 
 	if(user.sexcon.considered_limp())
@@ -89,7 +97,7 @@
 	user.sexcon.perform_sex_action(user, 2, 0, TRUE)
 	if(user.sexcon.check_active_ejaculation())
 		user.visible_message(span_love("[user] cums into [target]'s throat!"))
-		user.sexcon.cum_into(oral = TRUE, splashed_user = target)
+		user.sexcon.cum_into(oral = TRUE, splashed_user = target) // give facial status effect for the target, considering this was rough throat sex
 		user.virginity = FALSE
 
 	if(user.sexcon.considered_limp())
