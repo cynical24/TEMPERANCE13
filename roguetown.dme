@@ -2483,6 +2483,7 @@
 #include "modular\code\modules\maturity-prompt\code\config_entries.dm"
 #include "modular\code\modules\maturity-prompt\code\maturity_prompt.dm"
 #include "modular\code\modules\maturity-prompt\code\maturity_subsystem.dm"
+#include "modular\code\modules\mob\dead\new_player\sprite_accessory\genitals.dm"
 #include "modular\Creechers\code\trufflepig.dm"
 #include "modular\Mapping\icons\Mapping_aides.dm"
 #include "modular\Neu_Farming\code\eggs.dm"

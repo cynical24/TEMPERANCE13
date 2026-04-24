@@ -22,6 +22,8 @@
 	var/force = SEX_FORCE_MID
 	/// Our arousal
 	var/arousal = 0
+	///Makes genital arousal automatic by default
+	var/manual_arousal = SEX_MANUAL_AROUSAL_DEFAULT
 	/// Our charge gauge
 	var/charge = SEX_MAX_CHARGE
 	/// Whether we want to screw until finished, or non stop
@@ -51,6 +53,7 @@
 	var/tugging_knot_blocked = FALSE
 	var/mob/living/carbon/knotted_owner = null // whom has the knot
 	var/mob/living/carbon/knotted_recipient = null // whom took the knot
+	var/bottom_exposed = FALSE
 
 /datum/sex_controller/New(mob/living/carbon/human/owner)
 	user = owner
@@ -93,9 +96,9 @@
 // any new sex commands that target new locations, will need to be added here, and given a unique bitflag define
 /datum/sex_controller/proc/update_all_accessible_body_zones()
 	access_zone_bitfield = SEX_ZONE_NULL
-	if(get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = FALSE, skipundies = TRUE))
+	if(bottom_exposed || get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = FALSE, skipundies = TRUE))
 		access_zone_bitfield |= SEX_ZONE_GROIN
-	if(get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = TRUE, skipundies = TRUE))
+	if(bottom_exposed || get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = TRUE, skipundies = TRUE))
 		access_zone_bitfield |= SEX_ZONE_GROIN_GRAB
 	if(get_location_accessible(user, BODY_ZONE_PRECISE_L_FOOT, grabs = FALSE, skipundies = TRUE))
 		access_zone_bitfield |= SEX_ZONE_L_FOOT
@@ -113,9 +116,9 @@
 	switch(body_zone)
 		if(BODY_ZONE_PRECISE_GROIN)
 			if(grabs)
-				if((access_zone_bitfield&SEX_ZONE_GROIN_GRAB) && !get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = TRUE, skipundies = TRUE))
+				if((access_zone_bitfield&SEX_ZONE_GROIN_GRAB) && !bottom_exposed && !get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = TRUE, skipundies = TRUE))
 					access_zone_bitfield &= ~SEX_ZONE_GROIN_GRAB
-			else if((access_zone_bitfield&SEX_ZONE_GROIN) && !get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = FALSE, skipundies = TRUE))
+			else if((access_zone_bitfield&SEX_ZONE_GROIN) && !bottom_exposed && !get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = FALSE, skipundies = TRUE))
 				access_zone_bitfield &= ~SEX_ZONE_GROIN
 		if(BODY_ZONE_PRECISE_L_FOOT)
 			if((access_zone_bitfield&SEX_ZONE_L_FOOT) && !get_location_accessible(user, BODY_ZONE_PRECISE_L_FOOT, grabs = FALSE, skipundies = TRUE))
@@ -133,7 +136,7 @@
 			else if((access_zone_bitfield&SEX_ZONE_CHEST) && !get_location_accessible(user, BODY_ZONE_CHEST, grabs = FALSE, skipundies = TRUE))
 				access_zone_bitfield &= ~SEX_ZONE_CHEST
 		else
-		 	// hey YOU, add the new targeted zone to SEX_ZONE bitfield, and update update_all_accessible_body_zones()/get_accessible_body_zone()
+			// hey YOU, add the new targeted zone to SEX_ZONE bitfield, and update update_all_accessible_body_zones()/get_accessible_body_zone()
 			CRASH("sex_action: attempt to access non-existent bitfield for var body_zone_bitfield [body_zone]")
 
 /datum/sex_controller/proc/get_accessible_body_zone(body_zone_bitfield, body_zone, grabs)
@@ -210,6 +213,9 @@
 /datum/sex_controller/proc/adjust_force(amt)
 	force = clamp(force + amt, SEX_FORCE_MIN, SEX_FORCE_MAX)
 
+/datum/sex_controller/proc/adjust_arousal_manual(amt)
+	manual_arousal = clamp(manual_arousal + amt, SEX_MANUAL_AROUSAL_MIN, SEX_MANUAL_AROUSAL_MAX)
+
 /datum/sex_controller/proc/update_pink_screen()
 	var/severity = 0
 	switch(arousal)
@@ -244,25 +250,28 @@
 	set_target(new_target)
 	show_ui()
 
-/datum/sex_controller/proc/cum_onto()
+/datum/sex_controller/proc/cum_onto(mob/living/carbon/human/splashed_user = null)
 	log_combat(user, target, "Came onto the target")
 	playsound(target, 'sound/misc/mat/endout.ogg', 50, TRUE, ignore_walls = FALSE)
-	add_cum_floor(get_turf(target))
+	var/obj/item/organ/testicles/testes = user.getorganslot(ORGAN_SLOT_TESTICLES)
+	add_cum_floor(get_turf(target), do_big_puddle = testes?.ball_size > DEFAULT_TESTICLES_SIZE)
 	if(splashed_user)
 		var/datum/status_effect/facial/facial = splashed_user.has_status_effect(/datum/status_effect/facial)
 		if(!facial)
 			splashed_user.apply_status_effect(/datum/status_effect/facial)
 		else
 			facial.refresh_cum()
+	if(target.has_flaw(/datum/charflaw/addiction/lovefiend))
+		target.sate_addiction(/datum/charflaw/addiction/lovefiend)
 	after_ejaculation()
 
-/datum/sex_controller/proc/cum_into(oral = FALSE)
+/datum/sex_controller/proc/cum_into(oral = FALSE, mob/living/carbon/human/splashed_user = null)
 	log_combat(user, target, "Came inside the target")
 	if(oral)
-		playsound(target, pick(list('sound/misc/mat/mouthend (1).ogg','sound/misc/mat/mouthend (2).ogg')), 100, FALSE, ignore_walls = FALSE)
+		playsound(user, pick(list('sound/misc/mat/mouthend (1).ogg','sound/misc/mat/mouthend (2).ogg')), 100, FALSE, ignore_walls = FALSE)
 	else
-		playsound(target, 'sound/misc/mat/endin.ogg', 50, TRUE, ignore_walls = FALSE)
-	if(user != target && do_knot_action)
+		playsound(user, 'sound/misc/mat/endin.ogg', 50, TRUE, ignore_walls = FALSE)
+	if(user != target && do_knot_action && !isnull(target) && istype(target))
 		knot_try()
 	if(splashed_user && !splashed_user.sexcon.knotted_status)
 		var/status_type = !oral ? /datum/status_effect/facial/internal : /datum/status_effect/facial
@@ -271,9 +280,16 @@
 			splashed_user.apply_status_effect(status_type)
 		else
 			splashed_type.refresh_cum()
+		if(!oral)
+			var/obj/item/organ/testicles/testes = user.getorganslot(ORGAN_SLOT_TESTICLES)
+			if(testes?.ball_size > DEFAULT_TESTICLES_SIZE)
+				splashed_user.apply_status_effect(/datum/status_effect/creampie_leak/long)
+			else
+				splashed_user.apply_status_effect(/datum/status_effect/creampie_leak)
+	if(target.has_flaw(/datum/charflaw/addiction/lovefiend))
+		target.sate_addiction(/datum/charflaw/addiction/lovefiend)
 	after_ejaculation()
-	if(!oral)
-		after_intimate_climax()
+	after_intimate_climax(oral)
 
 /datum/status_effect/facial
 	id = "facial"
@@ -285,6 +301,19 @@
 	id = "creampie"
 	alert_type = null // don't show an alert on screen
 	tick_interval = 7 MINUTES // use this time as our dry count down
+
+/datum/status_effect/creampie_leak
+	id = "creampie_leak"
+	alert_type = null // don't show an alert on screen
+	tick_interval = 12 SECONDS
+	duration = 30 SECONDS
+	var/contents_to_drip = /datum/reagent/erpjuice/cum
+
+/datum/status_effect/creampie_leak/long
+	id = "creampie_leak_long"
+	alert_type = null // don't show an alert on screen
+	tick_interval = 12 SECONDS
+	duration = 60 SECONDS
 
 /datum/status_effect/facial/on_apply()
 	RegisterSignal(owner, list(COMSIG_COMPONENT_CLEAN_ACT, COMSIG_COMPONENT_CLEAN_FACE_ACT),PROC_REF(clean_up))
@@ -309,6 +338,19 @@
 			to_chat(owner, span_notice("I feel much cleaner now!"))
 			owner.add_stress(/datum/stressevent/bathcleaned)
 		owner.remove_status_effect(src)
+
+/datum/status_effect/creampie_leak/tick()
+	if(!owner?.sexcon?.bottom_exposed && !get_location_accessible(owner, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
+		return
+	var/cur_loc = get_turf(owner)
+	if(!cur_loc || !isturf(cur_loc))
+		return
+	add_cum_floor(cur_loc)
+	playsound(owner, pick('sound/misc/bleed (1).ogg', 'sound/misc/bleed (2).ogg', 'sound/misc/bleed (3).ogg'), 20, TRUE, -2, ignore_walls = FALSE)
+	var/obj/item/reagent_containers/glass/cum_chalice = locate() in cur_loc
+	if(!cum_chalice?.spillable) // leak contents underneath the first found open container
+		return
+	cum_chalice.reagents.add_reagent(contents_to_drip,1)
 
 /datum/sex_controller/proc/ejaculate()
 	log_combat(user, user, "Ejaculated")
@@ -507,7 +549,7 @@
 		return FALSE
 	return TRUE
 
-/datum/sex_controller/proc/handle_passive_ejaculation(var/mob/living/carbon/human/splashed_user = null)
+/datum/sex_controller/proc/handle_passive_ejaculation(mob/living/carbon/human/splashed_user = null)
 	var/mob/living/carbon/human/M = user
 	if(aphrodisiac > 1.5)
 		if(M.check_handholding())
@@ -591,13 +633,26 @@
 	var/force_name = get_force_string()
 	var/speed_name = get_speed_string()
 	var/manual_arousal_name = get_manual_arousal_string()
+	var/obj/item/organ/penis/got_cock = user.getorganslot(ORGAN_SLOT_PENIS)
+	var/obj/item/organ/vagina/got_pussy = user.getorganslot(ORGAN_SLOT_VAGINA)
 	dat += "<center><a href='?src=[REF(src)];task=speed_down'>\<</a> [speed_name] <a href='?src=[REF(src)];task=speed_up'>\></a> ~|~ <a href='?src=[REF(src)];task=force_down'>\<</a> [force_name] <a href='?src=[REF(src)];task=force_up'>\></a>"
-	if(user.getorganslot(ORGAN_SLOT_PENIS))
+	if(got_cock)
 		dat += " ~|~ <a href='?src=[REF(src)];task=manual_arousal_down'>\<</a> [manual_arousal_name] <a href='?src=[REF(src)];task=manual_arousal_up'>\></a>"
 	dat += "</center><center><a href='?src=[REF(src)];task=toggle_finished'>[do_until_finished ? "UNTIL IM FINISHED" : "UNTIL I STOP"]</a>"
+	if(got_cock && !got_pussy)
+		dat += "</center><center><a href='?src=[REF(src)];task=toggle_bottom_exposed'>[bottom_exposed ? "PINTLE EXPOSED" : "PINTLE CONCEALED"]</a>"
+	else if(!got_cock && got_pussy)
+		dat += "</center><center><a href='?src=[REF(src)];task=toggle_bottom_exposed'>[bottom_exposed ? "PUSSY EXPOSED" : "PUSSY CONCEALED"]</a>"
+	else
+		dat += "</center><center><a href='?src=[REF(src)];task=toggle_bottom_exposed'>[bottom_exposed ? "CROTCH EXPOSED" : "CROTCH CONCEALED"]</a>"
 	if(current_action && !desire_stop)
 		var/datum/sex_action/action = SEX_ACTION(current_action)
-		if(action.knot_on_finish && knot_penis_type())
+		if(action.subtle_supported)
+			if(do_subtle_action)
+				dat += " | <a href='?src=[REF(src)];task=toggle_subtle'>DOING SUBTLY</a>"
+			else
+				dat += " | <a href='?src=[REF(src)];task=toggle_subtle'>DOING VISIBLY</a>"
+		else if(action.knot_on_finish && knot_penis_type())
 			if(do_knot_action)
 				dat += " | <a href='?src=[REF(src)];task=toggle_knot'><font color='#d146f5'>USING KNOT</font></a>"
 			else
@@ -618,13 +673,15 @@
 	var/i = 0
 	var/user_is_incapacitated = user.incapacitated()
 	user.sexcon.update_all_accessible_body_zones()
-	if(target != user)
+	if(target && target != user)
 		target.sexcon.update_all_accessible_body_zones()
 	for(var/action_type in GLOB.sex_actions)
 		var/datum/sex_action/action = SEX_ACTION(action_type)
 		if(!(action_category&action.category))
 			continue
 		if(!action.shows_on_menu(user, target))
+			continue
+		if(action_blocked_by_intimate_state(action, TRUE))
 			continue
 		dat += "<td>"
 		var/link = ""
@@ -640,7 +697,7 @@
 			dat += "</tr><tr>"
 
 	dat += "</tr></table>"
-	var/datum/browser/popup = new(user, "sexcon", "<center>Sate Desire</center>", 430, 540)
+	var/datum/browser/popup = new(user, "sexcon", "<center>Sate Desire</center>", 500, 550)
 	popup.set_content(dat.Join())
 	popup.open()
 	return
@@ -665,8 +722,16 @@
 			adjust_force(1)
 		if("force_down")
 			adjust_force(-1)
+		if("manual_arousal_up")
+			adjust_arousal_manual(1)
+		if("manual_arousal_down")
+			adjust_arousal_manual(-1)
 		if("toggle_finished")
 			do_until_finished = !do_until_finished
+			update_exposure()
+		if("toggle_bottom_exposed")
+			bottom_exposed = !bottom_exposed
+			update_exposure()
 		if("set_arousal")
 			var/amount = input(user, "Value above 120 will immediately cause orgasm!", "Set Arousal", arousal) as num
 			if(aphrodisiac > 1 && amount > 0)
@@ -682,6 +747,8 @@
 			action_category = SEX_CATEGORY_HANDS
 		if("category_penetrate")
 			action_category = SEX_CATEGORY_PENETRATE
+		if("toggle_subtle")
+			do_subtle_action = !do_subtle_action
 		if("toggle_knot")
 			do_knot_action = !do_knot_action
 	show_ui()
@@ -863,6 +930,17 @@
 			return "<font color='#f05ee1'>QUICK</font>"
 		if(SEX_SPEED_EXTREME)
 			return "<font color='#d146f5'>UNRELENTING</font>"
+
+/datum/sex_controller/proc/get_manual_arousal_string()
+	switch(manual_arousal)
+		if(SEX_MANUAL_AROUSAL_DEFAULT)
+			return "<font color='#eac8de'>NATURAL</font>"
+		if(SEX_MANUAL_AROUSAL_UNAROUSED)
+			return "<font color='#e9a8d1'>UNAROUSED</font>"
+		if(SEX_MANUAL_AROUSAL_PARTIAL)
+			return "<font color='#f05ee1'>PARTIALLY ERECT</font>"
+		if(SEX_MANUAL_AROUSAL_FULL)
+			return "<font color='#d146f5'>FULLY ERECT</font>"
 
 /datum/sex_controller/proc/get_generic_force_adjective()
 	switch(force)

@@ -99,3 +99,11 @@
 	if(prob(10))
 		to_chat(C, span_boldannounce("The feeling in your loins has subsided to a dull ache. Only more [name] would scratch the itch..."))
 	return
+
+/datum/reagent/erpjuice/cum
+	description = "A thick, sticky, cream like fluid. produced during an orgasm."
+	taste_description = "salty and tangy"
+
+/datum/reagent/erpjuice/femcum
+	description = "A slightly milky fluid, thin and watery in texture."
+	taste_description = "faintly sweet and mineraly"
