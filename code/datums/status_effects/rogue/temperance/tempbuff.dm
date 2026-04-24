@@ -10,7 +10,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/buff/bloodhealing
 	duration = 30 SECONDS
 	examine_text = "SUBJECTPRONOUN is surrounded by strands of blood!"
-	var/healing_on_tick = 1.5
+	var/healing_on_tick = 2
 	var/outline_colour = "#681010"
 
 /datum/status_effect/buff/bloodhealing/on_creation(mob/living/new_owner, new_healing_on_tick)
