@@ -52,6 +52,7 @@ GLOBAL_LIST_EMPTY(cmode_tracks_by_name)
 	desc = "CANNON FODDER"
 	shortname = "Armsman"
 	musicpath = list('sound/music/combat_armsman.ogg')
+	credits = "Marked For Limitation - Vellocet - ANEURISM IV OST"
 
 /datum/combat_music/auxiliar
 	name = "Auxiliar"
@@ -134,7 +135,7 @@ GLOBAL_LIST_EMPTY(cmode_tracks_by_name)
 	musicpath = list('sound/music/combat_analog.ogg')
 	credits = "Sonic Analog - Crypt Voice"
 
-/datum/combat_music/linebreaker
+/datum/combat_music/fog
 	name = "The Fog"
 	desc = "PALPITATIONS"
 	shortname = "The Fog"
