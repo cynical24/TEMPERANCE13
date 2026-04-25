@@ -47,8 +47,12 @@
 	visuals.icon = icon
 	visuals.icon_state = icon_state
 	Draw()
-	RegisterSignal(origin, COMSIG_MOVABLE_MOVED, PROC_REF(redrawing))
-	RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(redrawing))
+	if(origin)
+		UnregisterSignal(origin, COMSIG_MOVABLE_MOVED)
+		RegisterSignal(origin, COMSIG_MOVABLE_MOVED, PROC_REF(redrawing))
+	if(target)
+		UnregisterSignal(target, COMSIG_MOVABLE_MOVED)
+		RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(redrawing))
 
 /**
  * Triggered by signals set up when the beam is set up. If it's still sane to create a beam, it removes the old beam, creates a new one. Otherwise it kills the beam.
@@ -59,7 +63,14 @@
  * direction: in what direction mover moved from.
  */
 /datum/beam/proc/redrawing(atom/movable/mover, atom/oldloc, direction)
-	if(origin && target && get_dist(origin,target)<max_distance && origin.z == target.z)
+	if(QDELETED(src))
+		return
+
+	if(!origin || !target)
+		qdel(src)
+		return
+
+	if(get_dist(origin, target) < max_distance && origin.z == target.z)
 		QDEL_LIST(elements)
 		Draw()
 	else
