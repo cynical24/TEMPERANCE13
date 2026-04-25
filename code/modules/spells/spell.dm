@@ -414,6 +414,10 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 			recharge_time = initial(recharge_time) + (initial(recharge_time) * (diff2 * COOLDOWN_REDUCTION_PER_INT))
 
 /obj/effect/proc_holder/spell/process()
+	if(!ranged_ability_user || QDELETED(ranged_ability_user) || !ranged_ability_user.loc)
+		STOP_PROCESSING(SSfastprocess, src)
+		return
+
 	if(charge_counter <= recharge_time) // Edge case when charge counter is set
 		charge_counter += 2	//processes 5 times per second instead of 10.
 		if(charge_counter >= recharge_time)
