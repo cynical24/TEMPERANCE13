@@ -3,7 +3,7 @@
 	volume = 100
 	extra_range = 10	// Increase sound range.
 	persistent_loop = TRUE
-	var/stress2give = /datum/stressevent/music
+	stress2give = /datum/stressevent/music
 	sound_group = null
 
 GLOBAL_LIST_EMPTY(instrument_band_lobbies)
@@ -141,8 +141,6 @@ GLOBAL_LIST_EMPTY(instrument_band_lobbies)
 		if(isliving(stop_source))
 			var/mob/living/holder = stop_source
 			holder.remove_status_effect(/datum/status_effect/buff/playing_music)
-			if(instrument.not_held)
-				holder.remove_status_effect(/datum/status_effect/buff/harpy_sing)
 
 /datum/looping_sound/instrument/New(_parent, start_immediately=FALSE, _direct=FALSE, _channel = 0)
 	. = ..(_parent, FALSE, _direct, _channel)
@@ -292,8 +290,6 @@ GLOBAL_LIST_EMPTY(instrument_band_lobbies)
 		groupplaying = FALSE
 		soundloop.stop(user)
 		user.remove_status_effect(/datum/status_effect/buff/playing_music)
-		if(not_held)
-			user.remove_status_effect(/datum/status_effect/buff/harpy_sing)
 		return
 	else
 		var/playdecision
@@ -420,9 +416,7 @@ GLOBAL_LIST_EMPTY(instrument_band_lobbies)
 					return
 				playing = TRUE
 				user.apply_status_effect(/datum/status_effect/buff/playing_music, stressevent, note_color)
-				if(not_held)
-					user.apply_status_effect(/datum/status_effect/buff/harpy_sing)
-				record_round_statistic(STATS_SONGS_PLAYED)
+				GLOB.azure_round_stats[STATS_SONGS_PLAYED]++
 			else
 				playing = FALSE
 				groupplaying = FALSE

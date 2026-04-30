@@ -35,15 +35,8 @@
 	extra_range = 10
 	falloff = 0
 	persistent_loop = TRUE
-	var/stress2give = /datum/stressevent/music
+	stress2give = /datum/stressevent/music
 	sound_group = null
-
-/datum/looping_sound/radios/on_hear_sound(mob/M)
-	. = ..()
-	if(stress2give)
-		if(isliving(M))
-			var/mob/living/carbon/L = M
-			L.add_stress(stress2give)
 
 /datum/looping_sound/radios/New(_parent, start_immediately=FALSE, _direct=FALSE, _channel = 0)
 	. = ..(_parent, FALSE, _direct, _channel)

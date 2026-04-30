@@ -54,6 +54,7 @@ GLOBAL_LIST_EMPTY(created_sound_groups)
 	var/extra_range = 0
 	var/falloff
 	var/frequency
+	var/stress2give
 	var/stopped = TRUE
 	var/persistent_loop = FALSE //we stay in the client's played_loops so we keep updating volume even when out of range
 	var/repeat_sound = TRUE // if FALSE, sound plays once client-side instead of looping
@@ -245,7 +246,12 @@ GLOBAL_LIST_EMPTY(created_sound_groups)
 		if(!M)
 			continue
 
-		M.playsound_local(null, soundfile, 0, vary, frequency, falloff, channel, FALSE, null, src) 
+		M.playsound_local(null, soundfile, 0, vary, frequency, falloff, channel, FALSE, null, src)
+		if(!thingshearing)
+			thingshearing = list()
+		LAZYADD(thingshearing, WEAKREF(M))
+		if(M?.client)
+			on_hear_sound(M)
 
 /datum/looping_sound/proc/begin_loop()
 	sound_loop()
