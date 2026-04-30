@@ -36,7 +36,7 @@
 	falloff = 0
 	persistent_loop = TRUE
 	var/stress2give = /datum/stressevent/music
-	sound_group = /datum/sound_group/radios
+	sound_group = null
 
 /datum/looping_sound/radios/on_hear_sound(mob/M)
 	. = ..()
@@ -44,6 +44,52 @@
 		if(isliving(M))
 			var/mob/living/carbon/L = M
 			L.add_stress(stress2give)
+
+/datum/looping_sound/radios/New(_parent, start_immediately=FALSE, _direct=FALSE, _channel = 0)
+	. = ..(_parent, FALSE, _direct, _channel)
+	// Radios can be widespread on the map. Reserve channels only while actively playing.
+	if(channel)
+		SSsounds.free_datum_channels(src)
+		channel = null
+	if(start_immediately)
+		start()
+
+/datum/looping_sound/radios/start(atom/on_behalf_of, sync_anchor)
+	if(sync_anchor)
+		starttime = sync_anchor
+	if(!channel)
+		channel = SSsounds.reserve_sound_channel(src)
+		if(!channel)
+			var/atom/resolved_parent = parent?.resolve()
+			log_game("RADIO: Failed to reserve sound channel for [resolved_parent] - channels may be exhausted (reserve_high=[SSsounds.channel_reserve_high], random_min=[SSsounds.random_channels_min])")
+			return FALSE
+	..()
+	return TRUE
+
+// Thingshearing was previously cleared BEFORE calling ..() which meant
+// the parent stop() had nothing to iterate over and silently did nothing.
+// We now let the parent run first, THEN clear thingshearing, and THEN free
+// the channel. The manual GLOB.clients loop handles clients whose played_loops
+// entry may have been missed by the parent.
+/datum/looping_sound/radios/stop(null_parent)
+	if(channel)
+		. = ..(null_parent)  // Parent runs first with thingshearing intact.
+		for(var/client/C in GLOB.clients)
+			if(!(src in C.played_loops))
+				continue
+			var/list/L = C.played_loops[src]
+			var/sound/SD = L?["SOUND"]
+			var/stop_channel = SD?.channel || channel
+			if(C.mob)
+				C.mob.stop_sound_channel(stop_channel)
+			else
+				SEND_SOUND(C, sound(null, repeat = 0, wait = 0, channel = stop_channel))
+			C.played_loops -= src
+		thingshearing = list()  // Clear AFTER parent and client loop are done.
+		SSsounds.free_datum_channels(src)
+		channel = null
+	else
+		. = ..(null_parent)
 
 /obj/item/roguemachine/musicbox
 	name = "metal radio"
