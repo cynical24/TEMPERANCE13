@@ -222,8 +222,6 @@
 		else
 			to_chat(user, span_warning("[target]'s face is covered!"))
 		return
-	if(!can_perform_suicide_shot(user))
-		return
 
 	if(user == target)
 		target.visible_message("<span class='warning'>[user] sticks the [src] in [user.p_their()] mouth, ready to pull the trigger...</span>", \
@@ -232,7 +230,8 @@
 		target.visible_message("<span class='warning'>[user] points the [src] at [target]'s head, ready to pull the trigger...</span>", \
 			"<span class='danger'>[user] points the [src] at your head, ready to pull the trigger...</span>")
 
-	if(!bypass_timer && (!do_mob(user, target, 120) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
+	var/suicide_delay = (user == target) ? 50 : 120
+	if(!bypass_timer && (!do_mob(user, target, suicide_delay) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
 		if(user)
 			if(user == target)
 				user.visible_message("<span class='notice'>[user] decided not to shoot.</span>")
@@ -241,6 +240,8 @@
 		return
 
 	target.visible_message("<span class='warning'>[user] pulls the trigger!</span>", "<span class='danger'>[(user == target) ? "You pull" : "[user] pulls"] the trigger!</span>")
+	if(!can_perform_suicide_shot(user))
+		return
 
 	if(chambered && chambered.BB)
 		chambered.BB.damage *= 10
@@ -256,10 +257,9 @@
 	execution_shot_active = TRUE
 	process_fire(target, user, TRUE, null, BODY_ZONE_PRECISE_MOUTH)
 	execution_shot_active = FALSE
-	sleep(1)
+	sleep(1) // dramatic pause (also required so process_fire can run properly)
 	if(gib_heads && head_part)
 		head_part.drop_limb()
-		qdel(head_part)
 		playsound(T, 'sound/gore/suicide.ogg', 80, TRUE)
 		new /obj/effect/gibspawner/generic(T)
 
