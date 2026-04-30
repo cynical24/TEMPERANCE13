@@ -1,4 +1,9 @@
 /obj/item/ammo_casing/proc/fire_casing(atom/target, mob/living/user, params, distro, quiet, zone_override, spread, atom/fired_from)
+	if(istype(fired_from, /obj/item/gun))
+		var/obj/item/gun/G = fired_from
+		if(G.execution_shot_active)
+			distro = 0
+			spread = 0
 	distro += variance
 	for (var/i = max(1, pellets), i > 0, i--)
 		var/targloc = get_turf(target)
@@ -33,6 +38,11 @@
 		BB.def_zone = zone_override
 	else
 		BB.def_zone = user?.zone_selected
+	if(istype(fired_from, /obj/item/gun))
+		var/obj/item/gun/G = fired_from
+		if(G.execution_shot_active)
+			BB.bonus_accuracy = max(BB.bonus_accuracy, 100)
+			BB.spread = 0
 	BB.suppressed = quiet
 
 	if(reagents && BB.reagents)

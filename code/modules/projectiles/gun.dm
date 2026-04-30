@@ -40,6 +40,7 @@
 	var/burst = 1 //amount of boolets to fire, ALSO SET SEMIAUTO PLS
 	var/burst_delay = 2 //amount of deciseconds between each shot if bursting
 	var/pb_knockback = 0
+	var/execution_shot_active = FALSE
 
 
 
@@ -107,20 +108,10 @@
 	if(!target)
 		testing("no target")
 		return
-	if(!(user.using_object))
-		if(!user?.used_intent.tranged) //melee attack
-			return
+	if(!user?.used_intent.tranged)
+		return
 	if(flag) //It's adjacent, is the user, or is on the user's person
-		if(target in user.contents) //can't shoot stuff inside us.
-			return
-		if(!ismob(target)) //melee attack
-			testing("gun with melee attack selected")
-			return
-		if(user.zone_selected == BODY_ZONE_PRECISE_MOUTH)
-			if(!istype(src, /obj/item/gun/ballistic/revolver/grenadelauncher)) // prevents bows from being used to trigger suicides
-				handle_suicide(user, target, params)
-				return
-		if(target == user && user.zone_selected != BODY_ZONE_PRECISE_MOUTH) //so we can't shoot ourselves (unless mouth selected)
+		if(handle_ranged_adjacent_target(target, user, params))
 			return
 
 	if(istype(user))//Check if the user can use the gun, if the user isn't alive(turrets) assume it can.
@@ -141,6 +132,43 @@
 
 /obj/item/gun/proc/recharge_newshot()
 	return
+
+/obj/item/gun/proc/handle_ranged_adjacent_target(atom/target, mob/living/user, params)
+	if(!target || !user?.used_intent.tranged)
+		return FALSE
+	if(target in user.contents) //can't shoot stuff inside us.
+		return TRUE
+	if(!ismob(target))
+		return FALSE
+	if(user.zone_selected == BODY_ZONE_PRECISE_MOUTH)
+		if(!istype(src, /obj/item/gun/ballistic/revolver/grenadelauncher)) // prevents bows from being used to trigger suicides
+			handle_suicide(user, target, params)
+			return TRUE
+	if(target == user) //so we can't shoot ourselves unless mouth selected
+		return TRUE
+	if(istype(user))//Check if the user can use the gun, if the user isn't alive(turrets) assume it can.
+		var/mob/living/L = user
+		if(!can_trigger_gun(L))
+			return TRUE
+	if(!can_shoot()) //Just because you can pull the trigger doesn't mean it can shoot.
+		shoot_with_empty_chamber(user)
+		return TRUE
+	process_fire(target, user, TRUE, params, null, 0)
+	return TRUE
+
+/obj/item/gun/pre_attack(atom/A, mob/living/user, params)
+	if(handle_ranged_adjacent_target(A, user, params))
+		return TRUE
+	return ..()
+
+/obj/item/gun/proc/can_perform_suicide_shot(mob/living/user)
+	if(!can_shoot())
+		shoot_with_empty_chamber(user)
+		return FALSE
+	if(!chambered?.BB)
+		shoot_with_empty_chamber(user)
+		return FALSE
+	return TRUE
 
 
 /obj/item/gun/proc/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
@@ -188,6 +216,14 @@
 /obj/item/gun/proc/handle_suicide(mob/living/carbon/human/user, mob/living/carbon/human/target, params, bypass_timer)
 	if(!ishuman(user) || !ishuman(target))
 		return
+	if(target.is_face_covered())
+		if(user == target)
+			to_chat(user, span_warning("I can't get [src] to my face while it's covered!"))
+		else
+			to_chat(user, span_warning("[target]'s face is covered!"))
+		return
+	if(!can_perform_suicide_shot(user))
+		return
 
 	if(user == target)
 		target.visible_message("<span class='warning'>[user] sticks the [src] in [user.p_their()] mouth, ready to pull the trigger...</span>", \
@@ -208,16 +244,29 @@
 
 	if(chambered && chambered.BB)
 		chambered.BB.damage *= 10
+		chambered.BB.bonus_accuracy = max(chambered.BB.bonus_accuracy, 100)
 
-	process_fire(target, user, TRUE, null, BODY_ZONE_HEAD)
-	sleep(1)
-	target.death()
+	var/gib_heads = FALSE
+	if(chambered && (istype(chambered, /obj/item/ammo_casing/shotgun/buckshot) || istype(chambered, /obj/item/ammo_casing/a577)))
+		gib_heads = TRUE
+
 	var/turf/T = get_turf(target)
+	var/obj/item/bodypart/head/head_part = target.get_bodypart(BODY_ZONE_HEAD)
+	ADD_TRAIT(target, TRAIT_NOPAIN, src)
+	execution_shot_active = TRUE
+	process_fire(target, user, TRUE, null, BODY_ZONE_PRECISE_MOUTH)
+	execution_shot_active = FALSE
+	sleep(1)
+	if(gib_heads && head_part)
+		head_part.drop_limb()
+		qdel(head_part)
+		playsound(T, 'sound/gore/suicide.ogg', 80, TRUE)
+		new /obj/effect/gibspawner/generic(T)
 
+	target.death()
 	new /obj/effect/gibspawner/generic(T)
-	playsound(T, 'sound/gore/suicide.ogg', 80, TRUE)
+	REMOVE_TRAIT(target, TRAIT_NOPAIN, src)
 
 //Happens before the actual projectile creation
 /obj/item/gun/proc/before_firing(atom/target,mob/user)
 	return
-

@@ -93,6 +93,8 @@
 	var/construct = 0
 
 /obj/item/proc/attack(mob/living/M, mob/living/user)
+	if(istype(src, /obj/item/gun) && !user?.used_intent.tranged)
+		return FALSE
 	if(SEND_SIGNAL(src, COMSIG_ITEM_ATTACK, M, user) & COMPONENT_ITEM_NO_ATTACK)
 		return FALSE
 	SEND_SIGNAL(user, COMSIG_MOB_ITEM_ATTACK, M, user)

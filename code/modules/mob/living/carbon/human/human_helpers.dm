@@ -47,12 +47,13 @@
 	return "Unknown"
 
 //Returns "Unknown" if facially disfigured and real_name if not. Useful for setting name when Fluacided or when updating a human's name variable
+/mob/living/carbon/human/proc/is_face_covered()
+	return (wear_mask && (wear_mask.flags_inv & HIDEFACE)) \
+		|| (head && (head.flags_inv & HIDEFACE)) \
+		|| (wear_neck && (wear_neck.flags_inv & HIDEFACE))
+
 /mob/living/carbon/human/proc/get_face_name(if_no_face="Unknown")
-	if( wear_mask && (wear_mask.flags_inv&HIDEFACE) )	//Wearing a mask which hides our face, use id-name if possible
-		return if_no_face
-	if( head && (head.flags_inv&HIDEFACE) )
-		return if_no_face		//Likewise for hats
-	if( wear_neck && (wear_neck.flags_inv&HIDEFACE) )
+	if(is_face_covered())
 		return if_no_face		//Likewise for hats
 	if( istype(src, /mob/living/carbon/human/species/skeleton)) //SPOOKY BONES
 		return real_name
