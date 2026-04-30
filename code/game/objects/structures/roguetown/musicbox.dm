@@ -102,7 +102,7 @@
 /obj/item/roguemachine/musicbox/Initialize()
 	. = ..()
 	curfile = pick(init_curfile)
-	soundloop = new(src, FALSE)
+	soundloop = new /datum/looping_sound/radios(src, FALSE)
 	if(playuponspawn)
 		start_playing()
 
