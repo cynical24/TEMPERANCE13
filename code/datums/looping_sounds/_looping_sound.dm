@@ -201,7 +201,9 @@ GLOBAL_LIST_EMPTY(created_sound_groups)
 			else
 				on_hear_sound(M)
 
-/datum/looping_sound/proc/on_hear_sound(mob/M)
+/datum/looping_sound/proc/on_hear_sound(mob/living/M)
+	if(stress2give && M && M.client && !M.has_stress_event(stress2give))
+		M.add_stress(stress2give)
 	if(!persistent_loop || !M?.client)
 		return
 
