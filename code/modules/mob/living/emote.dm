@@ -761,6 +761,10 @@
 	show_runechat = FALSE
 
 /datum/emote/living/scream/painscream/run_emote(mob/user, params, type_override, intentional)
+	if(isliving(user))
+		var/mob/living/L = user
+		if(L.suppress_pain_emotes)
+			return FALSE
 	. = ..()
 	if(.)
 		for(var/mob/living/carbon/human/L in viewers(7,user))
@@ -838,6 +842,13 @@
 	only_forced_audio = TRUE
 	show_runechat = FALSE
 
+/datum/emote/living/pain/run_emote(mob/user, params, type_override, intentional)
+	if(isliving(user))
+		var/mob/living/L = user
+		if(L.suppress_pain_emotes)
+			return FALSE
+	return ..()
+
 /datum/emote/living/drown
 	key = "drown"
 	emote_type = EMOTE_AUDIBLE
@@ -853,6 +864,13 @@
 	only_forced_audio = TRUE
 	show_runechat = FALSE
 
+/datum/emote/living/paincrit/run_emote(mob/user, params, type_override, intentional)
+	if(isliving(user))
+		var/mob/living/L = user
+		if(L.suppress_pain_emotes)
+			return FALSE
+	return ..()
+
 /datum/emote/living/embed
 	key = "embed"
 	emote_type = EMOTE_AUDIBLE
@@ -866,6 +884,13 @@
 	nomsg = TRUE
 	only_forced_audio = TRUE
 	show_runechat = FALSE
+
+/datum/emote/living/painmoan/run_emote(mob/user, params, type_override, intentional)
+	if(isliving(user))
+		var/mob/living/L = user
+		if(L.suppress_pain_emotes)
+			return FALSE
+	return ..()
 
 /datum/emote/living/groin
 	key = "groin"

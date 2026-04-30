@@ -230,7 +230,7 @@
 		target.visible_message("<span class='warning'>[user] points the [src] at [target]'s head, ready to pull the trigger...</span>", \
 			"<span class='danger'>[user] points the [src] at your head, ready to pull the trigger...</span>")
 
-	var/suicide_delay = (user == target) ? 50 : 120
+	var/suicide_delay = (user == target) ? 20 : 120
 	if(!bypass_timer && (!do_mob(user, target, suicide_delay) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
 		if(user)
 			if(user == target)
@@ -253,10 +253,11 @@
 
 	var/turf/T = get_turf(target)
 	var/obj/item/bodypart/head/head_part = target.get_bodypart(BODY_ZONE_HEAD)
-	ADD_TRAIT(target, TRAIT_NOPAIN, src)
+	target.suppress_pain_emotes = TRUE
 	execution_shot_active = TRUE
 	process_fire(target, user, TRUE, null, BODY_ZONE_PRECISE_MOUTH)
 	execution_shot_active = FALSE
+	target.suppress_pain_emotes = FALSE
 	sleep(1) // dramatic pause (also required so process_fire can run properly)
 	if(gib_heads && head_part)
 		head_part.drop_limb()
@@ -265,7 +266,6 @@
 
 	target.death()
 	new /obj/effect/gibspawner/generic(T)
-	REMOVE_TRAIT(target, TRAIT_NOPAIN, src)
 
 //Happens before the actual projectile creation
 /obj/item/gun/proc/before_firing(atom/target,mob/user)

@@ -258,6 +258,7 @@
 
 	var/list/attack_grunts = null
 	var/list/takedamage_grunts = null
+	var/suppress_pain_emotes = FALSE
 
 	var/canparry = FALSE
 	var/candodge = FALSE
