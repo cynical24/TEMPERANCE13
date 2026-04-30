@@ -116,6 +116,10 @@
 		if(!ismob(target)) //melee attack
 			testing("gun with melee attack selected")
 			return
+		if(user.zone_selected == BODY_ZONE_PRECISE_MOUTH)
+			if(!istype(src, /obj/item/gun/ballistic/revolver/grenadelauncher)) // prevents bows from being used to trigger suicides
+				handle_suicide(user, target, params)
+				return
 		if(target == user && user.zone_selected != BODY_ZONE_PRECISE_MOUTH) //so we can't shoot ourselves (unless mouth selected)
 			return
 
@@ -124,10 +128,6 @@
 		if(!can_trigger_gun(L))
 			return
 
-//	if(flag)
-//		if(user.zone_selected == BODY_ZONE_PRECISE_MOUTH)
-//			handle_suicide(user, target, params)
-//			return
 
 	if(!can_shoot()) //Just because you can pull the trigger doesn't mean it can shoot.
 		shoot_with_empty_chamber(user)
@@ -190,11 +190,11 @@
 		return
 
 	if(user == target)
-		target.visible_message("<span class='warning'>[user] sticks [src] in [user.p_their()] mouth, ready to pull the trigger...</span>", \
-			"<span class='danger'>I stick [src] in your mouth, ready to pull the trigger...</span>")
+		target.visible_message("<span class='warning'>[user] sticks the [src] in [user.p_their()] mouth, ready to pull the trigger...</span>", \
+			"<span class='danger'>I stick the [src] in my mouth, ready to pull the trigger...</span>")
 	else
-		target.visible_message("<span class='warning'>[user] points [src] at [target]'s head, ready to pull the trigger...</span>", \
-			"<span class='danger'>[user] points [src] at your head, ready to pull the trigger...</span>")
+		target.visible_message("<span class='warning'>[user] points the [src] at [target]'s head, ready to pull the trigger...</span>", \
+			"<span class='danger'>[user] points the [src] at your head, ready to pull the trigger...</span>")
 
 	if(!bypass_timer && (!do_mob(user, target, 120) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
 		if(user)
@@ -207,9 +207,15 @@
 	target.visible_message("<span class='warning'>[user] pulls the trigger!</span>", "<span class='danger'>[(user == target) ? "You pull" : "[user] pulls"] the trigger!</span>")
 
 	if(chambered && chambered.BB)
-		chambered.BB.damage *= 5
+		chambered.BB.damage *= 10
 
-	process_fire(target, user, TRUE, params, BODY_ZONE_HEAD)
+	process_fire(target, user, TRUE, null, BODY_ZONE_HEAD)
+	sleep(1)
+	target.death()
+	var/turf/T = get_turf(target)
+
+	new /obj/effect/gibspawner/generic(T)
+	playsound(T, 'sound/gore/suicide.ogg', 80, TRUE)
 
 //Happens before the actual projectile creation
 /obj/item/gun/proc/before_firing(atom/target,mob/user)

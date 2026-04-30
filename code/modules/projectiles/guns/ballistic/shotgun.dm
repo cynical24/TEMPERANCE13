@@ -49,7 +49,10 @@
 	if(!semi_auto && from_firing)
 		return
 
-/obj/item/gun/ballistic/shotgun/attack_self(mob/living/user)
+/obj/item/gun/ballistic/shotgun/attack_self(mob/living/user, suicide = FALSE)
+	if(suicide && user.zone_selected == BODY_ZONE_PRECISE_MOUTH && !istype(src, /obj/item/gun/ballistic/revolver/grenadelauncher))
+		handle_suicide(user, user, null)
+		return
 	if(recentpump > world.time)
 		return
 	pump(user, TRUE)

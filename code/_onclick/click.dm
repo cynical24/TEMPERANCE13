@@ -218,6 +218,13 @@
 		if(oactive)
 			W = get_inactive_held_item()
 
+	if(A == src && W && istype(W, /obj/item/gun)) // clicking yourself with a gun makes it so you don't hit yourself
+		if(src.zone_selected == BODY_ZONE_PRECISE_MOUTH)
+			W.attack_self(src, TRUE)
+			update_inv_hands()
+			return
+		return
+
 	if(W == A)
 		W.attack_self(src)
 		update_inv_hands()

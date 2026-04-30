@@ -319,7 +319,10 @@
 		return
 	return ..()
 
-/obj/item/gun/ballistic/attack_self(mob/living/user)
+/obj/item/gun/ballistic/attack_self(mob/living/user, suicide = FALSE)
+	if(suicide && user.zone_selected == BODY_ZONE_PRECISE_MOUTH && !istype(src, /obj/item/gun/ballistic/revolver/grenadelauncher))
+		handle_suicide(user, user, null)
+		return
 	if(!internal_magazine && magazine)
 		if(!magazine.ammo_count())
 			eject_magazine(user)

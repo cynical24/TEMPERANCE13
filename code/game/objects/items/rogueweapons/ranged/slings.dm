@@ -151,7 +151,10 @@
 			A = new /obj/item/ammo_casing/caseless/rogue/sling_bullet //putting a temporary sling bullet in its place. bonus force is kept on the sling and set to 0 if shot or stone is ejected
 		..()
 		
-/obj/item/gun/ballistic/revolver/grenadelauncher/sling/attack_self(mob/user) //more unholy code
+/obj/item/gun/ballistic/revolver/grenadelauncher/sling/attack_self(mob/user, suicide = FALSE) //more unholy code
+	if(suicide && user.zone_selected == BODY_ZONE_PRECISE_MOUTH && !istype(src, /obj/item/gun/ballistic/revolver/grenadelauncher))
+		handle_suicide(user, user, null)
+		return
 	if (temp_stone != null) //if there's a 'stone' in the sling, drop it and delete the temporary ammo inside
 		user.dropItemToGround(temp_stone) //pulling the stone from stone purgatory and dropping it
 		temp_stone = null //clearing the temp reference var

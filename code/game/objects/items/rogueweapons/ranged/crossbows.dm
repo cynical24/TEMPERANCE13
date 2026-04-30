@@ -111,7 +111,10 @@
 		cocked = FALSE
 		update_icon()
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/attack_self(mob/living/user)
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/attack_self(mob/living/user, suicide = FALSE)
+	// if(user.zone_selected == BODY_ZONE_PRECISE_MOUTH) maybe make a crossbow-specific suicide
+	// 	handle_suicide(user, user, null)
+	// 	return
 	if(chambered)
 		..()
 	else
