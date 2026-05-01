@@ -184,6 +184,7 @@
 		playsound(loc, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
 		user.visible_message(span_info("[user] presses a button on \the [src]."),span_info("I press a button on \the [src]."))
 		curfile = chosen_songlists_selection[song_selection]
+		GLOB.azure_round_stats[STATS_SONGS_PLAYED]++
 		stop_playing()
 		start_playing()
 
