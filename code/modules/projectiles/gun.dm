@@ -170,6 +170,10 @@
 		return FALSE
 	return TRUE
 
+/obj/item/gun/proc/log_admin_gun_execution(mob/living/carbon/human/user, mob/living/carbon/human/target, action)
+	var/message = "[ADMIN_LOOKUPFLW(user)] [action] [ADMIN_LOOKUPFLW(target)] with [src]"
+	message_admins(message)
+
 
 /obj/item/gun/proc/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	add_fingerprint(user)
@@ -229,9 +233,15 @@
 	else
 		target.visible_message("<span class='warning'>[user] points the [src] at [target]'s head, ready to pull the trigger...</span>", \
 			"<span class='danger'>[user] points the [src] at your head, ready to pull the trigger...</span>")
+	var/action_text = (user == target) ? "started a suicide doafter on" : "started a gun execution doafter on"
+	log_combat(user, target, action_text, src)
+	log_admin_gun_execution(user, target, (user == target) ? "started a suicide doafter on" : "started a gun execution doafter on")
 
 	var/suicide_delay = (user == target) ? 20 : 120
 	if(!bypass_timer && (!do_mob(user, target, suicide_delay) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
+		var/cancel_text = (user == target) ? "cancelled a suicide doafter on" : "cancelled a gun execution doafter on"
+		log_combat(user, target, cancel_text, src, "before firing")
+		log_admin_gun_execution(user, target, (user == target) ? "cancelled a suicide doafter on" : "cancelled a gun execution doafter on")
 		if(user)
 			if(user == target)
 				user.visible_message("<span class='notice'>[user] decided not to shoot.</span>")
@@ -240,6 +250,9 @@
 		return
 
 	target.visible_message("<span class='warning'>[user] pulls the trigger!</span>", "<span class='danger'>[(user == target) ? "You pull" : "[user] pulls"] the trigger!</span>")
+	var/completion_text = (user == target) ? "completed a suicide doafter on" : "completed a gun execution doafter on"
+	log_combat(user, target, completion_text, src, "and pulled the trigger")
+	log_admin_gun_execution(user, target, (user == target) ? "completed a suicide doafter on" : "completed a gun execution doafter on")
 	if(!can_perform_suicide_shot(user))
 		return
 
@@ -260,6 +273,8 @@
 	target.suppress_pain_emotes = FALSE
 	sleep(1) // dramatic pause (also required so process_fire can run properly)
 	if(gib_heads && head_part)
+		log_combat(user, target, "blewn the head off of", src)
+		log_admin_gun_execution(user, target, "blew the head off of")
 		head_part.drop_limb()
 		playsound(T, 'sound/gore/suicide.ogg', 80, TRUE)
 		new /obj/effect/gibspawner/generic(T)
